@@ -120,5 +120,5 @@ app.post('/webhook/bling', async (req, res) => {
 // 5. LIGA O ROBÔ
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`🤖 Servidor do Robô UNNA acordou e está vigiando a porta ${PORT}!`);
+    console.log(`Servidor backend inicializado com sucesso na porta ${PORT}.`);
 });
