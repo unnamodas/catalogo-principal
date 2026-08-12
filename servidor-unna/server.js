@@ -3,9 +3,18 @@ const { initializeApp, cert } = require('firebase-admin/app');
 const { getFirestore } = require('firebase-admin/firestore');
 const cors = require('cors');
 
-const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT
-    ? JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT)
-    : require('./firebase-key.json');
+// 1. CARREGA A CHAVE MESTRA DO FIREBASE
+let serviceAccount;
+
+if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+    // Se estiver no Render, lê a variável de ambiente
+    serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+    // 👇 O SEGREDO ESTÁ AQUI: Isso força o Render a ler as quebras de linha corretamente!
+    serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
+} else {
+    // Se estiver no seu computador, lê o arquivo físico
+    serviceAccount = require('./firebase-key.json');
+}
 
 initializeApp({
     credential: cert(serviceAccount)
