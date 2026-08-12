@@ -3,8 +3,9 @@ const { initializeApp, cert } = require('firebase-admin/app');
 const { getFirestore } = require('firebase-admin/firestore');
 const cors = require('cors');
 
-// 1. CARREGA A CHAVE MESTRA DO FIREBASE
-const serviceAccount = require('./firebase-key.json');
+const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT
+    ? JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT)
+    : require('./firebase-key.json');
 
 initializeApp({
     credential: cert(serviceAccount)
@@ -110,7 +111,7 @@ app.post('/webhook/bling', async (req, res) => {
 });
 
 // 5. LIGA O ROBÔ
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`🤖 Servidor do Robô UNNA acordou e está vigiando a porta ${PORT}!`);
 });
