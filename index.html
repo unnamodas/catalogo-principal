@@ -1,0 +1,2226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - UNNA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --card-bg: #ffffff;
+            --primary-color: #000000;
+            --accent-color: #767676;
+            --border-color: #e5e5e5;
+            --text-main: #000000;
+            --text-muted: #666666;
+            --sold-color: #cccccc;
+            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.02);
+            --transition: all 0.4s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .marquee-bar {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 10px 0;
+            font-size: 8px;
+            letter-spacing: 0.15em;
+            font-weight: 400;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--primary-color);
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+        }
+
+        .marquee-content span {
+            margin: 0 20px;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(-50%, 0, 0);
+            }
+        }
+
+        /* --- CABEÇALHO SOFISTICADO --- */
+        header {
+            text-align: center;
+            padding: 70px 20px 40px 20px;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        header .logo-loja {
+            max-width: 220px;
+            height: auto;
+            display: inline-block;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.08));
+            cursor: pointer;
+        }
+
+        header .logo-loja:hover {
+            transform: scale(1.03) translateY(-3px);
+            filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.15));
+        }
+
+        header::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #000000, transparent);
+            margin: 35px auto 0 auto;
+            opacity: 0.25;
+        }
+
+        .catalogo-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: #666666;
+            margin-top: 18px;
+            margin-bottom: 0;
+        }
+
+        header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 54px;
+            font-weight: 400;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 13px;
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px 60px 40px;
+        }
+
+        .controls-wrapper {
+            background-color: #ffffff;
+            padding: 0 0 30px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .search-filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+            min-width: 280px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 16px 12px 40px;
+            border: 1px solid var(--border-color);
+            border-radius: 0px;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            outline: none;
+            transition: var(--transition);
+            background-color: #ffffff;
+            color: #000000;
+            letter-spacing: 0.03em;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .search-box svg {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            width: 15px;
+            height: 15px;
+            stroke-width: 1.5;
+        }
+
+        .status-filters {
+            display: flex;
+            gap: 0px;
+            border: 1px solid var(--border-color);
+        }
+
+        .status-btn {
+            background: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            color: var(--text-muted);
+            transition: var(--transition);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .status-btn:not(:last-child) {
+            border-right: 1px solid var(--border-color);
+        }
+
+        .status-btn.active,
+        .status-btn:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .categories-tabs {
+            display: flex;
+            gap: 10px;
+            padding-top: 5px;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding-bottom: 5px;
+        }
+
+        .categories-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-tab {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 8px 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            flex-shrink: 0;
+        }
+
+        .category-tab.active,
+        .category-tab:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border-color: var(--primary-color);
+        }
+
+        .sizes-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+            padding: 8px 0;
+            /* Ajustado para dar folga em cima e embaixo */
+            border-top: 1px dashed var(--border-color);
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .sizes-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .size-label {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary-color);
+            margin-right: 5px;
+            flex-shrink: 0;
+        }
+
+        .sizes-tabs {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .size-tab {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            flex-shrink: 0;
+        }
+
+        .size-tab.active,
+        .size-tab:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border-color: var(--primary-color);
+        }
+
+        /* --- BOLINHAS SÓLIDAS DO FILTRO DE CORES --- */
+        .color-filter-dot {
+            width: 26px;
+            height: 26px;
+            min-width: 26px;
+            min-height: 26px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid var(--border-color);
+            transition: var(--transition);
+            flex-shrink: 0;
+            padding: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+        }
+
+        .color-filter-dot:hover {
+            border-color: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .color-filter-dot.active {
+            border-color: var(--primary-color);
+            transform: scale(1.2);
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .results-info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        .results-counter {
+            font-size: 9px;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px 30px;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .product-image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 140%;
+            background-color: #fcfcfc;
+            overflow: hidden;
+            border-radius: 6px;
+            /* Cantos sutilmente arredondados, super elegantes */
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            /* Uma bordinha quase imperceptível que dá acabamento */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            /* Sombra suave que dá a sensação de profundidade e leveza */
+            transition: var(--transition);
+        }
+
+        /* Um leve destaque ao passar o mouse para dar vida ao card */
+        .product-card:hover .product-image-container {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        /* --- ESTRUTURA DO CARROSSEL (EFEITO FADE SUAVE) --- */
+        .carousel-track {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-track img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            /* Todas ficam invisíveis por padrão */
+            filter: grayscale(15%);
+            transition: opacity 0.8s ease-in-out, filter 0.4s ease;
+            cursor: zoom-in;
+        }
+
+        /* A imagem ativa recebe opacidade total e fica na frente */
+        .carousel-track img.active-img {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .product-card:hover .carousel-track img.active-img {
+            filter: grayscale(0%);
+        }
+
+        /* --- INDICADORES DO CARROSSEL (ESTILO INSTAGRAM STORIES) --- */
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            padding: 0 15px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .indicator-bar {
+            flex: 1;
+            max-width: 25px;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 2px;
+            transition: background-color 0.4s ease;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .indicator-bar.active {
+            background-color: #ffffff;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-arrow {
+            display: none !important;
+        }
+
+        /* --- ETIQUETAS E BADGES --- */
+        .badge {
+            position: absolute;
+            padding: 6px 14px;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .badge-sale {
+            background-color: #ffffff;
+            color: #000000;
+            top: 15px;
+            left: 15px;
+            border: 1px solid #000000;
+        }
+
+        .badge-sold {
+            background-color: #000000;
+            color: #ffffff;
+            top: 15px;
+            left: 15px;
+            font-weight: 300;
+        }
+
+        .badge-discount {
+            background-color: #d93025;
+            color: #ffffff;
+            top: 15px;
+            right: 15px;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 16px;
+            letter-spacing: 0.05em;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 4px 12px rgba(217, 48, 37, 0.2);
+        }
+
+        .badge-destaque {
+            background-color: #000000;
+            color: #ffffff;
+            top: 15px;
+            left: 15px;
+            font-size: 9px;
+            font-weight: 600;
+            padding: 5px 10px;
+            letter-spacing: 0.08em;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .badge-novidade {
+            background-color: #d4af37;
+            color: #ffffff;
+            top: 15px;
+            left: 15px;
+            font-size: 9px;
+            font-weight: 600;
+            padding: 5px 10px;
+            letter-spacing: 0.08em;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .product-info {
+            padding: 12px 0 0 0;
+            /* Reduzido de 20px para 12px para aproximar da foto */
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-category {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            font-weight: 400;
+        }
+
+        .product-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 21px;
+            font-weight: 400;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .product-all-sizes {
+            font-size: 12px;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .product-all-colors {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-weight: 500;
+            text-transform: capitalize;
+            letter-spacing: 0.03em;
+        }
+
+        /* --- BOLINHAS DE CORES (Formato Circular Perfeito com Zoom Equilibrado) --- */
+        .cores-container {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding: 6px 2px;
+            overflow-x: auto;
+            align-items: center;
+        }
+
+        .cor-dot {
+            width: 46px;
+            height: 46px;
+            min-width: 46px;
+            min-height: 46px;
+            border-radius: 50% !important;
+            background-size: 145%;
+            /* Zoom inteligente que preenche a bolinha inteira sem cortes drásticos nas laterais */
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            outline: none;
+        }
+
+        .cor-dot:hover {
+            border-color: #888888;
+            transform: scale(1.05);
+        }
+
+        /* Contorno preto limpo ao clicar/selecionar */
+        .cor-dot.active {
+            border: 3px solid #000000 !important;
+            transform: scale(1.1);
+            box-shadow: none !important;
+        }
+
+        .product-size {
+            font-size: 10px;
+            /* Rótulos um pouco menores e mais delicados */
+            letter-spacing: 0.08em;
+            color: #888888;
+            /* Cinza suave para os títulos "Cor:" e "Tam.:" */
+            margin-bottom: 16px;
+            /* Espaçamento exato até a linha do preço */
+            font-weight: 500;
+            text-transform: uppercase;
+            border: none;
+            /* Remove a linha dupla indesejada! */
+            line-height: 1.8;
+            background-color: transparent;
+            padding: 0;
+        }
+
+        .product-size b {
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 11px;
+            /* Valor da cor mais destacado */
+        }
+
+        .destaque-tamanho {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: 0.05em;
+        }
+
+        /* --- CONTAINER DE PREÇOS (Estilo Grife Premium) --- */
+        .product-price-container {
+            margin-top: 6px;
+            /* Respiro após o título da peça */
+            margin-bottom: 18px;
+            /* Respiro antes das bolinhas de cores */
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            /* Diminui o espaço geral para controlar linha a linha */
+        }
+
+        /* 1. Preço Parcelado (Em destaque) */
+        .price-installments {
+            font-size: 19px;
+            /* Um pontinho maior para dar bastante força ao número */
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.02em;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            /* <-- O respiro ideal perfeito entre o número e o texto! */
+        }
+
+        .price-installments .price-small {
+            font-size: 9px;
+            /* Micro-cópia delicada */
+            font-weight: 500;
+            color: #999999;
+            /* Cinza um tom mais claro e elegante */
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            /* Letras mais afastadas dão muito ar de luxo */
+            margin-bottom: 8px;
+            /* Empurra o "R$ 189,90" um pouco mais para baixo */
+        }
+
+        /* 2. Valor Total (Sutil) */
+        .price-total {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        /* 3. Valor no PIX (Com respiro superior) */
+        .price-pix {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1b4b27;
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+            margin-top: 2px;
+            /* Dá um leve distanciamento do valor total */
+        }
+
+        .price-pix .price-small {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #2e7d32;
+        }
+
+        /* --- PREÇOS NO MODAL DE ZOOM (Acompanhando a nova identidade) --- */
+        .modal-price-total {
+            font-size: 14px;
+            color: #a0a0a0;
+            margin-bottom: 8px;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .modal-price-installments {
+            font-size: 22px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .modal-price-installments .price-small {
+            font-size: 11px;
+            font-weight: 400;
+            color: #cccccc;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .modal-price-pix {
+            font-size: 17px;
+            font-weight: 500;
+            color: #4caf50;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 6px;
+        }
+
+        .modal-price-pix .price-small {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        @keyframes shimmer-effect {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 200%;
+            }
+        }
+
+        .btn-whatsapp {
+            position: relative;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 22px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-align: center;
+            transition: all 0.25s ease;
+            border: none;
+            border-radius: 50px;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2), inset 0 -2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-whatsapp::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+            transform: skewX(-25deg);
+            animation: shimmer-effect 4.5s infinite;
+            z-index: 2;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #222222;
+            transform: translateY(-1px);
+            box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.3), inset 0 -3px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-btn-whatsapp {
+            position: relative;
+            display: block;
+            width: 100%;
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            padding: 12px 20px;
+            /* Botão mais fino */
+            font-size: 11px;
+            /* Fonte levemente menor */
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-align: center;
+            transition: all 0.25s ease;
+            border: 1px solid #000000;
+            border-radius: 50px;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-btn-whatsapp::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.12), transparent);
+            transform: skewX(-25deg);
+            animation: shimmer-effect 3.5s infinite;
+            z-index: 2;
+        }
+
+        .product-card.sold-item {
+            opacity: 0.5;
+        }
+
+        .btn-sold,
+        .modal-btn-whatsapp.btn-sold {
+            background: #f0f0f0 !important;
+            color: var(--sold-color) !important;
+            border-color: var(--sold-color) !important;
+            cursor: not-allowed;
+            transform: none !important;
+            box-shadow: none !important;
+            border-radius: 50px !important;
+        }
+
+        .btn-sold::after,
+        .modal-btn-whatsapp.btn-sold::after {
+            display: none !important;
+        }
+
+        .scroll-status {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 30px;
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-top: 1px solid var(--border-color);
+            display: none;
+        }
+
+        /* --- MODAL DE ZOOM (CORREÇÃO DEFINITIVA PC E CELULAR) --- */
+        .modal-overlay {
+            display: flex;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(8px);
+            justify-content: center;
+            align-items: flex-start;
+            /* Permite rolar a tela se o PC for pequeno */
+            overflow-y: auto;
+            /* A rolagem fica na tela toda, não só na foto */
+            padding: 40px 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+        }
+
+        .modal-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            position: relative;
+            margin: auto;
+            /* Mágica para centralizar perfeitamente */
+            width: 100%;
+            max-width: 420px;
+            /* Largura ideal para o computador não espremer o texto */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: scale(0.95);
+            opacity: 0;
+            transition: transform 0.4s ease, opacity 0.35s ease;
+        }
+
+        .modal-overlay.show .modal-content {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .modal-content img {
+            width: 100%;
+            max-height: 55vh;
+            /* Altura máxima da foto */
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+        /* --- Botão 'X' Minimalista e Elegante --- */
+        .modal-close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            /* Remove o fundo */
+            color: #ffffff;
+            font-size: 42px;
+            /* Fica maior, porém mais delicado */
+            font-weight: 200;
+            /* Deixa o traço bem fininho */
+            border: none;
+            /* Remove a borda redonda */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100000;
+            opacity: 0.5;
+            /* Fica meio transparente por padrão */
+            transition: opacity 0.3s ease;
+            line-height: 0.8;
+            padding-bottom: 4px;
+        }
+
+        .modal-close:hover {
+            background: transparent;
+            /* Mantém sem fundo */
+            opacity: 1;
+            /* Fica 100% branco ao passar o mouse */
+            color: #ffffff;
+            transform: none;
+            /* Remove o efeito de pular na tela */
+        }
+
+        .modal-info-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+            /* Margem superior reduzida */
+            width: 100%;
+            max-width: 400px;
+            padding-bottom: 10px;
+            /* Margem inferior reduzida */
+        }
+
+        .modal-caption {
+            color: #ffffff;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            letter-spacing: 0.05em;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .modal-prices {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        .placeholder-svg {
+            background-color: #fcfcfc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #ffffff;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer p {
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        footer a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #000000;
+            padding-bottom: 2px;
+            transition: var(--transition);
+        }
+
+        @media (max-width: 1100px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px 20px;
+            }
+
+            .container {
+                padding: 0 20px 40px 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px 10px;
+            }
+
+            header {
+                padding: 12px 15px 5px 15px;
+            }
+
+            header .logo-loja {
+                max-width: 110px;
+            }
+
+            header::after {
+                margin: 10px auto 0 auto;
+                width: 40px;
+            }
+
+            .controls-wrapper {
+                padding: 0 0 8px 0;
+                margin-bottom: 10px;
+            }
+
+            .search-filter-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 6px;
+                margin-bottom: 8px;
+            }
+
+            .search-box {
+                max-width: 100%;
+            }
+
+            .search-box input {
+                padding: 8px 12px 8px 35px;
+                font-size: 12px;
+            }
+
+            .status-filters {
+                justify-content: stretch;
+            }
+
+            .status-btn {
+                flex: 1;
+                text-align: center;
+                padding: 8px 4px;
+                font-size: 11px;
+            }
+
+            .category-tab {
+                padding: 6px 14px;
+                font-size: 11px;
+            }
+
+            .sizes-container {
+                margin-top: 6px;
+                padding-top: 6px;
+                gap: 6px;
+            }
+
+            .size-label {
+                font-size: 11px;
+            }
+
+            .size-tab {
+                padding: 6px 12px;
+                font-size: 11px;
+            }
+
+            .results-info-row {
+                margin-top: 15px;
+                margin-bottom: 12px;
+            }
+
+            .results-counter {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px 40px 12px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px 12px;
+            }
+
+            .product-title {
+                font-size: 18px;
+                margin-bottom: 6px;
+            }
+
+            .product-info {
+                padding: 12px 0 0 0;
+            }
+
+            .product-all-sizes {
+                font-size: 13px;
+                margin-bottom: 4px;
+            }
+
+            .product-all-colors {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            .product-size {
+                font-size: 11px;
+                margin-bottom: 14px;
+                padding: 7px 11px;
+            }
+
+            .destaque-tamanho {
+                font-size: 12px;
+            }
+
+            /* Ajuste fino da área de preços no celular */
+            .product-price-container {
+                padding-top: 10px;
+                gap: 6px;
+            }
+
+            .price-installments {
+                font-size: 17px;
+                /* Tamanho proporcional para tela de celular */
+            }
+
+            /* Micro-cópia em caixa alta (típico de marcas de luxo) */
+
+            .price-installments .price-small {
+                font-size: 9px;
+            }
+
+            .price-pix {
+                font-size: 16px;
+            }
+
+            .price-pix .price-small {
+                font-size: 9px;
+            }
+
+            .price-current {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            .price-old {
+                font-size: 13px;
+            }
+
+            .product-price-container {
+                gap: 4px;
+                margin-bottom: 14px;
+            }
+
+            .product-price-box {
+                gap: 6px;
+            }
+
+            .btn-whatsapp {
+                padding: 12px 14px;
+                font-size: 11px;
+                letter-spacing: 0.1em;
+            }
+
+            .badge {
+                padding: 5px 9px;
+                font-size: 10px;
+                top: 10px;
+            }
+
+            .badge-sale,
+            .badge-sold {
+                left: 10px;
+            }
+
+            .badge-discount {
+                top: 8px;
+                right: 8px;
+                left: auto;
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+
+            .badge-destaque {
+                top: 8px;
+                left: 8px;
+                font-size: 9px;
+                padding: 4px 8px;
+            }
+        }
+
+        /* --- ESTILOS EXCLUSIVOS DA LIQUIDAÇÃO --- */
+        .sale-price-box {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-top: 14px;
+            margin-bottom: 20px;
+        }
+
+        .price-old {
+            font-size: 14px;
+            color: #999999;
+            text-decoration: line-through;
+            font-weight: 600;
+        }
+
+        .price-current {
+            font-size: 26px;
+            font-weight: 700;
+            color: #000000;
+            letter-spacing: -0.02em;
+        }
+
+        .btn-liquidacao {
+            color: #d93025 !important;
+            font-weight: 700 !important;
+        }
+
+        .btn-liquidacao.active {
+            background-color: #d93025 !important;
+            color: #ffffff !important;
+            border-color: #d93025 !important;
+        }
+    </style>
+    <!-- Importando o Firebase (Versão Modular) -->
+    <!-- Importando o Firebase (Versão Modular) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getFirestore, collection, getDocs, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB0hatVfple7r7kbNqbaQ52Q52Su6yMvh0",
+            authDomain: "catalogo-unna.firebaseapp.com",
+            projectId: "catalogo-unna",
+            storageBucket: "catalogo-unna.firebasestorage.app",
+            messagingSenderId: "38681293793",
+            appId: "1:38681293793:web:87a04deeac99f7aa2118a0"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // TORNA AS FUNÇÕES DISPONÍVEIS GLOBALMENTE PARA O RESTO DO SITE
+        window.db = db;
+        window.collection = collection;
+        window.getDocs = getDocs;
+        window.doc = doc;
+        window.setDoc = setDoc;
+    </script>
+
+</head>
+
+<body>
+
+    <div class="marquee-bar">
+        <div class="marquee-content">
+            <span>• CATÁLOGO UNNA • CLIQUE NO BOTÃO DE COMPRAR PARA GARANTIR O SEU LOOK PELO WHATSAPP! •</span>
+            <span>• CATÁLOGO UNNA • CLIQUE NO BOTÃO DE COMPRAR PARA GARANTIR O SEU LOOK PELO WHATSAPP! •</span>
+        </div>
+    </div>
+
+    <header>
+        <img src="fotos/logo_unna.jpg" alt="Logo UNNA" class="logo-loja" onerror="substituirPorPlaceholder(this)">
+        <h2 class="catalogo-subtitle">Catálogo - UNNA</h2>
+    </header>
+
+    <div class="container">
+        <div class="controls-wrapper">
+            <!-- LINHA 1: BUSCA E BOTÕES PRINCIPAIS -->
+            <div class="search-filter-row">
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="search-input" placeholder="Buscar por peça ou tamanho..."
+                        oninput="lidarBusca(this.value)">
+                </div>
+
+                <div class="status-filters" style="display: flex; width: 100%;">
+                    <button class="status-btn active" id="status-todos" style="flex: 1; width: 50%;"
+                        onclick="filtrarStatus('todos')">Principal</button>
+                    <button class="status-btn btn-liquidacao" id="status-liquidacao" style="flex: 1; width: 50%;"
+                        onclick="abrirLiquidacao()">💥 LIQUIDAÇÃO</button>
+                </div>
+            </div> <!-- ESSA É A DIV QUE FALTAVA PARA FECHAR A LINHA CORRETAMENTE! -->
+
+            <!-- LINHA 2: CATEGORIAS -->
+            <div class="categories-tabs" id="categories-tabs"></div>
+
+            <!-- LINHA 3: CORES -->
+            <div class="sizes-container" style="border-top: none; margin-top: 5px; padding-top: 5px;">
+                <span class="size-label">Cor:</span>
+                <div class="sizes-tabs" id="colors-tabs"></div>
+            </div>
+
+            <!-- LINHA 4: TAMANHOS -->
+            <div class="sizes-container">
+                <span class="size-label">Tamanho:</span>
+                <div class="sizes-tabs" id="sizes-tabs"></div>
+            </div>
+        </div>
+
+        <div class="results-info-row">
+            <div class="results-counter" id="results-counter">Carregando catálogo...</div>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+
+        <div id="scroll-status" class="scroll-status">Carregando mais peças...</div>
+    </div>
+
+    <div id="image-modal" class="modal-overlay" onclick="fecharModal(event)">
+        <div class="modal-content">
+            <span class="modal-close" onclick="fecharModal(event)">&times;</span>
+            <img id="modal-img" src="" alt="Peça ampliada">
+            <div class="modal-info-box">
+                <div id="modal-caption" class="modal-caption"></div>
+                <div id="modal-prices" class="modal-prices"></div>
+                <div id="modal-btn-container" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 UNNA Modas.</p>
+    </footer>
+
+    <script>
+        const WHATSAPP_NUMERO = "5579999749647";
+
+
+        let modoLiquidacao = false;
+
+        function abrirLiquidacao() {
+            modoLiquidacao = true;
+
+            // 1. Atualiza os botões do topo
+            document.querySelectorAll('.status-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('status-liquidacao').classList.add('active');
+
+            // 2. Esconde as abas de categorias e tamanhos temporariamente
+            document.getElementById('categories-tabs').style.display = 'none';
+            document.getElementById('colors-tabs').parentElement.style.display = 'none';
+            document.getElementById('sizes-tabs').parentElement.style.display = 'none';
+
+            // 3. Limpa o catálogo normal e avisa quantos produtos tem na promo
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+            document.getElementById('results-counter').innerHTML = `<span style="color: #d93025; font-weight: 700;">💥 MEGA LIQUIDAÇÃO:</span> ${produtosLiquidacao.length} peças imperdíveis!`;
+            document.getElementById('scroll-status').style.display = 'none';
+
+            // 4. Monta os cards exclusivos da liquidação com o botão em vermelho
+            produtosLiquidacao.forEach(p => {
+
+                // LÊ A FOTO E OS TAMANHOS DO NOVO FORMATO DE VARIANTES
+                const imagemPrincipal = p.variantes[0].imagem;
+                const tamanhosDisponiveis = [...new Set(p.variantes.filter(v => !v.vendido).map(v => v.tamanho))].join(', ');
+                const tamanhosTexto = tamanhosDisponiveis || 'Esgotado';
+                const produtoTotalmenteEsgotado = p.variantes.every(v => v.vendido);
+
+                const card = document.createElement('div');
+                card.className = `product-card ${produtoTotalmenteEsgotado ? 'sold-item' : ''}`;
+
+                const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent("Olá, UNNA! Quero garantir a oferta: " + p.nome + " (Tam: " + tamanhosTexto + ") por R$ " + p.por + " na liquidação!")}`;
+
+                card.innerHTML = `
+                    <div class="product-image-container">
+                        ${!produtoTotalmenteEsgotado ? `<span class="badge badge-discount">-${p.desconto}%</span>` : ''}
+                        <span class="badge badge-sold" style="display: ${produtoTotalmenteEsgotado ? 'block' : 'none'};">ESGOTADO</span>
+                        
+                        <div class="carousel-track">
+                            <img src="${imagemPrincipal}" loading="lazy" class="active-img" alt="${p.nome}" onerror="substituirPorPlaceholder(this)">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${p.nome}</h3>
+                        
+                        <!-- Preços contendo o valor de risco (de) e o valor atual -->
+                        <div class="product-price-container">
+                            <div class="price-total" style="text-decoration: line-through; color: #999999; font-size: 13px;">R$ ${p.de}</div>
+                            <div class="price-installments" style="font-size: 22px; font-weight: 700; color: #000000;">R$ ${p.por}</div>
+                        </div>
+
+                        <!-- Estrutura de tamanho e espaçamento -->
+                        <div>
+                            <div class="product-size">
+                                <div style="margin-bottom: 8px; font-size: 11px;">Tamanho: <b style="color: var(--text-main); font-size: 11px; font-weight: 700;">${tamanhosTexto}</b></div>
+                            </div>
+                        </div>
+
+                        <!-- Botão de comprar em vermelho -->
+                        <div style="margin-top: auto;">
+                            ${produtoTotalmenteEsgotado ?
+                        '<button class="btn-whatsapp btn-sold" disabled>Indisponível</button>' :
+                        `<a href="${linkWhats}" target="_blank" class="btn-whatsapp" style="background-color: #d93025; border-color: #d93025;">Comprar</a>`
+                    }
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+        // --- TRUQUE INTELIGENTE: GARANTE QUE O CATÁLOGO VOLTE AO NORMAL SE ELA SAIR DA LIQUIDAÇÃO ---
+        const originalFiltrarStatus = filtrarStatus;
+        filtrarStatus = function (status) {
+            if (modoLiquidacao) {
+                modoLiquidacao = false;
+                document.getElementById('categories-tabs').style.display = 'flex';
+                document.getElementById('colors-tabs').parentElement.style.display = 'flex';
+                document.getElementById('sizes-tabs').parentElement.style.display = 'flex';
+                document.getElementById('status-liquidacao').classList.remove('active');
+            }
+            originalFiltrarStatus(status);
+        };
+
+        const originalLidarBusca = lidarBusca;
+        lidarBusca = function (valor) {
+            if (modoLiquidacao) {
+                document.getElementById('status-todos').click();
+            }
+            originalLidarBusca(valor);
+        };
+
+        function calcularDesconto(valorStr) {
+            let valorNum = parseFloat(valorStr.replace('.', '').replace(',', '.'));
+            let valorComDesconto = valorNum * 0.90;
+            // Pega a parte inteira do valor com desconto e força os centavos para ,90
+            let valorInteiro = Math.floor(valorComDesconto);
+            return valorInteiro + ',90';
+        }
+
+        function calcularParcelamento(valorStr) {
+            // Converte o valor em texto "199,90" para número decimal
+            let valorNum = parseFloat(valorStr.replace('.', '').replace(',', '.'));
+            let parcelaMinima = 89.90;
+
+            // Calcula o máximo de parcelas possíveis
+            let maxParcelas = Math.floor(valorNum / parcelaMinima);
+
+            // Garante que será no mínimo 1 parcela (se a peça for mais barata que 89,90)
+            if (maxParcelas < 1) maxParcelas = 1;
+
+            // Calcula o valor exato da parcela e formata para o padrão R$
+            let valorParcela = (valorNum / maxParcelas).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+            // O CSS agora faz a quebra de linha e gruda o texto
+            return `${maxParcelas}x de R$ ${valorParcela} <span class="price-small">sem juros</span>`;
+        }
+
+        const ITENS_POR_CARREGAMENTO = 24;
+        let indiceExibicaoAtual = 0;
+        let carregandoMais = false;
+
+        let categoriaAtual = 'Todos';
+        let tamanhoAtual = 'Todos';
+        let corAtual = 'Todas';
+        let termoPesquisa = '';
+        let statusFiltro = 'todos';
+        let produtosFiltradosGlobais = [];
+
+        window.estadoVariantes = {};
+        window.estadoFotosCard = {};
+        window.intervalosCarrossel = {};
+
+        function formatarTamanhosOrdenados(listaItens) {
+            let itensExpandidos = [];
+
+            const ordemLetras = {
+                'PP': 1, 'P': 2, 'M': 3, 'G': 4, 'GG': 5,
+                'XG': 6, 'EG': 7, 'EGG': 8, 'G1': 9, 'G2': 10,
+                'G3': 11, 'G4': 12, 'ÚNICO': 13
+            };
+
+            listaItens.forEach(item => {
+                let tamStr = String(item.tamanho || item).trim();
+                let partes = tamStr.split(/[\,\/\-\s]+/);
+
+                partes.forEach(p => {
+                    let limpo = p.trim().toUpperCase();
+                    if (limpo !== '') {
+                        let num = parseInt(limpo);
+                        if (!isNaN(num)) {
+                            if (!itensExpandidos.includes(num)) itensExpandidos.push(num);
+                        } else {
+                            if (!itensExpandidos.includes(limpo)) itensExpandidos.push(limpo);
+                        }
+                    }
+                });
+            });
+
+            itensExpandidos.sort((a, b) => {
+                let numA = parseInt(a);
+                let numB = parseInt(b);
+
+                if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
+
+                let pesoA = ordemLetras[String(a).toUpperCase()] || 99;
+                let pesoB = ordemLetras[String(b).toUpperCase()] || 99;
+
+                if (pesoA !== pesoB) return pesoA - pesoB;
+
+                return String(a).localeCompare(String(b));
+            });
+
+            return itensExpandidos.join('/');
+        }
+        function gerarHtmlTamanhosCor(produto, corObj) {
+            let tamanhosMap = {};
+
+            // 1. Olha direto na lista "variantes" que o robô atualiza no Firebase
+            produto.variantes.forEach(v => {
+                let corNomeClean = v.cor.split('(')[0].trim().toLowerCase();
+                let corObjClean = corObj.corOriginal.split('(')[0].trim().toLowerCase();
+
+                // Confere se pertence à cor correta
+                if (corNomeClean === corObjClean) {
+                    let partes = String(v.tamanho || '').split(/[\,\/\-\s]+/);
+                    partes.forEach(p => {
+                        let limpo = p.trim().toUpperCase();
+                        if (limpo !== '') {
+                            // Se qualquer variante desse tamanho estiver vendida, marca true
+                            if (tamanhosMap[limpo] === undefined) {
+                                tamanhosMap[limpo] = (v.vendido === true);
+                            } else if (v.vendido === false) {
+                                tamanhosMap[limpo] = false; // Se houver alguma unidade livre, destrava
+                            }
+                        }
+                    });
+                }
+            });
+
+            // 2. Ordena corretamente os tamanhos
+            const ordemLetras = {
+                'PP': 1, 'P': 2, 'M': 3, 'G': 4, 'GG': 5,
+                'XG': 6, 'EG': 7, 'EGG': 8, 'G1': 9, 'G2': 10,
+                'G3': 11, 'G4': 12, 'ÚNICO': 13
+            };
+
+            let tamanhosArray = Object.keys(tamanhosMap);
+            tamanhosArray.sort((a, b) => {
+                let numA = parseInt(a);
+                let numB = parseInt(b);
+                if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
+                let pesoA = ordemLetras[a] || 99;
+                let pesoB = ordemLetras[b] || 99;
+                if (pesoA !== pesoB) return pesoA - pesoB;
+                return a.localeCompare(b);
+            });
+
+            // 3. Monta o visual riscando o que estiver esgotado
+            let htmlParts = tamanhosArray.map(tam => {
+                return tamanhosMap[tam]
+                    ? `<span style="text-decoration: line-through; color: #d93025; font-size: 14px;" title="Tamanho Esgotado">${tam}</span>`
+                    : `<span>${tam}</span>`;
+            });
+
+            return htmlParts.join(' <span style="font-size:12px; color:#999;">/</span> ');
+        }
+
+        window.addEventListener('DOMContentLoaded', async () => {
+            // 1. Busca os produtos normais direto do Firebase
+            try {
+                const querySnapshot = await getDocs(collection(window.db, "produtos"));
+                window.produtosFirebase = [];
+                querySnapshot.forEach((doc) => {
+                    window.produtosFirebase.push({ idDoc: doc.id, ...doc.data() });
+                });
+
+                // Substitui a nossa antiga variável fixa pela do Firebase
+                window.produtos = window.produtosFirebase;
+            } catch (e) {
+                console.error("Erro ao carregar produtos do Firebase: ", e);
+            }
+
+            // 2. Busca os produtos da liquidação direto do Firebase
+            try {
+                const queryLiqSnapshot = await getDocs(collection(window.db, "produtosLiquidacao"));
+                window.produtosLiqFirebase = [];
+                queryLiqSnapshot.forEach((doc) => {
+                    window.produtosLiqFirebase.push({ idDoc: doc.id, ...doc.data() });
+                });
+
+                window.produtosLiquidacao = window.produtosLiqFirebase;
+            } catch (e) {
+                console.error("Erro ao carregar liquidação do Firebase: ", e);
+            }
+
+            // 3. Processa as variantes e monta o catálogo normalmente igual antes
+            produtos.forEach(p => {
+                const coresUnicasMap = {};
+                p.variantes.forEach(v => {
+                    let corNomeClean = v.cor.split('(')[0].trim().toLowerCase();
+                    if (!coresUnicasMap[corNomeClean]) {
+                        coresUnicasMap[corNomeClean] = {
+                            corOriginal: v.cor.split('(')[0].trim(),
+                            tamanhos: [],
+                            fotos: [],
+                            variantesOriginais: [],
+                            esgotada: true
+                        };
+                    }
+                    if (!coresUnicasMap[corNomeClean].tamanhos.includes(v.tamanho)) {
+                        coresUnicasMap[corNomeClean].tamanhos.push(v.tamanho);
+                    }
+                    coresUnicasMap[corNomeClean].fotos.push(v.imagem);
+                    coresUnicasMap[corNomeClean].variantesOriginais.push(v);
+
+                    if (v.vendido !== true) {
+                        coresUnicasMap[corNomeClean].esgotada = false;
+                    }
+                });
+
+                p.coresAgrupadas = Object.values(coresUnicasMap);
+            });
+
+            gerarAbasCategorias();
+            gerarAbasTamanhos();
+            gerarAbasCores();
+            atualizarFiltrosERenderizar();
+            configurarObservadorRolagem();
+        });
+
+        function obterCategoriasUnicas() {
+            const listasCategorias = ['Todos'];
+            produtos.forEach(p => {
+                let cat = p.nome.split(' ')[0].trim();
+                cat = cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase();
+                if (!listasCategorias.includes(cat) && cat.length > 0) {
+                    listasCategorias.push(cat);
+                }
+            });
+            return listasCategorias;
+        }
+
+        function gerarAbasCategorias() {
+            const containerAbas = document.getElementById('categories-tabs');
+            const categorias = obterCategoriasUnicas();
+            containerAbas.innerHTML = '';
+            categorias.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.className = `category-tab ${cat === 'Todos' ? 'active' : ''}`;
+                btn.textContent = cat;
+                btn.setAttribute('data-category', cat);
+                btn.onclick = () => filtrarCategoria(cat);
+                containerAbas.appendChild(btn);
+            });
+        }
+
+        function gerarAbasTamanhos() {
+            const containerTamanhos = document.getElementById('sizes-tabs');
+            const tamanhosPadrao = ['Todos', '44', '46', '48', '50', '52', '54', 'P', 'M', 'GG', 'G2', 'G3'];
+
+            containerTamanhos.innerHTML = '';
+            tamanhosPadrao.forEach(tam => {
+                const btn = document.createElement('button');
+                btn.className = `size-tab ${tam === 'Todos' ? 'active' : ''}`;
+                btn.textContent = tam;
+                btn.setAttribute('data-size', tam);
+                btn.onclick = () => filtrarTamanho(tam);
+                containerTamanhos.appendChild(btn);
+            });
+        }
+        function filtrarTamanho(tamanho) {
+            tamanhoAtual = tamanho;
+            // O '#sizes-tabs' garante que ele pinte apenas os botões de tamanho!
+            document.querySelectorAll('#sizes-tabs .size-tab').forEach(btn => {
+                if (btn.getAttribute('data-size') === tamanho) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+            atualizarFiltrosERenderizar();
+        }
+
+        function gerarAbasCores() {
+            const containerCores = document.getElementById('colors-tabs');
+            let coresData = [];
+
+            // Dicionário de Cores Sólidas
+            const mapaCoresHex = {
+                'Preto': '#000000',
+                'Branco': '#ffffff',
+                'Bordô': '#6d0c24',
+                'Azul marinho': '#1a2436',
+                'Verde oliva': '#556b2f',
+                'Azul': '#3a5f85',
+                'Marrom': '#6b4e31',
+                'Bege': '#e6d8c3',
+                'Fúcsia': '#d9027d',
+                'Rosa': '#f2a7b9',
+                'Verde': '#2d7a3e',
+                'Terracota': '#bd5a3a',
+                'Amarelo': '#eeb422',
+                'Vermelho': '#c21a1a',
+                'Azul petróleo': '#1e4d56',
+                'Cru': '#FFFAF0',
+            };
+
+            produtos.forEach(p => {
+                p.variantes.forEach(v => {
+                    let corLimpa = v.cor.split('(')[0].trim();
+                    corLimpa = corLimpa.charAt(0).toUpperCase() + corLimpa.slice(1).toLowerCase();
+
+                    if (!coresData.includes(corLimpa) && corLimpa !== '') {
+                        coresData.push(corLimpa);
+                    }
+                });
+            });
+
+            coresData.sort((a, b) => a.localeCompare(b));
+
+            containerCores.innerHTML = '';
+
+            // Botão "Todas"
+            const btnTodas = document.createElement('button');
+            btnTodas.className = `size-tab ${corAtual === 'Todas' ? 'active' : ''}`;
+            btnTodas.style.borderRadius = '50px';
+            btnTodas.textContent = 'Todas';
+            btnTodas.setAttribute('data-color', 'Todas');
+            btnTodas.onclick = () => filtrarCor('Todas');
+            containerCores.appendChild(btnTodas);
+
+            // Bolinhas sólidas
+            coresData.forEach(nomeCor => {
+                const btn = document.createElement('button');
+                btn.className = `color-filter-dot ${corAtual === nomeCor ? 'active' : ''}`;
+                btn.style.backgroundColor = mapaCoresHex[nomeCor] || '#cccccc';
+                btn.title = nomeCor; // Mostra o nome da cor ao passar o mouse
+                btn.setAttribute('data-color', nomeCor);
+                btn.onclick = () => filtrarCor(nomeCor);
+                containerCores.appendChild(btn);
+            });
+        }
+
+        function filtrarCor(cor) {
+            corAtual = cor;
+            // Gerencia a classe active tanto no botão "Todas" quanto nas bolinhas sólidas
+            document.querySelectorAll('#colors-tabs button').forEach(btn => {
+                if (btn.getAttribute('data-color') === cor) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+            atualizarFiltrosERenderizar();
+        }
+
+        function verificaTamanhoCompativel(produto, tamanhoBuscado) {
+            if (tamanhoBuscado === 'Todos') return true;
+            const tamBuscaUpper = tamanhoBuscado.toUpperCase();
+
+            return produto.variantes.some(v => {
+                let tamFormatado = formatarTamanhosOrdenados([v]);
+                return tamFormatado.toUpperCase().includes(tamBuscaUpper) || v.tamanho.toUpperCase().includes(tamBuscaUpper);
+            });
+        }
+
+        function filtrarCategoria(categoria) {
+            categoriaAtual = categoria;
+            document.querySelectorAll('.category-tab').forEach(btn => {
+                if (btn.getAttribute('data-category') === categoria) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+            atualizarFiltrosERenderizar();
+        }
+
+        function lidarBusca(valor) {
+            termoPesquisa = valor;
+            atualizarFiltrosERenderizar();
+        }
+
+        function filtrarStatus(status) {
+            statusFiltro = status;
+            document.querySelectorAll('.status-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`status-${status}`).classList.add('active');
+            atualizarFiltrosERenderizar();
+        }
+
+        function atualizarFiltrosERenderizar() {
+            // TRAVA DE SEGURANÇA: Se estiver no modo liquidação, não carrega os produtos normais!
+            if (modoLiquidacao) {
+                return;
+            }
+
+            produtosFiltradosGlobais = produtos.filter(p => {
+                const catItem = p.nome.split(' ')[0].charAt(0).toUpperCase() + p.nome.split(' ')[0].slice(1).toLowerCase();
+
+                const matchesCategoria = (categoriaAtual === 'Todos' || catItem === categoriaAtual);
+                const matchesTamanho = verificaTamanhoCompativel(p, tamanhoAtual);
+                const matchesCor = (corAtual === 'Todas') || p.variantes.some(v => v.cor.toLowerCase().includes(corAtual.toLowerCase()));
+                const matchesStatus = (statusFiltro === 'todos') || (statusFiltro === 'disponiveis' && !p.vendido) || (statusFiltro === 'vendidos' && p.vendido);
+
+                const matchesPesquisa = p.nome.toLowerCase().includes(termoPesquisa.toLowerCase()) ||
+                    p.variantes.some(v => v.tamanho.toLowerCase().includes(termoPesquisa.toLowerCase()) || v.cor.toLowerCase().includes(termoPesquisa.toLowerCase()));
+
+                return matchesCategoria && matchesTamanho && matchesCor && matchesPesquisa && matchesStatus;
+            });
+
+            produtosFiltradosGlobais.sort(() => Math.random() - 0.5);
+
+            produtosFiltradosGlobais.sort((a, b) => {
+                // 1º Esgotados vão sempre para o final
+                if (a.vendido !== b.vendido) return a.vendido ? 1 : -1;
+
+                // 2º Novidades aparecem primeiro no catálogo
+                const novidadeA = a.novidade ? 1 : 0;
+                const novidadeB = b.novidade ? 1 : 0;
+                if (novidadeA !== novidadeB) return novidadeB - novidadeA;
+
+                // 3º Destaques aparecem logo em seguida
+                const destaqueA = a.destaque ? 1 : 0;
+                const destaqueB = b.destaque ? 1 : 0;
+                return destaqueB - destaqueA;
+            });
+
+            indiceExibicaoAtual = 0;
+            document.getElementById('product-grid').innerHTML = '';
+
+            const totalProdutos = produtosFiltradosGlobais.length;
+            document.getElementById('results-counter').textContent = `Mostrando ${totalProdutos} item(ns) encontrado(s)`;
+
+            if (totalProdutos === 0) {
+                document.getElementById('product-grid').innerHTML = `<div class="no-results">Nenhuma peça encontrada nos critérios selecionados.</div>`;
+                document.getElementById('scroll-status').style.display = 'none';
+                return;
+            }
+
+            carregarMaisProdutos();
+        }
+
+        function trocarCor(event, produtoId, corIndex, dotElement) {
+            event.stopPropagation();
+
+            if (window.intervalosCarrossel[produtoId]) {
+                clearInterval(window.intervalosCarrossel[produtoId]);
+                window.intervalosCarrossel[produtoId] = null;
+            }
+
+            const indContainer = document.getElementById(`indicators-${produtoId}`);
+            if (indContainer) indContainer.style.display = 'none';
+
+            window.estadoVariantes[produtoId] = corIndex;
+
+            const produto = produtos.find(p => p.id === produtoId);
+            const corObj = produto.coresAgrupadas[corIndex];
+
+            let todasAsFotos = [];
+            produto.variantes.forEach(v => {
+                if (v.imagem && !todasAsFotos.includes(v.imagem)) todasAsFotos.push(v.imagem);
+            });
+            let fotoIndex = todasAsFotos.indexOf(corObj.fotos[0]);
+            if (fotoIndex === -1) fotoIndex = 0;
+
+            window.estadoFotosCard[produtoId] = fotoIndex;
+
+            const trackElement = document.getElementById(`track-${produtoId}`);
+            if (trackElement) {
+                const imagens = trackElement.querySelectorAll('img');
+                imagens.forEach((img, i) => {
+                    if (i === fotoIndex) img.classList.add('active-img');
+                    else img.classList.remove('active-img');
+                });
+            }
+
+            const badgeSold = document.getElementById(`badge-sold-${produtoId}`);
+            if (badgeSold) {
+                if (produto.vendido || corObj.esgotada) {
+                    badgeSold.style.display = 'block';
+                    badgeSold.textContent = produto.vendido ? 'ESGOTADO' : 'COR ESGOTADA';
+                } else {
+                    badgeSold.style.display = 'none';
+                }
+            }
+
+            // Atualiza o texto dinâmico da cor selecionada
+            let esgotadaTexto = corObj.esgotada ? ' <span style="color: #d93025; font-size: 10px; font-weight: 700;">(ESGOTADA)</span>' : '';
+            const textoCorElement = document.getElementById(`cor-selecionada-${produtoId}`);
+            if (textoCorElement) {
+                textoCorElement.innerHTML = `Cor: <b>${corObj.corOriginal}</b>${esgotadaTexto}`;
+            }
+
+            // GARANTE O CONTORNO PRETO NA BOLINHA CLICADA E REMOVE DAS OUTRAS
+            const container = dotElement.parentElement;
+            container.querySelectorAll('.cor-dot').forEach(d => d.classList.remove('active'));
+            dotElement.classList.add('active');
+
+            // BOTÃO COMPRAR VOLTA AO NORMAL
+            const btnContainer = document.getElementById(`btn-container-${produtoId}`);
+            if (btnContainer && !produto.vendido) {
+                const stringTamanhos = formatarTamanhosOrdenados(corObj.tamanhos);
+                const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${produto.nome}" na cor ${corObj.corOriginal} (Tamanhos: ${stringTamanhos}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
+                btnContainer.innerHTML = `<a id="btn-compra-${produtoId}" href="https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}" target="_blank" class="btn-whatsapp">Comprar</a>`;
+            }
+        }
+        function carregarMaisProdutos() {
+            // TRAVA DE SEGURANÇA DO SCROLL: Impede de carregar catálogo normal na aba de liquidação
+            if (modoLiquidacao) return;
+
+            if (carregandoMais || indiceExibicaoAtual >= produtosFiltradosGlobais.length) return;
+            const statusDiv = document.getElementById('scroll-status');
+            const grid = document.getElementById('product-grid');
+
+            const proximoLote = produtosFiltradosGlobais.slice(indiceExibicaoAtual, indiceExibicaoAtual + ITENS_POR_CARREGAMENTO);
+
+            proximoLote.forEach(p => {
+                if (window.estadoVariantes[p.id] === undefined) window.estadoVariantes[p.id] = 0;
+                if (window.estadoFotosCard[p.id] === undefined) window.estadoFotosCard[p.id] = 0;
+
+                let corIndex = window.estadoVariantes[p.id];
+                let corObj = p.coresAgrupadas[corIndex];
+
+                const stringTamanhosAtual = formatarTamanhosOrdenados(corObj.tamanhos);
+                const todosTamanhos = formatarTamanhosOrdenados(p.variantes);
+                const todasCores = [...new Set(p.coresAgrupadas.map(c => c.corOriginal))].join(', ');
+
+                // Gera as bolinhas de cor sem nenhuma marcada por padrão ao carregar
+                let carrosselCoresHtml = '';
+                if (p.coresAgrupadas.length > 1) {
+                    carrosselCoresHtml = '<div class="cores-container">';
+                    p.coresAgrupadas.forEach((c, index) => {
+                        // Nenhuma bolinha ganha a classe 'active' ao abrir o card
+                        carrosselCoresHtml += `<div class="cor-dot" style="background-image: url('${c.fotos[0]}')" onclick="trocarCor(event, ${p.id}, ${index}, this)" title="Cor: ${c.corOriginal}"></div>`;
+                    });
+                    carrosselCoresHtml += '</div>';
+                }
+
+                // --- GERA O TRILHO DESLIZANTE DE FOTOS E OS INDICADORES ---
+                let todasAsFotosCard = [];
+                p.variantes.forEach(v => {
+                    if (v.imagem && !todasAsFotosCard.includes(v.imagem)) todasAsFotosCard.push(v.imagem);
+                });
+
+                let trackImagensHtml = '';
+                todasAsFotosCard.forEach((foto, i) => {
+                    // A foto atual recebe a classe para já nascer visível
+                    let classeVisivel = i === window.estadoFotosCard[p.id] ? 'active-img' : '';
+                    trackImagensHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${p.nome}" onclick="abrirModal(${p.id})" onerror="substituirPorPlaceholder(this)">`;
+                });
+
+                let indicadoresHtml = '';
+                if (todasAsFotosCard.length > 1) {
+                    indicadoresHtml = `<div class="carousel-indicators" id="indicators-${p.id}">`;
+                    todasAsFotosCard.forEach((_, i) => {
+                        indicadoresHtml += `<div class="indicator-bar ${i === window.estadoFotosCard[p.id] ? 'active' : ''}"></div>`;
+                    });
+                    indicadoresHtml += `</div>`;
+                }
+
+                const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${p.nome}" na cor ${corObj.corOriginal} (Tamanhos disponíveis: ${stringTamanhosAtual}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
+                const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}`;
+
+                const card = document.createElement('div');
+                card.className = `product-card ${p.vendido ? 'sold-item' : ''}`;
+
+                // Lógica inteligente de exibir e riscar os tamanhos sem duplicar
+                let esgotadaTexto = corObj.esgotada ? ' <span style="color: #d93025; font-size: 10px; font-weight: 700;">(ESGOTADA)</span>' : '';
+
+                // NOVO: Lista de cores e tamanhos com visual limpo, elegante e leve
+                let listaCoresTamanhosHtml = p.coresAgrupadas.map(c => {
+                    let tamanhosCor = gerarHtmlTamanhosCor(p, c);
+                    let esgotadaStatus = c.esgotada ? ' <span style="color: #d93025; font-size: 9px; font-weight: 600;">(ESGOTADA)</span>' : '';
+                    return `<div style="margin-bottom: 5px; font-size: 11px; font-weight: 400; color: var(--text-muted); letter-spacing: 0.03em;">
+                        <span style="font-weight: 500; color: var(--text-main);">${c.corOriginal}</span>: <span class="destaque-tamanho" style="font-weight: 400; color: var(--text-muted);">${tamanhosCor}</span>${esgotadaStatus}
+                    </div>`;
+                }).join('');
+
+                card.innerHTML = `
+                   <div class="product-image-container">
+                        ${p.destaque ? '<span class="badge badge-destaque">⭐ DESTAQUE</span>' : ''}
+                        
+                        <span id="badge-sold-${p.id}" class="badge badge-sold" style="display: ${p.vendido || corObj.esgotada ? 'block' : 'none'}; ${p.destaque ? 'top: 42px;' : ''}">${p.vendido ? 'ESGOTADO' : 'COR ESGOTADA'}</span>
+                        
+                        ${p.novidade && !p.vendido && !corObj.esgotada ? '<span class="badge badge-novidade">✨ NOVIDADE</span>' : ''}
+                        
+                        ${p.desconto > 0 && !p.vendido ? `<span class="badge badge-discount" style="${p.novidade ? 'top: 50px;' : ''}">-${p.desconto}%</span>` : ''}
+                        
+                        <div class="carousel-track" id="track-${p.id}">
+                            ${trackImagensHtml}
+                        </div>
+                        
+                        ${indicadoresHtml}
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${p.nome}</h3>
+                        
+                        <!-- 1. PREÇOS -->
+                        <div class="product-price-container">
+                            <div class="price-installments">${calcularParcelamento(p.por)}</div>
+                            <div class="price-total">R$ ${p.por}</div>
+                            <div class="price-pix">R$ ${calcularDesconto(p.por)}</div>
+                        </div>
+
+                        <!-- 2. BOLINHAS DE CORES -->
+                        ${carrosselCoresHtml}
+                        
+                        <!-- 3. NOME DA COR ATUAL E A LISTA DE CORES/TAMANHOS -->
+                        <div>
+                            <div class="product-size">
+                                <div id="cor-selecionada-${p.id}" style="margin-bottom: 8px; font-size: 11px;">Cor: <b>${corObj.corOriginal}</b>${esgotadaTexto}</div>
+                                <div style="border-top: 1px dashed var(--border-color); padding-top: 8px; margin-top: 4px;">
+                                    ${listaCoresTamanhosHtml}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. BOTÃO DE COMPRAR -->
+                        <div id="btn-container-${p.id}" style="margin-top: auto;">
+                            ${p.vendido ?
+                        '<button class="btn-whatsapp btn-sold" disabled>Indisponível</button>' :
+                        `<a id="btn-compra-${p.id}" href="${linkWhats}" target="_blank" class="btn-whatsapp">Comprar</a>`
+                    }
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+                iniciarCarrosselAutomatico(p.id);
+            });
+
+            indiceExibicaoAtual += proximoLote.length;
+
+            if (indiceExibicaoAtual >= produtosFiltradosGlobais.length) {
+                statusDiv.textContent = '• VOCÊ CHEGOU AO FIM DO CATÁLOGO •';
+                statusDiv.style.display = 'block';
+            } else {
+                statusDiv.textContent = 'Carregando mais peças...';
+                statusDiv.style.display = 'block';
+            }
+
+            carregandoMais = false;
+        }
+
+        // --- FUNÇÃO PARA PASSAR TODAS AS FOTOS AUTOMATICAMENTE (DESLIZANDO) ---
+        function iniciarCarrosselAutomatico(produtoId) {
+            const produto = produtos.find(p => p.id === produtoId);
+            if (!produto) return;
+
+            let todasAsFotos = [];
+            produto.variantes.forEach(v => {
+                if (v.imagem && !todasAsFotos.includes(v.imagem)) {
+                    todasAsFotos.push(v.imagem);
+                }
+            });
+
+            if (todasAsFotos.length > 1) {
+                window.intervalosCarrossel[produtoId] = setInterval(() => {
+                    const trackElement = document.getElementById(`track-${produtoId}`);
+                    if (!trackElement) return;
+
+                    let indiceAtualFoto = window.estadoFotosCard[produtoId] || 0;
+                    indiceAtualFoto = (indiceAtualFoto + 1) % todasAsFotos.length;
+                    window.estadoFotosCard[produtoId] = indiceAtualFoto;
+
+                    // O segredo do efeito suave (Fade)
+                    const imagens = trackElement.querySelectorAll('img');
+                    imagens.forEach((img, i) => {
+                        if (i === indiceAtualFoto) img.classList.add('active-img');
+                        else img.classList.remove('active-img');
+                    });
+
+                    const indContainer = document.getElementById(`indicators-${produtoId}`);
+
+                    // --- MÁGICA: ATUALIZA A ETIQUETA DE ESGOTADO CONFORME A FOTO QUE ESTÁ PASSANDO ---
+                    const fotoAtualUrl = todasAsFotos[indiceAtualFoto];
+                    const corDestaFoto = produto.coresAgrupadas.find(c => c.fotos.includes(fotoAtualUrl));
+                    const badgeSold = document.getElementById(`badge-sold-${produtoId}`);
+
+                    if (badgeSold && !produto.vendido) {
+                        if (corDestaFoto && corDestaFoto.esgotada) {
+                            badgeSold.style.display = 'block';
+                            badgeSold.textContent = 'COR ESGOTADA';
+                        } else {
+                            badgeSold.style.display = 'none';
+                        }
+                    }
+
+                }, 4000);
+            }
+        }
+
+        function configurarObservadorRolagem() {
+            window.addEventListener('scroll', () => {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 400) {
+                    carregarMaisProdutos();
+                }
+            });
+        }
+
+        function substituirPorPlaceholder(imgElement) {
+            imgElement.onerror = null;
+            imgElement.parentElement.classList.add('placeholder-svg');
+            imgElement.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23d9d9d9' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' style='margin:auto;'><rect x='3' y='3' width='18' height='18' rx='2' ry='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg>";
+        }
+
+        function abrirModal(idProduto) {
+            const produto = produtos.find(p => p.id === idProduto);
+            if (!produto) return;
+
+            let corIndex = window.estadoVariantes[idProduto] || 0;
+            let corObj = produto.coresAgrupadas[corIndex];
+
+            // Puxa a foto certa considerando o trilho global
+            let todasAsFotos = [];
+            produto.variantes.forEach(v => {
+                if (v.imagem && !todasAsFotos.includes(v.imagem)) todasAsFotos.push(v.imagem);
+            });
+
+            let fotoIndex = window.estadoFotosCard[idProduto] || 0;
+            let fotoAtual = todasAsFotos[fotoIndex];
+
+            const stringTamanhosAtual = formatarTamanhosOrdenados(corObj.tamanhos);
+
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalCaption = document.getElementById('modal-caption');
+            const modalPrices = document.getElementById('modal-prices');
+            const modalBtnContainer = document.getElementById('modal-btn-container');
+
+            modalImg.src = fotoAtual;
+            // 1. Título, Cor e Tamanho mais compactos
+            modalCaption.innerHTML = `
+                <div style="font-size: 20px; line-height: 1.1; margin-bottom: 4px;">${produto.nome}</div>
+                <div style="font-family: 'Inter', sans-serif; font-size: 10px; color: #a0a0a0; letter-spacing: 0.1em; text-transform: uppercase;">
+                    <b style="color: #ffffff; font-weight: 600;">Cor:</b> ${corObj.corOriginal} &nbsp;•&nbsp; <b style="color: #ffffff; font-weight: 600;">Tam:</b> ${stringTamanhosAtual}
+                </div>
+                <div style="width: 40px; height: 1px; background-color: rgba(255,255,255,0.2); margin: 10px auto;"></div>
+            `;
+
+            // 2. Preços reduzidos com menor espaçamento
+            modalPrices.innerHTML = `
+                <div style="display: flex; flex-direction: column; align-items: center; width: 100%; margin-bottom: 10px;">
+                    <div class="modal-price-installments" style="margin-bottom: 2px; font-size: 18px;">
+                        ${calcularParcelamento(produto.por)}
+                    </div>
+                    <div class="modal-price-total" style="font-size: 11px; margin-bottom: 6px; color: #888;">
+                        Total: R$ ${produto.por}
+                    </div>
+                    <div class="modal-price-pix" style="background: rgba(76, 175, 80, 0.15); padding: 5px 14px; border-radius: 4px; border: 1px solid rgba(76, 175, 80, 0.25); font-size: 14px;">
+                        R$ ${calcularDesconto(produto.por)} <span class="price-small" style="color: #a5d6a7; font-size: 9px; margin-left: 5px;">NO PIX</span>
+                    </div>
+                </div>
+            `;
+
+            const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${produto.nome}" na cor ${corObj.corOriginal} (Tamanhos disponíveis: ${stringTamanhosAtual}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
+            const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}`;
+
+            if (produto.vendido) {
+                modalBtnContainer.innerHTML = `<button class="modal-btn-whatsapp btn-sold" disabled>Indisponível</button>`;
+            } else {
+                modalBtnContainer.innerHTML = `<a href="${linkWhats}" target="_blank" class="modal-btn-whatsapp">COMPRAR AGORA NO WHATSAPP</a>`;
+            }
+
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function fecharModal(event) {
+            if (!event || event.target.id === 'image-modal' || event.target.classList.contains('modal-close')) {
+                const modal = document.getElementById('image-modal');
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                fecharModal();
+            }
+        });
+    </script>
+    <!-- 1. CARREGA O ARQUIVO COM A SUA LISTA DE PRODUTOS -->
+    <!-- <script src="produtos.js"></script> -->
+
+</body>
+
+</html>

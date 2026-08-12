@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "catalogo-unna",
+  "private_key_id": "3ba43fec66d0a393f5aa23ee5aee20e3ce4aabce",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDvJfpoogoDp3CI\naaF6zCZZDHufnimylkq3yicloybof20ka2X7xDh1VGWZgEUtbL0lQdTrpikhpZex\n16cbUljb/34xMefGGcbUdKSq2mgpWLsYZuOuBo8zRXDxOl1+i7LwkIaT5GMmeggb\nQCBbmOFABYFRHh65aaKgHXFXbEcW24mXelQq6ZrmKySu3V7YIsUMd2KIPBSI53h4\nNrHKO2K7+odjw6nQ6cdaZCvrEkoVdp43q9e/c+jZaAnEmEuTTWxCVEkCpVTRYAHx\n1HsGCzmvp1ipdfju2UZgNtFvsfK22TklpVzh/WkOuIcIKMbXHD8+aO6Zi6+hQqn2\nkJQ0Fuh3AgMBAAECggEAJloqr/K4n2sQCYMYh1chGUEpZujtr/sZTXiT0Z3kz1Qh\niT3Ys559csI6WaUwCD+65QmLNNAczY1pvUwj5lD3o4R0VOhiJADImb7Wak4EzAiz\nrI9SQ9DqezhPi2gm9p8/Ga8GiMY6Pmvt9ozQrk/fY9iI1hz5+Ws0TkWagoDWCmyT\nCdwwu2MgQouIsqG3U3B5JWRZjm0+jnU1RFXUkCl7Hk/AvPAbv0w/rr1Ea2oPHJ/Y\n/B5ybfXmlOODuxjSZ314tjrm7l3TtfHg9bcStDBJ/VHmbmDj9mW7ycBBNq0kLFoH\n/4pvYyEYAkqPt+8Ga4eRNSkDVvr6DPtY3oSeohocGQKBgQD99rrtRQfOezyw09uS\n8oZ4Z1+TZH/tghb+jICGMuy/leZNw/rwwcdYvvYbl4k4i5GT/rEAT7sRKjfetiqk\n8hRFMN5l8MSRuCyVHQqDmI2VgQKujzHDZmuOUH8U7XNux7hiXLYZbWzCpC9vxaMi\nUCAkeXGvJ6DO/E7ebyqOUn0/mQKBgQDxENa4zUKbesXXySKGk3yH/7woXbbkRCoE\nPsSSb6gHtpQCwSlV//8aKAi4mEKgWXxDmOBgR0KuCdHQHYt7A63DPRog/ONH/Vu0\n12sxp94RXIf4LGFnwT7YyjqqjAC7hZdHxd4CD/YhtTSTGdfmrS+BSLWd7Wjl0TZP\nfgZ4KiiyjwKBgAeGhid9wit2L2g1/u2tzhpHRefCNKA/GJtWYoCXhbhvorFvO0Jj\nG5sfnX9X0DMiv5+ZDnmp4ysxCxLIZx8YJU2fkxeGOOzwfjG0+JjJrnhdqEyv5ZOa\nt1kyPXHLT35a4LXZdXPvcCecYeN4AcuEgE9UYfAExpkblOK2fJZXD2sRAoGASw9J\nLGWNFchWjefsviZyIg540cDMT6sBwiyhHE9z7GLnFyx56HM7RTOt83xFUpRKYunZ\nA2Fs26/nCnwIkBcHJcGCvz6+rg2vXlGs6NsyBAnhtF5tPdcn8GyXc78AA2OHRSvR\nAqdhpgE8C4mCdir6nbC8DB5+CQDpfjrpXMUTwvUCgYEAqll9Ze+BkxXoWhklVo1P\nFo4RJGr3ubxjqIEt2htonPUrNAh/L11hBOGZrh4um1JWUeph/0l/RGUypQX9/vbV\nZqhWb5T22snZ27Jy6lUxx/INq9Z7HDABe16AXfVa2a1j+5iY8jgGM7E7vz6GM36b\nVYvyy9n6UB/BUm24OVQI60E=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@catalogo-unna.iam.gserviceaccount.com",
+  "client_id": "107670252481482128747",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40catalogo-unna.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
