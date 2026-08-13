@@ -1,0 +1,26 @@
+[
+    {
+        "id": "130",
+        "nome": "Conjunto Novo",
+        "por": "199,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "463052",
+                "cor": "Rosa",
+                "tamanho": "52",
+                "imagem": "fotos/conjunto_19ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463053",
+                "cor": "Azul",
+                "tamanho": "52",
+                "imagem": "fotos/conjunto_19az.jpg",
+                "vendido": false
+            }
+        ]
+    }
+]
