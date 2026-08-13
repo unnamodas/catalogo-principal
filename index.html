@@ -1940,7 +1940,7 @@
 
             window.estadoVariantes[produtoId] = corIndex;
 
-            const produto = produtos.find(p => p.id === produtoId);
+            const produto = produtos.find(p => String(p.id) === String(produtoId));
             const corObj = produto.coresAgrupadas[corIndex];
 
             let todasAsFotos = [];
@@ -2130,7 +2130,7 @@
 
         // --- FUNÇÃO PARA PASSAR TODAS AS FOTOS AUTOMATICAMENTE (DESLIZANDO) ---
         function iniciarCarrosselAutomatico(produtoId) {
-            const produto = produtos.find(p => p.id === produtoId);
+            const produto = produtos.find(p => String(p.id) === String(produtoId));
             if (!produto) return;
 
             let todasAsFotos = [];
@@ -2191,7 +2191,7 @@
         }
 
         function abrirModal(idProduto) {
-            const produto = produtos.find(p => p.id === idProduto);
+            const produto = produtos.find(p => String(p.id) === String(idProduto));
             if (!produto) return;
 
             let corIndex = window.estadoVariantes[idProduto] || 0;
