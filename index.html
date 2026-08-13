@@ -30,6 +30,47 @@
             padding: 0;
         }
 
+        /* Estilo da Tela de Carregamento */
+        #tela-carregamento {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            /* Fundo branco */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Garante que fique por cima de TUDO no site */
+        }
+
+        /* Estilo da Bolinha Giratória */
+        .bolinha-giratoria {
+            border: 5px solid #f3f3f3;
+            /* Cor do fundo da argola (cinza claro) */
+            border-top: 5px solid #000000;
+            /* Cor da parte que gira (preto - você pode mudar para a cor da sua marca) */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: girar 1s linear infinite;
+            /* Faz a animação nunca parar */
+        }
+
+        /* O Motor da Animação */
+        @keyframes girar {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
@@ -1300,11 +1341,18 @@
         window.getDocs = getDocs;
         window.doc = doc;
         window.setDoc = setDoc;
+
+        document.getElementById('tela-carregamento').style.display = 'none';
     </script>
 
 </head>
 
 <body>
+    <!-- Tela de Carregamento -->
+    <div id="tela-carregamento">
+        <div class="bolinha-giratoria"></div>
+        <p style="font-family: Arial, sans-serif; color: #333; margin-top: 15px;">Preparando a vitrine...</p>
+    </div>
 
     <div class="marquee-bar">
         <div class="marquee-content">
