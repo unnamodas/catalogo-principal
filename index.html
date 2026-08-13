@@ -2018,7 +2018,7 @@
                     carrosselCoresHtml = '<div class="cores-container">';
                     p.coresAgrupadas.forEach((c, index) => {
                         // Nenhuma bolinha ganha a classe 'active' ao abrir o card
-                        carrosselCoresHtml += `<div class="cor-dot" style="background-image: url('${c.fotos[0]}')" onclick="trocarCor(event, ${p.id}, ${index}, this)" title="Cor: ${c.corOriginal}"></div>`;
+                        carrosselCoresHtml += `<div class="cor-dot" style="background-image: url('${c.fotos[0]}')" onclick="trocarCor(event, '${p.id}', ${index}, this)" title="Cor: ${c.corOriginal}"></div>`;
                     });
                     carrosselCoresHtml += '</div>';
                 }
@@ -2033,7 +2033,7 @@
                 todasAsFotosCard.forEach((foto, i) => {
                     // A foto atual recebe a classe para já nascer visível
                     let classeVisivel = i === window.estadoFotosCard[p.id] ? 'active-img' : '';
-                    trackImagensHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${p.nome}" onclick="abrirModal(${p.id})" onerror="substituirPorPlaceholder(this)">`;
+                    trackImagensHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${p.nome}" onclick="abrirModal('${p.id}')" onerror="substituirPorPlaceholder(this)">`;
                 });
 
                 let indicadoresHtml = '';
