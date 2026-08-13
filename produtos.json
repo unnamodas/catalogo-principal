@@ -1,24 +1,24 @@
 [
     {
-        "id": "131",
-        "nome": "Conjunto",
-        "por": "389,90",
+        "id": "132",
+        "nome": "Vestido midi",
+        "por": "329,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465547",
-                "cor": "Marrom",
-                "tamanho": "GG",
-                "imagem": "fotos/conjunto_20mar.jpg",
+                "codigoBling": "463270",
+                "cor": "Bege",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_61beg.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465548",
-                "cor": "Bege",
-                "tamanho": "G",
-                "imagem": "fotos/conjunto_20beg.jpg",
+                "codigoBling": "463456",
+                "cor": "Marrom",
+                "tamanho": "54",
+                "imagem": "fotos/vestido_61mar.jpg",
                 "vendido": false
             }
         ]
