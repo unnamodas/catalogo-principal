@@ -1691,6 +1691,12 @@
 
             // 3. Processa as variantes e monta o catálogo normalmente igual antes
             produtos.forEach(p => {
+                // 🟢 MÁGICA DE ESTOQUE: Se todas as variantes acabaram, o produto inteiro esgota
+                let todasVariantesEsgotadas = p.variantes.every(v => v.vendido === true || String(v.vendido) === "true");
+                if (todasVariantesEsgotadas) {
+                    p.vendido = true;
+                }
+
                 const coresUnicasMap = {};
                 p.variantes.forEach(v => {
                     let corNomeClean = v.cor.split('(')[0].trim().toLowerCase();
@@ -1709,7 +1715,8 @@
                     coresUnicasMap[corNomeClean].fotos.push(v.imagem);
                     coresUnicasMap[corNomeClean].variantesOriginais.push(v);
 
-                    if (v.vendido !== true) {
+                    // Ajuste anti-bug: garante que a cor não fique esgotada se tiver pelo menos 1 peça
+                    if (v.vendido !== true && String(v.vendido) !== "true") {
                         coresUnicasMap[corNomeClean].esgotada = false;
                     }
                 });
