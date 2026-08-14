@@ -1316,6 +1316,90 @@
             color: #ffffff !important;
             border-color: #d93025 !important;
         }
+
+        /* --- MÁGICA DA COMPACTAÇÃO HARMONIOSA --- */
+        .product-info {
+            padding: 10px 0 0 0 !important;
+        }
+
+        .product-title {
+            font-size: 19px !important;
+            margin-bottom: 2px !important;
+        }
+
+        .product-price-container {
+            margin-top: 2px !important;
+            margin-bottom: 10px !important;
+            gap: 0px !important;
+        }
+
+        .price-installments {
+            font-size: 17px !important;
+        }
+
+        .price-total {
+            font-size: 12px !important;
+        }
+
+        .price-pix {
+            font-size: 14px !important;
+            margin-top: 0px !important;
+        }
+
+        .cores-container {
+            gap: 8px !important;
+            margin-bottom: 8px !important;
+            padding: 4px 2px !important;
+        }
+
+        .cor-dot {
+            width: 38px !important;
+            height: 38px !important;
+            min-width: 38px !important;
+            min-height: 38px !important;
+        }
+
+        .btn-whatsapp {
+            padding: 11px 18px !important;
+            font-size: 10px !important;
+        }
+
+        @media (max-width: 480px) {
+            .product-title {
+                font-size: 17px !important;
+                margin-bottom: 2px !important;
+            }
+
+            .product-price-container {
+                padding-top: 4px !important;
+                gap: 2px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .price-installments {
+                font-size: 15px !important;
+            }
+
+            .price-total {
+                font-size: 11px !important;
+            }
+
+            .price-pix {
+                font-size: 13px !important;
+            }
+
+            .cor-dot {
+                width: 32px !important;
+                height: 32px !important;
+                min-width: 32px !important;
+                min-height: 32px !important;
+            }
+
+            .btn-whatsapp {
+                padding: 10px 14px !important;
+                font-size: 10px !important;
+            }
+        }
     </style>
     <!-- Importando o Firebase (Versão Modular) -->
     <!-- Importando o Firebase (Versão Modular) -->
@@ -2067,12 +2151,12 @@
                 let listaCoresTamanhosHtml = p.coresAgrupadas.map(c => {
                     let tamanhosCor = gerarHtmlTamanhosCor(p, c);
                     let esgotadaStatus = c.esgotada ? ' <span style="color: #d93025; font-size: 9px; font-weight: 600;">(ESGOTADA)</span>' : '';
-                    return `<div style="margin-bottom: 5px; font-size: 11px; font-weight: 400; color: var(--text-muted); letter-spacing: 0.03em;">
+                    return `<div style="margin-bottom: 2px; font-size: 11px; font-weight: 400; color: var(--text-muted); letter-spacing: 0.03em;">
                         <span style="font-weight: 500; color: var(--text-main);">${c.corOriginal}</span>: <span class="destaque-tamanho" style="font-weight: 400; color: var(--text-muted);">${tamanhosCor}</span>${esgotadaStatus}
                     </div>`;
                 }).join('');
 
-                // 🟢 MÁGICA ANTI-BUG: Força o HTML a entender perfeitamente as etiquetas 🟢
+                // Força o HTML a entender perfeitamente as etiquetas 
                 let isDestaque = (p.destaque === true || String(p.destaque) === "true");
                 let isVendido = (p.vendido === true || String(p.vendido) === "true");
                 let isNovidade = (p.novidade === true || String(p.novidade) === "true");
