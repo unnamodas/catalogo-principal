@@ -1898,17 +1898,19 @@
             produtosFiltradosGlobais.sort(() => Math.random() - 0.5);
 
             produtosFiltradosGlobais.sort((a, b) => {
-                // 1º Esgotados vão sempre para o final
-                if (a.vendido !== b.vendido) return a.vendido ? 1 : -1;
+                // 1º Garante que Esgotados vão sempre para o final
+                let vendidoA = (a.vendido === true || String(a.vendido) === "true");
+                let vendidoB = (b.vendido === true || String(b.vendido) === "true");
+                if (vendidoA !== vendidoB) return vendidoA ? 1 : -1;
 
-                // 2º Novidades aparecem primeiro no catálogo
-                const novidadeA = a.novidade ? 1 : 0;
-                const novidadeB = b.novidade ? 1 : 0;
+                // 2º Novidades RIGOROSAMENTE no topo
+                let novidadeA = (a.novidade === true || String(a.novidade) === "true") ? 1 : 0;
+                let novidadeB = (b.novidade === true || String(b.novidade) === "true") ? 1 : 0;
                 if (novidadeA !== novidadeB) return novidadeB - novidadeA;
 
-                // 3º Destaques aparecem logo em seguida
-                const destaqueA = a.destaque ? 1 : 0;
-                const destaqueB = b.destaque ? 1 : 0;
+                // 3º Destaques logo em seguida
+                let destaqueA = (a.destaque === true || String(a.destaque) === "true") ? 1 : 0;
+                let destaqueB = (b.destaque === true || String(b.destaque) === "true") ? 1 : 0;
                 return destaqueB - destaqueA;
             });
 

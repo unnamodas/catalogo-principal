@@ -1,24 +1,82 @@
 [
     {
-        "id": "132",
-        "nome": "Vestido midi",
-        "por": "329,90",
+        "id": "134",
+        "nome": "Blusa renda",
+        "por": "89,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "463270",
-                "cor": "Bege",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_61beg.jpg",
+                "codigoBling": "465899",
+                "cor": "Preto",
+                "tamanho": "G1",
+                "imagem": "fotos/blusa_21.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "135",
+        "nome": "Vestido",
+        "por": "149,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465909",
+                "cor": "Azul marinho",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_62.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "463456",
+                "codigoBling": "465909",
+                "cor": "Azul marinho",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_62f2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "136",
+        "nome": "Conjunto colete e calça",
+        "por": "197,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465914",
                 "cor": "Marrom",
-                "tamanho": "54",
-                "imagem": "fotos/vestido_61mar.jpg",
+                "tamanho": "G1",
+                "imagem": "fotos/conjunto_21mar.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465915",
+                "cor": "Preto",
+                "tamanho": "G2",
+                "imagem": "fotos/conjunto_21pre.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "137",
+        "nome": "Vestido linho",
+        "por": "199,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465905",
+                "cor": "Cru",
+                "tamanho": "G1",
+                "imagem": "fotos/vestido_63.jpg",
                 "vendido": false
             }
         ]
