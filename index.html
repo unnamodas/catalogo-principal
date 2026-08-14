@@ -2065,15 +2065,20 @@
                     </div>`;
                 }).join('');
 
+                // 🟢 MÁGICA ANTI-BUG: Força o HTML a entender perfeitamente as etiquetas 🟢
+                let isDestaque = (p.destaque === true || String(p.destaque) === "true");
+                let isVendido = (p.vendido === true || String(p.vendido) === "true");
+                let isNovidade = (p.novidade === true || String(p.novidade) === "true");
+
                 card.innerHTML = `
                    <div class="product-image-container">
-                        ${p.destaque ? '<span class="badge badge-destaque">⭐ DESTAQUE</span>' : ''}
+                        ${isDestaque ? '<span class="badge badge-destaque">⭐ DESTAQUE</span>' : ''}
                         
-                        <span id="badge-sold-${p.id}" class="badge badge-sold" style="display: ${p.vendido || corObj.esgotada ? 'block' : 'none'}; ${p.destaque ? 'top: 42px;' : ''}">${p.vendido ? 'ESGOTADO' : 'COR ESGOTADA'}</span>
+                        <span id="badge-sold-${p.id}" class="badge badge-sold" style="display: ${isVendido || corObj.esgotada ? 'block' : 'none'}; ${isDestaque ? 'top: 42px;' : ''}">${isVendido ? 'ESGOTADO' : 'COR ESGOTADA'}</span>
                         
-                        ${p.novidade && !p.vendido && !corObj.esgotada ? '<span class="badge badge-novidade">✨ NOVIDADE</span>' : ''}
+                        ${isNovidade && !isVendido && !corObj.esgotada ? '<span class="badge badge-novidade">✨ NOVIDADE</span>' : ''}
                         
-                        ${p.desconto > 0 && !p.vendido ? `<span class="badge badge-discount" style="${p.novidade ? 'top: 50px;' : ''}">-${p.desconto}%</span>` : ''}
+                        ${p.desconto > 0 && !isVendido ? `<span class="badge badge-discount" style="${isNovidade ? 'top: 50px;' : ''}">-${p.desconto}%</span>` : ''}
                         
                         <div class="carousel-track" id="track-${p.id}">
                             ${trackImagensHtml}
@@ -2106,7 +2111,7 @@
 
                         <!-- 4. BOTÃO DE COMPRAR -->
                         <div id="btn-container-${p.id}" style="margin-top: auto;">
-                            ${p.vendido ?
+                            ${isVendido ?
                         '<button class="btn-whatsapp btn-sold" disabled>Indisponível</button>' :
                         `<a id="btn-compra-${p.id}" href="${linkWhats}" target="_blank" class="btn-whatsapp">Comprar</a>`
                     }
