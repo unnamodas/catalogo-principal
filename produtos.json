@@ -3,7 +3,7 @@
         "id": "134",
         "nome": "Blusa renda",
         "por": "89,90",
-        "novidade": false,
+        "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
@@ -20,7 +20,7 @@
         "id": "135",
         "nome": "Vestido",
         "por": "149,90",
-        "novidade": false,
+        "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
@@ -44,7 +44,7 @@
         "id": "136",
         "nome": "Conjunto colete e calça",
         "por": "197,90",
-        "novidade": false,
+        "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
@@ -68,7 +68,7 @@
         "id": "137",
         "nome": "Vestido linho",
         "por": "199,90",
-        "novidade": false,
+        "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
@@ -76,7 +76,14 @@
                 "codigoBling": "465905",
                 "cor": "Cru",
                 "tamanho": "G1",
-                "imagem": "fotos/vestido_63.jpg",
+                "imagem": "fotos/vestido_64.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465916",
+                "cor": "Azul marinho",
+                "tamanho": "GG",
+                "imagem": "fotos/vestido_64az.jpg",
                 "vendido": false
             }
         ]
