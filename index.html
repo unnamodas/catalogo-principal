@@ -1548,7 +1548,7 @@
             let valorParcela = (valorNum / maxParcelas).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
             // O CSS agora faz a quebra de linha e gruda o texto
-            return `${maxParcelas}x de R$ ${valorParcela} <span class="price-small">sem juros</span>`;
+            return `${maxParcelas}x de R$ ${valorParcela}`;
         }
 
         const ITENS_POR_CARREGAMENTO = 24;
@@ -2099,14 +2099,9 @@
                         <!-- 2. BOLINHAS DE CORES -->
                         ${carrosselCoresHtml}
                         
-                        <!-- 3. NOME DA COR ATUAL E A LISTA DE CORES/TAMANHOS -->
-                        <div>
-                            <div class="product-size">
-                                <div id="cor-selecionada-${p.id}" style="margin-bottom: 8px; font-size: 11px;">Cor: <b>${corObj.corOriginal}</b>${esgotadaTexto}</div>
-                                <div style="border-top: 1px dashed var(--border-color); padding-top: 8px; margin-top: 4px;">
-                                    ${listaCoresTamanhosHtml}
-                                </div>
-                            </div>
+                        <!-- 3. LISTA DE CORES E TAMANHOS (Compacta) -->
+                        <div class="product-size" style="margin-top: -6px; margin-bottom: 8px;">
+                            ${listaCoresTamanhosHtml}
                         </div>
 
                         <!-- 4. BOTÃO DE COMPRAR -->
