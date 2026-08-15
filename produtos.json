@@ -1,89 +1,201 @@
 [
     {
-        "id": "134",
-        "nome": "Blusa renda",
-        "por": "89,90",
-        "novidade": true,
+        "id": "138",
+        "nome": "Blusa",
+        "por": "199,90",
+        "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465899",
+                "codigoBling": "465180",
+                "cor": "Terracota",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_22.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "139",
+        "nome": "Regata cetim",
+        "por": "199,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "461707",
+                "cor": "Bege",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_23.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "140",
+        "nome": "Regata",
+        "por": "119,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465452",
                 "cor": "Preto",
-                "tamanho": "G1",
-                "imagem": "fotos/blusa_21.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "135",
-        "nome": "Vestido",
-        "por": "149,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465909",
-                "cor": "Azul marinho",
-                "tamanho": "Único",
-                "imagem": "fotos/vestido_62.jpg",
+                "tamanho": "G",
+                "imagem": "fotos/regata_2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465909",
-                "cor": "Azul marinho",
-                "tamanho": "Único",
-                "imagem": "fotos/vestido_62f2.jpg",
+                "codigoBling": "465453",
+                "cor": "Preto",
+                "tamanho": "GG",
+                "imagem": "fotos/regata_2.jpg",
                 "vendido": false
             }
         ]
     },
     {
-        "id": "136",
-        "nome": "Conjunto colete e calça",
-        "por": "197,90",
-        "novidade": true,
+        "id": "142",
+        "nome": "Blusa",
+        "por": "179,90",
+        "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465914",
+                "codigoBling": "463441",
+                "cor": "Amarelo",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_25.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "143",
+        "nome": "Blusa renda",
+        "por": "139,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465013",
+                "cor": "Preto",
+                "tamanho": "G",
+                "imagem": "fotos/blusa_26.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465012",
+                "cor": "Preto",
+                "tamanho": "M",
+                "imagem": "fotos/blusa_26.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "144",
+        "nome": "Blusa",
+        "por": "199,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "461922",
+                "cor": "Bege",
+                "tamanho": "44",
+                "imagem": "fotos/blusa_27.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "145",
+        "nome": "Body",
+        "por": "119,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465612",
+                "cor": "Branco",
+                "tamanho": "Único",
+                "imagem": "fotos/body_2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "146",
+        "nome": "Blusa",
+        "por": "89,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465104",
+                "cor": "Preto",
+                "tamanho": "M",
+                "imagem": "fotos/blusa_28.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "147",
+        "nome": "Blusa",
+        "por": "119,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "464626",
+                "cor": "Preto",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_29.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "148",
+        "nome": "Camisa",
+        "por": "179,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465272",
                 "cor": "Marrom",
-                "tamanho": "G1",
-                "imagem": "fotos/conjunto_21mar.jpg",
+                "tamanho": "G2",
+                "imagem": "fotos/camisa_3.jpg",
                 "vendido": false
-            },
+            }
+        ]
+    },
+    {
+        "id": "149",
+        "nome": "Camisa",
+        "por": "179,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
             {
-                "codigoBling": "465915",
+                "codigoBling": "465111",
                 "cor": "Preto",
                 "tamanho": "G2",
-                "imagem": "fotos/conjunto_21pre.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "137",
-        "nome": "Vestido linho",
-        "por": "199,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465905",
-                "cor": "Cru",
-                "tamanho": "G1",
-                "imagem": "fotos/vestido_64.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465916",
-                "cor": "Azul marinho",
-                "tamanho": "GG",
-                "imagem": "fotos/vestido_64az.jpg",
+                "imagem": "fotos/camisa_4.jpg",
                 "vendido": false
             }
         ]
