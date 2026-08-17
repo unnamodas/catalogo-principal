@@ -1,138 +1,7 @@
 [
     {
-        "id": "150",
-        "nome": "Blusa",
-        "por": "179,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "464559",
-                "cor": "Branco",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_30bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464560",
-                "cor": "Branco",
-                "tamanho": "52",
-                "imagem": "fotos/blusa_30bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464561",
-                "cor": "Branco",
-                "tamanho": "54",
-                "imagem": "fotos/blusa_30bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464560",
-                "cor": "Azul marinho",
-                "tamanho": "52",
-                "imagem": "fotos/blusa_30az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464557",
-                "cor": "Preto",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_30pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464559",
-                "cor": "Preto",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_30pre.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "151",
-        "nome": "Blusa",
-        "por": "199,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "463367",
-                "cor": "Azul marinho",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_31.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463369",
-                "cor": "Azul marinho",
-                "tamanho": "52",
-                "imagem": "fotos/blusa_31.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463370",
-                "cor": "Azul marinho",
-                "tamanho": "54",
-                "imagem": "fotos/blusa_31.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "152",
-        "nome": "Blusa",
-        "por": "129,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "463815",
-                "cor": "Azul",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_32.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "154",
-        "nome": "Blusa",
-        "por": "219,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "464373",
-                "cor": "Branco",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_33bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464374",
-                "cor": "Branco",
-                "tamanho": "52",
-                "imagem": "fotos/blusa_33bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464375",
-                "cor": "Amarelo",
-                "tamanho": "54",
-                "imagem": "fotos/blusa_33am.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "155",
-        "nome": "Blusa",
+        "id": "157",
+        "nome": "Blusa gola redonda",
         "por": "119,90",
         "novidade": false,
         "destaque": false,
@@ -140,82 +9,68 @@
         "variantes": [
             {
                 "codigoBling": "461534",
-                "cor": "Preto",
+                "cor": "Amarelo",
                 "tamanho": "P",
-                "imagem": "fotos/blusa_34pre.jpg",
+                "imagem": "fotos/blusa_35am.jpg",
                 "vendido": false
             },
             {
                 "codigoBling": "461535",
-                "cor": "Preto",
+                "cor": "Rosa",
                 "tamanho": "M",
-                "imagem": "fotos/blusa_34pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "462408",
-                "cor": "Preto",
-                "tamanho": "GG",
-                "imagem": "fotos/blusa_34pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "461534",
-                "cor": "Branco (Off White)",
-                "tamanho": "P",
-                "imagem": "fotos/blusa_34off.jpg",
+                "imagem": "fotos/blusa_35ros.jpg",
                 "vendido": false
             },
             {
                 "codigoBling": "461535",
-                "cor": "Branco (Off White)",
+                "cor": "Azul",
                 "tamanho": "M",
-                "imagem": "fotos/blusa_34off.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "462409",
-                "cor": "Branco (Off White)",
-                "tamanho": "G",
-                "imagem": "fotos/blusa_34off.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "462408",
-                "cor": "Branco (Off White)",
-                "tamanho": "GG",
-                "imagem": "fotos/blusa_34off.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "461535",
-                "cor": "Azul marinho",
-                "tamanho": "M",
-                "imagem": "fotos/blusa_34az.jpg",
+                "imagem": "fotos/blusa_35az.jpg",
                 "vendido": false
             }
         ]
     },
     {
-        "id": "156",
+        "id": "158",
         "nome": "Regata",
-        "por": "179,90",
+        "por": "89,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "464351",
-                "cor": "Vermelho",
-                "tamanho": "48",
-                "imagem": "fotos/regata_4.jpg",
+                "codigoBling": "464607",
+                "cor": "Preto",
+                "tamanho": "G",
+                "imagem": "fotos/regata_5pre.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "464352",
-                "cor": "Vermelho",
-                "tamanho": "50",
-                "imagem": "fotos/regata_4.jpg",
+                "codigoBling": "464607",
+                "cor": "Azul marinho",
+                "tamanho": "G",
+                "imagem": "fotos/regata_5az.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464607",
+                "cor": "Rosa",
+                "tamanho": "G",
+                "imagem": "fotos/regata_5ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464608",
+                "cor": "Azul marinho",
+                "tamanho": "GG",
+                "imagem": "fotos/regata_5az.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464608",
+                "cor": "Amarelo",
+                "tamanho": "GG",
+                "imagem": "fotos/regata_5am.jpg",
                 "vendido": false
             }
         ]
