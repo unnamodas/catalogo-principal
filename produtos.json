@@ -1,72 +1,206 @@
 [
     {
-        "id": "159",
-        "nome": "Blusa",
+        "id": "162",
+        "nome": "Camisa jeans",
+        "por": "219,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465109",
+                "cor": "Azul",
+                "tamanho": "G2",
+                "imagem": "fotos/camisa_5az.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "163",
+        "nome": "Camisa",
         "por": "179,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465351",
-                "cor": "Marrom",
+                "codigoBling": "465111",
+                "cor": "Branco",
+                "tamanho": "G2",
+                "imagem": "fotos/camisa_4bra.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465111",
+                "cor": "Preto",
+                "tamanho": "G2",
+                "imagem": "fotos/camisa_4pre.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "164",
+        "nome": "Vestido linho",
+        "por": "329,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465245",
+                "cor": "Cru",
+                "tamanho": "42",
+                "imagem": "fotos/vestido_65.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465245",
+                "cor": "Cru",
+                "tamanho": "42",
+                "imagem": "fotos/vestido_65ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465246",
+                "cor": "Cru",
                 "tamanho": "44",
-                "imagem": "fotos/blusa_37.jpg",
+                "imagem": "fotos/vestido_65.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465352",
-                "cor": "Marrom",
+                "codigoBling": "465247",
+                "cor": "Cru",
                 "tamanho": "46",
-                "imagem": "fotos/blusa_37.jpg",
+                "imagem": "fotos/vestido_65.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465353",
+                "codigoBling": "465247",
+                "cor": "Cru",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_65ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465248",
+                "cor": "Cru",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_65.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "165",
+        "nome": "Vestido",
+        "por": "329,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465256",
                 "cor": "Marrom",
                 "tamanho": "48",
-                "imagem": "fotos/blusa_37.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "160",
-        "nome": "Blusa renda",
-        "por": "224,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "464776",
-                "cor": "Bege",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_36.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "161",
-        "nome": "Blusa T-shirt",
-        "por": "69,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "463715",
-                "cor": "Azul",
-                "tamanho": "Único",
-                "imagem": "fotos/blusa_38az.jpg",
+                "imagem": "fotos/vestido_66.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "463715",
-                "cor": "Amarelo",
-                "tamanho": "Único",
-                "imagem": "fotos/blusa_38am.jpg",
+                "codigoBling": "465256",
+                "cor": "Marrom",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_66ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465257",
+                "cor": "Marrom",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_66.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "166",
+        "nome": "Blusa",
+        "por": "159,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465031",
+                "cor": "Bege",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_39.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "167",
+        "nome": "Camisa com colete",
+        "por": "189,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465106",
+                "cor": "Branco",
+                "tamanho": "G",
+                "imagem": "fotos/camisacolete_1.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465106",
+                "cor": "Preto",
+                "tamanho": "G",
+                "imagem": "fotos/camisacolete_1.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "168",
+        "nome": "Camisa",
+        "por": "139,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465106",
+                "cor": "Preto",
+                "tamanho": "GG",
+                "imagem": "fotos/camisa_6.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "169",
+        "nome": "Camisa",
+        "por": "179,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465139",
+                "cor": "Bege (Perolada)",
+                "tamanho": "M",
+                "imagem": "fotos/camisa_7beg.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465140",
+                "cor": "Preto",
+                "tamanho": "G",
+                "imagem": "fotos/camisa_7pre.jpg",
                 "vendido": false
             }
         ]
