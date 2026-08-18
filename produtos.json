@@ -1,76 +1,72 @@
 [
     {
-        "id": "157",
-        "nome": "Blusa gola redonda",
-        "por": "119,90",
+        "id": "159",
+        "nome": "Blusa",
+        "por": "179,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "461534",
-                "cor": "Amarelo",
-                "tamanho": "P",
-                "imagem": "fotos/blusa_35am.jpg",
+                "codigoBling": "465351",
+                "cor": "Marrom",
+                "tamanho": "44",
+                "imagem": "fotos/blusa_37.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "461535",
-                "cor": "Rosa",
-                "tamanho": "M",
-                "imagem": "fotos/blusa_35ros.jpg",
+                "codigoBling": "465352",
+                "cor": "Marrom",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_37.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "461535",
-                "cor": "Azul",
-                "tamanho": "M",
-                "imagem": "fotos/blusa_35az.jpg",
+                "codigoBling": "465353",
+                "cor": "Marrom",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_37.jpg",
                 "vendido": false
             }
         ]
     },
     {
-        "id": "158",
-        "nome": "Regata",
-        "por": "89,90",
+        "id": "160",
+        "nome": "Blusa renda",
+        "por": "224,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "464607",
-                "cor": "Preto",
-                "tamanho": "G",
-                "imagem": "fotos/regata_5pre.jpg",
+                "codigoBling": "464776",
+                "cor": "Bege",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_36.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "161",
+        "nome": "Blusa T-shirt",
+        "por": "69,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "463715",
+                "cor": "Azul",
+                "tamanho": "Único",
+                "imagem": "fotos/blusa_38az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "464607",
-                "cor": "Azul marinho",
-                "tamanho": "G",
-                "imagem": "fotos/regata_5az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464607",
-                "cor": "Rosa",
-                "tamanho": "G",
-                "imagem": "fotos/regata_5ros.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464608",
-                "cor": "Azul marinho",
-                "tamanho": "GG",
-                "imagem": "fotos/regata_5az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464608",
+                "codigoBling": "463715",
                 "cor": "Amarelo",
-                "tamanho": "GG",
-                "imagem": "fotos/regata_5am.jpg",
+                "tamanho": "Único",
+                "imagem": "fotos/blusa_38am.jpg",
                 "vendido": false
             }
         ]
