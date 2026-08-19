@@ -1,46 +1,5 @@
 [
     {
-        "id": "176",
-        "nome": "Blusa",
-        "por": "209,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "463460",
-                "cor": "Amarelo",
-                "tamanho": "54",
-                "imagem": "fotos/blusa_41.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "177",
-        "nome": "Vestido com kimono",
-        "por": "289,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465061",
-                "cor": "Bege",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_69.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465062",
-                "cor": "Bege",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_69.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
         "id": "178",
         "nome": "Blusa tule",
         "por": "69,90",
@@ -52,7 +11,31 @@
                 "codigoBling": "465648",
                 "cor": "Preto",
                 "tamanho": "Único",
-                "imagem": "blusa_42.jpg",
+                "imagem": "fotos/blusa_42.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "179",
+        "nome": "Blusa",
+        "por": "69,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465104",
+                "cor": "Preto",
+                "tamanho": "M(Slim)",
+                "imagem": "fotos/blusa_43pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465104",
+                "cor": "Marrom",
+                "tamanho": "M(Slim)",
+                "imagem": "fotos/blusa_43mar.jpg",
                 "vendido": false
             }
         ]
