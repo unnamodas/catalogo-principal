@@ -1843,7 +1843,7 @@
 
         function gerarAbasTamanhos() {
             const containerTamanhos = document.getElementById('sizes-tabs');
-            const tamanhosPadrao = ['Todos', '44', '46', '48', '50', '52', '54', 'P', 'M', 'GG', 'G2', 'G3'];
+            const tamanhosPadrao = ['Todos', 'Slim', '42', '44', '46', '48', '50', '52', '54', 'PP', 'P', 'M', 'GG', 'G2', 'G3'];
 
             containerTamanhos.innerHTML = '';
             tamanhosPadrao.forEach(tam => {
@@ -1887,6 +1887,7 @@
                 'Vermelho': '#c21a1a',
                 'Azul petróleo': '#1e4d56',
                 'Cru': '#FFFAF0',
+                'Coral': '#FDA487',
             };
 
             produtos.forEach(p => {
@@ -1937,11 +1938,29 @@
 
         function verificaTamanhoCompativel(produto, tamanhoBuscado) {
             if (tamanhoBuscado === 'Todos') return true;
-            const tamBuscaUpper = tamanhoBuscado.toUpperCase();
 
+            // 🟢 REGRA ESPECIAL PARA O FILTRO "SLIM"
+            if (tamanhoBuscado === 'Slim') {
+                return produto.variantes.some(v => {
+                    let tamUpper = String(v.tamanho).toUpperCase();
+
+                    // Condição 1: A variante tem a palavra "SLIM" escrita (ex: "GG(Slim)")
+                    if (tamUpper.includes('SLIM')) return true;
+
+                    // Condição 2: É um número igual ou menor que 42 (ex: "42", "40", "38")
+                    let partes = tamUpper.split(/[\,\/\-\s]+/);
+                    return partes.some(p => {
+                        let num = parseInt(p.trim());
+                        return !isNaN(num) && num <= 42 && num > 0;
+                    });
+                });
+            }
+
+            // Regra normal para os outros tamanhos (44, 46, GG, etc)
+            const tamBuscaUpper = tamanhoBuscado.toUpperCase();
             return produto.variantes.some(v => {
                 let tamFormatado = formatarTamanhosOrdenados([v]);
-                return tamFormatado.toUpperCase().includes(tamBuscaUpper) || v.tamanho.toUpperCase().includes(tamBuscaUpper);
+                return tamFormatado.toUpperCase().includes(tamBuscaUpper) || String(v.tamanho).toUpperCase().includes(tamBuscaUpper);
             });
         }
 
