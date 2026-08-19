@@ -1,41 +1,62 @@
 [
     {
-        "id": "178",
-        "nome": "Blusa tule",
-        "por": "69,90",
+        "id": "180",
+        "nome": "Conjunto colete e short saia",
+        "por": "259,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465648",
-                "cor": "Preto",
-                "tamanho": "Único",
-                "imagem": "fotos/blusa_42.jpg",
+                "codigoBling": "464448",
+                "cor": "Amarelo",
+                "tamanho": "G1",
+                "imagem": "fotos/conjunto_24.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464449",
+                "cor": "Amarelo",
+                "tamanho": "G2",
+                "imagem": "fotos/conjunto_24.jpg",
                 "vendido": false
             }
         ]
     },
     {
-        "id": "179",
+        "id": "181",
         "nome": "Blusa",
-        "por": "69,90",
+        "por": "129,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465104",
-                "cor": "Preto",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/blusa_43pre.jpg",
+                "codigoBling": "463685",
+                "cor": "Bege",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_44.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465104",
-                "cor": "Marrom",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/blusa_43mar.jpg",
+                "codigoBling": "463686",
+                "cor": "Bege",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_44.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463687",
+                "cor": "Bege",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_44.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463688",
+                "cor": "Bege",
+                "tamanho": "52",
+                "imagem": "fotos/blusa_44.jpg",
                 "vendido": false
             }
         ]
