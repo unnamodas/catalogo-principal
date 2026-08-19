@@ -1,82 +1,58 @@
 [
     {
-        "id": "172",
-        "nome": "Conjunto blusa e calça",
-        "por": "169,90",
+        "id": "176",
+        "nome": "Blusa",
+        "por": "209,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465901",
-                "cor": "Azul",
-                "tamanho": "G1",
-                "imagem": "fotos/conjunto_22.jpg",
+                "codigoBling": "463460",
+                "cor": "Amarelo",
+                "tamanho": "54",
+                "imagem": "fotos/blusa_41.jpg",
                 "vendido": false
             }
         ]
     },
     {
-        "id": "173",
-        "nome": "Conjunto blusa e saia",
-        "por": "387,90",
+        "id": "177",
+        "nome": "Vestido com kimono",
+        "por": "289,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "461838",
+                "codigoBling": "465061",
                 "cor": "Bege",
-                "tamanho": "PP",
-                "imagem": "fotos/conjunto_23.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "174",
-        "nome": "Vestido midi",
-        "por": "339,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "464422",
-                "cor": "Coral",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_67.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464423",
-                "cor": "Coral",
-                "tamanho": "52",
-                "imagem": "fotos/vestido_67.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "175",
-        "nome": "Vestido linho",
-        "por": "329,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "464417",
-                "cor": "Cru",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_68.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464418",
-                "cor": "Cru",
                 "tamanho": "48",
-                "imagem": "fotos/vestido_68.jpg",
+                "imagem": "fotos/vestido_69.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465062",
+                "cor": "Bege",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_69.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "178",
+        "nome": "Blusa tule",
+        "por": "69,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465648",
+                "cor": "Preto",
+                "tamanho": "Único",
+                "imagem": "blusa_42.jpg",
                 "vendido": false
             }
         ]
