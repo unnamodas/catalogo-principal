@@ -1649,6 +1649,8 @@
         window.estadoVariantes = {};
         window.estadoFotosCard = {};
         window.intervalosCarrossel = {};
+        window.modoCorUnica = {};
+        ;
 
         function formatarTamanhosOrdenados(listaItens) {
             let itensExpandidos = [];
@@ -2026,6 +2028,11 @@
             indiceExibicaoAtual = 0;
             document.getElementById('product-grid').innerHTML = '';
 
+            // 🟢 Reseta as fotos para que o filtro force a cor escolhida a aparecer primeiro
+            window.estadoVariantes = {};
+            window.estadoFotosCard = {};
+            window.modoCorUnica = {};
+
             const totalProdutos = produtosFiltradosGlobais.length;
             document.getElementById('results-counter').textContent = `Mostrando ${totalProdutos} item(ns) encontrado(s)`;
 
@@ -2050,26 +2057,38 @@
             if (indContainer) indContainer.style.display = 'none';
 
             window.estadoVariantes[produtoId] = corIndex;
+            window.estadoFotosCard[produtoId] = 0; // Reseta para a primeira foto da nova cor
+            window.modoCorUnica[produtoId] = true; // Avisa o sistema que a cliente focou nessa cor
 
             const produto = produtos.find(p => String(p.id) === String(produtoId));
             const corObj = produto.coresAgrupadas[corIndex];
 
-            let todasAsFotos = [];
-            produto.variantes.forEach(v => {
-                if (v.imagem && !todasAsFotos.includes(v.imagem)) todasAsFotos.push(v.imagem);
-            });
-            let fotoIndex = todasAsFotos.indexOf(corObj.fotos[0]);
-            if (fotoIndex === -1) fotoIndex = 0;
+            let fotosDaCor = [...new Set(corObj.fotos)];
 
-            window.estadoFotosCard[produtoId] = fotoIndex;
-
+            // Substitui as imagens do carrossel pelas da nova cor
             const trackElement = document.getElementById(`track-${produtoId}`);
             if (trackElement) {
-                const imagens = trackElement.querySelectorAll('img');
-                imagens.forEach((img, i) => {
-                    if (i === fotoIndex) img.classList.add('active-img');
-                    else img.classList.remove('active-img');
+                let trackHtml = '';
+                fotosDaCor.forEach((foto, i) => {
+                    let classeVisivel = i === 0 ? 'active-img' : '';
+                    trackHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${produto.nome}" onclick="abrirModal('${produtoId}')" onerror="substituirPorPlaceholder(this)">`;
                 });
+                trackElement.innerHTML = trackHtml;
+            }
+
+            // Substitui os indicadores
+            if (indContainer) {
+                if (fotosDaCor.length > 1) {
+                    let indHtml = '';
+                    fotosDaCor.forEach((_, i) => {
+                        indHtml += `<div class="indicator-bar ${i === 0 ? 'active' : ''}"></div>`;
+                    });
+                    indContainer.innerHTML = indHtml;
+                    indContainer.style.display = 'flex';
+                } else {
+                    indContainer.innerHTML = '';
+                    indContainer.style.display = 'none';
+                }
             }
 
             const badgeSold = document.getElementById(`badge-sold-${produtoId}`);
@@ -2101,6 +2120,9 @@
                 const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${produto.nome}" na cor ${corObj.corOriginal} (Tamanhos: ${stringTamanhos}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
                 btnContainer.innerHTML = `<a id="btn-compra-${produtoId}" href="https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}" target="_blank" class="btn-whatsapp">Comprar</a>`;
             }
+
+            // Se essa cor tiver mais de uma foto (frente e costas), faz ela deslizar!
+            iniciarCarrosselAutomatico(produtoId);
         }
         function carregarMaisProdutos() {
             // TRAVA DE SEGURANÇA DO SCROLL: Impede de carregar catálogo normal na aba de liquidação
@@ -2113,44 +2135,58 @@
             const proximoLote = produtosFiltradosGlobais.slice(indiceExibicaoAtual, indiceExibicaoAtual + ITENS_POR_CARREGAMENTO);
 
             proximoLote.forEach(p => {
-                if (window.estadoVariantes[p.id] === undefined) window.estadoVariantes[p.id] = 0;
+                // 🟢 1. Define a cor inicial do card obedecendo aos filtros ativos
+                if (window.estadoVariantes[p.id] === undefined) {
+                    if (corAtual !== 'Todas') {
+                        let filterIdx = p.coresAgrupadas.findIndex(c => c.corOriginal.toLowerCase().includes(corAtual.toLowerCase()));
+                        window.estadoVariantes[p.id] = filterIdx !== -1 ? filterIdx : 0;
+                        window.modoCorUnica[p.id] = true; // Força a travar na cor do filtro!
+                    } else {
+                        window.estadoVariantes[p.id] = 0;
+                        window.modoCorUnica[p.id] = false; // Se não tem filtro de cor, libera todas!
+                    }
+                }
                 if (window.estadoFotosCard[p.id] === undefined) window.estadoFotosCard[p.id] = 0;
 
                 let corIndex = window.estadoVariantes[p.id];
                 let corObj = p.coresAgrupadas[corIndex];
-
                 const stringTamanhosAtual = formatarTamanhosOrdenados(corObj.tamanhos);
-                const todosTamanhos = formatarTamanhosOrdenados(p.variantes);
-                const todasCores = [...new Set(p.coresAgrupadas.map(c => c.corOriginal))].join(', ');
 
-                // Gera as bolinhas de cor sem nenhuma marcada por padrão ao carregar
+                // Bolinhas de cor (A cor que veio no filtro já vem selecionada!)
                 let carrosselCoresHtml = '';
                 if (p.coresAgrupadas.length > 1) {
                     carrosselCoresHtml = '<div class="cores-container">';
                     p.coresAgrupadas.forEach((c, index) => {
-                        // Nenhuma bolinha ganha a classe 'active' ao abrir o card
-                        carrosselCoresHtml += `<div class="cor-dot" style="background-image: url('${c.fotos[0]}')" onclick="trocarCor(event, '${p.id}', ${index}, this)" title="Cor: ${c.corOriginal}"></div>`;
+                        let classeAtiva = (index === corIndex) ? 'active' : '';
+                        carrosselCoresHtml += `<div class="cor-dot ${classeAtiva}" style="background-image: url('${c.fotos[0]}')" onclick="trocarCor(event, '${p.id}', ${index}, this)" title="Cor: ${c.corOriginal}"></div>`;
                     });
                     carrosselCoresHtml += '</div>';
                 }
 
-                // --- GERA O TRILHO DESLIZANTE DE FOTOS E OS INDICADORES ---
-                let todasAsFotosCard = [];
-                p.variantes.forEach(v => {
-                    if (v.imagem && !todasAsFotosCard.includes(v.imagem)) todasAsFotosCard.push(v.imagem);
-                });
+                // --- GERA O TRILHO (ESTÁTICO SE HOUVER FILTRO DE COR, DINÂMICO SE LIVRE) ---
+                let fotosParaCarrossel = [];
+                let isFiltroCorAtivo = (corAtual !== 'Todas');
+
+                if (isFiltroCorAtivo) {
+                    // Se há filtro de cor, pega APENAS A PRIMEIRA foto daquela cor para ficar estático
+                    fotosParaCarrossel = [corObj.fotos[0]];
+                } else {
+                    // Sem filtro de cor, puxa todas as fotos das variantes para o carrossel livre
+                    p.variantes.forEach(v => {
+                        if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
+                    });
+                }
 
                 let trackImagensHtml = '';
-                todasAsFotosCard.forEach((foto, i) => {
-                    // A foto atual recebe a classe para já nascer visível
-                    let classeVisivel = i === window.estadoFotosCard[p.id] ? 'active-img' : '';
+                fotosParaCarrossel.forEach((foto, i) => {
+                    let classeVisivel = (i === 0 || i === window.estadoFotosCard[p.id]) ? 'active-img' : '';
                     trackImagensHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${p.nome}" onclick="abrirModal('${p.id}')" onerror="substituirPorPlaceholder(this)">`;
                 });
 
                 let indicadoresHtml = '';
-                if (todasAsFotosCard.length > 1) {
+                if (!isFiltroCorAtivo && fotosParaCarrossel.length > 1) {
                     indicadoresHtml = `<div class="carousel-indicators" id="indicators-${p.id}">`;
-                    todasAsFotosCard.forEach((_, i) => {
+                    fotosParaCarrossel.forEach((_, i) => {
                         indicadoresHtml += `<div class="indicator-bar ${i === window.estadoFotosCard[p.id] ? 'active' : ''}"></div>`;
                     });
                     indicadoresHtml += `</div>`;
@@ -2239,25 +2275,39 @@
             carregandoMais = false;
         }
 
-        // --- FUNÇÃO PARA PASSAR TODAS AS FOTOS AUTOMATICAMENTE (DESLIZANDO) ---
         function iniciarCarrosselAutomatico(produtoId) {
             const produto = produtos.find(p => String(p.id) === String(produtoId));
             if (!produto) return;
 
-            let todasAsFotos = [];
-            produto.variantes.forEach(v => {
-                if (v.imagem && !todasAsFotos.includes(v.imagem)) {
-                    todasAsFotos.push(v.imagem);
+            // 🟢 BLINDAGEM TOTAL: Se há filtro de cor ativo, o carrossel NUNCA roda, independente da categoria!
+            if (corAtual !== 'Todas') {
+                if (window.intervalosCarrossel[produtoId]) {
+                    clearInterval(window.intervalosCarrossel[produtoId]);
+                    window.intervalosCarrossel[produtoId] = null;
                 }
-            });
+                return;
+            }
 
-            if (todasAsFotos.length > 1) {
+            let fotosParaCarrossel = [];
+
+            // Verifica se a vitrine está focada em uma cor ou livre para todas
+            if (window.modoCorUnica[produtoId]) {
+                let corIndex = window.estadoVariantes[produtoId] || 0;
+                let corObj = produto.coresAgrupadas[corIndex];
+                fotosParaCarrossel = [...new Set(corObj.fotos)];
+            } else {
+                produto.variantes.forEach(v => {
+                    if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
+                });
+            }
+
+            if (fotosParaCarrossel.length > 1) {
                 window.intervalosCarrossel[produtoId] = setInterval(() => {
                     const trackElement = document.getElementById(`track-${produtoId}`);
                     if (!trackElement) return;
 
                     let indiceAtualFoto = window.estadoFotosCard[produtoId] || 0;
-                    indiceAtualFoto = (indiceAtualFoto + 1) % todasAsFotos.length;
+                    indiceAtualFoto = (indiceAtualFoto + 1) % fotosParaCarrossel.length;
                     window.estadoFotosCard[produtoId] = indiceAtualFoto;
 
                     // O segredo do efeito suave (Fade)
@@ -2268,18 +2318,27 @@
                     });
 
                     const indContainer = document.getElementById(`indicators-${produtoId}`);
+                    if (indContainer) {
+                        const bars = indContainer.querySelectorAll('.indicator-bar');
+                        bars.forEach((bar, i) => {
+                            if (i === indiceAtualFoto) bar.classList.add('active');
+                            else bar.classList.remove('active');
+                        });
+                    }
 
-                    // --- MÁGICA: ATUALIZA A ETIQUETA DE ESGOTADO CONFORME A FOTO QUE ESTÁ PASSANDO ---
-                    const fotoAtualUrl = todasAsFotos[indiceAtualFoto];
-                    const corDestaFoto = produto.coresAgrupadas.find(c => c.fotos.includes(fotoAtualUrl));
-                    const badgeSold = document.getElementById(`badge-sold-${produtoId}`);
+                    // Se estiver girando todas as fotos, atualiza a etiqueta de ESGOTADO pra foto da vez
+                    if (!window.modoCorUnica[produtoId]) {
+                        const fotoAtualUrl = fotosParaCarrossel[indiceAtualFoto];
+                        const corDestaFoto = produto.coresAgrupadas.find(c => c.fotos.includes(fotoAtualUrl));
+                        const badgeSold = document.getElementById(`badge-sold-${produtoId}`);
 
-                    if (badgeSold && !produto.vendido) {
-                        if (corDestaFoto && corDestaFoto.esgotada) {
-                            badgeSold.style.display = 'block';
-                            badgeSold.textContent = 'COR ESGOTADA';
-                        } else {
-                            badgeSold.style.display = 'none';
+                        if (badgeSold && !produto.vendido) {
+                            if (corDestaFoto && corDestaFoto.esgotada) {
+                                badgeSold.style.display = 'block';
+                                badgeSold.textContent = 'COR ESGOTADA';
+                            } else {
+                                badgeSold.style.display = 'none';
+                            }
                         }
                     }
 
@@ -2308,14 +2367,17 @@
             let corIndex = window.estadoVariantes[idProduto] || 0;
             let corObj = produto.coresAgrupadas[corIndex];
 
-            // Puxa a foto certa considerando o trilho global
-            let todasAsFotos = [];
-            produto.variantes.forEach(v => {
-                if (v.imagem && !todasAsFotos.includes(v.imagem)) todasAsFotos.push(v.imagem);
-            });
-
+            // Puxa a foto certa de acordo com o modo atual (todas ou só uma cor)
+            let fotosParaCarrossel = [];
+            if (window.modoCorUnica[idProduto]) {
+                fotosParaCarrossel = [...new Set(corObj.fotos)];
+            } else {
+                produto.variantes.forEach(v => {
+                    if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
+                });
+            }
             let fotoIndex = window.estadoFotosCard[idProduto] || 0;
-            let fotoAtual = todasAsFotos[fotoIndex];
+            let fotoAtual = fotosParaCarrossel[fotoIndex];
 
             const stringTamanhosAtual = formatarTamanhosOrdenados(corObj.tamanhos);
 
