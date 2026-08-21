@@ -136,16 +136,16 @@
         "variantes": [
             {
                 "codigoBling": "465524",
-                "cor": "Bege",
+                "cor": "Bege (Caramelo)",
                 "tamanho": "G(Slim)",
                 "imagem": "fotos/vestido_96.jpg",
                 "vendido": false
             },
             {
                 "codigoBling": "465525",
-                "cor": "Bege",
+                "cor": "Bege (Claro)",
                 "tamanho": "GG(Slim)",
-                "imagem": "fotos/vestido_96.jpg",
+                "imagem": "fotos/vestido_96beg.jpg",
                 "vendido": false
             }
         ]
