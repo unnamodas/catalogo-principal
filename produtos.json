@@ -1,320 +1,58 @@
 [
     {
-        "id": "198",
-        "nome": "Blusa",
-        "por": "197,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "463917",
-                "cor": "Rosa",
-                "tamanho": "52",
-                "imagem": "fotos/blusa_46.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463918",
-                "cor": "Rosa",
-                "tamanho": "54",
-                "imagem": "fotos/blusa_46.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "199",
-        "nome": "Calça",
-        "por": "199,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465265",
-                "cor": "Marrom",
-                "tamanho": "52",
-                "imagem": "fotos/calca_14.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465266",
-                "cor": "Marrom",
-                "tamanho": "54",
-                "imagem": "fotos/calca_14.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "200",
-        "nome": "Vestido midi",
-        "por": "199,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465919",
-                "cor": "Rosa",
-                "tamanho": "Único",
-                "imagem": "fotos/vestido_94ros.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465917",
-                "cor": "Preto",
-                "tamanho": "Único",
-                "imagem": "fotos/vestido_94pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465918",
-                "cor": "Branco",
-                "tamanho": "Único",
-                "imagem": "fotos/vestido_94bra.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "201",
-        "nome": "Colete",
-        "por": "199,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "463439",
-                "cor": "Preto",
-                "tamanho": "Único",
-                "imagem": "fotos/colete_2.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "202",
-        "nome": "Vestido midi",
-        "por": "319,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465527",
-                "cor": "Rosa (Rosé)",
-                "tamanho": "P(Slim)",
-                "imagem": "fotos/vestido_95.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465528",
-                "cor": "Rosa (Rosé)",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/vestido_95ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465680",
-                "cor": "Rosa (Rosé)",
-                "tamanho": "G(Slim)",
-                "imagem": "fotos/vestido_95.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "203",
-        "nome": "Vestido",
-        "por": "329,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465524",
-                "cor": "Bege (Caramelo)",
-                "tamanho": "G(Slim)",
-                "imagem": "fotos/vestido_96.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465525",
-                "cor": "Bege (Claro)",
-                "tamanho": "GG(Slim)",
-                "imagem": "fotos/vestido_96beg.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "204",
-        "nome": "Blusa",
-        "por": "199,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "464387",
-                "cor": "Branco",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_47bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464388",
-                "cor": "Branco",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_47bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464390",
-                "cor": "Branco",
-                "tamanho": "52",
-                "imagem": "fotos/blusa_47bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464387",
-                "cor": "Vermelho",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_47ver.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464389",
-                "cor": "Vermelho",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_47ver.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464390",
-                "cor": "Vermelho",
-                "tamanho": "52",
-                "imagem": "fotos/blusa_47ver.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464391",
-                "cor": "Vermelho",
-                "tamanho": "54",
-                "imagem": "fotos/blusa_47ver.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "205",
-        "nome": "Short saia",
-        "por": "159,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "463644",
-                "cor": "Rosa",
-                "tamanho": "G1",
-                "imagem": "fotos/shortsaia_1ros.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463644",
-                "cor": "Azul",
-                "tamanho": "G1",
-                "imagem": "fotos/shortsaia_1az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463645",
-                "cor": "Azul",
-                "tamanho": "G2",
-                "imagem": "fotos/shortsaia_1az.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "206",
+        "id": "209",
         "nome": "Short",
-        "por": "159,90",
+        "por": "239,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "464439",
-                "cor": "Vermelho",
-                "tamanho": "G1",
-                "imagem": "fotos/short_1.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464440",
-                "cor": "Vermelho",
-                "tamanho": "G2",
-                "imagem": "fotos/short_1.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "207",
-        "nome": "Regata",
-        "por": "99,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "464795",
-                "cor": "Azul marinho",
-                "tamanho": "46",
-                "imagem": "fotos/regata_6az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464796",
-                "cor": "Preto",
-                "tamanho": "48",
-                "imagem": "fotos/regata_6pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464797",
-                "cor": "Preto",
-                "tamanho": "50",
-                "imagem": "fotos/regata_6pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "464797",
-                "cor": "Azul marinho",
-                "tamanho": "50",
-                "imagem": "fotos/regata_6az.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "208",
-        "nome": "Vestido",
-        "por": "199,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465530",
+                "codigoBling": "459891",
                 "cor": "Bege",
-                "tamanho": "G",
-                "imagem": "fotos/vestido_98.jpg",
+                "tamanho": "48",
+                "imagem": "fotos/short_2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "210",
+        "nome": "Short saia",
+        "por": "169,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "463170",
+                "cor": "Rosa",
+                "tamanho": "50",
+                "imagem": "fotos/shortsaia_2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "211",
+        "nome": "Short",
+        "por": "169,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "463148",
+                "cor": "Azul",
+                "tamanho": "50",
+                "imagem": "fotos/short_3az.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464168",
+                "cor": "Rosa",
+                "tamanho": "46",
+                "imagem": "fotos/short_3ros.jpg",
                 "vendido": false
             }
         ]
