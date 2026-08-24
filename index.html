@@ -1822,6 +1822,18 @@
             produtos.forEach(p => {
                 let cat = p.nome.split(' ')[0].trim();
                 cat = cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase();
+
+                // --- REGRA DOS SHORTS E BERMUDAS ---
+                if (cat === 'Short' || cat === 'Shorts' || cat === 'Bermuda') {
+                    cat = 'Short/Bermuda';
+                }
+
+                // --- NOVA REGRA: CAMISA VIRA BLUSA ---
+                if (cat === 'Camisa') {
+                    cat = 'Blusa';
+                }
+                // ------------------------------------------------
+
                 if (!listasCategorias.includes(cat) && cat.length > 0) {
                     listasCategorias.push(cat);
                 }
@@ -1993,7 +2005,18 @@
             }
 
             produtosFiltradosGlobais = produtos.filter(p => {
-                const catItem = p.nome.split(' ')[0].charAt(0).toUpperCase() + p.nome.split(' ')[0].slice(1).toLowerCase();
+                let catItem = p.nome.split(' ')[0].charAt(0).toUpperCase() + p.nome.split(' ')[0].slice(1).toLowerCase();
+
+                // --- REGRA DOS SHORTS E BERMUDAS ---
+                if (catItem === 'Short' || catItem === 'Shorts' || catItem === 'Bermuda') {
+                    catItem = 'Short/Bermuda';
+                }
+
+                // --- NOVA REGRA: CAMISA VIRA BLUSA ---
+                if (catItem === 'Camisa') {
+                    catItem = 'Blusa';
+                }
+                // -----------------------------------------------
 
                 const matchesCategoria = (categoriaAtual === 'Todos' || catItem === categoriaAtual);
                 const matchesTamanho = verificaTamanhoCompativel(p, tamanhoAtual);
