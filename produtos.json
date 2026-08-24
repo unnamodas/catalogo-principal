@@ -56,5 +56,53 @@
                 "vendido": false
             }
         ]
+    },
+    {
+        "id": "212",
+        "nome": "Short",
+        "por": "169,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "464180",
+                "cor": "Rosa",
+                "tamanho": "48",
+                "imagem": "fotos/short_4ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464181",
+                "cor": "Azul",
+                "tamanho": "50",
+                "imagem": "fotos/short_4az.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "213",
+        "nome": "Short saia",
+        "por": "169,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "464170",
+                "cor": "Vermelho",
+                "tamanho": "46",
+                "imagem": "fotos/shortsaia_3.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464171",
+                "cor": "Vermelho",
+                "tamanho": "48",
+                "imagem": "fotos/shortsaia_3.jpg",
+                "vendido": false
+            }
+        ]
     }
 ]
