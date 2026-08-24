@@ -1,69 +1,116 @@
 [
     {
-        "id": "214",
+        "id": "216",
         "nome": "Short",
-        "por": "189,90",
+        "por": "199,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "463854",
-                "cor": "Rosa",
-                "tamanho": "P",
-                "imagem": "fotos/shortlistra_5.jpg",
+                "codigoBling": "464383",
+                "cor": "Bege",
+                "tamanho": "46",
+                "imagem": "fotos/short_6.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "463854",
-                "cor": "Azul",
-                "tamanho": "P",
-                "imagem": "fotos/shortlistra_5.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463855",
-                "cor": "Rosa",
-                "tamanho": "M",
-                "imagem": "fotos/shortlistra_5.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463856",
-                "cor": "Rosa",
-                "tamanho": "G",
-                "imagem": "fotos/shortlistra_5.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463857",
-                "cor": "Rosa",
-                "tamanho": "GG",
-                "imagem": "fotos/shortlistra_5.jpg",
+                "codigoBling": "464385",
+                "cor": "Bege",
+                "tamanho": "54",
+                "imagem": "fotos/short_6.jpg",
                 "vendido": false
             }
         ]
     },
     {
-        "id": "215",
-        "nome": "Blusa",
-        "por": "89,90",
+        "id": "217",
+        "nome": "Saia midi",
+        "por": "219,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "464707",
-                "cor": "Azul",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_48.jpg",
+                "codigoBling": "463968",
+                "cor": "Branco",
+                "tamanho": "46",
+                "imagem": "fotos/saia_1.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "218",
+        "nome": "Saia",
+        "por": "249,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "464522",
+                "cor": "Branco",
+                "tamanho": "46",
+                "imagem": "fotos/saia_2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "464708",
-                "cor": "Azul",
+                "codigoBling": "464525",
+                "cor": "Azul marinho",
                 "tamanho": "52",
-                "imagem": "fotos/blusa_48.jpg",
+                "imagem": "fotos/saia_2az.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "219",
+        "nome": "Saia midi",
+        "por": "199,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "463662",
+                "cor": "Bege",
+                "tamanho": "G",
+                "imagem": "fotos/saia_3.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "220",
+        "nome": "Saia midi",
+        "por": "329,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "464543",
+                "cor": "Branco",
+                "tamanho": "52",
+                "imagem": "fotos/saia_4.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "221",
+        "nome": "Vestido",
+        "por": "359,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "460910",
+                "cor": "Bege",
+                "tamanho": "M",
+                "imagem": "fotos/vestido_99.jpg",
                 "vendido": false
             }
         ]
