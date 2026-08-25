@@ -1,24 +1,17 @@
 [
     {
-        "id": "203",
-        "nome": "Vestido",
-        "por": "329,90",
+        "id": "222",
+        "nome": "Conjunto blusa e bermuda",
+        "por": "369,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465524",
-                "cor": "Bege (Caramelo)",
-                "tamanho": "G(Slim)",
-                "imagem": "fotos/vestido_96.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465525",
-                "cor": "Bege",
-                "tamanho": "GG(Slim)",
-                "imagem": "fotos/vestido_96beg.jpg",
+                "codigoBling": "464216",
+                "cor": "Branco (Off White)",
+                "tamanho": "52",
+                "imagem": "fotos/conjunto_25.jpg",
                 "vendido": false
             }
         ]
