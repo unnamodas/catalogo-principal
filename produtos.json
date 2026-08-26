@@ -1,384 +1,184 @@
 [
     {
-        "id": "223",
-        "nome": "Vestido midi",
-        "por": "129,90",
-        "novidade": false,
+        "id": "232",
+        "nome": "Kimono",
+        "por": "199,90",
+        "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465976",
-                "cor": "Branco",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/vestido_100.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465976",
-                "cor": "Branco",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/vestido_100ft2.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "224",
-        "nome": "Vestido midi",
-        "por": "129,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465973",
-                "cor": "Bege",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/vestido_101.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465973",
-                "cor": "Bege",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/vestido_101ft2.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "225",
-        "nome": "Macacão",
-        "por": "279,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "466072",
-                "cor": "Preto",
-                "tamanho": "P",
-                "imagem": "fotos/macacao_3pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466071",
-                "cor": "Azul marinho",
-                "tamanho": "M",
-                "imagem": "fotos/macacao_3az.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "226",
-        "nome": "Blusa tule",
-        "por": "79,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "466001",
-                "cor": "Preto",
-                "tamanho": "G1",
-                "imagem": "fotos/blusa_49.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466071",
-                "cor": "Azul marinho",
-                "tamanho": "M",
-                "imagem": "fotos/macacao_3az.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "227",
-        "nome": "Vestido midi",
-        "por": "289,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "466026",
-                "cor": "Branco",
+                "codigoBling": "466031",
+                "cor": "Terracota",
                 "tamanho": "44",
-                "imagem": "fotos/vestido_102.jpg",
+                "imagem": "fotos/kimono_1ter.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466026",
-                "cor": "Branco",
+                "codigoBling": "466031",
+                "cor": "Terracota",
                 "tamanho": "44",
-                "imagem": "fotos/vestido_102ft2.jpg",
+                "imagem": "fotos/kimono_1terft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466027",
-                "cor": "Branco",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_102.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466027",
-                "cor": "Branco",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_102ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466028",
-                "cor": "Branco",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_102.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466028",
-                "cor": "Branco",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_102ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466029",
-                "cor": "Branco",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_102.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466029",
-                "cor": "Branco",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_102ft2.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "228",
-        "nome": "Blusa laise",
-        "por": "289,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465990",
+                "codigoBling": "466033",
                 "cor": "Azul",
-                "tamanho": "G2",
-                "imagem": "fotos/blusa_50az.jpg",
+                "tamanho": "46",
+                "imagem": "fotos/kimono_1az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465989",
+                "codigoBling": "466033",
+                "cor": "Azul",
+                "tamanho": "48",
+                "imagem": "fotos/kimono_1azft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466032",
+                "cor": "Terracota",
+                "tamanho": "48",
+                "imagem": "fotos/kimono_1ter.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466032",
+                "cor": "Terracota",
+                "tamanho": "48",
+                "imagem": "fotos/kimono_1terft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466034",
+                "cor": "Azul",
+                "tamanho": "52",
+                "imagem": "fotos/kimono_1az.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466034",
+                "cor": "Azul",
+                "tamanho": "52",
+                "imagem": "fotos/kimono_1azft2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "233",
+        "nome": "Calça pantalona",
+        "por": "229,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "466044",
+                "cor": "Terracota",
+                "tamanho": "44",
+                "imagem": "fotos/calca_15ter.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466044",
+                "cor": "Terracota",
+                "tamanho": "44",
+                "imagem": "fotos/calca_15ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466046",
+                "cor": "Azul",
+                "tamanho": "48",
+                "imagem": "fotos/calca_15az.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466046",
+                "cor": "Azul",
+                "tamanho": "48",
+                "imagem": "fotos/calca_15azft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466045",
+                "cor": "Terracota",
+                "tamanho": "48",
+                "imagem": "fotos/calca_15ter.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466045",
+                "cor": "Terracota",
+                "tamanho": "48",
+                "imagem": "fotos/calca_15terft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466047",
+                "cor": "Azul",
+                "tamanho": "52",
+                "imagem": "fotos/calca_15az.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466047",
+                "cor": "Azul",
+                "tamanho": "52",
+                "imagem": "fotos/calca_15azft2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "234",
+        "nome": "Vestido",
+        "por": "269,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465949",
                 "cor": "Rosa",
                 "tamanho": "G1",
-                "imagem": "fotos/blusa_50ros.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "229",
-        "nome": "Vestido",
-        "por": "298,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "466040",
-                "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_103.jpg",
+                "imagem": "fotos/vestido_106ros.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466040",
-                "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_103ft2.jpg",
+                "codigoBling": "465949",
+                "cor": "Rosa",
+                "tamanho": "G1",
+                "imagem": "fotos/vestido_106rosft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466040",
-                "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_103ft3.jpg",
+                "codigoBling": "465949",
+                "cor": "Rosa",
+                "tamanho": "G1",
+                "imagem": "fotos/vestido_106rosft3.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466041",
+                "codigoBling": "465948",
                 "cor": "Azul",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_103.jpg",
+                "tamanho": "GG",
+                "imagem": "fotos/vestido_106az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466041",
+                "codigoBling": "465948",
                 "cor": "Azul",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_103ft2.jpg",
+                "tamanho": "GG",
+                "imagem": "fotos/vestido_106azft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466041",
+                "codigoBling": "465948",
                 "cor": "Azul",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_103ft3.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466042",
-                "cor": "Azul",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_103.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466042",
-                "cor": "Azul",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_103ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466042",
-                "cor": "Azul",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_103ft3.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "230",
-        "nome": "Vestido",
-        "por": "229,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "466036",
-                "cor": "Azul",
-                "tamanho": "44",
-                "imagem": "fotos/vestido_104az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466036",
-                "cor": "Azul",
-                "tamanho": "44",
-                "imagem": "fotos/vestido_104azft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466036",
-                "cor": "Azul",
-                "tamanho": "44",
-                "imagem": "fotos/vestido_104azft3.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466037",
-                "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_104az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466037",
-                "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_104azft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466037",
-                "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_104azft3.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466038",
-                "cor": "Bege",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_104beg.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466038",
-                "cor": "Bege",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_104begft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466038",
-                "cor": "Bege",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_104begft3.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "231",
-        "nome": "Vestido midi",
-        "por": "329,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "466022",
-                "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_105.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466022",
-                "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_105ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466023",
-                "cor": "Azul",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_105.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466023",
-                "cor": "Azul",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_105ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466024",
-                "cor": "Azul",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_105.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466024",
-                "cor": "Azul",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_105ft2.jpg",
+                "tamanho": "GG",
+                "imagem": "fotos/vestido_106azft3.jpg",
                 "vendido": false
             }
         ]
