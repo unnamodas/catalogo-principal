@@ -65,6 +65,27 @@
                 "tamanho": "G1",
                 "imagem": "fotos/conjunto_27bra.jpg",
                 "vendido": false
+            },
+            {
+                "codigoBling": "466004",
+                "cor": "Rosa",
+                "tamanho": "G1",
+                "imagem": "fotos/conjunto_27ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466006",
+                "cor": "Verde",
+                "tamanho": "G1",
+                "imagem": "fotos/conjunto_27ver.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466007",
+                "cor": "Verde",
+                "tamanho": "G2",
+                "imagem": "fotos/conjunto_27ver.jpg",
+                "vendido": false
             }
         ]
     }
