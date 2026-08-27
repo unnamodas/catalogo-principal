@@ -1776,7 +1776,11 @@
             }
 
             // 3. Processa as variantes e monta o catálogo normalmente igual antes
+            // 3. Processa as variantes e monta o catálogo normalmente igual antes
             produtos.forEach(p => {
+                // 🟢 NOVIDADE DINÂMICA: Dá um "número da sorte" para embaralhar os itens a cada visita
+                p.ordemAleatoria = Math.random();
+
                 // 🟢 MÁGICA DE ESTOQUE: Se todas as variantes acabaram, o produto inteiro esgota
                 let todasVariantesEsgotadas = p.variantes.every(v => v.vendido === true || String(v.vendido) === "true");
                 if (todasVariantesEsgotadas) {
@@ -2058,6 +2062,19 @@
 
                 return matchesCategoria && matchesTamanho && matchesCor && matchesPesquisa && matchesStatus;
             });
+            // 🟢 MUDANÇA q AQUI: Ordena as Novidades no topo E embaralha a ordem a cada novo acesso
+            produtosFiltradosGlobais.sort((a, b) => {
+                let aNovidade = (a.novidade === true || String(a.novidade).toLowerCase() === 'true' || a.Novidade === true || String(a.Novidade).toLowerCase() === 'true') ? 1 : 0;
+                let bNovidade = (b.novidade === true || String(b.novidade).toLowerCase() === 'true' || b.Novidade === true || String(b.Novidade).toLowerCase() === 'true') ? 1 : 0;
+
+                // 1º Regra: Se um é novidade e o outro não, a novidade sobe
+                if (bNovidade !== aNovidade) {
+                    return bNovidade - aNovidade;
+                }
+
+                // 2º Regra: Se os dois são iguais (ambos novidade ou ambos comuns), usa o número sorteado na entrada do site
+                return a.ordemAleatoria - b.ordemAleatoria;
+            });
 
             indiceExibicaoAtual = 0;
             document.getElementById('product-grid').innerHTML = '';
@@ -2233,9 +2250,10 @@
             </div>`;
                 }).join('');
 
-                let isDestaque = (p.destaque === true || String(p.destaque) === "true");
-                let isVendido = (p.vendido === true || String(p.vendido) === "true");
-                let isNovidade = (p.novidade === true || String(p.novidade) === "true");
+                // 🟢 MUDANÇA AQUI: Verifica as variáveis independente de como foram cadastradas no Firebase
+                let isDestaque = (p.destaque === true || String(p.destaque).toLowerCase() === "true" || p.Destaque === true || String(p.Destaque).toLowerCase() === "true");
+                let isVendido = (p.vendido === true || String(p.vendido).toLowerCase() === "true");
+                let isNovidade = (p.novidade === true || String(p.novidade).toLowerCase() === "true" || p.Novidade === true || String(p.Novidade).toLowerCase() === "true");
 
                 card.innerHTML = `
            <div class="product-image-container">
