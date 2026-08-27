@@ -1,108 +1,101 @@
 [
     {
-        "id": "242",
-        "nome": "Conjunto camisa e short",
-        "por": "189,90",
+        "id": "246",
+        "nome": "Vestido longo",
+        "por": "229,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465992",
+                "codigoBling": "465968",
+                "cor": "Verde",
+                "tamanho": "M",
+                "imagem": "fotos/vestido_109ver.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465969",
+                "cor": "Azul",
+                "tamanho": "M",
+                "imagem": "fotos/vestido_109az.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "247",
+        "nome": "Vestido longo",
+        "por": "229,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465966",
+                "cor": "Rosa (Rosé)",
+                "tamanho": "M",
+                "imagem": "fotos/vestido_110ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465965",
+                "cor": "Azul",
+                "tamanho": "M",
+                "imagem": "fotos/vestido_110az.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "180",
+        "nome": "Conjunto colete e short saia",
+        "por": "199,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "466073",
+                "cor": "Rosa",
+                "tamanho": "G1",
+                "imagem": "fotos/conjunto_29ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466073",
+                "cor": "Amarelo",
+                "tamanho": "G1",
+                "imagem": "fotos/conjunto_29am.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465999",
                 "cor": "Azul",
                 "tamanho": "G1",
-                "imagem": "fotos/conjunto_28az.jpg",
+                "imagem": "fotos/conjunto_29az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465993",
-                "cor": "Laranja",
+                "codigoBling": "466074",
+                "cor": "Vermelho",
                 "tamanho": "G1",
-                "imagem": "fotos/conjunto_28lar.jpg",
+                "imagem": "fotos/conjunto_29verm.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465994",
-                "cor": "Marrom",
+                "codigoBling": "466076",
+                "cor": "Amarelo",
                 "tamanho": "G2",
-                "imagem": "fotos/conjunto_28mar.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "243",
-        "nome": "Blusa com regata",
-        "por": "179,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "466056",
-                "cor": "Bege",
-                "tamanho": "P",
-                "imagem": "fotos/blusa_51beg.jpg",
+                "imagem": "fotos/conjunto_29am.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466057",
-                "cor": "Preto",
-                "tamanho": "M",
-                "imagem": "fotos/blusa_51pre.jpg",
+                "codigoBling": "466075",
+                "cor": "Vermelho",
+                "tamanho": "G2",
+                "imagem": "fotos/conjunto_29verm.jpg",
                 "vendido": false
-            },
-            {
-                "codigoBling": "466058",
-                "cor": "Bege",
-                "tamanho": "G",
-                "imagem": "fotos/blusa_51beg.jpg",
-                "vendido": true
-            },
-            {
-                "codigoBling": "466059",
-                "cor": "Preto",
-                "tamanho": "GG",
-                "imagem": "fotos/blusa_51pre.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "244",
-        "nome": "Blusa",
-        "por": "169,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "466049",
-                "cor": "Marrom",
-                "tamanho": "P",
-                "imagem": "fotos/blusa_52mar.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466053",
-                "cor": "Verde",
-                "tamanho": "M",
-                "imagem": "fotos/blusa_52ver.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466053",
-                "cor": "Verde",
-                "tamanho": "GG",
-                "imagem": "fotos/blusa_52ver.jpg",
-                "vendido": true
-            },
-            {
-                "codigoBling": "466052",
-                "cor": "Preto",
-                "tamanho": "G",
-                "imagem": "fotos/blusa_52pre.jpg",
-                "vendido": true
             }
         ]
     }
