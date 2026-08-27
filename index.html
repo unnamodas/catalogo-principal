@@ -632,7 +632,7 @@
             background-position: center;
             background-repeat: no-repeat;
             cursor: pointer;
-            border: 2px solid #e0e0e0;
+            border: 2px solid transparent;
             transition: all 0.3s ease;
             position: relative;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -1823,16 +1823,31 @@
                 let cat = p.nome.split(' ')[0].trim();
                 cat = cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase();
 
-                // --- REGRA DOS SHORTS E BERMUDAS ---
-                if (cat === 'Short' || cat === 'Shorts' || cat === 'Bermuda') {
-                    cat = 'Short/Bermuda';
+                // --- 1. REGRA ABSOLUTA DO CONJUNTO ---
+                if (p.nome.toLowerCase().includes('conjunto')) {
+                    cat = 'Conjuntos';
+                } else {
+                    // --- 2. OUTRAS REGRAS E PLURAIS ---
+                    if (cat === 'Short' || cat === 'Shorts' || cat === 'Bermuda') {
+                        cat = 'Shorts/Bermudas';
+                    }
+                    // Adicionando Body junto com Camisa, Kimono, Colete e Regata para virarem Blusas
+                    else if (cat === 'Camisa' || cat === 'Kimono' || cat === 'Colete' || cat === 'Regata' || cat === 'Blusa' || cat === 'Body') {
+                        cat = 'Blusas';
+                    }
+                    else if (cat === 'Vestido') {
+                        cat = 'Vestidos';
+                    }
+                    else if (cat === 'Calça') {
+                        cat = 'Calças';
+                    }
+                    else if (cat === 'Saia') {
+                        cat = 'Saias';
+                    }
+                    else if (cat === 'Macacão') {
+                        cat = 'Macacões';
+                    }
                 }
-
-                // --- NOVA REGRA: CAMISA VIRA BLUSA ---
-                if (cat === 'Camisa') {
-                    cat = 'Blusa';
-                }
-                // ------------------------------------------------
 
                 if (!listasCategorias.includes(cat) && cat.length > 0) {
                     listasCategorias.push(cat);
@@ -2007,16 +2022,31 @@
             produtosFiltradosGlobais = produtos.filter(p => {
                 let catItem = p.nome.split(' ')[0].charAt(0).toUpperCase() + p.nome.split(' ')[0].slice(1).toLowerCase();
 
-                // --- REGRA DOS SHORTS E BERMUDAS ---
-                if (catItem === 'Short' || catItem === 'Shorts' || catItem === 'Bermuda') {
-                    catItem = 'Short/Bermuda';
+                // --- 1. REGRA ABSOLUTA DO CONJUNTO ---
+                if (p.nome.toLowerCase().includes('conjunto')) {
+                    catItem = 'Conjuntos';
+                } else {
+                    // --- 2. OUTRAS REGRAS E PLURAIS ---
+                    if (catItem === 'Short' || catItem === 'Shorts' || catItem === 'Bermuda') {
+                        catItem = 'Shorts/Bermudas';
+                    }
+                    // Adicionando Body junto com Camisa, Kimono, Colete e Regata para virarem Blusas
+                    else if (catItem === 'Camisa' || catItem === 'Kimono' || catItem === 'Colete' || catItem === 'Regata' || catItem === 'Blusa' || catItem === 'Body') {
+                        catItem = 'Blusas';
+                    }
+                    else if (catItem === 'Vestido') {
+                        catItem = 'Vestidos';
+                    }
+                    else if (catItem === 'Calça') {
+                        catItem = 'Calças';
+                    }
+                    else if (catItem === 'Saia') {
+                        catItem = 'Saias';
+                    }
+                    else if (catItem === 'Macacão') {
+                        catItem = 'Macacões';
+                    }
                 }
-
-                // --- NOVA REGRA: CAMISA VIRA BLUSA ---
-                if (catItem === 'Camisa') {
-                    catItem = 'Blusa';
-                }
-                // -----------------------------------------------
 
                 const matchesCategoria = (categoriaAtual === 'Todos' || catItem === categoriaAtual);
                 const matchesTamanho = verificaTamanhoCompativel(p, tamanhoAtual);
@@ -2027,25 +2057,6 @@
                     p.variantes.some(v => v.tamanho.toLowerCase().includes(termoPesquisa.toLowerCase()) || v.cor.toLowerCase().includes(termoPesquisa.toLowerCase()));
 
                 return matchesCategoria && matchesTamanho && matchesCor && matchesPesquisa && matchesStatus;
-            });
-
-            produtosFiltradosGlobais.sort(() => Math.random() - 0.5);
-
-            produtosFiltradosGlobais.sort((a, b) => {
-                // 1º Garante que Esgotados vão sempre para o final
-                let vendidoA = (a.vendido === true || String(a.vendido) === "true");
-                let vendidoB = (b.vendido === true || String(b.vendido) === "true");
-                if (vendidoA !== vendidoB) return vendidoA ? 1 : -1;
-
-                // 2º Novidades RIGOROSAMENTE no topo
-                let novidadeA = (a.novidade === true || String(a.novidade) === "true") ? 1 : 0;
-                let novidadeB = (b.novidade === true || String(b.novidade) === "true") ? 1 : 0;
-                if (novidadeA !== novidadeB) return novidadeB - novidadeA;
-
-                // 3º Destaques logo em seguida
-                let destaqueA = (a.destaque === true || String(a.destaque) === "true") ? 1 : 0;
-                let destaqueB = (b.destaque === true || String(b.destaque) === "true") ? 1 : 0;
-                return destaqueB - destaqueA;
             });
 
             indiceExibicaoAtual = 0;
@@ -2080,26 +2091,25 @@
             if (indContainer) indContainer.style.display = 'none';
 
             window.estadoVariantes[produtoId] = corIndex;
-            window.estadoFotosCard[produtoId] = 0; // Reseta para a primeira foto da nova cor
-            window.modoCorUnica[produtoId] = true; // Avisa o sistema que a cliente focou nessa cor
+            window.estadoFotosCard[produtoId] = 0;
+            window.modoCorUnica[produtoId] = true;
 
             const produto = produtos.find(p => String(p.id) === String(produtoId));
             const corObj = produto.coresAgrupadas[corIndex];
 
-            let fotosDaCor = [...new Set(corObj.fotos)];
+            // 🟢 FILTRO DE SEGURANÇA: Remove fotos vazias, nulas ou inválidas
+            let fotosDaCor = [...new Set(corObj.fotos)].filter(foto => foto && foto.trim() !== "" && !foto.includes("undefined"));
 
-            // Substitui as imagens do carrossel pelas da nova cor
             const trackElement = document.getElementById(`track-${produtoId}`);
             if (trackElement) {
                 let trackHtml = '';
                 fotosDaCor.forEach((foto, i) => {
                     let classeVisivel = i === 0 ? 'active-img' : '';
-                    trackHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${produto.nome}" onclick="abrirModal('${produtoId}')" onerror="substituirPorPlaceholder(this)">`;
+                    trackHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${produto.nome}" onerror="substituirPorPlaceholder(this)">`;
                 });
                 trackElement.innerHTML = trackHtml;
             }
 
-            // Substitui os indicadores
             if (indContainer) {
                 if (fotosDaCor.length > 1) {
                     let indHtml = '';
@@ -2124,19 +2134,10 @@
                 }
             }
 
-            // Atualiza o texto dinâmico da cor selecionada
-            let esgotadaTexto = corObj.esgotada ? ' <span style="color: #d93025; font-size: 10px; font-weight: 700;">(ESGOTADA)</span>' : '';
-            const textoCorElement = document.getElementById(`cor-selecionada-${produtoId}`);
-            if (textoCorElement) {
-                textoCorElement.innerHTML = `Cor: <b>${corObj.corOriginal}</b>${esgotadaTexto}`;
-            }
-
-            // GARANTE O CONTORNO PRETO NA BOLINHA CLICADA E REMOVE DAS OUTRAS
             const container = dotElement.parentElement;
             container.querySelectorAll('.cor-dot').forEach(d => d.classList.remove('active'));
             dotElement.classList.add('active');
 
-            // BOTÃO COMPRAR VOLTA AO NORMAL
             const btnContainer = document.getElementById(`btn-container-${produtoId}`);
             if (btnContainer && !produto.vendido) {
                 const stringTamanhos = formatarTamanhosOrdenados(corObj.tamanhos);
@@ -2144,11 +2145,9 @@
                 btnContainer.innerHTML = `<a id="btn-compra-${produtoId}" href="https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}" target="_blank" class="btn-whatsapp">Comprar</a>`;
             }
 
-            // Se essa cor tiver mais de uma foto (frente e costas), faz ela deslizar!
             iniciarCarrosselAutomatico(produtoId);
         }
         function carregarMaisProdutos() {
-            // TRAVA DE SEGURANÇA DO SCROLL: Impede de carregar catálogo normal na aba de liquidação
             if (modoLiquidacao) return;
 
             if (carregandoMais || indiceExibicaoAtual >= produtosFiltradosGlobais.length) return;
@@ -2158,15 +2157,14 @@
             const proximoLote = produtosFiltradosGlobais.slice(indiceExibicaoAtual, indiceExibicaoAtual + ITENS_POR_CARREGAMENTO);
 
             proximoLote.forEach(p => {
-                // 🟢 1. Define a cor inicial do card obedecendo aos filtros ativos
                 if (window.estadoVariantes[p.id] === undefined) {
                     if (corAtual !== 'Todas') {
                         let filterIdx = p.coresAgrupadas.findIndex(c => c.corOriginal.toLowerCase().includes(corAtual.toLowerCase()));
                         window.estadoVariantes[p.id] = filterIdx !== -1 ? filterIdx : 0;
-                        window.modoCorUnica[p.id] = true; // Força a travar na cor do filtro!
+                        window.modoCorUnica[p.id] = true;
                     } else {
                         window.estadoVariantes[p.id] = 0;
-                        window.modoCorUnica[p.id] = false; // Se não tem filtro de cor, libera todas!
+                        window.modoCorUnica[p.id] = false;
                     }
                 }
                 if (window.estadoFotosCard[p.id] === undefined) window.estadoFotosCard[p.id] = 0;
@@ -2175,30 +2173,35 @@
                 let corObj = p.coresAgrupadas[corIndex];
                 const stringTamanhosAtual = formatarTamanhosOrdenados(corObj.tamanhos);
 
-                // Bolinhas de cor (A cor que veio no filtro já vem selecionada!)
                 let carrosselCoresHtml = '';
                 if (p.coresAgrupadas.length > 1) {
                     carrosselCoresHtml = '<div class="cores-container">';
                     p.coresAgrupadas.forEach((c, index) => {
-                        let classeAtiva = (index === corIndex) ? 'active' : '';
+                        let classeAtiva = (index === corIndex && window.modoCorUnica[p.id]) ? 'active' : '';
                         carrosselCoresHtml += `<div class="cor-dot ${classeAtiva}" style="background-image: url('${c.fotos[0]}')" onclick="trocarCor(event, '${p.id}', ${index}, this)" title="Cor: ${c.corOriginal}"></div>`;
                     });
                     carrosselCoresHtml += '</div>';
                 }
 
-                // --- GERA O TRILHO (ESTÁTICO SE HOUVER FILTRO DE COR, DINÂMICO SE LIVRE) ---
+                // 🟢 CORREÇÃO AQUI: Se há filtro de cor ativo, pega TODAS AS FOTOS DAQUELA COR (e não apenas a primeira!)
                 let fotosParaCarrossel = [];
                 let isFiltroCorAtivo = (corAtual !== 'Todas');
 
                 if (isFiltroCorAtivo) {
-                    // Se há filtro de cor, pega APENAS A PRIMEIRA foto daquela cor para ficar estático
-                    fotosParaCarrossel = [corObj.fotos[0]];
+                    let corFiltradaObj = p.coresAgrupadas.find(c => c.corOriginal.toLowerCase().includes(corAtual.toLowerCase()));
+                    if (corFiltradaObj) {
+                        fotosParaCarrossel = [...new Set(corFiltradaObj.fotos)];
+                    }
+                } else if (window.modoCorUnica[p.id]) {
+                    fotosParaCarrossel = [...new Set(corObj.fotos)];
                 } else {
-                    // Sem filtro de cor, puxa todas as fotos das variantes para o carrossel livre
                     p.variantes.forEach(v => {
                         if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
                     });
                 }
+
+                // Limpa URLs inválidas
+                fotosParaCarrossel = fotosParaCarrossel.filter(foto => foto && typeof foto === 'string' && foto.trim() !== "" && !foto.includes("undefined"));
 
                 let trackImagensHtml = '';
                 fotosParaCarrossel.forEach((foto, i) => {
@@ -2207,7 +2210,8 @@
                 });
 
                 let indicadoresHtml = '';
-                if (!isFiltroCorAtivo && fotosParaCarrossel.length > 1) {
+                // Mostra os tracinhos se houver mais de uma foto para essa cor selecionada
+                if (fotosParaCarrossel.length > 1) {
                     indicadoresHtml = `<div class="carousel-indicators" id="indicators-${p.id}">`;
                     fotosParaCarrossel.forEach((_, i) => {
                         indicadoresHtml += `<div class="indicator-bar ${i === window.estadoFotosCard[p.id] ? 'active' : ''}"></div>`;
@@ -2221,66 +2225,57 @@
                 const card = document.createElement('div');
                 card.className = `product-card ${p.vendido ? 'sold-item' : ''}`;
 
-                // Lógica inteligente de exibir e riscar os tamanhos sem duplicar
-                let esgotadaTexto = corObj.esgotada ? ' <span style="color: #d93025; font-size: 10px; font-weight: 700;">(ESGOTADA)</span>' : '';
-
-                // NOVO: Lista de cores e tamanhos com visual limpo, elegante e leve
                 let listaCoresTamanhosHtml = p.coresAgrupadas.map(c => {
                     let tamanhosCor = gerarHtmlTamanhosCor(p, c);
                     let esgotadaStatus = c.esgotada ? ' <span style="color: #d93025; font-size: 9px; font-weight: 600;">(ESGOTADA)</span>' : '';
                     return `<div style="margin-bottom: 2px; font-size: 11px; font-weight: 400; color: var(--text-muted); letter-spacing: 0.03em;">
-                        <span style="font-weight: 500; color: var(--text-main);">${c.corOriginal}</span>: <span class="destaque-tamanho" style="font-weight: 400; color: var(--text-muted);">${tamanhosCor}</span>${esgotadaStatus}
-                    </div>`;
+                <span style="font-weight: 500; color: var(--text-main);">${c.corOriginal}</span>: <span class="destaque-tamanho" style="font-weight: 400; color: var(--text-muted);">${tamanhosCor}</span>${esgotadaStatus}
+            </div>`;
                 }).join('');
 
-                // Força o HTML a entender perfeitamente as etiquetas 
                 let isDestaque = (p.destaque === true || String(p.destaque) === "true");
                 let isVendido = (p.vendido === true || String(p.vendido) === "true");
                 let isNovidade = (p.novidade === true || String(p.novidade) === "true");
 
                 card.innerHTML = `
-                   <div class="product-image-container">
-                        ${isDestaque ? '<span class="badge badge-destaque">⭐ DESTAQUE</span>' : ''}
-                        
-                        <span id="badge-sold-${p.id}" class="badge badge-sold" style="display: ${isVendido || corObj.esgotada ? 'block' : 'none'}; ${isDestaque ? 'top: 42px;' : ''}">${isVendido ? 'ESGOTADO' : 'COR ESGOTADA'}</span>
-                        
-                        ${isNovidade && !isVendido && !corObj.esgotada ? '<span class="badge badge-novidade">✨ NOVIDADE</span>' : ''}
-                        
-                        ${p.desconto > 0 && !isVendido ? `<span class="badge badge-discount" style="${isNovidade ? 'top: 50px;' : ''}">-${p.desconto}%</span>` : ''}
-                        
-                        <div class="carousel-track" id="track-${p.id}">
-                            ${trackImagensHtml}
-                        </div>
-                        
-                        ${indicadoresHtml}
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">${p.nome}</h3>
-                        
-                        <!-- 1. PREÇOS -->
-                        <div class="product-price-container">
-                            <div class="price-installments">${calcularParcelamento(p.por)}</div>
-                            <div class="price-total">R$ ${p.por}</div>
-                            <div class="price-pix">R$ ${calcularDesconto(p.por)}</div>
-                        </div>
+           <div class="product-image-container">
+                ${isDestaque ? '<span class="badge badge-destaque">⭐ DESTAQUE</span>' : ''}
+                
+                <span id="badge-sold-${p.id}" class="badge badge-sold" style="display: ${isVendido || corObj.esgotada ? 'block' : 'none'}; ${isDestaque ? 'top: 42px;' : ''}">${isVendido ? 'ESGOTADO' : 'COR ESGOTADA'}</span>
+                
+                ${isNovidade && !isVendido && !corObj.esgotada ? '<span class="badge badge-novidade">✨ NOVIDADE</span>' : ''}
+                
+                ${p.desconto > 0 && !isVendido ? `<span class="badge badge-discount" style="${isNovidade ? 'top: 50px;' : ''}">-${p.desconto}%</span>` : ''}
+                
+                <div class="carousel-track" id="track-${p.id}">
+                    ${trackImagensHtml}
+                </div>
+                
+                ${indicadoresHtml}
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">${p.nome}</h3>
+                
+                <div class="product-price-container">
+                    <div class="price-installments">${calcularParcelamento(p.por)}</div>
+                    <div class="price-total">R$ ${p.por}</div>
+                    <div class="price-pix">R$ ${calcularDesconto(p.por)}</div>
+                </div>
 
-                        <!-- 2. BOLINHAS DE CORES -->
-                        ${carrosselCoresHtml}
-                        
-                        <!-- 3. LISTA DE CORES E TAMANHOS (Compacta) -->
-                        <div class="product-size" style="margin-top: -6px; margin-bottom: 8px;">
-                            ${listaCoresTamanhosHtml}
-                        </div>
+                ${carrosselCoresHtml}
+                
+                <div class="product-size" style="margin-top: -6px; margin-bottom: 8px;">
+                    ${listaCoresTamanhosHtml}
+                </div>
 
-                        <!-- 4. BOTÃO DE COMPRAR -->
-                        <div id="btn-container-${p.id}" style="margin-top: auto;">
-                            ${isVendido ?
+                <div id="btn-container-${p.id}" style="margin-top: auto;">
+                    ${isVendido ?
                         '<button class="btn-whatsapp btn-sold" disabled>Indisponível</button>' :
                         `<a id="btn-compra-${p.id}" href="${linkWhats}" target="_blank" class="btn-whatsapp">Comprar</a>`
                     }
-                        </div>
-                    </div>
-                `;
+                </div>
+            </div>
+        `;
                 grid.appendChild(card);
                 iniciarCarrosselAutomatico(p.id);
             });
@@ -2302,19 +2297,20 @@
             const produto = produtos.find(p => String(p.id) === String(produtoId));
             if (!produto) return;
 
-            // 🟢 BLINDAGEM TOTAL: Se há filtro de cor ativo, o carrossel NUNCA roda, independente da categoria!
-            if (corAtual !== 'Todas') {
-                if (window.intervalosCarrossel[produtoId]) {
-                    clearInterval(window.intervalosCarrossel[produtoId]);
-                    window.intervalosCarrossel[produtoId] = null;
-                }
-                return;
+            if (window.intervalosCarrossel[produtoId]) {
+                clearInterval(window.intervalosCarrossel[produtoId]);
+                window.intervalosCarrossel[produtoId] = null;
             }
 
             let fotosParaCarrossel = [];
+            let isFiltroCorAtivo = (corAtual !== 'Todas');
 
-            // Verifica se a vitrine está focada em uma cor ou livre para todas
-            if (window.modoCorUnica[produtoId]) {
+            if (isFiltroCorAtivo) {
+                let corFiltradaObj = produto.coresAgrupadas.find(c => c.corOriginal.toLowerCase().includes(corAtual.toLowerCase()));
+                if (corFiltradaObj) {
+                    fotosParaCarrossel = [...new Set(corFiltradaObj.fotos)];
+                }
+            } else if (window.modoCorUnica[produtoId]) {
                 let corIndex = window.estadoVariantes[produtoId] || 0;
                 let corObj = produto.coresAgrupadas[corIndex];
                 fotosParaCarrossel = [...new Set(corObj.fotos)];
@@ -2324,20 +2320,34 @@
                 });
             }
 
+            fotosParaCarrossel = fotosParaCarrossel.filter(foto => foto && typeof foto === 'string' && foto.trim() !== "" && !foto.includes("undefined"));
+
+            // O carrossel roda se houver MAIS DE UMA foto válida para essa cor
             if (fotosParaCarrossel.length > 1) {
                 window.intervalosCarrossel[produtoId] = setInterval(() => {
                     const trackElement = document.getElementById(`track-${produtoId}`);
                     if (!trackElement) return;
 
+                    let imagens = trackElement.querySelectorAll('img');
+                    if (!imagens || imagens.length === 0) return;
+
                     let indiceAtualFoto = window.estadoFotosCard[produtoId] || 0;
-                    indiceAtualFoto = (indiceAtualFoto + 1) % fotosParaCarrossel.length;
+                    indiceAtualFoto = (indiceAtualFoto + 1) % imagens.length;
                     window.estadoFotosCard[produtoId] = indiceAtualFoto;
 
-                    // O segredo do efeito suave (Fade)
-                    const imagens = trackElement.querySelectorAll('img');
+                    let imgAlvo = imagens[indiceAtualFoto];
+                    if (!imgAlvo || !imgAlvo.src || imgAlvo.src.trim() === "" || imgAlvo.src.includes("undefined")) {
+                        indiceAtualFoto = 0;
+                        window.estadoFotosCard[produtoId] = 0;
+                        imgAlvo = imagens[0];
+                    }
+
                     imagens.forEach((img, i) => {
-                        if (i === indiceAtualFoto) img.classList.add('active-img');
-                        else img.classList.remove('active-img');
+                        if (i === indiceAtualFoto) {
+                            img.classList.add('active-img');
+                        } else {
+                            img.classList.remove('active-img');
+                        }
                     });
 
                     const indContainer = document.getElementById(`indicators-${produtoId}`);
@@ -2347,22 +2357,6 @@
                             if (i === indiceAtualFoto) bar.classList.add('active');
                             else bar.classList.remove('active');
                         });
-                    }
-
-                    // Se estiver girando todas as fotos, atualiza a etiqueta de ESGOTADO pra foto da vez
-                    if (!window.modoCorUnica[produtoId]) {
-                        const fotoAtualUrl = fotosParaCarrossel[indiceAtualFoto];
-                        const corDestaFoto = produto.coresAgrupadas.find(c => c.fotos.includes(fotoAtualUrl));
-                        const badgeSold = document.getElementById(`badge-sold-${produtoId}`);
-
-                        if (badgeSold && !produto.vendido) {
-                            if (corDestaFoto && corDestaFoto.esgotada) {
-                                badgeSold.style.display = 'block';
-                                badgeSold.textContent = 'COR ESGOTADA';
-                            } else {
-                                badgeSold.style.display = 'none';
-                            }
-                        }
                     }
 
                 }, 4000);
