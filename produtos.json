@@ -1,236 +1,69 @@
 [
     {
-        "id": "235",
-        "nome": "Conjunto blusa e saia",
-        "por": "398,90",
+        "id": "239",
+        "nome": "Trijunto",
+        "por": "149,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465935",
+                "codigoBling": "465971",
                 "cor": "Azul",
-                "tamanho": "G1",
-                "imagem": "fotos/conjunto_25az.jpg",
+                "tamanho": "M",
+                "imagem": "fotos/trijunto_1az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465935",
+                "codigoBling": "465971",
                 "cor": "Azul",
-                "tamanho": "G1",
-                "imagem": "fotos/conjunto_25azft2.jpg",
+                "tamanho": "M",
+                "imagem": "fotos/trijunto_1azft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465936",
+                "codigoBling": "465972",
                 "cor": "Rosa",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_25ros.jpg",
+                "tamanho": "M",
+                "imagem": "fotos/trijunto_1ros.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465936",
+                "codigoBling": "465972",
                 "cor": "Rosa",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_25rosft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465936",
-                "cor": "Rosa",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_25rosft3.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465937",
-                "cor": "Rosa",
-                "tamanho": "GG(Slim)",
-                "imagem": "fotos/conjunto_25ros.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465937",
-                "cor": "Rosa",
-                "tamanho": "GG(Slim)",
-                "imagem": "fotos/conjunto_25rosft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465937",
-                "cor": "Rosa",
-                "tamanho": "GG(Slim)",
-                "imagem": "fotos/conjunto_25rosft3.jpg",
+                "tamanho": "M",
+                "imagem": "fotos/trijunto_1rosft2.jpg",
                 "vendido": false
             }
         ]
     },
     {
-        "id": "236",
-        "nome": "Vestido longo",
-        "por": "289,90",
+        "id": "240",
+        "nome": "Conjunto kimono e short",
+        "por": "179,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465940",
-                "cor": "Rosa",
-                "tamanho": "G1",
-                "imagem": "fotos/vestido_107ros.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465940",
-                "cor": "Rosa",
-                "tamanho": "G1",
-                "imagem": "fotos/vestido_107rosft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465941",
-                "cor": "Azul",
-                "tamanho": "G2",
-                "imagem": "fotos/vestido_107az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465941",
-                "cor": "Azul",
-                "tamanho": "G2",
-                "imagem": "fotos/vestido_107azft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465939",
-                "cor": "Azul",
-                "tamanho": "GG",
-                "imagem": "fotos/vestido_107az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465939",
-                "cor": "Azul",
-                "tamanho": "GG",
-                "imagem": "fotos/vestido_107azft2.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "237",
-        "nome": "Vestido longo",
-        "por": "298,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465927",
-                "cor": "Rosa",
-                "tamanho": "G1",
-                "imagem": "fotos/vestido_108ros.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465927",
-                "cor": "Rosa",
-                "tamanho": "G1",
-                "imagem": "fotos/vestido_108rosft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465928",
-                "cor": "Azul",
-                "tamanho": "G2",
-                "imagem": "fotos/vestido_108az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465926",
-                "cor": "Azul",
-                "tamanho": "GG(Slim)",
-                "imagem": "fotos/vestido_108az.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "238",
-        "nome": "Conjunto blusa e saia",
-        "por": "398,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465931",
+                "codigoBling": "466003",
                 "cor": "Azul",
                 "tamanho": "G1",
-                "imagem": "fotos/conjunto_26az.jpg",
+                "imagem": "fotos/conjunto_27az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465931",
+                "codigoBling": "466003",
                 "cor": "Azul",
                 "tamanho": "G1",
-                "imagem": "fotos/conjunto_26azft2.jpg",
+                "imagem": "fotos/conjunto_27azft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465931",
-                "cor": "Azul",
+                "codigoBling": "466005",
+                "cor": "Branco",
                 "tamanho": "G1",
-                "imagem": "fotos/conjunto_26azft3.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465932",
-                "cor": "Verde",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_26ver.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465932",
-                "cor": "Verde",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_26verft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465933",
-                "cor": "Azul",
-                "tamanho": "G3",
-                "imagem": "fotos/conjunto_26az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465933",
-                "cor": "Azul",
-                "tamanho": "G3",
-                "imagem": "fotos/conjunto_26azft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465933",
-                "cor": "Azul",
-                "tamanho": "G3",
-                "imagem": "fotos/conjunto_26azft3.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465930",
-                "cor": "Verde",
-                "tamanho": "GG(Slim)",
-                "imagem": "fotos/conjunto_26ver.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465930",
-                "cor": "Verde",
-                "tamanho": "GG(Slim)",
-                "imagem": "fotos/conjunto_26verft2.jpg",
+                "imagem": "fotos/conjunto_27bra.jpg",
                 "vendido": false
             }
         ]
