@@ -1,17 +1,97 @@
 [
     {
-        "id": "252",
-        "nome": "Colete",
-        "por": "79,90",
-        "novidade": false,
+        "id": "253",
+        "nome": "Camisa",
+        "por": "169,90",
+        "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "466107",
+                "codigoBling": "465922",
+                "cor": "Azul (claro)",
+                "tamanho": "G2",
+                "imagem": "fotos/blusa_55azc.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465923",
+                "cor": "Rosa",
+                "tamanho": "G3",
+                "imagem": "fotos/blusa_55ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465923",
+                "cor": "Rosa",
+                "tamanho": "G3",
+                "imagem": "fotos/blusa_55rosft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465924",
+                "cor": "Azul",
+                "tamanho": "G4",
+                "imagem": "fotos/blusa_55az.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465924",
+                "cor": "Azul",
+                "tamanho": "G4",
+                "imagem": "fotos/blusa_55azft2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "254",
+        "nome": "Camisa",
+        "por": "119,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "466101",
+                "cor": "Azul",
+                "tamanho": "G",
+                "imagem": "fotos/blusa_56az.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466105",
                 "cor": "Preto",
                 "tamanho": "G",
-                "imagem": "fotos/colete_3.jpg",
+                "imagem": "fotos/blusa_56pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466102",
+                "cor": "Rosa",
+                "tamanho": "G",
+                "imagem": "fotos/blusa_56ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466103",
+                "cor": "Azul",
+                "tamanho": "GG",
+                "imagem": "fotos/blusa_56az.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466104",
+                "cor": "Marrom",
+                "tamanho": "GG",
+                "imagem": "fotos/blusa_56mar.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465978",
+                "cor": "Azul",
+                "tamanho": "M",
+                "imagem": "fotos/blusa_56az.jpg",
                 "vendido": false
             }
         ]
