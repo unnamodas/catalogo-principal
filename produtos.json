@@ -1,98 +1,46 @@
 [
     {
-        "id": "253",
-        "nome": "Camisa",
-        "por": "169,90",
+        "id": "255",
+        "nome": "Vestido moletinho",
+        "por": "249,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465922",
-                "cor": "Azul (claro)",
-                "tamanho": "G2",
-                "imagem": "fotos/blusa_55azc.jpg",
+                "codigoBling": "466061",
+                "cor": "Cinza",
+                "tamanho": "P",
+                "imagem": "fotos/vestido_111cin.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465923",
-                "cor": "Rosa",
-                "tamanho": "G3",
-                "imagem": "fotos/blusa_55ros.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465923",
-                "cor": "Rosa",
-                "tamanho": "G3",
-                "imagem": "fotos/blusa_55rosft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465924",
-                "cor": "Azul",
-                "tamanho": "G4",
-                "imagem": "fotos/blusa_55az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465924",
-                "cor": "Azul",
-                "tamanho": "G4",
-                "imagem": "fotos/blusa_55azft2.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "254",
-        "nome": "Camisa",
-        "por": "119,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "466101",
-                "cor": "Azul",
-                "tamanho": "G",
-                "imagem": "fotos/blusa_56az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466105",
-                "cor": "Preto",
-                "tamanho": "G",
-                "imagem": "fotos/blusa_56pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466102",
-                "cor": "Rosa",
-                "tamanho": "G",
-                "imagem": "fotos/blusa_56ros.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466103",
-                "cor": "Azul",
-                "tamanho": "GG",
-                "imagem": "fotos/blusa_56az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466104",
-                "cor": "Marrom",
-                "tamanho": "GG",
-                "imagem": "fotos/blusa_56mar.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465978",
-                "cor": "Azul",
+                "codigoBling": "466062",
+                "cor": "Azul (marinho)",
                 "tamanho": "M",
-                "imagem": "fotos/blusa_56az.jpg",
+                "imagem": "fotos/vestido_111az.jpg",
                 "vendido": false
+            },
+            {
+                "codigoBling": "466108",
+                "cor": "Preto",
+                "tamanho": "GG",
+                "imagem": "fotos/vestido_111pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466063",
+                "cor": "Marrom",
+                "tamanho": "G",
+                "imagem": "fotos/vestido_111mar.jpg",
+                "vendido": true
+            },
+            {
+                "codigoBling": "466064",
+                "cor": "Bordô",
+                "tamanho": "G",
+                "imagem": "fotos/vestido_111bor.jpg",
+                "vendido": true
             }
         ]
     }
