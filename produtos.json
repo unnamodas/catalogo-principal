@@ -1,46 +1,39 @@
 [
     {
-        "id": "255",
-        "nome": "Vestido moletinho",
-        "por": "249,90",
+        "id": "256",
+        "nome": "Blusa",
+        "por": "139,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "466061",
-                "cor": "Cinza",
-                "tamanho": "P",
-                "imagem": "fotos/vestido_111cin.jpg",
+                "codigoBling": "466097",
+                "cor": "Rosa",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_54ros.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466062",
-                "cor": "Azul (marinho)",
-                "tamanho": "M",
-                "imagem": "fotos/vestido_111az.jpg",
+                "codigoBling": "466013",
+                "cor": "Verde",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_54ver.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466108",
-                "cor": "Preto",
-                "tamanho": "GG",
-                "imagem": "fotos/vestido_111pre.jpg",
+                "codigoBling": "466100",
+                "cor": "Rosa",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_54ros.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466063",
-                "cor": "Marrom",
-                "tamanho": "G",
-                "imagem": "fotos/vestido_111mar.jpg",
-                "vendido": true
-            },
-            {
-                "codigoBling": "466064",
-                "cor": "Bordô",
-                "tamanho": "G",
-                "imagem": "fotos/vestido_111bor.jpg",
-                "vendido": true
+                "codigoBling": "466014",
+                "cor": "Verde",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_54ver.jpg",
+                "vendido": false
             }
         ]
     }
