@@ -1,38 +1,121 @@
 [
     {
-        "id": "248",
-        "nome": "Conjunto blusa e short",
-        "por": "289,90",
+        "id": "249",
+        "nome": "Short",
+        "por": "159,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465944",
-                "cor": "Preto",
+                "codigoBling": "466079",
+                "cor": "Rosa",
+                "tamanho": "46",
+                "imagem": "fotos/short_7.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466082",
+                "cor": "Amarelo",
+                "tamanho": "48",
+                "imagem": "fotos/short_7.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466083",
+                "cor": "Azul",
+                "tamanho": "48",
+                "imagem": "fotos/short_7.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466084",
+                "cor": "Rosa",
+                "tamanho": "50",
+                "imagem": "fotos/short_7.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466088",
+                "cor": "Amarelo",
+                "tamanho": "52",
+                "imagem": "fotos/short_7.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466089",
+                "cor": "Azul",
+                "tamanho": "52",
+                "imagem": "fotos/short_7.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466092",
+                "cor": "Azul",
+                "tamanho": "54",
+                "imagem": "fotos/short_7.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "250",
+        "nome": "Blusa t-shirt",
+        "por": "149,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "463877",
+                "cor": "Branco (Off White)",
+                "tamanho": "P",
+                "imagem": "fotos/blusa_53.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463484",
+                "cor": "Branco (Off White)",
+                "tamanho": "M",
+                "imagem": "fotos/blusa_53.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463485",
+                "cor": "Branco (Off White)",
+                "tamanho": "G",
+                "imagem": "fotos/blusa_53.jpg",
+                "vendido": true
+            },
+            {
+                "codigoBling": "463486",
+                "cor": "Branco (Off White)",
                 "tamanho": "GG",
-                "imagem": "fotos/conjunto_30pre.jpg",
+                "imagem": "fotos/blusa_53.jpg",
                 "vendido": false
-            },
+            }
+        ]
+    },
+    {
+        "id": "251",
+        "nome": "Blusa",
+        "por": "139,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
             {
-                "codigoBling": "465945",
+                "codigoBling": "466013",
                 "cor": "Verde",
-                "tamanho": "G1",
-                "imagem": "fotos/conjunto_30ver.jpg",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_54ver.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465945",
+                "codigoBling": "466014",
                 "cor": "Verde",
-                "tamanho": "G1",
-                "imagem": "fotos/conjunto_30verft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465946",
-                "cor": "Preto",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_30pre.jpg",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_54ver.jpg",
                 "vendido": false
             }
         ]
