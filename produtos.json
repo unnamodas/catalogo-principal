@@ -1,38 +1,24 @@
 [
     {
-        "id": "256",
+        "id": "257",
         "nome": "Blusa",
-        "por": "139,90",
+        "por": "99,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "466097",
-                "cor": "Rosa",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_54ros.jpg",
+                "codigoBling": "465986",
+                "cor": "Branco",
+                "tamanho": "G1",
+                "imagem": "fotos/blusa_57bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466013",
-                "cor": "Verde",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_54ver.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466100",
-                "cor": "Rosa",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_54ros.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466014",
-                "cor": "Verde",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_54ver.jpg",
+                "codigoBling": "465987",
+                "cor": "Preto",
+                "tamanho": "G2",
+                "imagem": "fotos/blusa_57pre.jpg",
                 "vendido": false
             }
         ]
