@@ -1,121 +1,17 @@
 [
     {
-        "id": "249",
-        "nome": "Short",
-        "por": "159,90",
-        "novidade": true,
+        "id": "252",
+        "nome": "Colete",
+        "por": "79,90",
+        "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "466079",
-                "cor": "Rosa",
-                "tamanho": "46",
-                "imagem": "fotos/short_7.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466082",
-                "cor": "Amarelo",
-                "tamanho": "48",
-                "imagem": "fotos/short_7.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466083",
-                "cor": "Azul",
-                "tamanho": "48",
-                "imagem": "fotos/short_7.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466084",
-                "cor": "Rosa",
-                "tamanho": "50",
-                "imagem": "fotos/short_7.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466088",
-                "cor": "Amarelo",
-                "tamanho": "52",
-                "imagem": "fotos/short_7.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466089",
-                "cor": "Azul",
-                "tamanho": "52",
-                "imagem": "fotos/short_7.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466092",
-                "cor": "Azul",
-                "tamanho": "54",
-                "imagem": "fotos/short_7.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "250",
-        "nome": "Blusa t-shirt",
-        "por": "149,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "463877",
-                "cor": "Branco (Off White)",
-                "tamanho": "P",
-                "imagem": "fotos/blusa_53.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463484",
-                "cor": "Branco (Off White)",
-                "tamanho": "M",
-                "imagem": "fotos/blusa_53.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463485",
-                "cor": "Branco (Off White)",
+                "codigoBling": "466107",
+                "cor": "Preto",
                 "tamanho": "G",
-                "imagem": "fotos/blusa_53.jpg",
-                "vendido": true
-            },
-            {
-                "codigoBling": "463486",
-                "cor": "Branco (Off White)",
-                "tamanho": "GG",
-                "imagem": "fotos/blusa_53.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "251",
-        "nome": "Blusa",
-        "por": "139,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "466013",
-                "cor": "Verde",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_54ver.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466014",
-                "cor": "Verde",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_54ver.jpg",
+                "imagem": "fotos/colete_3.jpg",
                 "vendido": false
             }
         ]
