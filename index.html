@@ -111,68 +111,93 @@
             }
         }
 
-        /* --- CABEÇALHO SOFISTICADO --- */
+        /* --- CABEÇALHO SOFISTICADO (NOVO DESIGN HORIZONTAL) --- */
         header {
-            text-align: center;
-            padding: 70px 20px 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 40px;
             background-color: #ffffff;
-            position: relative;
+            border-bottom: 1px solid var(--border-color);
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         header .logo-loja {
-            max-width: 220px;
+            max-width: 170px;
+            /* Reduzida um pouco para equilibrar com a barra */
             height: auto;
-            display: inline-block;
             transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
             mix-blend-mode: multiply;
-            filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.08));
             cursor: pointer;
         }
 
         header .logo-loja:hover {
-            transform: scale(1.03) translateY(-3px);
-            filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.15));
+            transform: scale(1.03);
         }
 
-        header::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #000000, transparent);
-            margin: 35px auto 0 auto;
-            opacity: 0.25;
+        .header-logo-nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            /* Dá um respiro super chique entre a logo e o texto */
         }
 
-        .catalogo-subtitle {
+        .header-search {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .header-search input {
+            width: 100%;
+            padding: 12px 16px 12px 40px;
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            /* Borda arredondada suave (estilo pílula) */
             font-family: 'Inter', sans-serif;
             font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 0.35em;
-            text-transform: uppercase;
-            color: #666666;
-            margin-top: 18px;
-            margin-bottom: 0;
+            outline: none;
+            transition: var(--transition);
+            background-color: #fcfcfc;
+            /* Fundo levemente cinza para destacar do fundo branco */
+            color: #000000;
+            letter-spacing: 0.03em;
         }
 
-        header h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 54px;
-            font-weight: 400;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+        .header-search input:focus {
+            border-color: var(--primary-color);
+            background-color: #ffffff;
         }
 
-        header p {
-            font-size: 13px;
+        .header-search svg {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
             color: var(--text-muted);
-            max-width: 500px;
-            margin: 0 auto;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-            line-height: 1.8;
+            width: 15px;
+            height: 15px;
+            stroke-width: 1.5;
+        }
+
+        /* Ajuste para a versão de celular */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .header-logo-nav {
+                flex-direction: column;
+                /* No celular, a logo fica em cima dos botões */
+                gap: 15px;
+            }
+
+            .header-search {
+                max-width: 100%;
+            }
         }
 
         .container {
@@ -233,34 +258,39 @@
             stroke-width: 1.5;
         }
 
+        /* --- ABAS DE NAVEGAÇÃO MINIMALISTAS --- */
         .status-filters {
             display: flex;
-            gap: 0px;
-            border: 1px solid var(--border-color);
+            gap: 30px;
+            /* Dá um respiro elegante entre as abas */
+            border-bottom: none;
+            /* Linha de base bem fininha */
         }
 
         .status-btn {
-            background: #ffffff;
+            background: transparent;
             border: none;
-            padding: 12px 24px;
+            border-bottom: 2px solid transparent;
+            /* Prepara o espaço para a linha de seleção */
+            padding: 0 10px 12px 10px;
+            /* Remove o visual de 'caixa' e aproxima o texto da linha */
             cursor: pointer;
             font-family: 'Inter', sans-serif;
-            font-size: 10px;
-            font-weight: 400;
+            font-size: 11px;
+            font-weight: 500;
             color: var(--text-muted);
             transition: var(--transition);
-            letter-spacing: 0.08em;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-        }
-
-        .status-btn:not(:last-child) {
-            border-right: 1px solid var(--border-color);
         }
 
         .status-btn.active,
         .status-btn:hover {
-            background-color: var(--primary-color);
-            color: #ffffff;
+            background-color: transparent;
+            color: var(--primary-color);
+            /* O texto fica preto ao selecionar */
+            border-bottom: 2px solid var(--primary-color);
+            /* Linha preta embaixo indicando a aba ativa */
         }
 
         .categories-tabs {
@@ -306,8 +336,8 @@
             gap: 10px;
             margin-top: 15px;
             padding: 8px 0;
-            /* Ajustado para dar folga em cima e embaixo */
-            border-top: 1px dashed var(--border-color);
+            border-top: none;
+            /* 🟢 Linha tracejada removida! */
             overflow-x: auto;
             white-space: nowrap;
             scrollbar-width: none;
@@ -1308,13 +1338,15 @@
 
         .btn-liquidacao {
             color: #d93025 !important;
-            font-weight: 700 !important;
+            font-weight: 600 !important;
         }
 
-        .btn-liquidacao.active {
-            background-color: #d93025 !important;
-            color: #ffffff !important;
-            border-color: #d93025 !important;
+        /* 🟢 ABA LIQUIDAÇÃO ATIVA (Minimalista) */
+        .btn-liquidacao.active,
+        .btn-liquidacao:hover {
+            background-color: transparent !important;
+            color: #d93025 !important;
+            border-bottom: 2px solid #d93025 !important;
         }
 
         /* --- MÁGICA DA COMPACTAÇÃO HARMONIOSA --- */
@@ -1438,45 +1470,38 @@
         <p style="font-family: Arial, sans-serif; color: #333; margin-top: 15px;">Preparando a vitrine...</p>
     </div>
 
-    <div class="marquee-bar">
-        <div class="marquee-content">
-            <span>• CATÁLOGO UNNA • CLIQUE NO BOTÃO DE COMPRAR PARA GARANTIR O SEU LOOK PELO WHATSAPP! •</span>
-            <span>• CATÁLOGO UNNA • CLIQUE NO BOTÃO DE COMPRAR PARA GARANTIR O SEU LOOK PELO WHATSAPP! •</span>
-        </div>
-    </div>
-
     <header>
-        <img src="fotos/logo_unna.jpg" alt="Logo UNNA" class="logo-loja" onerror="substituirPorPlaceholder(this)">
-        <h2 class="catalogo-subtitle">Catálogo - UNNA</h2>
+        <!-- 🟢 NOVO: Um agrupamento para a Logo e os Botões ficarem lado a lado -->
+        <div class="header-logo-nav">
+            <img src="fotos/logo_unna.jpg" alt="Logo UNNA" class="logo-loja" onerror="substituirPorPlaceholder(this)">
+
+            <!-- Os botões vieram para cá! -->
+            <div class="status-filters">
+                <button class="status-btn active" id="status-todos" onclick="filtrarStatus('todos')">Principal</button>
+                <button class="status-btn btn-liquidacao" id="status-liquidacao"
+                    onclick="abrirLiquidacao()">Liquidação</button>
+            </div>
+        </div>
+
+        <div class="header-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="search-input" placeholder="Buscar por peça..." oninput="lidarBusca(this.value)">
+        </div>
     </header>
 
     <div class="container">
-        <div class="controls-wrapper">
-            <!-- LINHA 1: BUSCA E BOTÕES PRINCIPAIS -->
-            <div class="search-filter-row">
-                <div class="search-box">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                    <input type="text" id="search-input" placeholder="Buscar por peça ou tamanho..."
-                        oninput="lidarBusca(this.value)">
-                </div>
+        <!-- Removido o padding-top excessivo daqui, já que os botões subiram -->
+        <div class="controls-wrapper" style="padding-top: 15px;">
 
-                <div class="status-filters" style="display: flex; width: 100%;">
-                    <button class="status-btn active" id="status-todos" style="flex: 1; width: 50%;"
-                        onclick="filtrarStatus('todos')">Principal</button>
-                    <button class="status-btn btn-liquidacao" id="status-liquidacao" style="flex: 1; width: 50%;"
-                        onclick="abrirLiquidacao()">💥 LIQUIDAÇÃO</button>
-                </div>
-            </div> <!-- ESSA É A DIV QUE FALTAVA PARA FECHAR A LINHA CORRETAMENTE! -->
-
-            <!-- LINHA 2: CATEGORIAS -->
+            <!-- LINHA 2: CATEGORIAS (agora é a primeira linha abaixo do cabeçalho) -->
             <div class="categories-tabs" id="categories-tabs"></div>
 
             <!-- LINHA 3: CORES -->
-            <div class="sizes-container" style="border-top: none; margin-top: 5px; padding-top: 5px;">
+            <div class="sizes-container">
                 <span class="size-label">Cor:</span>
                 <div class="sizes-tabs" id="colors-tabs"></div>
             </div>
@@ -1486,72 +1511,71 @@
                 <span class="size-label">Tamanho:</span>
                 <div class="sizes-tabs" id="sizes-tabs"></div>
             </div>
+
+            <div class="results-info-row">
+                <div class="results-counter" id="results-counter">Carregando catálogo...</div>
+            </div>
+
+            <div class="product-grid" id="product-grid"></div>
+
+            <div id="scroll-status" class="scroll-status">Carregando mais peças...</div>
         </div>
 
-        <div class="results-info-row">
-            <div class="results-counter" id="results-counter">Carregando catálogo...</div>
-        </div>
-
-        <div class="product-grid" id="product-grid"></div>
-
-        <div id="scroll-status" class="scroll-status">Carregando mais peças...</div>
-    </div>
-
-    <div id="image-modal" class="modal-overlay" onclick="fecharModal(event)">
-        <div class="modal-content">
-            <span class="modal-close" onclick="fecharModal(event)">&times;</span>
-            <img id="modal-img" src="" alt="Peça ampliada">
-            <div class="modal-info-box">
-                <div id="modal-caption" class="modal-caption"></div>
-                <div id="modal-prices" class="modal-prices"></div>
-                <div id="modal-btn-container" style="width: 100%;"></div>
+        <div id="image-modal" class="modal-overlay" onclick="fecharModal(event)">
+            <div class="modal-content">
+                <span class="modal-close" onclick="fecharModal(event)">&times;</span>
+                <img id="modal-img" src="" alt="Peça ampliada">
+                <div class="modal-info-box">
+                    <div id="modal-caption" class="modal-caption"></div>
+                    <div id="modal-prices" class="modal-prices"></div>
+                    <div id="modal-btn-container" style="width: 100%;"></div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <footer>
-        <p>&copy; 2026 UNNA Modas.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 UNNA Modas.</p>
+        </footer>
 
-    <script>
-        const WHATSAPP_NUMERO = "5579999749647";
+        <script>
+            const WHATSAPP_NUMERO = "5579999749647";
 
 
-        let modoLiquidacao = false;
+            let modoLiquidacao = false;
 
-        function abrirLiquidacao() {
-            modoLiquidacao = true;
+            function abrirLiquidacao() {
+                modoLiquidacao = true;
 
-            // 1. Atualiza os botões do topo
-            document.querySelectorAll('.status-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById('status-liquidacao').classList.add('active');
+                // 1. Atualiza os botões do topo
+                document.querySelectorAll('.status-btn').forEach(btn => btn.classList.remove('active'));
+                document.getElementById('status-liquidacao').classList.add('active');
 
-            // 2. Esconde as abas de categorias e tamanhos temporariamente
-            document.getElementById('categories-tabs').style.display = 'none';
-            document.getElementById('colors-tabs').parentElement.style.display = 'none';
-            document.getElementById('sizes-tabs').parentElement.style.display = 'none';
+                // 2. Esconde as abas de categorias e tamanhos temporariamente
+                document.getElementById('categories-tabs').style.display = 'none';
+                document.getElementById('colors-tabs').parentElement.style.display = 'none';
+                document.getElementById('sizes-tabs').parentElement.style.display = 'none';
 
-            // 3. Limpa o catálogo normal e avisa quantos produtos tem na promo
-            const grid = document.getElementById('product-grid');
-            grid.innerHTML = '';
-            document.getElementById('results-counter').innerHTML = `<span style="color: #d93025; font-weight: 700;">💥 MEGA LIQUIDAÇÃO:</span> ${produtosLiquidacao.length} peças imperdíveis!`;
-            document.getElementById('scroll-status').style.display = 'none';
+                // 3. Limpa o catálogo normal e avisa quantos produtos tem na promo
+                const grid = document.getElementById('product-grid');
+                grid.innerHTML = '';
+                document.getElementById('results-counter').innerHTML = `<span style="color: #d93025; font-weight: 700;">💥 MEGA LIQUIDAÇÃO:</span> ${produtosLiquidacao.length} peças imperdíveis!`;
+                document.getElementById('scroll-status').style.display = 'none';
 
-            // 4. Monta os cards exclusivos da liquidação com o botão em vermelho
-            produtosLiquidacao.forEach(p => {
+                // 4. Monta os cards exclusivos da liquidação com o botão em vermelho
+                produtosLiquidacao.forEach(p => {
 
-                // LÊ A FOTO E OS TAMANHOS DO NOVO FORMATO DE VARIANTES
-                const imagemPrincipal = p.variantes[0].imagem;
-                const tamanhosDisponiveis = [...new Set(p.variantes.filter(v => !v.vendido).map(v => v.tamanho))].join(', ');
-                const tamanhosTexto = tamanhosDisponiveis || 'Esgotado';
-                const produtoTotalmenteEsgotado = p.variantes.every(v => v.vendido);
+                    // LÊ A FOTO E OS TAMANHOS DO NOVO FORMATO DE VARIANTES
+                    const imagemPrincipal = p.variantes[0].imagem;
+                    const tamanhosDisponiveis = [...new Set(p.variantes.filter(v => !v.vendido).map(v => v.tamanho))].join(', ');
+                    const tamanhosTexto = tamanhosDisponiveis || 'Esgotado';
+                    const produtoTotalmenteEsgotado = p.variantes.every(v => v.vendido);
 
-                const card = document.createElement('div');
-                card.className = `product-card ${produtoTotalmenteEsgotado ? 'sold-item' : ''}`;
+                    const card = document.createElement('div');
+                    card.className = `product-card ${produtoTotalmenteEsgotado ? 'sold-item' : ''}`;
 
-                const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent("Olá, UNNA! Quero garantir a oferta: " + p.nome + " (Tam: " + tamanhosTexto + ") por R$ " + p.por + " na liquidação!")}`;
+                    const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent("Olá, UNNA! Quero garantir a oferta: " + p.nome + " (Tam: " + tamanhosTexto + ") por R$ " + p.por + " na liquidação!")}`;
 
-                card.innerHTML = `
+                    card.innerHTML = `
                     <div class="product-image-container">
                         ${!produtoTotalmenteEsgotado ? `<span class="badge badge-discount">-${p.desconto}%</span>` : ''}
                         <span class="badge badge-sold" style="display: ${produtoTotalmenteEsgotado ? 'block' : 'none'};">ESGOTADO</span>
@@ -1579,683 +1603,683 @@
                         <!-- Botão de comprar em vermelho -->
                         <div style="margin-top: auto;">
                             ${produtoTotalmenteEsgotado ?
-                        '<button class="btn-whatsapp btn-sold" disabled>Indisponível</button>' :
-                        `<a href="${linkWhats}" target="_blank" class="btn-whatsapp" style="background-color: #d93025; border-color: #d93025;">Comprar</a>`
-                    }
+                            '<button class="btn-whatsapp btn-sold" disabled>Indisponível</button>' :
+                            `<a href="${linkWhats}" target="_blank" class="btn-whatsapp" style="background-color: #d93025; border-color: #d93025;">Comprar</a>`
+                        }
                         </div>
                     </div>
                 `;
-                grid.appendChild(card);
-            });
-        }
-        // --- TRUQUE INTELIGENTE: GARANTE QUE O CATÁLOGO VOLTE AO NORMAL SE ELA SAIR DA LIQUIDAÇÃO ---
-        const originalFiltrarStatus = filtrarStatus;
-        filtrarStatus = function (status) {
-            if (modoLiquidacao) {
-                modoLiquidacao = false;
-                document.getElementById('categories-tabs').style.display = 'flex';
-                document.getElementById('colors-tabs').parentElement.style.display = 'flex';
-                document.getElementById('sizes-tabs').parentElement.style.display = 'flex';
-                document.getElementById('status-liquidacao').classList.remove('active');
+                    grid.appendChild(card);
+                });
             }
-            originalFiltrarStatus(status);
-        };
-
-        const originalLidarBusca = lidarBusca;
-        lidarBusca = function (valor) {
-            if (modoLiquidacao) {
-                document.getElementById('status-todos').click();
-            }
-            originalLidarBusca(valor);
-        };
-
-        function calcularDesconto(valorStr) {
-            let valorNum = parseFloat(valorStr.replace('.', '').replace(',', '.'));
-            let valorComDesconto = valorNum * 0.90;
-            // Pega a parte inteira do valor com desconto e força os centavos para ,90
-            let valorInteiro = Math.floor(valorComDesconto);
-            return valorInteiro + ',90';
-        }
-
-        function calcularParcelamento(valorStr) {
-            // Converte o valor em texto "199,90" para número decimal
-            let valorNum = parseFloat(valorStr.replace('.', '').replace(',', '.'));
-            let parcelaMinima = 89.90;
-
-            // Calcula o máximo de parcelas possíveis
-            let maxParcelas = Math.floor(valorNum / parcelaMinima);
-
-            // Garante que será no mínimo 1 parcela (se a peça for mais barata que 89,90)
-            if (maxParcelas < 1) maxParcelas = 1;
-
-            // Calcula o valor exato da parcela e formata para o padrão R$
-            let valorParcela = (valorNum / maxParcelas).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-
-            // O CSS agora faz a quebra de linha e gruda o texto
-            return `${maxParcelas}x de R$ ${valorParcela}`;
-        }
-
-        const ITENS_POR_CARREGAMENTO = 24;
-        let indiceExibicaoAtual = 0;
-        let carregandoMais = false;
-
-        let categoriaAtual = 'Todos';
-        let tamanhoAtual = 'Todos';
-        let corAtual = 'Todas';
-        let termoPesquisa = '';
-        let statusFiltro = 'todos';
-        let produtosFiltradosGlobais = [];
-
-        window.estadoVariantes = {};
-        window.estadoFotosCard = {};
-        window.intervalosCarrossel = {};
-        window.modoCorUnica = {};
-        ;
-
-        function formatarTamanhosOrdenados(listaItens) {
-            let itensExpandidos = [];
-
-            const ordemLetras = {
-                'PP': 1, 'P': 2, 'M': 3, 'G': 4, 'GG': 5,
-                'XG': 6, 'EG': 7, 'EGG': 8, 'G1': 9, 'G2': 10,
-                'G3': 11, 'G4': 12, 'ÚNICO': 13
+            // --- TRUQUE INTELIGENTE: GARANTE QUE O CATÁLOGO VOLTE AO NORMAL SE ELA SAIR DA LIQUIDAÇÃO ---
+            const originalFiltrarStatus = filtrarStatus;
+            filtrarStatus = function (status) {
+                if (modoLiquidacao) {
+                    modoLiquidacao = false;
+                    document.getElementById('categories-tabs').style.display = 'flex';
+                    document.getElementById('colors-tabs').parentElement.style.display = 'flex';
+                    document.getElementById('sizes-tabs').parentElement.style.display = 'flex';
+                    document.getElementById('status-liquidacao').classList.remove('active');
+                }
+                originalFiltrarStatus(status);
             };
 
-            listaItens.forEach(item => {
-                let tamStr = String(item.tamanho || item).trim();
-                let partes = tamStr.split(/[\,\/\-\s]+/);
+            const originalLidarBusca = lidarBusca;
+            lidarBusca = function (valor) {
+                if (modoLiquidacao) {
+                    document.getElementById('status-todos').click();
+                }
+                originalLidarBusca(valor);
+            };
 
-                partes.forEach(p => {
-                    let limpo = p.trim().toUpperCase();
-                    if (limpo !== '') {
-                        let num = parseInt(limpo);
-                        if (!isNaN(num)) {
-                            if (!itensExpandidos.includes(num)) itensExpandidos.push(num);
-                        } else {
-                            if (!itensExpandidos.includes(limpo)) itensExpandidos.push(limpo);
-                        }
-                    }
-                });
-            });
+            function calcularDesconto(valorStr) {
+                let valorNum = parseFloat(valorStr.replace('.', '').replace(',', '.'));
+                let valorComDesconto = valorNum * 0.90;
+                // Pega a parte inteira do valor com desconto e força os centavos para ,90
+                let valorInteiro = Math.floor(valorComDesconto);
+                return valorInteiro + ',90';
+            }
 
-            itensExpandidos.sort((a, b) => {
-                let numA = parseInt(a);
-                let numB = parseInt(b);
+            function calcularParcelamento(valorStr) {
+                // Converte o valor em texto "199,90" para número decimal
+                let valorNum = parseFloat(valorStr.replace('.', '').replace(',', '.'));
+                let parcelaMinima = 89.90;
 
-                if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
+                // Calcula o máximo de parcelas possíveis
+                let maxParcelas = Math.floor(valorNum / parcelaMinima);
 
-                let pesoA = ordemLetras[String(a).toUpperCase()] || 99;
-                let pesoB = ordemLetras[String(b).toUpperCase()] || 99;
+                // Garante que será no mínimo 1 parcela (se a peça for mais barata que 89,90)
+                if (maxParcelas < 1) maxParcelas = 1;
 
-                if (pesoA !== pesoB) return pesoA - pesoB;
+                // Calcula o valor exato da parcela e formata para o padrão R$
+                let valorParcela = (valorNum / maxParcelas).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-                return String(a).localeCompare(String(b));
-            });
+                // O CSS agora faz a quebra de linha e gruda o texto
+                return `${maxParcelas}x de R$ ${valorParcela}`;
+            }
 
-            return itensExpandidos.join('/');
-        }
-        function gerarHtmlTamanhosCor(produto, corObj) {
-            let tamanhosMap = {};
+            const ITENS_POR_CARREGAMENTO = 24;
+            let indiceExibicaoAtual = 0;
+            let carregandoMais = false;
 
-            // 1. Olha direto na lista "variantes" que o robô atualiza no Firebase
-            produto.variantes.forEach(v => {
-                let corNomeClean = v.cor.split('(')[0].trim().toLowerCase();
-                let corObjClean = corObj.corOriginal.split('(')[0].trim().toLowerCase();
+            let categoriaAtual = 'Todos';
+            let tamanhoAtual = 'Todos';
+            let corAtual = 'Todas';
+            let termoPesquisa = '';
+            let statusFiltro = 'todos';
+            let produtosFiltradosGlobais = [];
 
-                // Confere se pertence à cor correta
-                if (corNomeClean === corObjClean) {
-                    let partes = String(v.tamanho || '').split(/[\,\/\-\s]+/);
+            window.estadoVariantes = {};
+            window.estadoFotosCard = {};
+            window.intervalosCarrossel = {};
+            window.modoCorUnica = {};
+            ;
+
+            function formatarTamanhosOrdenados(listaItens) {
+                let itensExpandidos = [];
+
+                const ordemLetras = {
+                    'PP': 1, 'P': 2, 'M': 3, 'G': 4, 'GG': 5,
+                    'XG': 6, 'EG': 7, 'EGG': 8, 'G1': 9, 'G2': 10,
+                    'G3': 11, 'G4': 12, 'ÚNICO': 13
+                };
+
+                listaItens.forEach(item => {
+                    let tamStr = String(item.tamanho || item).trim();
+                    let partes = tamStr.split(/[\,\/\-\s]+/);
+
                     partes.forEach(p => {
                         let limpo = p.trim().toUpperCase();
                         if (limpo !== '') {
-                            // Se qualquer variante desse tamanho estiver vendida, marca true
-                            if (tamanhosMap[limpo] === undefined) {
-                                tamanhosMap[limpo] = (v.vendido === true);
-                            } else if (v.vendido === false) {
-                                tamanhosMap[limpo] = false; // Se houver alguma unidade livre, destrava
+                            let num = parseInt(limpo);
+                            if (!isNaN(num)) {
+                                if (!itensExpandidos.includes(num)) itensExpandidos.push(num);
+                            } else {
+                                if (!itensExpandidos.includes(limpo)) itensExpandidos.push(limpo);
                             }
                         }
                     });
-                }
-            });
-
-            // 2. Ordena corretamente os tamanhos
-            const ordemLetras = {
-                'PP': 1, 'P': 2, 'M': 3, 'G': 4, 'GG': 5,
-                'XG': 6, 'EG': 7, 'EGG': 8, 'G1': 9, 'G2': 10,
-                'G3': 11, 'G4': 12, 'ÚNICO': 13
-            };
-
-            let tamanhosArray = Object.keys(tamanhosMap);
-            tamanhosArray.sort((a, b) => {
-                let numA = parseInt(a);
-                let numB = parseInt(b);
-                if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
-                let pesoA = ordemLetras[a] || 99;
-                let pesoB = ordemLetras[b] || 99;
-                if (pesoA !== pesoB) return pesoA - pesoB;
-                return a.localeCompare(b);
-            });
-
-            // 3. Monta o visual riscando o que estiver esgotado
-            let htmlParts = tamanhosArray.map(tam => {
-                return tamanhosMap[tam]
-                    ? `<span style="text-decoration: line-through; color: #d93025; font-size: 14px;" title="Tamanho Esgotado">${tam}</span>`
-                    : `<span>${tam}</span>`;
-            });
-
-            return htmlParts.join(' <span style="font-size:12px; color:#999;">/</span> ');
-        }
-
-        window.addEventListener('DOMContentLoaded', async () => {
-            // 1. Busca os produtos normais direto do Firebase
-            try {
-                const querySnapshot = await getDocs(collection(window.db, "produtos"));
-                window.produtosFirebase = [];
-                querySnapshot.forEach((doc) => {
-                    window.produtosFirebase.push({ idDoc: doc.id, ...doc.data() });
                 });
 
-                // Substitui a nossa antiga variável fixa pela do Firebase
-                window.produtos = window.produtosFirebase;
-            } catch (e) {
-                console.error("Erro ao carregar produtos do Firebase: ", e);
-            }
+                itensExpandidos.sort((a, b) => {
+                    let numA = parseInt(a);
+                    let numB = parseInt(b);
 
-            // 2. Busca os produtos da liquidação direto do Firebase
-            try {
-                const queryLiqSnapshot = await getDocs(collection(window.db, "produtosLiquidacao"));
-                window.produtosLiqFirebase = [];
-                queryLiqSnapshot.forEach((doc) => {
-                    window.produtosLiqFirebase.push({ idDoc: doc.id, ...doc.data() });
+                    if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
+
+                    let pesoA = ordemLetras[String(a).toUpperCase()] || 99;
+                    let pesoB = ordemLetras[String(b).toUpperCase()] || 99;
+
+                    if (pesoA !== pesoB) return pesoA - pesoB;
+
+                    return String(a).localeCompare(String(b));
                 });
 
-                window.produtosLiquidacao = window.produtosLiqFirebase;
-            } catch (e) {
-                console.error("Erro ao carregar liquidação do Firebase: ", e);
+                return itensExpandidos.join('/');
             }
+            function gerarHtmlTamanhosCor(produto, corObj) {
+                let tamanhosMap = {};
 
-            // 3. Processa as variantes e monta o catálogo normalmente igual antes
-            // 3. Processa as variantes e monta o catálogo normalmente igual antes
-            produtos.forEach(p => {
-                // 🟢 NOVIDADE DINÂMICA: Dá um "número da sorte" para embaralhar os itens a cada visita
-                p.ordemAleatoria = Math.random();
-
-                // 🟢 MÁGICA DE ESTOQUE: Se todas as variantes acabaram, o produto inteiro esgota
-                let todasVariantesEsgotadas = p.variantes.every(v => v.vendido === true || String(v.vendido) === "true");
-                if (todasVariantesEsgotadas) {
-                    p.vendido = true;
-                }
-
-                const coresUnicasMap = {};
-                p.variantes.forEach(v => {
+                // 1. Olha direto na lista "variantes" que o robô atualiza no Firebase
+                produto.variantes.forEach(v => {
                     let corNomeClean = v.cor.split('(')[0].trim().toLowerCase();
-                    if (!coresUnicasMap[corNomeClean]) {
-                        coresUnicasMap[corNomeClean] = {
-                            corOriginal: v.cor.split('(')[0].trim(),
-                            tamanhos: [],
-                            fotos: [],
-                            variantesOriginais: [],
-                            esgotada: true
-                        };
-                    }
-                    if (!coresUnicasMap[corNomeClean].tamanhos.includes(v.tamanho)) {
-                        coresUnicasMap[corNomeClean].tamanhos.push(v.tamanho);
-                    }
-                    coresUnicasMap[corNomeClean].fotos.push(v.imagem);
-                    coresUnicasMap[corNomeClean].variantesOriginais.push(v);
+                    let corObjClean = corObj.corOriginal.split('(')[0].trim().toLowerCase();
 
-                    // Ajuste anti-bug: garante que a cor não fique esgotada se tiver pelo menos 1 peça
-                    if (v.vendido !== true && String(v.vendido) !== "true") {
-                        coresUnicasMap[corNomeClean].esgotada = false;
+                    // Confere se pertence à cor correta
+                    if (corNomeClean === corObjClean) {
+                        let partes = String(v.tamanho || '').split(/[\,\/\-\s]+/);
+                        partes.forEach(p => {
+                            let limpo = p.trim().toUpperCase();
+                            if (limpo !== '') {
+                                // Se qualquer variante desse tamanho estiver vendida, marca true
+                                if (tamanhosMap[limpo] === undefined) {
+                                    tamanhosMap[limpo] = (v.vendido === true);
+                                } else if (v.vendido === false) {
+                                    tamanhosMap[limpo] = false; // Se houver alguma unidade livre, destrava
+                                }
+                            }
+                        });
                     }
                 });
 
-                p.coresAgrupadas = Object.values(coresUnicasMap);
-            });
+                // 2. Ordena corretamente os tamanhos
+                const ordemLetras = {
+                    'PP': 1, 'P': 2, 'M': 3, 'G': 4, 'GG': 5,
+                    'XG': 6, 'EG': 7, 'EGG': 8, 'G1': 9, 'G2': 10,
+                    'G3': 11, 'G4': 12, 'ÚNICO': 13
+                };
 
-            gerarAbasCategorias();
-            gerarAbasTamanhos();
-            gerarAbasCores();
-            atualizarFiltrosERenderizar();
-            configurarObservadorRolagem();
-        });
-
-        function obterCategoriasUnicas() {
-            const listasCategorias = ['Todos'];
-            produtos.forEach(p => {
-                let cat = p.nome.split(' ')[0].trim();
-                cat = cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase();
-
-                // --- 1. REGRA ABSOLUTA DO CONJUNTO ---
-                if (p.nome.toLowerCase().includes('conjunto')) {
-                    cat = 'Conjuntos';
-                } else {
-                    // --- 2. OUTRAS REGRAS E PLURAIS ---
-                    if (cat === 'Short' || cat === 'Shorts' || cat === 'Bermuda') {
-                        cat = 'Shorts/Bermudas';
-                    }
-                    // Adicionando Body junto com Camisa, Kimono, Colete e Regata para virarem Blusas
-                    else if (cat === 'Camisa' || cat === 'Kimono' || cat === 'Colete' || cat === 'Regata' || cat === 'Blusa' || cat === 'Body') {
-                        cat = 'Blusas';
-                    }
-                    else if (cat === 'Vestido') {
-                        cat = 'Vestidos';
-                    }
-                    else if (cat === 'Calça') {
-                        cat = 'Calças';
-                    }
-                    else if (cat === 'Saia') {
-                        cat = 'Saias';
-                    }
-                    else if (cat === 'Macacão') {
-                        cat = 'Macacões';
-                    }
-                }
-
-                if (!listasCategorias.includes(cat) && cat.length > 0) {
-                    listasCategorias.push(cat);
-                }
-            });
-            return listasCategorias;
-        }
-
-        function gerarAbasCategorias() {
-            const containerAbas = document.getElementById('categories-tabs');
-            const categorias = obterCategoriasUnicas();
-            containerAbas.innerHTML = '';
-            categorias.forEach(cat => {
-                const btn = document.createElement('button');
-                btn.className = `category-tab ${cat === 'Todos' ? 'active' : ''}`;
-                btn.textContent = cat;
-                btn.setAttribute('data-category', cat);
-                btn.onclick = () => filtrarCategoria(cat);
-                containerAbas.appendChild(btn);
-            });
-        }
-
-        function gerarAbasTamanhos() {
-            const containerTamanhos = document.getElementById('sizes-tabs');
-            const tamanhosPadrao = ['Todos', 'Slim', '42', '44', '46', '48', '50', '52', '54', 'PP', 'P', 'M', 'GG', 'G2', 'G3'];
-
-            containerTamanhos.innerHTML = '';
-            tamanhosPadrao.forEach(tam => {
-                const btn = document.createElement('button');
-                btn.className = `size-tab ${tam === 'Todos' ? 'active' : ''}`;
-                btn.textContent = tam;
-                btn.setAttribute('data-size', tam);
-                btn.onclick = () => filtrarTamanho(tam);
-                containerTamanhos.appendChild(btn);
-            });
-        }
-        function filtrarTamanho(tamanho) {
-            tamanhoAtual = tamanho;
-            // O '#sizes-tabs' garante que ele pinte apenas os botões de tamanho!
-            document.querySelectorAll('#sizes-tabs .size-tab').forEach(btn => {
-                if (btn.getAttribute('data-size') === tamanho) btn.classList.add('active');
-                else btn.classList.remove('active');
-            });
-            atualizarFiltrosERenderizar();
-        }
-
-        function gerarAbasCores() {
-            const containerCores = document.getElementById('colors-tabs');
-            let coresData = [];
-
-            // Dicionário de Cores Sólidas
-            const mapaCoresHex = {
-                'Preto': '#000000',
-                'Branco': '#ffffff',
-                'Bordô': '#6d0c24',
-                'Azul marinho': '#001451',
-                'Azul': '#3E77B6',
-                'Marrom': '#6b4e31',
-                'Bege': '#e6d8c3',
-                'Fúcsia': '#9e366d',
-                'Rosa': '#f2a7b9',
-                'Verde': '#3a6332',
-                'Terracota': '#bd5a3a',
-                'Amarelo': '#FFEE8C',
-                'Vermelho': '#c21a1a',
-                'Azul petróleo': '#1e4d56',
-                'Cru': '#FFFAF0',
-                'Coral': '#FDA487',
-            };
-
-            produtos.forEach(p => {
-                p.variantes.forEach(v => {
-                    let corLimpa = v.cor.split('(')[0].trim();
-                    corLimpa = corLimpa.charAt(0).toUpperCase() + corLimpa.slice(1).toLowerCase();
-
-                    if (!coresData.includes(corLimpa) && corLimpa !== '') {
-                        coresData.push(corLimpa);
-                    }
+                let tamanhosArray = Object.keys(tamanhosMap);
+                tamanhosArray.sort((a, b) => {
+                    let numA = parseInt(a);
+                    let numB = parseInt(b);
+                    if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
+                    let pesoA = ordemLetras[a] || 99;
+                    let pesoB = ordemLetras[b] || 99;
+                    if (pesoA !== pesoB) return pesoA - pesoB;
+                    return a.localeCompare(b);
                 });
-            });
 
-            coresData.sort((a, b) => a.localeCompare(b));
+                // 3. Monta o visual riscando o que estiver esgotado
+                let htmlParts = tamanhosArray.map(tam => {
+                    return tamanhosMap[tam]
+                        ? `<span style="text-decoration: line-through; color: #d93025; font-size: 14px;" title="Tamanho Esgotado">${tam}</span>`
+                        : `<span>${tam}</span>`;
+                });
 
-            containerCores.innerHTML = '';
+                return htmlParts.join(' <span style="font-size:12px; color:#999;">/</span> ');
+            }
 
-            // Botão "Todas"
-            const btnTodas = document.createElement('button');
-            btnTodas.className = `size-tab ${corAtual === 'Todas' ? 'active' : ''}`;
-            btnTodas.style.borderRadius = '50px';
-            btnTodas.textContent = 'Todas';
-            btnTodas.setAttribute('data-color', 'Todas');
-            btnTodas.onclick = () => filtrarCor('Todas');
-            containerCores.appendChild(btnTodas);
-
-            // Bolinhas sólidas
-            coresData.forEach(nomeCor => {
-                const btn = document.createElement('button');
-                btn.className = `color-filter-dot ${corAtual === nomeCor ? 'active' : ''}`;
-                btn.style.backgroundColor = mapaCoresHex[nomeCor] || '#cccccc';
-                btn.title = nomeCor; // Mostra o nome da cor ao passar o mouse
-                btn.setAttribute('data-color', nomeCor);
-                btn.onclick = () => filtrarCor(nomeCor);
-                containerCores.appendChild(btn);
-            });
-        }
-
-        function filtrarCor(cor) {
-            corAtual = cor;
-            // Gerencia a classe active tanto no botão "Todas" quanto nas bolinhas sólidas
-            document.querySelectorAll('#colors-tabs button').forEach(btn => {
-                if (btn.getAttribute('data-color') === cor) btn.classList.add('active');
-                else btn.classList.remove('active');
-            });
-            atualizarFiltrosERenderizar();
-        }
-
-        function verificaTamanhoCompativel(produto, tamanhoBuscado) {
-            if (tamanhoBuscado === 'Todos') return true;
-
-            // 🟢 REGRA ESPECIAL PARA O FILTRO "SLIM"
-            if (tamanhoBuscado === 'Slim') {
-                return produto.variantes.some(v => {
-                    let tamUpper = String(v.tamanho).toUpperCase();
-
-                    // Condição 1: A variante tem a palavra "SLIM" escrita (ex: "GG(Slim)")
-                    if (tamUpper.includes('SLIM')) return true;
-
-                    // Condição 2: É um número igual ou menor que 42 (ex: "42", "40", "38")
-                    let partes = tamUpper.split(/[\,\/\-\s]+/);
-                    return partes.some(p => {
-                        let num = parseInt(p.trim());
-                        return !isNaN(num) && num <= 42 && num > 0;
+            window.addEventListener('DOMContentLoaded', async () => {
+                // 1. Busca os produtos normais direto do Firebase
+                try {
+                    const querySnapshot = await getDocs(collection(window.db, "produtos"));
+                    window.produtosFirebase = [];
+                    querySnapshot.forEach((doc) => {
+                        window.produtosFirebase.push({ idDoc: doc.id, ...doc.data() });
                     });
-                });
-            }
 
-            // Regra normal para os outros tamanhos (44, 46, GG, etc)
-            const tamBuscaUpper = tamanhoBuscado.toUpperCase();
-            return produto.variantes.some(v => {
-                let tamFormatado = formatarTamanhosOrdenados([v]);
-                return tamFormatado.toUpperCase().includes(tamBuscaUpper) || String(v.tamanho).toUpperCase().includes(tamBuscaUpper);
-            });
-        }
-
-        function filtrarCategoria(categoria) {
-            categoriaAtual = categoria;
-            document.querySelectorAll('.category-tab').forEach(btn => {
-                if (btn.getAttribute('data-category') === categoria) btn.classList.add('active');
-                else btn.classList.remove('active');
-            });
-            atualizarFiltrosERenderizar();
-        }
-
-        function lidarBusca(valor) {
-            termoPesquisa = valor;
-            atualizarFiltrosERenderizar();
-        }
-
-        function filtrarStatus(status) {
-            statusFiltro = status;
-            document.querySelectorAll('.status-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(`status-${status}`).classList.add('active');
-            atualizarFiltrosERenderizar();
-        }
-
-        function atualizarFiltrosERenderizar() {
-            // TRAVA DE SEGURANÇA: Se estiver no modo liquidação, não carrega os produtos normais!
-            if (modoLiquidacao) {
-                return;
-            }
-
-            produtosFiltradosGlobais = produtos.filter(p => {
-                let catItem = p.nome.split(' ')[0].charAt(0).toUpperCase() + p.nome.split(' ')[0].slice(1).toLowerCase();
-
-                // --- 1. REGRA ABSOLUTA DO CONJUNTO ---
-                if (p.nome.toLowerCase().includes('conjunto')) {
-                    catItem = 'Conjuntos';
-                } else {
-                    // --- 2. OUTRAS REGRAS E PLURAIS ---
-                    if (catItem === 'Short' || catItem === 'Shorts' || catItem === 'Bermuda') {
-                        catItem = 'Shorts/Bermudas';
-                    }
-                    // Adicionando Body junto com Camisa, Kimono, Colete e Regata para virarem Blusas
-                    else if (catItem === 'Camisa' || catItem === 'Kimono' || catItem === 'Colete' || catItem === 'Regata' || catItem === 'Blusa' || catItem === 'Body') {
-                        catItem = 'Blusas';
-                    }
-                    else if (catItem === 'Vestido') {
-                        catItem = 'Vestidos';
-                    }
-                    else if (catItem === 'Calça') {
-                        catItem = 'Calças';
-                    }
-                    else if (catItem === 'Saia') {
-                        catItem = 'Saias';
-                    }
-                    else if (catItem === 'Macacão') {
-                        catItem = 'Macacões';
-                    }
+                    // Substitui a nossa antiga variável fixa pela do Firebase
+                    window.produtos = window.produtosFirebase;
+                } catch (e) {
+                    console.error("Erro ao carregar produtos do Firebase: ", e);
                 }
 
-                const matchesCategoria = (categoriaAtual === 'Todos' || catItem === categoriaAtual);
-                const matchesTamanho = verificaTamanhoCompativel(p, tamanhoAtual);
-                const matchesCor = (corAtual === 'Todas') || p.variantes.some(v => v.cor.toLowerCase().includes(corAtual.toLowerCase()));
-                const matchesStatus = (statusFiltro === 'todos') || (statusFiltro === 'disponiveis' && !p.vendido) || (statusFiltro === 'vendidos' && p.vendido);
-
-                const matchesPesquisa = p.nome.toLowerCase().includes(termoPesquisa.toLowerCase()) ||
-                    p.variantes.some(v => v.tamanho.toLowerCase().includes(termoPesquisa.toLowerCase()) || v.cor.toLowerCase().includes(termoPesquisa.toLowerCase()));
-
-                return matchesCategoria && matchesTamanho && matchesCor && matchesPesquisa && matchesStatus;
-            });
-            // 🟢 MUDANÇA q AQUI: Ordena as Novidades no topo E embaralha a ordem a cada novo acesso
-            produtosFiltradosGlobais.sort((a, b) => {
-                let aNovidade = (a.novidade === true || String(a.novidade).toLowerCase() === 'true' || a.Novidade === true || String(a.Novidade).toLowerCase() === 'true') ? 1 : 0;
-                let bNovidade = (b.novidade === true || String(b.novidade).toLowerCase() === 'true' || b.Novidade === true || String(b.Novidade).toLowerCase() === 'true') ? 1 : 0;
-
-                // 1º Regra: Se um é novidade e o outro não, a novidade sobe
-                if (bNovidade !== aNovidade) {
-                    return bNovidade - aNovidade;
-                }
-
-                // 2º Regra: Se os dois são iguais (ambos novidade ou ambos comuns), usa o número sorteado na entrada do site
-                return a.ordemAleatoria - b.ordemAleatoria;
-            });
-
-            indiceExibicaoAtual = 0;
-            document.getElementById('product-grid').innerHTML = '';
-
-            // 🟢 Reseta as fotos para que o filtro force a cor escolhida a aparecer primeiro
-            window.estadoVariantes = {};
-            window.estadoFotosCard = {};
-            window.modoCorUnica = {};
-
-            const totalProdutos = produtosFiltradosGlobais.length;
-            document.getElementById('results-counter').textContent = `Mostrando ${totalProdutos} item(ns) encontrado(s)`;
-
-            if (totalProdutos === 0) {
-                document.getElementById('product-grid').innerHTML = `<div class="no-results">Nenhuma peça encontrada nos critérios selecionados.</div>`;
-                document.getElementById('scroll-status').style.display = 'none';
-                return;
-            }
-
-            carregarMaisProdutos();
-        }
-
-        function trocarCor(event, produtoId, corIndex, dotElement) {
-            event.stopPropagation();
-
-            if (window.intervalosCarrossel[produtoId]) {
-                clearInterval(window.intervalosCarrossel[produtoId]);
-                window.intervalosCarrossel[produtoId] = null;
-            }
-
-            const indContainer = document.getElementById(`indicators-${produtoId}`);
-            if (indContainer) indContainer.style.display = 'none';
-
-            window.estadoVariantes[produtoId] = corIndex;
-            window.estadoFotosCard[produtoId] = 0;
-            window.modoCorUnica[produtoId] = true;
-
-            const produto = produtos.find(p => String(p.id) === String(produtoId));
-            const corObj = produto.coresAgrupadas[corIndex];
-
-            // 🟢 FILTRO DE SEGURANÇA: Remove fotos vazias, nulas ou inválidas
-            let fotosDaCor = [...new Set(corObj.fotos)].filter(foto => foto && foto.trim() !== "" && !foto.includes("undefined"));
-
-            const trackElement = document.getElementById(`track-${produtoId}`);
-            if (trackElement) {
-                let trackHtml = '';
-                fotosDaCor.forEach((foto, i) => {
-                    let classeVisivel = i === 0 ? 'active-img' : '';
-                    trackHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${produto.nome}" onerror="substituirPorPlaceholder(this)">`;
-                });
-                trackElement.innerHTML = trackHtml;
-            }
-
-            if (indContainer) {
-                if (fotosDaCor.length > 1) {
-                    let indHtml = '';
-                    fotosDaCor.forEach((_, i) => {
-                        indHtml += `<div class="indicator-bar ${i === 0 ? 'active' : ''}"></div>`;
+                // 2. Busca os produtos da liquidação direto do Firebase
+                try {
+                    const queryLiqSnapshot = await getDocs(collection(window.db, "produtosLiquidacao"));
+                    window.produtosLiqFirebase = [];
+                    queryLiqSnapshot.forEach((doc) => {
+                        window.produtosLiqFirebase.push({ idDoc: doc.id, ...doc.data() });
                     });
-                    indContainer.innerHTML = indHtml;
-                    indContainer.style.display = 'flex';
-                } else {
-                    indContainer.innerHTML = '';
-                    indContainer.style.display = 'none';
+
+                    window.produtosLiquidacao = window.produtosLiqFirebase;
+                } catch (e) {
+                    console.error("Erro ao carregar liquidação do Firebase: ", e);
                 }
-            }
 
-            const badgeSold = document.getElementById(`badge-sold-${produtoId}`);
-            if (badgeSold) {
-                if (produto.vendido || corObj.esgotada) {
-                    badgeSold.style.display = 'block';
-                    badgeSold.textContent = produto.vendido ? 'ESGOTADO' : 'COR ESGOTADA';
-                } else {
-                    badgeSold.style.display = 'none';
-                }
-            }
+                // 3. Processa as variantes e monta o catálogo normalmente igual antes
+                // 3. Processa as variantes e monta o catálogo normalmente igual antes
+                produtos.forEach(p => {
+                    // 🟢 NOVIDADE DINÂMICA: Dá um "número da sorte" para embaralhar os itens a cada visita
+                    p.ordemAleatoria = Math.random();
 
-            const container = dotElement.parentElement;
-            container.querySelectorAll('.cor-dot').forEach(d => d.classList.remove('active'));
-            dotElement.classList.add('active');
-
-            const btnContainer = document.getElementById(`btn-container-${produtoId}`);
-            if (btnContainer && !produto.vendido) {
-                const stringTamanhos = formatarTamanhosOrdenados(corObj.tamanhos);
-                const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${produto.nome}" na cor ${corObj.corOriginal} (Tamanhos: ${stringTamanhos}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
-                btnContainer.innerHTML = `<a id="btn-compra-${produtoId}" href="https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}" target="_blank" class="btn-whatsapp">Comprar</a>`;
-            }
-
-            iniciarCarrosselAutomatico(produtoId);
-        }
-        function carregarMaisProdutos() {
-            if (modoLiquidacao) return;
-
-            if (carregandoMais || indiceExibicaoAtual >= produtosFiltradosGlobais.length) return;
-            const statusDiv = document.getElementById('scroll-status');
-            const grid = document.getElementById('product-grid');
-
-            const proximoLote = produtosFiltradosGlobais.slice(indiceExibicaoAtual, indiceExibicaoAtual + ITENS_POR_CARREGAMENTO);
-
-            proximoLote.forEach(p => {
-                if (window.estadoVariantes[p.id] === undefined) {
-                    if (corAtual !== 'Todas') {
-                        let filterIdx = p.coresAgrupadas.findIndex(c => c.corOriginal.toLowerCase().includes(corAtual.toLowerCase()));
-                        window.estadoVariantes[p.id] = filterIdx !== -1 ? filterIdx : 0;
-                        window.modoCorUnica[p.id] = true;
-                    } else {
-                        window.estadoVariantes[p.id] = 0;
-                        window.modoCorUnica[p.id] = false;
+                    // 🟢 MÁGICA DE ESTOQUE: Se todas as variantes acabaram, o produto inteiro esgota
+                    let todasVariantesEsgotadas = p.variantes.every(v => v.vendido === true || String(v.vendido) === "true");
+                    if (todasVariantesEsgotadas) {
+                        p.vendido = true;
                     }
-                }
-                if (window.estadoFotosCard[p.id] === undefined) window.estadoFotosCard[p.id] = 0;
 
-                let corIndex = window.estadoVariantes[p.id];
-                let corObj = p.coresAgrupadas[corIndex];
-                const stringTamanhosAtual = formatarTamanhosOrdenados(corObj.tamanhos);
-
-                let carrosselCoresHtml = '';
-                if (p.coresAgrupadas.length > 1) {
-                    carrosselCoresHtml = '<div class="cores-container">';
-                    p.coresAgrupadas.forEach((c, index) => {
-                        let classeAtiva = (index === corIndex && window.modoCorUnica[p.id]) ? 'active' : '';
-                        carrosselCoresHtml += `<div class="cor-dot ${classeAtiva}" style="background-image: url('${c.fotos[0]}')" onclick="trocarCor(event, '${p.id}', ${index}, this)" title="Cor: ${c.corOriginal}"></div>`;
-                    });
-                    carrosselCoresHtml += '</div>';
-                }
-
-                // 🟢 CORREÇÃO AQUI: Se há filtro de cor ativo, pega TODAS AS FOTOS DAQUELA COR (e não apenas a primeira!)
-                let fotosParaCarrossel = [];
-                let isFiltroCorAtivo = (corAtual !== 'Todas');
-
-                if (isFiltroCorAtivo) {
-                    let corFiltradaObj = p.coresAgrupadas.find(c => c.corOriginal.toLowerCase().includes(corAtual.toLowerCase()));
-                    if (corFiltradaObj) {
-                        fotosParaCarrossel = [...new Set(corFiltradaObj.fotos)];
-                    }
-                } else if (window.modoCorUnica[p.id]) {
-                    fotosParaCarrossel = [...new Set(corObj.fotos)];
-                } else {
+                    const coresUnicasMap = {};
                     p.variantes.forEach(v => {
-                        if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
+                        let corNomeClean = v.cor.split('(')[0].trim().toLowerCase();
+                        if (!coresUnicasMap[corNomeClean]) {
+                            coresUnicasMap[corNomeClean] = {
+                                corOriginal: v.cor.split('(')[0].trim(),
+                                tamanhos: [],
+                                fotos: [],
+                                variantesOriginais: [],
+                                esgotada: true
+                            };
+                        }
+                        if (!coresUnicasMap[corNomeClean].tamanhos.includes(v.tamanho)) {
+                            coresUnicasMap[corNomeClean].tamanhos.push(v.tamanho);
+                        }
+                        coresUnicasMap[corNomeClean].fotos.push(v.imagem);
+                        coresUnicasMap[corNomeClean].variantesOriginais.push(v);
+
+                        // Ajuste anti-bug: garante que a cor não fique esgotada se tiver pelo menos 1 peça
+                        if (v.vendido !== true && String(v.vendido) !== "true") {
+                            coresUnicasMap[corNomeClean].esgotada = false;
+                        }
                     });
-                }
 
-                // Limpa URLs inválidas
-                fotosParaCarrossel = fotosParaCarrossel.filter(foto => foto && typeof foto === 'string' && foto.trim() !== "" && !foto.includes("undefined"));
-
-                let trackImagensHtml = '';
-                fotosParaCarrossel.forEach((foto, i) => {
-                    let classeVisivel = (i === 0 || i === window.estadoFotosCard[p.id]) ? 'active-img' : '';
-                    trackImagensHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${p.nome}" onclick="abrirModal('${p.id}')" onerror="substituirPorPlaceholder(this)">`;
+                    p.coresAgrupadas = Object.values(coresUnicasMap);
                 });
 
-                let indicadoresHtml = '';
-                // Mostra os tracinhos se houver mais de uma foto para essa cor selecionada
-                if (fotosParaCarrossel.length > 1) {
-                    indicadoresHtml = `<div class="carousel-indicators" id="indicators-${p.id}">`;
-                    fotosParaCarrossel.forEach((_, i) => {
-                        indicadoresHtml += `<div class="indicator-bar ${i === window.estadoFotosCard[p.id] ? 'active' : ''}"></div>`;
+                gerarAbasCategorias();
+                gerarAbasTamanhos();
+                gerarAbasCores();
+                atualizarFiltrosERenderizar();
+                configurarObservadorRolagem();
+            });
+
+            function obterCategoriasUnicas() {
+                const listasCategorias = ['Todos'];
+                produtos.forEach(p => {
+                    let cat = p.nome.split(' ')[0].trim();
+                    cat = cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase();
+
+                    // --- 1. REGRA ABSOLUTA DO CONJUNTO ---
+                    if (p.nome.toLowerCase().includes('conjunto')) {
+                        cat = 'Conjuntos';
+                    } else {
+                        // --- 2. OUTRAS REGRAS E PLURAIS ---
+                        if (cat === 'Short' || cat === 'Shorts' || cat === 'Bermuda') {
+                            cat = 'Shorts/Bermudas';
+                        }
+                        // Adicionando Body junto com Camisa, Kimono, Colete e Regata para virarem Blusas
+                        else if (cat === 'Camisa' || cat === 'Kimono' || cat === 'Colete' || cat === 'Regata' || cat === 'Blusa' || cat === 'Body') {
+                            cat = 'Blusas';
+                        }
+                        else if (cat === 'Vestido') {
+                            cat = 'Vestidos';
+                        }
+                        else if (cat === 'Calça') {
+                            cat = 'Calças';
+                        }
+                        else if (cat === 'Saia') {
+                            cat = 'Saias';
+                        }
+                        else if (cat === 'Macacão') {
+                            cat = 'Macacões';
+                        }
+                    }
+
+                    if (!listasCategorias.includes(cat) && cat.length > 0) {
+                        listasCategorias.push(cat);
+                    }
+                });
+                return listasCategorias;
+            }
+
+            function gerarAbasCategorias() {
+                const containerAbas = document.getElementById('categories-tabs');
+                const categorias = obterCategoriasUnicas();
+                containerAbas.innerHTML = '';
+                categorias.forEach(cat => {
+                    const btn = document.createElement('button');
+                    btn.className = `category-tab ${cat === 'Todos' ? 'active' : ''}`;
+                    btn.textContent = cat;
+                    btn.setAttribute('data-category', cat);
+                    btn.onclick = () => filtrarCategoria(cat);
+                    containerAbas.appendChild(btn);
+                });
+            }
+
+            function gerarAbasTamanhos() {
+                const containerTamanhos = document.getElementById('sizes-tabs');
+                const tamanhosPadrao = ['Todos', 'Slim', '42', '44', '46', '48', '50', '52', '54', 'PP', 'P', 'M', 'GG', 'G2', 'G3'];
+
+                containerTamanhos.innerHTML = '';
+                tamanhosPadrao.forEach(tam => {
+                    const btn = document.createElement('button');
+                    btn.className = `size-tab ${tam === 'Todos' ? 'active' : ''}`;
+                    btn.textContent = tam;
+                    btn.setAttribute('data-size', tam);
+                    btn.onclick = () => filtrarTamanho(tam);
+                    containerTamanhos.appendChild(btn);
+                });
+            }
+            function filtrarTamanho(tamanho) {
+                tamanhoAtual = tamanho;
+                // O '#sizes-tabs' garante que ele pinte apenas os botões de tamanho!
+                document.querySelectorAll('#sizes-tabs .size-tab').forEach(btn => {
+                    if (btn.getAttribute('data-size') === tamanho) btn.classList.add('active');
+                    else btn.classList.remove('active');
+                });
+                atualizarFiltrosERenderizar();
+            }
+
+            function gerarAbasCores() {
+                const containerCores = document.getElementById('colors-tabs');
+                let coresData = [];
+
+                // Dicionário de Cores Sólidas
+                const mapaCoresHex = {
+                    'Preto': '#000000',
+                    'Branco': '#ffffff',
+                    'Bordô': '#6d0c24',
+                    'Azul marinho': '#001451',
+                    'Azul': '#3E77B6',
+                    'Marrom': '#6b4e31',
+                    'Bege': '#e6d8c3',
+                    'Fúcsia': '#9e366d',
+                    'Rosa': '#f2a7b9',
+                    'Verde': '#3a6332',
+                    'Terracota': '#bd5a3a',
+                    'Amarelo': '#FFEE8C',
+                    'Vermelho': '#c21a1a',
+                    'Azul petróleo': '#1e4d56',
+                    'Cru': '#FFFAF0',
+                    'Coral': '#FDA487',
+                };
+
+                produtos.forEach(p => {
+                    p.variantes.forEach(v => {
+                        let corLimpa = v.cor.split('(')[0].trim();
+                        corLimpa = corLimpa.charAt(0).toUpperCase() + corLimpa.slice(1).toLowerCase();
+
+                        if (!coresData.includes(corLimpa) && corLimpa !== '') {
+                            coresData.push(corLimpa);
+                        }
                     });
-                    indicadoresHtml += `</div>`;
+                });
+
+                coresData.sort((a, b) => a.localeCompare(b));
+
+                containerCores.innerHTML = '';
+
+                // Botão "Todas"
+                const btnTodas = document.createElement('button');
+                btnTodas.className = `size-tab ${corAtual === 'Todas' ? 'active' : ''}`;
+                btnTodas.style.borderRadius = '50px';
+                btnTodas.textContent = 'Todas';
+                btnTodas.setAttribute('data-color', 'Todas');
+                btnTodas.onclick = () => filtrarCor('Todas');
+                containerCores.appendChild(btnTodas);
+
+                // Bolinhas sólidas
+                coresData.forEach(nomeCor => {
+                    const btn = document.createElement('button');
+                    btn.className = `color-filter-dot ${corAtual === nomeCor ? 'active' : ''}`;
+                    btn.style.backgroundColor = mapaCoresHex[nomeCor] || '#cccccc';
+                    btn.title = nomeCor; // Mostra o nome da cor ao passar o mouse
+                    btn.setAttribute('data-color', nomeCor);
+                    btn.onclick = () => filtrarCor(nomeCor);
+                    containerCores.appendChild(btn);
+                });
+            }
+
+            function filtrarCor(cor) {
+                corAtual = cor;
+                // Gerencia a classe active tanto no botão "Todas" quanto nas bolinhas sólidas
+                document.querySelectorAll('#colors-tabs button').forEach(btn => {
+                    if (btn.getAttribute('data-color') === cor) btn.classList.add('active');
+                    else btn.classList.remove('active');
+                });
+                atualizarFiltrosERenderizar();
+            }
+
+            function verificaTamanhoCompativel(produto, tamanhoBuscado) {
+                if (tamanhoBuscado === 'Todos') return true;
+
+                // 🟢 REGRA ESPECIAL PARA O FILTRO "SLIM"
+                if (tamanhoBuscado === 'Slim') {
+                    return produto.variantes.some(v => {
+                        let tamUpper = String(v.tamanho).toUpperCase();
+
+                        // Condição 1: A variante tem a palavra "SLIM" escrita (ex: "GG(Slim)")
+                        if (tamUpper.includes('SLIM')) return true;
+
+                        // Condição 2: É um número igual ou menor que 42 (ex: "42", "40", "38")
+                        let partes = tamUpper.split(/[\,\/\-\s]+/);
+                        return partes.some(p => {
+                            let num = parseInt(p.trim());
+                            return !isNaN(num) && num <= 42 && num > 0;
+                        });
+                    });
                 }
 
-                const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${p.nome}" na cor ${corObj.corOriginal} (Tamanhos disponíveis: ${stringTamanhosAtual}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
-                const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}`;
+                // Regra normal para os outros tamanhos (44, 46, GG, etc)
+                const tamBuscaUpper = tamanhoBuscado.toUpperCase();
+                return produto.variantes.some(v => {
+                    let tamFormatado = formatarTamanhosOrdenados([v]);
+                    return tamFormatado.toUpperCase().includes(tamBuscaUpper) || String(v.tamanho).toUpperCase().includes(tamBuscaUpper);
+                });
+            }
 
-                const card = document.createElement('div');
-                card.className = `product-card ${p.vendido ? 'sold-item' : ''}`;
+            function filtrarCategoria(categoria) {
+                categoriaAtual = categoria;
+                document.querySelectorAll('.category-tab').forEach(btn => {
+                    if (btn.getAttribute('data-category') === categoria) btn.classList.add('active');
+                    else btn.classList.remove('active');
+                });
+                atualizarFiltrosERenderizar();
+            }
 
-                let listaCoresTamanhosHtml = p.coresAgrupadas.map(c => {
-                    let tamanhosCor = gerarHtmlTamanhosCor(p, c);
-                    let esgotadaStatus = c.esgotada ? ' <span style="color: #d93025; font-size: 9px; font-weight: 600;">(ESGOTADA)</span>' : '';
-                    return `<div style="margin-bottom: 2px; font-size: 11px; font-weight: 400; color: var(--text-muted); letter-spacing: 0.03em;">
+            function lidarBusca(valor) {
+                termoPesquisa = valor;
+                atualizarFiltrosERenderizar();
+            }
+
+            function filtrarStatus(status) {
+                statusFiltro = status;
+                document.querySelectorAll('.status-btn').forEach(btn => btn.classList.remove('active'));
+                document.getElementById(`status-${status}`).classList.add('active');
+                atualizarFiltrosERenderizar();
+            }
+
+            function atualizarFiltrosERenderizar() {
+                // TRAVA DE SEGURANÇA: Se estiver no modo liquidação, não carrega os produtos normais!
+                if (modoLiquidacao) {
+                    return;
+                }
+
+                produtosFiltradosGlobais = produtos.filter(p => {
+                    let catItem = p.nome.split(' ')[0].charAt(0).toUpperCase() + p.nome.split(' ')[0].slice(1).toLowerCase();
+
+                    // --- 1. REGRA ABSOLUTA DO CONJUNTO ---
+                    if (p.nome.toLowerCase().includes('conjunto')) {
+                        catItem = 'Conjuntos';
+                    } else {
+                        // --- 2. OUTRAS REGRAS E PLURAIS ---
+                        if (catItem === 'Short' || catItem === 'Shorts' || catItem === 'Bermuda') {
+                            catItem = 'Shorts/Bermudas';
+                        }
+                        // Adicionando Body junto com Camisa, Kimono, Colete e Regata para virarem Blusas
+                        else if (catItem === 'Camisa' || catItem === 'Kimono' || catItem === 'Colete' || catItem === 'Regata' || catItem === 'Blusa' || catItem === 'Body') {
+                            catItem = 'Blusas';
+                        }
+                        else if (catItem === 'Vestido') {
+                            catItem = 'Vestidos';
+                        }
+                        else if (catItem === 'Calça') {
+                            catItem = 'Calças';
+                        }
+                        else if (catItem === 'Saia') {
+                            catItem = 'Saias';
+                        }
+                        else if (catItem === 'Macacão') {
+                            catItem = 'Macacões';
+                        }
+                    }
+
+                    const matchesCategoria = (categoriaAtual === 'Todos' || catItem === categoriaAtual);
+                    const matchesTamanho = verificaTamanhoCompativel(p, tamanhoAtual);
+                    const matchesCor = (corAtual === 'Todas') || p.variantes.some(v => v.cor.toLowerCase().includes(corAtual.toLowerCase()));
+                    const matchesStatus = (statusFiltro === 'todos') || (statusFiltro === 'disponiveis' && !p.vendido) || (statusFiltro === 'vendidos' && p.vendido);
+
+                    const matchesPesquisa = p.nome.toLowerCase().includes(termoPesquisa.toLowerCase()) ||
+                        p.variantes.some(v => v.tamanho.toLowerCase().includes(termoPesquisa.toLowerCase()) || v.cor.toLowerCase().includes(termoPesquisa.toLowerCase()));
+
+                    return matchesCategoria && matchesTamanho && matchesCor && matchesPesquisa && matchesStatus;
+                });
+                // 🟢 MUDANÇA q AQUI: Ordena as Novidades no topo E embaralha a ordem a cada novo acesso
+                produtosFiltradosGlobais.sort((a, b) => {
+                    let aNovidade = (a.novidade === true || String(a.novidade).toLowerCase() === 'true' || a.Novidade === true || String(a.Novidade).toLowerCase() === 'true') ? 1 : 0;
+                    let bNovidade = (b.novidade === true || String(b.novidade).toLowerCase() === 'true' || b.Novidade === true || String(b.Novidade).toLowerCase() === 'true') ? 1 : 0;
+
+                    // 1º Regra: Se um é novidade e o outro não, a novidade sobe
+                    if (bNovidade !== aNovidade) {
+                        return bNovidade - aNovidade;
+                    }
+
+                    // 2º Regra: Se os dois são iguais (ambos novidade ou ambos comuns), usa o número sorteado na entrada do site
+                    return a.ordemAleatoria - b.ordemAleatoria;
+                });
+
+                indiceExibicaoAtual = 0;
+                document.getElementById('product-grid').innerHTML = '';
+
+                // 🟢 Reseta as fotos para que o filtro force a cor escolhida a aparecer primeiro
+                window.estadoVariantes = {};
+                window.estadoFotosCard = {};
+                window.modoCorUnica = {};
+
+                const totalProdutos = produtosFiltradosGlobais.length;
+                document.getElementById('results-counter').textContent = `Mostrando ${totalProdutos} item(ns) encontrado(s)`;
+
+                if (totalProdutos === 0) {
+                    document.getElementById('product-grid').innerHTML = `<div class="no-results">Nenhuma peça encontrada nos critérios selecionados.</div>`;
+                    document.getElementById('scroll-status').style.display = 'none';
+                    return;
+                }
+
+                carregarMaisProdutos();
+            }
+
+            function trocarCor(event, produtoId, corIndex, dotElement) {
+                event.stopPropagation();
+
+                if (window.intervalosCarrossel[produtoId]) {
+                    clearInterval(window.intervalosCarrossel[produtoId]);
+                    window.intervalosCarrossel[produtoId] = null;
+                }
+
+                const indContainer = document.getElementById(`indicators-${produtoId}`);
+                if (indContainer) indContainer.style.display = 'none';
+
+                window.estadoVariantes[produtoId] = corIndex;
+                window.estadoFotosCard[produtoId] = 0;
+                window.modoCorUnica[produtoId] = true;
+
+                const produto = produtos.find(p => String(p.id) === String(produtoId));
+                const corObj = produto.coresAgrupadas[corIndex];
+
+                // 🟢 FILTRO DE SEGURANÇA: Remove fotos vazias, nulas ou inválidas
+                let fotosDaCor = [...new Set(corObj.fotos)].filter(foto => foto && foto.trim() !== "" && !foto.includes("undefined"));
+
+                const trackElement = document.getElementById(`track-${produtoId}`);
+                if (trackElement) {
+                    let trackHtml = '';
+                    fotosDaCor.forEach((foto, i) => {
+                        let classeVisivel = i === 0 ? 'active-img' : '';
+                        trackHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${produto.nome}" onerror="substituirPorPlaceholder(this)">`;
+                    });
+                    trackElement.innerHTML = trackHtml;
+                }
+
+                if (indContainer) {
+                    if (fotosDaCor.length > 1) {
+                        let indHtml = '';
+                        fotosDaCor.forEach((_, i) => {
+                            indHtml += `<div class="indicator-bar ${i === 0 ? 'active' : ''}"></div>`;
+                        });
+                        indContainer.innerHTML = indHtml;
+                        indContainer.style.display = 'flex';
+                    } else {
+                        indContainer.innerHTML = '';
+                        indContainer.style.display = 'none';
+                    }
+                }
+
+                const badgeSold = document.getElementById(`badge-sold-${produtoId}`);
+                if (badgeSold) {
+                    if (produto.vendido || corObj.esgotada) {
+                        badgeSold.style.display = 'block';
+                        badgeSold.textContent = produto.vendido ? 'ESGOTADO' : 'COR ESGOTADA';
+                    } else {
+                        badgeSold.style.display = 'none';
+                    }
+                }
+
+                const container = dotElement.parentElement;
+                container.querySelectorAll('.cor-dot').forEach(d => d.classList.remove('active'));
+                dotElement.classList.add('active');
+
+                const btnContainer = document.getElementById(`btn-container-${produtoId}`);
+                if (btnContainer && !produto.vendido) {
+                    const stringTamanhos = formatarTamanhosOrdenados(corObj.tamanhos);
+                    const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${produto.nome}" na cor ${corObj.corOriginal} (Tamanhos: ${stringTamanhos}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
+                    btnContainer.innerHTML = `<a id="btn-compra-${produtoId}" href="https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}" target="_blank" class="btn-whatsapp">Comprar</a>`;
+                }
+
+                iniciarCarrosselAutomatico(produtoId);
+            }
+            function carregarMaisProdutos() {
+                if (modoLiquidacao) return;
+
+                if (carregandoMais || indiceExibicaoAtual >= produtosFiltradosGlobais.length) return;
+                const statusDiv = document.getElementById('scroll-status');
+                const grid = document.getElementById('product-grid');
+
+                const proximoLote = produtosFiltradosGlobais.slice(indiceExibicaoAtual, indiceExibicaoAtual + ITENS_POR_CARREGAMENTO);
+
+                proximoLote.forEach(p => {
+                    if (window.estadoVariantes[p.id] === undefined) {
+                        if (corAtual !== 'Todas') {
+                            let filterIdx = p.coresAgrupadas.findIndex(c => c.corOriginal.toLowerCase().includes(corAtual.toLowerCase()));
+                            window.estadoVariantes[p.id] = filterIdx !== -1 ? filterIdx : 0;
+                            window.modoCorUnica[p.id] = true;
+                        } else {
+                            window.estadoVariantes[p.id] = 0;
+                            window.modoCorUnica[p.id] = false;
+                        }
+                    }
+                    if (window.estadoFotosCard[p.id] === undefined) window.estadoFotosCard[p.id] = 0;
+
+                    let corIndex = window.estadoVariantes[p.id];
+                    let corObj = p.coresAgrupadas[corIndex];
+                    const stringTamanhosAtual = formatarTamanhosOrdenados(corObj.tamanhos);
+
+                    let carrosselCoresHtml = '';
+                    if (p.coresAgrupadas.length > 1) {
+                        carrosselCoresHtml = '<div class="cores-container">';
+                        p.coresAgrupadas.forEach((c, index) => {
+                            let classeAtiva = (index === corIndex && window.modoCorUnica[p.id]) ? 'active' : '';
+                            carrosselCoresHtml += `<div class="cor-dot ${classeAtiva}" style="background-image: url('${c.fotos[0]}')" onclick="trocarCor(event, '${p.id}', ${index}, this)" title="Cor: ${c.corOriginal}"></div>`;
+                        });
+                        carrosselCoresHtml += '</div>';
+                    }
+
+                    // 🟢 CORREÇÃO AQUI: Se há filtro de cor ativo, pega TODAS AS FOTOS DAQUELA COR (e não apenas a primeira!)
+                    let fotosParaCarrossel = [];
+                    let isFiltroCorAtivo = (corAtual !== 'Todas');
+
+                    if (isFiltroCorAtivo) {
+                        let corFiltradaObj = p.coresAgrupadas.find(c => c.corOriginal.toLowerCase().includes(corAtual.toLowerCase()));
+                        if (corFiltradaObj) {
+                            fotosParaCarrossel = [...new Set(corFiltradaObj.fotos)];
+                        }
+                    } else if (window.modoCorUnica[p.id]) {
+                        fotosParaCarrossel = [...new Set(corObj.fotos)];
+                    } else {
+                        p.variantes.forEach(v => {
+                            if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
+                        });
+                    }
+
+                    // Limpa URLs inválidas
+                    fotosParaCarrossel = fotosParaCarrossel.filter(foto => foto && typeof foto === 'string' && foto.trim() !== "" && !foto.includes("undefined"));
+
+                    let trackImagensHtml = '';
+                    fotosParaCarrossel.forEach((foto, i) => {
+                        let classeVisivel = (i === 0 || i === window.estadoFotosCard[p.id]) ? 'active-img' : '';
+                        trackImagensHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${p.nome}" onclick="abrirModal('${p.id}')" onerror="substituirPorPlaceholder(this)">`;
+                    });
+
+                    let indicadoresHtml = '';
+                    // Mostra os tracinhos se houver mais de uma foto para essa cor selecionada
+                    if (fotosParaCarrossel.length > 1) {
+                        indicadoresHtml = `<div class="carousel-indicators" id="indicators-${p.id}">`;
+                        fotosParaCarrossel.forEach((_, i) => {
+                            indicadoresHtml += `<div class="indicator-bar ${i === window.estadoFotosCard[p.id] ? 'active' : ''}"></div>`;
+                        });
+                        indicadoresHtml += `</div>`;
+                    }
+
+                    const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${p.nome}" na cor ${corObj.corOriginal} (Tamanhos disponíveis: ${stringTamanhosAtual}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
+                    const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}`;
+
+                    const card = document.createElement('div');
+                    card.className = `product-card ${p.vendido ? 'sold-item' : ''}`;
+
+                    let listaCoresTamanhosHtml = p.coresAgrupadas.map(c => {
+                        let tamanhosCor = gerarHtmlTamanhosCor(p, c);
+                        let esgotadaStatus = c.esgotada ? ' <span style="color: #d93025; font-size: 9px; font-weight: 600;">(ESGOTADA)</span>' : '';
+                        return `<div style="margin-bottom: 2px; font-size: 11px; font-weight: 400; color: var(--text-muted); letter-spacing: 0.03em;">
                 <span style="font-weight: 500; color: var(--text-main);">${c.corOriginal}</span>: <span class="destaque-tamanho" style="font-weight: 400; color: var(--text-muted);">${tamanhosCor}</span>${esgotadaStatus}
             </div>`;
-                }).join('');
+                    }).join('');
 
-                // 🟢 MUDANÇA AQUI: Verifica as variáveis independente de como foram cadastradas no Firebase
-                let isDestaque = (p.destaque === true || String(p.destaque).toLowerCase() === "true" || p.Destaque === true || String(p.Destaque).toLowerCase() === "true");
-                let isVendido = (p.vendido === true || String(p.vendido).toLowerCase() === "true");
-                let isNovidade = (p.novidade === true || String(p.novidade).toLowerCase() === "true" || p.Novidade === true || String(p.Novidade).toLowerCase() === "true");
+                    // 🟢 MUDANÇA AQUI: Verifica as variáveis independente de como foram cadastradas no Firebase
+                    let isDestaque = (p.destaque === true || String(p.destaque).toLowerCase() === "true" || p.Destaque === true || String(p.Destaque).toLowerCase() === "true");
+                    let isVendido = (p.vendido === true || String(p.vendido).toLowerCase() === "true");
+                    let isNovidade = (p.novidade === true || String(p.novidade).toLowerCase() === "true" || p.Novidade === true || String(p.Novidade).toLowerCase() === "true");
 
-                card.innerHTML = `
+                    card.innerHTML = `
            <div class="product-image-container">
                 ${isDestaque ? '<span class="badge badge-destaque">⭐ DESTAQUE</span>' : ''}
                 
@@ -2288,143 +2312,143 @@
 
                 <div id="btn-container-${p.id}" style="margin-top: auto;">
                     ${isVendido ?
-                        '<button class="btn-whatsapp btn-sold" disabled>Indisponível</button>' :
-                        `<a id="btn-compra-${p.id}" href="${linkWhats}" target="_blank" class="btn-whatsapp">Comprar</a>`
-                    }
+                            '<button class="btn-whatsapp btn-sold" disabled>Indisponível</button>' :
+                            `<a id="btn-compra-${p.id}" href="${linkWhats}" target="_blank" class="btn-whatsapp">Comprar</a>`
+                        }
                 </div>
             </div>
         `;
-                grid.appendChild(card);
-                iniciarCarrosselAutomatico(p.id);
-            });
-
-            indiceExibicaoAtual += proximoLote.length;
-
-            if (indiceExibicaoAtual >= produtosFiltradosGlobais.length) {
-                statusDiv.textContent = '• VOCÊ CHEGOU AO FIM DO CATÁLOGO •';
-                statusDiv.style.display = 'block';
-            } else {
-                statusDiv.textContent = 'Carregando mais peças...';
-                statusDiv.style.display = 'block';
-            }
-
-            carregandoMais = false;
-        }
-
-        function iniciarCarrosselAutomatico(produtoId) {
-            const produto = produtos.find(p => String(p.id) === String(produtoId));
-            if (!produto) return;
-
-            if (window.intervalosCarrossel[produtoId]) {
-                clearInterval(window.intervalosCarrossel[produtoId]);
-                window.intervalosCarrossel[produtoId] = null;
-            }
-
-            let fotosParaCarrossel = [];
-            let isFiltroCorAtivo = (corAtual !== 'Todas');
-
-            if (isFiltroCorAtivo) {
-                let corFiltradaObj = produto.coresAgrupadas.find(c => c.corOriginal.toLowerCase().includes(corAtual.toLowerCase()));
-                if (corFiltradaObj) {
-                    fotosParaCarrossel = [...new Set(corFiltradaObj.fotos)];
-                }
-            } else if (window.modoCorUnica[produtoId]) {
-                let corIndex = window.estadoVariantes[produtoId] || 0;
-                let corObj = produto.coresAgrupadas[corIndex];
-                fotosParaCarrossel = [...new Set(corObj.fotos)];
-            } else {
-                produto.variantes.forEach(v => {
-                    if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
+                    grid.appendChild(card);
+                    iniciarCarrosselAutomatico(p.id);
                 });
+
+                indiceExibicaoAtual += proximoLote.length;
+
+                if (indiceExibicaoAtual >= produtosFiltradosGlobais.length) {
+                    statusDiv.textContent = '• VOCÊ CHEGOU AO FIM DO CATÁLOGO •';
+                    statusDiv.style.display = 'block';
+                } else {
+                    statusDiv.textContent = 'Carregando mais peças...';
+                    statusDiv.style.display = 'block';
+                }
+
+                carregandoMais = false;
             }
 
-            fotosParaCarrossel = fotosParaCarrossel.filter(foto => foto && typeof foto === 'string' && foto.trim() !== "" && !foto.includes("undefined"));
+            function iniciarCarrosselAutomatico(produtoId) {
+                const produto = produtos.find(p => String(p.id) === String(produtoId));
+                if (!produto) return;
 
-            // O carrossel roda se houver MAIS DE UMA foto válida para essa cor
-            if (fotosParaCarrossel.length > 1) {
-                window.intervalosCarrossel[produtoId] = setInterval(() => {
-                    const trackElement = document.getElementById(`track-${produtoId}`);
-                    if (!trackElement) return;
+                if (window.intervalosCarrossel[produtoId]) {
+                    clearInterval(window.intervalosCarrossel[produtoId]);
+                    window.intervalosCarrossel[produtoId] = null;
+                }
 
-                    let imagens = trackElement.querySelectorAll('img');
-                    if (!imagens || imagens.length === 0) return;
+                let fotosParaCarrossel = [];
+                let isFiltroCorAtivo = (corAtual !== 'Todas');
 
-                    let indiceAtualFoto = window.estadoFotosCard[produtoId] || 0;
-                    indiceAtualFoto = (indiceAtualFoto + 1) % imagens.length;
-                    window.estadoFotosCard[produtoId] = indiceAtualFoto;
-
-                    let imgAlvo = imagens[indiceAtualFoto];
-                    if (!imgAlvo || !imgAlvo.src || imgAlvo.src.trim() === "" || imgAlvo.src.includes("undefined")) {
-                        indiceAtualFoto = 0;
-                        window.estadoFotosCard[produtoId] = 0;
-                        imgAlvo = imagens[0];
+                if (isFiltroCorAtivo) {
+                    let corFiltradaObj = produto.coresAgrupadas.find(c => c.corOriginal.toLowerCase().includes(corAtual.toLowerCase()));
+                    if (corFiltradaObj) {
+                        fotosParaCarrossel = [...new Set(corFiltradaObj.fotos)];
                     }
-
-                    imagens.forEach((img, i) => {
-                        if (i === indiceAtualFoto) {
-                            img.classList.add('active-img');
-                        } else {
-                            img.classList.remove('active-img');
-                        }
+                } else if (window.modoCorUnica[produtoId]) {
+                    let corIndex = window.estadoVariantes[produtoId] || 0;
+                    let corObj = produto.coresAgrupadas[corIndex];
+                    fotosParaCarrossel = [...new Set(corObj.fotos)];
+                } else {
+                    produto.variantes.forEach(v => {
+                        if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
                     });
-
-                    const indContainer = document.getElementById(`indicators-${produtoId}`);
-                    if (indContainer) {
-                        const bars = indContainer.querySelectorAll('.indicator-bar');
-                        bars.forEach((bar, i) => {
-                            if (i === indiceAtualFoto) bar.classList.add('active');
-                            else bar.classList.remove('active');
-                        });
-                    }
-
-                }, 4000);
-            }
-        }
-
-        function configurarObservadorRolagem() {
-            window.addEventListener('scroll', () => {
-                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 400) {
-                    carregarMaisProdutos();
                 }
-            });
-        }
 
-        function substituirPorPlaceholder(imgElement) {
-            imgElement.onerror = null;
-            imgElement.parentElement.classList.add('placeholder-svg');
-            imgElement.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23d9d9d9' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' style='margin:auto;'><rect x='3' y='3' width='18' height='18' rx='2' ry='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg>";
-        }
+                fotosParaCarrossel = fotosParaCarrossel.filter(foto => foto && typeof foto === 'string' && foto.trim() !== "" && !foto.includes("undefined"));
 
-        function abrirModal(idProduto) {
-            const produto = produtos.find(p => String(p.id) === String(idProduto));
-            if (!produto) return;
+                // O carrossel roda se houver MAIS DE UMA foto válida para essa cor
+                if (fotosParaCarrossel.length > 1) {
+                    window.intervalosCarrossel[produtoId] = setInterval(() => {
+                        const trackElement = document.getElementById(`track-${produtoId}`);
+                        if (!trackElement) return;
 
-            let corIndex = window.estadoVariantes[idProduto] || 0;
-            let corObj = produto.coresAgrupadas[corIndex];
+                        let imagens = trackElement.querySelectorAll('img');
+                        if (!imagens || imagens.length === 0) return;
 
-            // Puxa a foto certa de acordo com o modo atual (todas ou só uma cor)
-            let fotosParaCarrossel = [];
-            if (window.modoCorUnica[idProduto]) {
-                fotosParaCarrossel = [...new Set(corObj.fotos)];
-            } else {
-                produto.variantes.forEach(v => {
-                    if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
+                        let indiceAtualFoto = window.estadoFotosCard[produtoId] || 0;
+                        indiceAtualFoto = (indiceAtualFoto + 1) % imagens.length;
+                        window.estadoFotosCard[produtoId] = indiceAtualFoto;
+
+                        let imgAlvo = imagens[indiceAtualFoto];
+                        if (!imgAlvo || !imgAlvo.src || imgAlvo.src.trim() === "" || imgAlvo.src.includes("undefined")) {
+                            indiceAtualFoto = 0;
+                            window.estadoFotosCard[produtoId] = 0;
+                            imgAlvo = imagens[0];
+                        }
+
+                        imagens.forEach((img, i) => {
+                            if (i === indiceAtualFoto) {
+                                img.classList.add('active-img');
+                            } else {
+                                img.classList.remove('active-img');
+                            }
+                        });
+
+                        const indContainer = document.getElementById(`indicators-${produtoId}`);
+                        if (indContainer) {
+                            const bars = indContainer.querySelectorAll('.indicator-bar');
+                            bars.forEach((bar, i) => {
+                                if (i === indiceAtualFoto) bar.classList.add('active');
+                                else bar.classList.remove('active');
+                            });
+                        }
+
+                    }, 4000);
+                }
+            }
+
+            function configurarObservadorRolagem() {
+                window.addEventListener('scroll', () => {
+                    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 400) {
+                        carregarMaisProdutos();
+                    }
                 });
             }
-            let fotoIndex = window.estadoFotosCard[idProduto] || 0;
-            let fotoAtual = fotosParaCarrossel[fotoIndex];
 
-            const stringTamanhosAtual = formatarTamanhosOrdenados(corObj.tamanhos);
+            function substituirPorPlaceholder(imgElement) {
+                imgElement.onerror = null;
+                imgElement.parentElement.classList.add('placeholder-svg');
+                imgElement.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23d9d9d9' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' style='margin:auto;'><rect x='3' y='3' width='18' height='18' rx='2' ry='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg>";
+            }
 
-            const modal = document.getElementById('image-modal');
-            const modalImg = document.getElementById('modal-img');
-            const modalCaption = document.getElementById('modal-caption');
-            const modalPrices = document.getElementById('modal-prices');
-            const modalBtnContainer = document.getElementById('modal-btn-container');
+            function abrirModal(idProduto) {
+                const produto = produtos.find(p => String(p.id) === String(idProduto));
+                if (!produto) return;
 
-            modalImg.src = fotoAtual;
-            // 1. Título, Cor e Tamanho mais compactos
-            modalCaption.innerHTML = `
+                let corIndex = window.estadoVariantes[idProduto] || 0;
+                let corObj = produto.coresAgrupadas[corIndex];
+
+                // Puxa a foto certa de acordo com o modo atual (todas ou só uma cor)
+                let fotosParaCarrossel = [];
+                if (window.modoCorUnica[idProduto]) {
+                    fotosParaCarrossel = [...new Set(corObj.fotos)];
+                } else {
+                    produto.variantes.forEach(v => {
+                        if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
+                    });
+                }
+                let fotoIndex = window.estadoFotosCard[idProduto] || 0;
+                let fotoAtual = fotosParaCarrossel[fotoIndex];
+
+                const stringTamanhosAtual = formatarTamanhosOrdenados(corObj.tamanhos);
+
+                const modal = document.getElementById('image-modal');
+                const modalImg = document.getElementById('modal-img');
+                const modalCaption = document.getElementById('modal-caption');
+                const modalPrices = document.getElementById('modal-prices');
+                const modalBtnContainer = document.getElementById('modal-btn-container');
+
+                modalImg.src = fotoAtual;
+                // 1. Título, Cor e Tamanho mais compactos
+                modalCaption.innerHTML = `
                 <div style="font-size: 20px; line-height: 1.1; margin-bottom: 4px;">${produto.nome}</div>
                 <div style="font-family: 'Inter', sans-serif; font-size: 10px; color: #a0a0a0; letter-spacing: 0.1em; text-transform: uppercase;">
                     <b style="color: #ffffff; font-weight: 600;">Cor:</b> ${corObj.corOriginal} &nbsp;•&nbsp; <b style="color: #ffffff; font-weight: 600;">Tam:</b> ${stringTamanhosAtual}
@@ -2432,8 +2456,8 @@
                 <div style="width: 40px; height: 1px; background-color: rgba(255,255,255,0.2); margin: 10px auto;"></div>
             `;
 
-            // 2. Preços reduzidos com menor espaçamento
-            modalPrices.innerHTML = `
+                // 2. Preços reduzidos com menor espaçamento
+                modalPrices.innerHTML = `
                 <div style="display: flex; flex-direction: column; align-items: center; width: 100%; margin-bottom: 10px;">
                     <div class="modal-price-installments" style="margin-bottom: 2px; font-size: 18px;">
                         ${calcularParcelamento(produto.por)}
@@ -2447,35 +2471,35 @@
                 </div>
             `;
 
-            const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${produto.nome}" na cor ${corObj.corOriginal} (Tamanhos disponíveis: ${stringTamanhosAtual}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
-            const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}`;
+                const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${produto.nome}" na cor ${corObj.corOriginal} (Tamanhos disponíveis: ${stringTamanhosAtual}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
+                const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}`;
 
-            if (produto.vendido) {
-                modalBtnContainer.innerHTML = `<button class="modal-btn-whatsapp btn-sold" disabled>Indisponível</button>`;
-            } else {
-                modalBtnContainer.innerHTML = `<a href="${linkWhats}" target="_blank" class="modal-btn-whatsapp">COMPRAR AGORA NO WHATSAPP</a>`;
+                if (produto.vendido) {
+                    modalBtnContainer.innerHTML = `<button class="modal-btn-whatsapp btn-sold" disabled>Indisponível</button>`;
+                } else {
+                    modalBtnContainer.innerHTML = `<a href="${linkWhats}" target="_blank" class="modal-btn-whatsapp">COMPRAR AGORA NO WHATSAPP</a>`;
+                }
+
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
             }
 
-            modal.classList.add('show');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function fecharModal(event) {
-            if (!event || event.target.id === 'image-modal' || event.target.classList.contains('modal-close')) {
-                const modal = document.getElementById('image-modal');
-                modal.classList.remove('show');
-                document.body.style.overflow = '';
+            function fecharModal(event) {
+                if (!event || event.target.id === 'image-modal' || event.target.classList.contains('modal-close')) {
+                    const modal = document.getElementById('image-modal');
+                    modal.classList.remove('show');
+                    document.body.style.overflow = '';
+                }
             }
-        }
 
-        document.addEventListener('keydown', function (event) {
-            if (event.key === "Escape") {
-                fecharModal();
-            }
-        });
-    </script>
-    <!-- 1. CARREGA O ARQUIVO COM A SUA LISTA DE PRODUTOS -->
-    <!-- <script src="produtos.js"></script> -->
+            document.addEventListener('keydown', function (event) {
+                if (event.key === "Escape") {
+                    fecharModal();
+                }
+            });
+        </script>
+        <!-- 1. CARREGA O ARQUIVO COM A SUA LISTA DE PRODUTOS -->
+        <!-- <script src="produtos.js"></script> -->
 
 </body>
 
