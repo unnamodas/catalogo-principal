@@ -1,93 +1,128 @@
 [
     {
-        "id": "258",
-        "nome": "Conjunto saia e blusa",
-        "por": "319,90",
+        "id": "261",
+        "nome": "Camisa renda",
+        "por": "179,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "466127",
-                "cor": "Bege",
-                "tamanho": "P",
-                "imagem": "fotos/conjunto_31.jpg",
+                "codigoBling": "466110",
+                "cor": "Preto",
+                "tamanho": "M",
+                "imagem": "fotos/blusa_58.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466127",
-                "cor": "Bege",
-                "tamanho": "P",
-                "imagem": "fotos/conjunto_31ft2.jpg",
+                "codigoBling": "466110",
+                "cor": "Preto",
+                "tamanho": "M",
+                "imagem": "fotos/blusa_58ft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466128",
-                "cor": "Bege",
+                "codigoBling": "466110",
+                "cor": "Preto",
+                "tamanho": "M",
+                "imagem": "fotos/blusa_58ft3.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466111",
+                "cor": "Preto",
                 "tamanho": "G",
-                "imagem": "fotos/conjunto_31.jpg",
+                "imagem": "fotos/blusa_58.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466128",
-                "cor": "Bege",
+                "codigoBling": "466111",
+                "cor": "Preto",
                 "tamanho": "G",
-                "imagem": "fotos/conjunto_31ft2.jpg",
+                "imagem": "fotos/blusa_58ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466111",
+                "cor": "Preto",
+                "tamanho": "G",
+                "imagem": "fotos/blusa_58ft3.jpg",
                 "vendido": false
             }
         ]
     },
     {
-        "id": "259",
-        "nome": "Vestido longo",
-        "por": "319,90",
+        "id": "262",
+        "nome": "Calça pantalona",
+        "por": "199,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "466122",
-                "cor": "Verde",
-                "tamanho": "G",
-                "imagem": "fotos/vestido_112.jpg",
+                "codigoBling": "466119",
+                "cor": "Bege",
+                "tamanho": "P",
+                "imagem": "fotos/calca_16.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466122",
-                "cor": "Verde",
+                "codigoBling": "466119",
+                "cor": "Bege",
+                "tamanho": "P",
+                "imagem": "fotos/calca_16ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466120",
+                "cor": "Bege",
                 "tamanho": "G",
-                "imagem": "fotos/vestido_112ft2.jpg",
+                "imagem": "fotos/calca_16.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466120",
+                "cor": "Bege",
+                "tamanho": "G",
+                "imagem": "fotos/calca_16ft2.jpg",
                 "vendido": false
             }
         ]
     },
     {
-        "id": "260",
-        "nome": "Vestido longo",
-        "por": "299,90",
+        "id": "263",
+        "nome": "Blusa",
+        "por": "139,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "466133",
-                "cor": "Verde",
-                "tamanho": "M",
-                "imagem": "fotos/vestido_113.jpg",
+                "codigoBling": "466113",
+                "cor": "Bege",
+                "tamanho": "P",
+                "imagem": "fotos/blusa_59.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466133",
-                "cor": "Verde",
-                "tamanho": "M",
-                "imagem": "fotos/vestido_113ft2.jpg",
+                "codigoBling": "466113",
+                "cor": "Bege",
+                "tamanho": "P",
+                "imagem": "fotos/blusa_59ft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466133",
-                "cor": "Verde",
-                "tamanho": "M",
-                "imagem": "fotos/vestido_113ft3.jpg",
+                "codigoBling": "466114",
+                "cor": "Bege",
+                "tamanho": "G",
+                "imagem": "fotos/blusa_59.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466114",
+                "cor": "Bege",
+                "tamanho": "G",
+                "imagem": "fotos/blusa_59ft2.jpg",
                 "vendido": false
             }
         ]
