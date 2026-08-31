@@ -1,76 +1,41 @@
 [
     {
-        "id": "265",
-        "nome": "Blusa",
-        "por": "139,90",
-        "novidade": true,
+        "id": "267",
+        "nome": "Vestido longo",
+        "por": "269,90",
+        "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "466116",
-                "cor": "Branco",
-                "tamanho": "M",
-                "imagem": "fotos/blusa_60.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466116",
-                "cor": "Branco",
-                "tamanho": "M",
-                "imagem": "fotos/blusa_60ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466117",
-                "cor": "Branco",
-                "tamanho": "G",
-                "imagem": "fotos/blusa_60.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466117",
-                "cor": "Branco",
-                "tamanho": "G",
-                "imagem": "fotos/blusa_60ft2.jpg",
+                "codigoBling": "465644",
+                "cor": "Marrom",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_114.jpg",
                 "vendido": false
             }
         ]
     },
     {
-        "id": "266",
-        "nome": "Saia",
-        "por": "179,90",
-        "novidade": true,
+        "id": "268",
+        "nome": "Blusa t-shirt",
+        "por": "79,90",
+        "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "466124",
-                "cor": "Preto",
-                "tamanho": "M",
-                "imagem": "fotos/saia_5.jpg",
+                "codigoBling": "465956",
+                "cor": "Branco (Off White)",
+                "tamanho": "Único",
+                "imagem": "fotos/blusa_61.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466124",
-                "cor": "Preto",
-                "tamanho": "M",
-                "imagem": "fotos/saia_5ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466125",
-                "cor": "Preto",
-                "tamanho": "G",
-                "imagem": "fotos/saia_5.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466125",
-                "cor": "Preto",
-                "tamanho": "G",
-                "imagem": "fotos/saia_5ft2.jpg",
+                "codigoBling": "465956",
+                "cor": "Branco (Off White)",
+                "tamanho": "Único",
+                "imagem": "fotos/blusa_61ft2.jpg",
                 "vendido": false
             }
         ]
