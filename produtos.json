@@ -1,24 +1,93 @@
 [
     {
-        "id": "257",
-        "nome": "Blusa",
-        "por": "99,90",
+        "id": "258",
+        "nome": "Conjunto saia e blusa",
+        "por": "319,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465986",
-                "cor": "Branco",
-                "tamanho": "G1",
-                "imagem": "fotos/blusa_57bra.jpg",
+                "codigoBling": "466127",
+                "cor": "Bege",
+                "tamanho": "P",
+                "imagem": "fotos/conjunto_31.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465987",
-                "cor": "Preto",
-                "tamanho": "G2",
-                "imagem": "fotos/blusa_57pre.jpg",
+                "codigoBling": "466127",
+                "cor": "Bege",
+                "tamanho": "P",
+                "imagem": "fotos/conjunto_31ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466128",
+                "cor": "Bege",
+                "tamanho": "G",
+                "imagem": "fotos/conjunto_31.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466128",
+                "cor": "Bege",
+                "tamanho": "G",
+                "imagem": "fotos/conjunto_31ft2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "259",
+        "nome": "Vestido longo",
+        "por": "319,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "466122",
+                "cor": "Verde",
+                "tamanho": "G",
+                "imagem": "fotos/vestido_112.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466122",
+                "cor": "Verde",
+                "tamanho": "G",
+                "imagem": "fotos/vestido_112ft2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "260",
+        "nome": "Vestido longo",
+        "por": "299,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "466133",
+                "cor": "Verde",
+                "tamanho": "M",
+                "imagem": "fotos/vestido_113.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466133",
+                "cor": "Verde",
+                "tamanho": "M",
+                "imagem": "fotos/vestido_113ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466133",
+                "cor": "Verde",
+                "tamanho": "M",
+                "imagem": "fotos/vestido_113ft3.jpg",
                 "vendido": false
             }
         ]
