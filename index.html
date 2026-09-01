@@ -1583,11 +1583,14 @@
                 // 4. Monta os cards exclusivos da liquidação com o botão em vermelho
                 produtosLiquidacao.forEach(p => {
 
-                    // LÊ A FOTO E OS TAMANHOS DO NOVO FORMATO DE VARIANTES
+                    // LÊ A FOTO E OS TAMANHOS DO NOVO FORMATO DE VARIANTES!
                     const imagemPrincipal = p.variantes[0].imagem;
                     const tamanhosDisponiveis = [...new Set(p.variantes.filter(v => !v.vendido).map(v => v.tamanho))].join(', ');
                     const tamanhosTexto = tamanhosDisponiveis || 'Esgotado';
                     const produtoTotalmenteEsgotado = p.variantes.every(v => v.vendido);
+
+                    // 🟢 MUDANÇA AQUI: Variável para a liquidação
+                    let isUltimaPeca = (p.ultimaPeca === true || String(p.ultimaPeca).toLowerCase() === "true" || p.UltimaPeca === true || String(p.UltimaPeca).toLowerCase() === "true");
 
                     const card = document.createElement('div');
                     card.className = `product-card ${produtoTotalmenteEsgotado ? 'sold-item' : ''}`;
@@ -1595,8 +1598,12 @@
                     const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent("Olá, UNNA! Quero garantir a oferta: " + p.nome + " (Tam: " + tamanhosTexto + ") por R$ " + p.por + " na liquidação!")}`;
 
                     card.innerHTML = `
-                    <div class="product-image-container">
-                        ${!produtoTotalmenteEsgotado ? `<span class="badge badge-discount">-${p.desconto}%</span>` : ''}
+                    <div class="product-image-container" onclick="abrirModal('${p.id}')" style="cursor: zoom-in;">
+                        ${!produtoTotalmenteEsgotado && p.desconto > 0 ? `<span class="badge badge-discount">-${p.desconto}%</span>` : ''}
+                        
+                        <!-- 🟢 NOVA TAG IMPRESSA AQUI -->
+                        ${isUltimaPeca && !produtoTotalmenteEsgotado ? `<span class="badge badge-ultima-peca" style="${p.desconto > 0 ? 'top: 48px;' : ''}">⏳ ÚLTIMA PEÇA</span>` : ''}
+
                         <span class="badge badge-sold" style="display: ${produtoTotalmenteEsgotado ? 'block' : 'none'};">ESGOTADO</span>
                         
                         <div class="carousel-track">
