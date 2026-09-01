@@ -550,12 +550,35 @@
             border: 1px solid #000000;
         }
 
+        /* 🟢 BADGE ESGOTADO (Padronizado na mesma vibe e tamanho dos outros) */
         .badge-sold {
             background-color: #000000;
             color: #ffffff;
             top: 15px;
             left: 15px;
-            font-weight: 300;
+            font-size: 9px;
+            font-weight: 600;
+            padding: 5px 10px;
+            letter-spacing: 0.08em;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            z-index: 2;
+            pointer-events: none;
+            display: inline-block;
+            animation: pulse-sold 2.5s ease-in-out infinite;
+        }
+
+        /* 🟢 Glow suave para manter a harmonia com as outras tags */
+        @keyframes pulse-sold {
+
+            0%,
+            100% {
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(255, 255, 255, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.6), inset 0 0 5px rgba(255, 255, 255, 0.4);
+            }
         }
 
         .badge-discount {
@@ -1303,12 +1326,12 @@
             }
 
             .product-title {
-                font-size: 18px;
-                margin-bottom: 6px;
+                font-size: 17px !important;
+                margin-bottom: 2px !important;
             }
 
             .product-info {
-                padding: 12px 0 0 0;
+                padding: 10px 0 0 0 !important;
             }
 
             .product-all-sizes {
@@ -1333,23 +1356,21 @@
 
             /* Ajuste fino da área de preços no celular */
             .product-price-container {
-                padding-top: 10px;
-                gap: 6px;
+                padding-top: 4px !important;
+                gap: 2px !important;
+                margin-bottom: 10px !important;
             }
 
             .price-installments {
-                font-size: 17px;
-                /* Tamanho proporcional para tela de celular */
+                font-size: 15px !important;
             }
-
-            /* Micro-cópia em caixa alta (típico de marcas de luxo) */
 
             .price-installments .price-small {
                 font-size: 9px;
             }
 
             .price-pix {
-                font-size: 16px;
+                font-size: 13px !important;
             }
 
             .price-pix .price-small {
@@ -1365,9 +1386,8 @@
                 font-size: 13px;
             }
 
-            .product-price-container {
-                gap: 4px;
-                margin-bottom: 14px;
+            .price-total {
+                font-size: 11px !important;
             }
 
             .product-price-box {
@@ -1375,42 +1395,40 @@
             }
 
             .btn-whatsapp {
-                padding: 12px 14px;
-                font-size: 11px;
+                padding: 10px 14px !important;
+                font-size: 10px !important;
                 letter-spacing: 0.1em;
             }
 
+            .cor-dot {
+                width: 32px !important;
+                height: 32px !important;
+                min-width: 32px !important;
+                min-height: 32px !important;
+            }
+
+            /* 🟢 BADGES COMPACTOS E PROPORCIONAIS NO CELULAR */
             .badge {
-                padding: 5px 9px;
-                font-size: 10px;
-                top: 10px;
+                padding: 3px 7px !important;
+                font-size: 8px !important;
+                top: 8px !important;
+                letter-spacing: 0.05em !important;
             }
 
             .badge-sale,
-            .badge-sold {
-                left: 10px;
+            .badge-sold,
+            .badge-destaque,
+            .badge-novidade {
+                left: 8px !important;
             }
 
-            .badge-discount {
-                top: 8px;
-                right: 8px;
-                left: auto;
-                font-size: 12px;
-                padding: 4px 8px;
-            }
-
-            .badge-destaque {
-                top: 8px;
-                left: 8px;
-                font-size: 9px;
-                padding: 4px 8px;
-            }
-
+            .badge-discount,
             .badge-ultima-peca {
-                top: 8px;
-                right: 8px;
-                font-size: 9px;
-                padding: 4px 8px;
+                right: 8px !important;
+                left: auto !important;
+                font-size: 9px !important;
+                padding: 3px 7px !important;
+                top: 8px !important;
             }
         }
 
@@ -1450,7 +1468,7 @@
             border-bottom: 2px solid #d93025 !important;
         }
 
-        /* --- MÁGICA DA COMPACTAÇÃO HARMONIOSA --- */
+        /* --- MÁGICA DA COMPACTAÇÃO HARMONIOSA (PC) --- */
         .product-info {
             padding: 10px 0 0 0 !important;
         }
@@ -1495,43 +1513,6 @@
         .btn-whatsapp {
             padding: 11px 18px !important;
             font-size: 10px !important;
-        }
-
-        @media (max-width: 480px) {
-            .product-title {
-                font-size: 17px !important;
-                margin-bottom: 2px !important;
-            }
-
-            .product-price-container {
-                padding-top: 4px !important;
-                gap: 2px !important;
-                margin-bottom: 10px !important;
-            }
-
-            .price-installments {
-                font-size: 15px !important;
-            }
-
-            .price-total {
-                font-size: 11px !important;
-            }
-
-            .price-pix {
-                font-size: 13px !important;
-            }
-
-            .cor-dot {
-                width: 32px !important;
-                height: 32px !important;
-                min-width: 32px !important;
-                min-height: 32px !important;
-            }
-
-            .btn-whatsapp {
-                padding: 10px 14px !important;
-                font-size: 10px !important;
-            }
         }
     </style>
     <!-- Importando o Firebase (Versão Modular) -->
