@@ -1,41 +1,24 @@
 [
     {
-        "id": "267",
+        "id": "269",
         "nome": "Vestido longo",
-        "por": "269,90",
+        "por": "199,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465644",
-                "cor": "Marrom",
-                "tamanho": "Único",
-                "imagem": "fotos/vestido_114.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "268",
-        "nome": "Blusa t-shirt",
-        "por": "79,90",
-        "novidade": false,
-        "destaque": false,
-        "vendido": false,
-        "variantes": [
-            {
-                "codigoBling": "465956",
-                "cor": "Branco (Off White)",
-                "tamanho": "Único",
-                "imagem": "fotos/blusa_61.jpg",
+                "codigoBling": "465521",
+                "cor": "Bordô",
+                "tamanho": "Único(Slim)",
+                "imagem": "fotos/vestido_115bor.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465956",
-                "cor": "Branco (Off White)",
-                "tamanho": "Único",
-                "imagem": "fotos/blusa_61ft2.jpg",
+                "codigoBling": "465521",
+                "cor": "Preto",
+                "tamanho": "Único(Slim)",
+                "imagem": "fotos/vestido_115pre.jpg",
                 "vendido": false
             }
         ]
