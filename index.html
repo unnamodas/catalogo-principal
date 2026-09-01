@@ -597,6 +597,22 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
+        /* 🟢 NOVA TAG: ÚLTIMA PEÇA */
+        .badge-ultima-peca {
+            background-color: #4a0c0c;
+            /* Tom de vinho escuro e muito sofisticado */
+            color: #ffffff;
+            top: 15px;
+            right: 15px;
+            /* Fica no canto direito para equilibrar o design */
+            font-size: 9px;
+            font-weight: 600;
+            padding: 5px 10px;
+            letter-spacing: 0.08em;
+            box-shadow: 0 4px 12px rgba(74, 12, 12, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
         .product-info {
             padding: 12px 0 0 0;
             /* Reduzido de 20px para 12px para aproximar da foto */
@@ -1304,6 +1320,13 @@
             .badge-destaque {
                 top: 8px;
                 left: 8px;
+                font-size: 9px;
+                padding: 4px 8px;
+            }
+
+            .badge-ultima-peca {
+                top: 8px;
+                right: 8px;
                 font-size: 9px;
                 padding: 4px 8px;
             }
@@ -2271,12 +2294,14 @@
             </div>`;
                     }).join('');
 
-                    // 🟢 MUDANÇA AQUI: Verifica as variáveis independente de como foram cadastradas no Firebase
+                    // 🟢 MUDANÇA AQUI: Variáveis para ler do Firebase
                     let isDestaque = (p.destaque === true || String(p.destaque).toLowerCase() === "true" || p.Destaque === true || String(p.Destaque).toLowerCase() === "true");
                     let isVendido = (p.vendido === true || String(p.vendido).toLowerCase() === "true");
                     let isNovidade = (p.novidade === true || String(p.novidade).toLowerCase() === "true" || p.Novidade === true || String(p.Novidade).toLowerCase() === "true");
+                    let isUltimaPeca = (p.ultimaPeca === true || String(p.ultimaPeca).toLowerCase() === "true" || p.UltimaPeca === true || String(p.UltimaPeca).toLowerCase() === "true");
+
                     card.innerHTML = `
-           <!-- 🟢 2. Colocamos o onclick na CAIXA INTEIRA, garantindo que qualquer toque funcione! -->
+           <!-- 🟢 Colocamos o onclick na CAIXA INTEIRA, garantindo que qualquer toque funcione! -->
            <div class="product-image-container" onclick="abrirModal('${p.id}')" style="cursor: zoom-in;">
                 ${isDestaque ? '<span class="badge badge-destaque">⭐ DESTAQUE</span>' : ''}
                 
@@ -2285,6 +2310,9 @@
                 ${isNovidade && !isVendido && !corObj.esgotada ? '<span class="badge badge-novidade">✨ NOVIDADE</span>' : ''}
                 
                 ${p.desconto > 0 && !isVendido ? `<span class="badge badge-discount" style="${isNovidade ? 'top: 50px;' : ''}">-${p.desconto}%</span>` : ''}
+
+                <!-- 🟢 NOVA TAG IMPRESSA AQUI -->
+                ${isUltimaPeca && !isVendido && !corObj.esgotada ? `<span class="badge badge-ultima-peca" style="${p.desconto > 0 ? 'top: 48px;' : ''}">⏳ ÚLTIMA PEÇA</span>` : ''}
                 
                 <div class="carousel-track" id="track-${p.id}">
                     ${trackImagensHtml}

@@ -1,24 +1,269 @@
 [
     {
-        "id": "269",
-        "nome": "Vestido longo",
-        "por": "199,90",
+        "id": "270",
+        "nome": "Conjunto blusa e saia",
+        "por": "269,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "variantes": [
             {
-                "codigoBling": "465521",
-                "cor": "Bordô",
-                "tamanho": "Único(Slim)",
-                "imagem": "fotos/vestido_115bor.jpg",
+                "codigoBling": "464328",
+                "cor": "Branco",
+                "tamanho": "GG",
+                "imagem": "fotos/conjunto_32bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465521",
+                "codigoBling": "464327",
+                "cor": "Vermelho",
+                "tamanho": "G",
+                "imagem": "fotos/conjunto_32verm.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "271",
+        "nome": "Conjunto blusa e calça",
+        "por": "369,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "462837",
+                "cor": "Verde",
+                "tamanho": "46",
+                "imagem": "fotos/conjunto_33.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "272",
+        "nome": "Conjunto blusa e calça",
+        "por": "299,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465544",
+                "cor": "Marrom",
+                "tamanho": "M",
+                "imagem": "fotos/conjunto_34mar.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465545",
                 "cor": "Preto",
-                "tamanho": "Único(Slim)",
-                "imagem": "fotos/vestido_115pre.jpg",
+                "tamanho": "G",
+                "imagem": "fotos/conjunto_34pre.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "273",
+        "nome": "Conjunto blusa e calça",
+        "por": "299,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "465544",
+                "cor": "Marrom",
+                "tamanho": "M(Slim)",
+                "imagem": "fotos/conjunto_34mar.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465545",
+                "cor": "Preto",
+                "tamanho": "G(Slim)",
+                "imagem": "fotos/conjunto_34pre.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "274",
+        "nome": "Conjunto blusa e short",
+        "por": "349,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "464472",
+                "cor": "Vermelho",
+                "tamanho": "48",
+                "imagem": "fotos/conjunto_35.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464472",
+                "cor": "Vermelho",
+                "tamanho": "48",
+                "imagem": "fotos/conjunto_35ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464473",
+                "cor": "Vermelho",
+                "tamanho": "52",
+                "imagem": "fotos/conjunto_35.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464473",
+                "cor": "Vermelho",
+                "tamanho": "52",
+                "imagem": "fotos/conjunto_35ft2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "275",
+        "nome": "Conjunto blusa e calça",
+        "por": "379,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "464459",
+                "cor": "Rosa",
+                "tamanho": "46",
+                "imagem": "fotos/conjunto_36ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464462",
+                "cor": "Verde",
+                "tamanho": "52",
+                "imagem": "fotos/conjunto_36ver.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "276",
+        "nome": "Conjunto colete e calça",
+        "por": "289,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "464442",
+                "cor": "Vermelho",
+                "tamanho": "G1",
+                "imagem": "fotos/conjunto_37.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464443",
+                "cor": "Vermelho",
+                "tamanho": "G2",
+                "imagem": "fotos/conjunto_37.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "277",
+        "nome": "Macacão",
+        "por": "179,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "464985",
+                "cor": "Bordô",
+                "tamanho": "M(Slim)",
+                "imagem": "fotos/macacao_4bor.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464986",
+                "cor": "Preto",
+                "tamanho": "G(Slim)",
+                "imagem": "fotos/macacao_4pre.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "278",
+        "nome": "Conjunto renda blusa e saia",
+        "por": "289,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "variantes": [
+            {
+                "codigoBling": "464340",
+                "cor": "Preto",
+                "tamanho": "G(Slim)",
+                "imagem": "fotos/conjunto_38.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464340",
+                "cor": "Preto",
+                "tamanho": "G(Slim)",
+                "imagem": "fotos/conjunto_38ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464340",
+                "cor": "Preto",
+                "tamanho": "G(Slim)",
+                "imagem": "fotos/conjunto_38ft3.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "279",
+        "nome": "Vestido",
+        "por": "349,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": true,
+        "variantes": [
+            {
+                "codigoBling": "465296",
+                "cor": "Marrom",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_116.jpg",
+                "vendido": true
+            },
+            {
+                "codigoBling": "465297",
+                "cor": "Marrom",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_116.jpg",
+                "vendido": true
+            },
+            {
+                "codigoBling": "465298",
+                "cor": "Marrom",
+                "tamanho": "52",
+                "imagem": "fotos/vestido_116.jpg",
+                "vendido": true
+            },
+            {
+                "codigoBling": "465299",
+                "cor": "Marrom",
+                "tamanho": "54",
+                "imagem": "fotos/vestido_116.jpg",
                 "vendido": false
             }
         ]
