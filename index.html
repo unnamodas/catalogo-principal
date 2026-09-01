@@ -999,39 +999,35 @@
         /* --- Botão 'X' Minimalista e Elegante --- */
         .modal-close {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
-            background: transparent;
-            /* Remove o fundo */
+            top: 25px;
+            right: 25px;
+            width: 44px;
+            /* Tamanho ideal de toque para celular */
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            /* Fundo translúcido extremamente sutil e chique */
+            backdrop-filter: blur(4px);
             color: #ffffff;
-            font-size: 42px;
-            /* Fica maior, porém mais delicado */
-            font-weight: 200;
-            /* Deixa o traço bem fininho */
-            border: none;
-            /* Remove a borda redonda */
+            font-size: 28px;
+            font-weight: 300;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            /* Bordinha delicada */
+            border-radius: 50%;
+            /* Fica um círculo perfeito e moderno */
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             z-index: 100000;
-            opacity: 0.5;
-            /* Fica meio transparente por padrão */
-            transition: opacity 0.3s ease;
-            line-height: 0.8;
-            padding-bottom: 4px;
+            transition: all 0.3s ease;
+            line-height: 1;
         }
 
         .modal-close:hover {
-            background: transparent;
-            /* Mantém sem fundo */
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
             opacity: 1;
-            /* Fica 100% branco ao passar o mouse */
             color: #ffffff;
-            transform: none;
-            /* Remove o efeito de pular na tela */
         }
 
         .modal-info-box {
@@ -2244,10 +2240,11 @@
                     // Limpa URLs inválidas
                     fotosParaCarrossel = fotosParaCarrossel.filter(foto => foto && typeof foto === 'string' && foto.trim() !== "" && !foto.includes("undefined"));
 
+                    // 🟢 1. Removemos o onclick da imagem para evitar conflito de toques
                     let trackImagensHtml = '';
                     fotosParaCarrossel.forEach((foto, i) => {
                         let classeVisivel = (i === 0 || i === window.estadoFotosCard[p.id]) ? 'active-img' : '';
-                        trackImagensHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${p.nome}" onclick="abrirModal('${p.id}')" onerror="substituirPorPlaceholder(this)">`;
+                        trackImagensHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${p.nome}" onerror="substituirPorPlaceholder(this)">`;
                     });
 
                     let indicadoresHtml = '';
@@ -2278,9 +2275,9 @@
                     let isDestaque = (p.destaque === true || String(p.destaque).toLowerCase() === "true" || p.Destaque === true || String(p.Destaque).toLowerCase() === "true");
                     let isVendido = (p.vendido === true || String(p.vendido).toLowerCase() === "true");
                     let isNovidade = (p.novidade === true || String(p.novidade).toLowerCase() === "true" || p.Novidade === true || String(p.Novidade).toLowerCase() === "true");
-
                     card.innerHTML = `
-           <div class="product-image-container">
+           <!-- 🟢 2. Colocamos o onclick na CAIXA INTEIRA, garantindo que qualquer toque funcione! -->
+           <div class="product-image-container" onclick="abrirModal('${p.id}')" style="cursor: zoom-in;">
                 ${isDestaque ? '<span class="badge badge-destaque">⭐ DESTAQUE</span>' : ''}
                 
                 <span id="badge-sold-${p.id}" class="badge badge-sold" style="display: ${isVendido || corObj.esgotada ? 'block' : 'none'}; ${isDestaque ? 'top: 42px;' : ''}">${isVendido ? 'ESGOTADO' : 'COR ESGOTADA'}</span>
