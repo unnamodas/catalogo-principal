@@ -267,5 +267,30 @@
                 "vendido": false
             }
         ]
+    },
+    {
+        "id": "282",
+        "nome": "Vestido",
+        "por": "159,90",
+        "novidade": false,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": true,
+        "variantes": [
+            {
+                "codigoBling": "463506",
+                "cor": "Azul",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_117.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463507",
+                "cor": "Azul",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_117.jpg",
+                "vendido": true
+            }
+        ]
     }
 ]

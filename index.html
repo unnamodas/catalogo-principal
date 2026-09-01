@@ -584,6 +584,8 @@
             border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
+
+        /* 🟢 TAG NOVIDADE COM EFEITO GLOW PULSANTE */
         .badge-novidade {
             background-color: #d4af37;
             color: #ffffff;
@@ -593,24 +595,104 @@
             font-weight: 600;
             padding: 5px 10px;
             letter-spacing: 0.08em;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            animation: glow-pulse 2.5s ease-in-out infinite;
+            /* Aplica o pulso infinito */
         }
 
-        /* 🟢 NOVA TAG: ÚLTIMA PEÇA */
+        /* 🟢 TAG: ÚLTIMA PEÇA COM GLOW PULSANTE */
         .badge-ultima-peca {
-            background-color: #4a0c0c;
-            /* Tom de vinho escuro e muito sofisticado */
+            background-color: #d53939;
             color: #ffffff;
             top: 15px;
             right: 15px;
-            /* Fica no canto direito para equilibrar o design */
             font-size: 9px;
             font-weight: 600;
             padding: 5px 10px;
             letter-spacing: 0.08em;
-            box-shadow: 0 4px 12px rgba(74, 12, 12, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            z-index: 2;
+            pointer-events: none;
+            display: inline-block;
+            animation: pulse-ultima-peca 2.5s ease-in-out infinite;
+        }
+
+        /* 🟢 Motor do Glow da Última Peça */
+        @keyframes pulse-ultima-peca {
+
+            0%,
+            100% {
+                box-shadow: 0 0 4px rgba(246, 47, 47, 0.4), inset 0 0 2px rgba(255, 255, 255, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 12px rgba(140, 45, 45, 0.9), inset 0 0 6px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        /* 🟢 ANIMAÇÃO DE ROTAÇÃO DA AMPULHETA */
+        .ampulheta {
+            display: inline-block;
+            animation: girar-ampulheta 2.5s ease-in-out infinite;
+        }
+
+        @keyframes girar-ampulheta {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            30% {
+                transform: rotate(180deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            80% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 🟢 Brilho cintilante suave anterior (Fade & Scale) */
+        .sparkle-icon {
+            display: inline-block;
+            animation: sparkle-suave 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle-suave {
+
+            0%,
+            100% {
+                opacity: 0.4;
+                transform: scale(0.9);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.25);
+                text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+            }
+        }
+
+        /* 🟢 O Motor da Animação do Glow */
+        @keyframes glow-pulse {
+            0% {
+                box-shadow: 0 0 4px rgba(212, 175, 55, 0.4), inset 0 0 2px rgba(255, 255, 255, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 12px rgba(212, 175, 55, 0.9), inset 0 0 6px rgba(255, 255, 255, 0.6);
+                /* O brilho expande e fica mais intenso */
+            }
+
+            100% {
+                box-shadow: 0 0 4px rgba(212, 175, 55, 0.4), inset 0 0 2px rgba(255, 255, 255, 0.3);
+            }
         }
 
         .product-info {
@@ -2314,12 +2396,12 @@
                 
                 <span id="badge-sold-${p.id}" class="badge badge-sold" style="display: ${isVendido || corObj.esgotada ? 'block' : 'none'}; ${isDestaque ? 'top: 42px;' : ''}">${isVendido ? 'ESGOTADO' : 'COR ESGOTADA'}</span>
                 
-                ${isNovidade && !isVendido && !corObj.esgotada ? '<span class="badge badge-novidade">✨ NOVIDADE</span>' : ''}
+                ${isNovidade && !isVendido && !corObj.esgotada ? '<span class="badge badge-novidade"><span class="sparkle-icon">✨</span> NOVIDADE</span>' : ''}
                 
                 ${p.desconto > 0 && !isVendido ? `<span class="badge badge-discount" style="${isNovidade ? 'top: 50px;' : ''}">-${p.desconto}%</span>` : ''}
 
                 <!-- 🟢 NOVA TAG IMPRESSA AQUI -->
-                ${isUltimaPeca && !isVendido && !corObj.esgotada ? `<span class="badge badge-ultima-peca" style="${p.desconto > 0 ? 'top: 48px;' : ''}">⏳ ÚLTIMA PEÇA</span>` : ''}
+                ${isUltimaPeca && !isVendido && !corObj.esgotada ? `<span class="badge badge-ultima-peca" style="${p.desconto > 0 ? 'top: 48px;' : ''}"><span class="ampulheta">⏳</span> ÚLTIMA PEÇA</span>` : ''}
                 
                 <div class="carousel-track" id="track-${p.id}">
                     ${trackImagensHtml}
