@@ -1,26 +1,26 @@
 [
     {
-        "id": "282",
-        "nome": "Vestido",
-        "por": "159,90",
-        "novidade": false,
+        "id": "283",
+        "nome": "Blusa",
+        "por": "119,90",
+        "novidade": true,
         "destaque": false,
         "vendido": false,
-        "ultimaPeca": true,
+        "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "463506",
+                "codigoBling": "466192",
                 "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_117.jpg",
+                "tamanho": "G1",
+                "imagem": "fotos/blusa_62az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "463507",
-                "cor": "Azul",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_117.jpg",
-                "vendido": true
+                "codigoBling": "466193",
+                "cor": "Preto",
+                "tamanho": "G3",
+                "imagem": "fotos/blusa_62pre.jpg",
+                "vendido": false
             }
         ]
     }
