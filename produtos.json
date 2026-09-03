@@ -1,25 +1,43 @@
 [
     {
-        "id": "283",
-        "nome": "Blusa",
-        "por": "119,90",
+        "id": "284",
+        "nome": "Vestido longo",
+        "por": "269,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466192",
-                "cor": "Azul",
-                "tamanho": "G1",
-                "imagem": "fotos/blusa_62az.jpg",
+                "codigoBling": "466174",
+                "cor": "Azul (Jeans)",
+                "tamanho": "G",
+                "imagem": "fotos/vestido_118.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "285",
+        "nome": "Vestido longo",
+        "por": "179,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
+            {
+                "codigoBling": "466207",
+                "cor": "Marrom",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_119mar.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466193",
-                "cor": "Preto",
-                "tamanho": "G3",
-                "imagem": "fotos/blusa_62pre.jpg",
+                "codigoBling": "466209",
+                "cor": "Azul (Marinho)",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_119azma.jpg",
                 "vendido": false
             }
         ]
