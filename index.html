@@ -258,13 +258,12 @@
             stroke-width: 1.5;
         }
 
-        /* --- ABAS DE NAVEGAÇÃO MINIMALISTAS --- */
+        /* --- ABAS DE NAVEGAÇÃO SUPERIORES (Estilo Pílula) --- */
         .status-filters {
             display: flex;
             gap: 30px;
-            /* Dá um respiro elegante entre as abas */
+            /* Respiro elegante entre as abas */
             border-bottom: none;
-            /* Linha de base bem fininha */
         }
 
         .status-btn {
@@ -276,9 +275,12 @@
             /* Remove o visual de 'caixa' e aproxima o texto da linha */
             cursor: pointer;
             font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 500;
+            font-size: 12px;
+            /* Mantemos 12px para leitura mais fácil */
+            font-weight: 600;
+            /* Semi-negrito para dar clareza */
             color: var(--text-muted);
+            /* Cinza no estado inativo */
             transition: var(--transition);
             letter-spacing: 0.1em;
             text-transform: uppercase;
@@ -308,27 +310,39 @@
             display: none;
         }
 
-        .category-tab {
+        .category-tab,
+        .size-tab {
             background-color: #ffffff;
-            border: 1px solid var(--border-color);
-            padding: 8px 20px;
+            border: 1px solid #d1d1d1;
+            /* Borda ligeiramente mais suave */
+            border-radius: 50px;
+            /* Transforma o quadrado em pílula */
+            padding: 8px 18px;
             font-family: 'Inter', sans-serif;
-            font-size: 10px;
-            font-weight: 400;
-            color: var(--text-muted);
+            font-size: 12px;
+            /* Mantém o tamanho excelente para leitura */
+            font-weight: 600;
+            /* Semi-negrito: destaca sem ficar grosseiro */
+            color: #222222;
+            /* Cinza super escuro, muito mais chique que o preto puro */
             cursor: pointer;
             transition: var(--transition);
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.05em;
             flex-shrink: 0;
         }
 
         .category-tab.active,
-        .category-tab:hover {
+        .category-tab:hover,
+        .size-tab.active,
+        .size-tab:hover {
             background-color: var(--primary-color);
             color: #ffffff;
             border-color: var(--primary-color);
         }
+
+
+
 
         .sizes-container {
             display: flex;
@@ -362,21 +376,6 @@
             display: flex;
             gap: 8px;
             align-items: center;
-        }
-
-        .size-tab {
-            background-color: #ffffff;
-            border: 1px solid var(--border-color);
-            padding: 6px 14px;
-            font-family: 'Inter', sans-serif;
-            font-size: 10px;
-            font-weight: 400;
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: var(--transition);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            flex-shrink: 0;
         }
 
         .size-tab.active,
@@ -1285,10 +1284,13 @@
                 font-size: 11px;
             }
 
-            .category-tab {
+            .category-tab,
+            .size-tab {
                 padding: 6px 14px;
-                font-size: 11px;
+                /* Reduz o espaço interno para caberem mais opções na tela */
+                font-size: 12px;
             }
+
 
             .sizes-container {
                 margin-top: 6px;
@@ -1300,10 +1302,6 @@
                 font-size: 11px;
             }
 
-            .size-tab {
-                padding: 6px 12px;
-                font-size: 11px;
-            }
 
             .results-info-row {
                 margin-top: 15px;
@@ -1457,15 +1455,14 @@
 
         .btn-liquidacao {
             color: #d93025 !important;
-            font-weight: 600 !important;
         }
 
-        /* 🟢 ABA LIQUIDAÇÃO ATIVA (Minimalista) */
         .btn-liquidacao.active,
         .btn-liquidacao:hover {
             background-color: transparent !important;
             color: #d93025 !important;
             border-bottom: 2px solid #d93025 !important;
+            /* Linha vermelha no destaque */
         }
 
         /* --- MÁGICA DA COMPACTAÇÃO HARMONIOSA (PC) --- */
@@ -1963,6 +1960,9 @@
                         }
                         else if (cat === 'Macacão') {
                             cat = 'Macacões';
+                        }
+                        else if (cat === 'Trijunto') {
+                            cat = 'Trijuntos';
                         }
                     }
 
