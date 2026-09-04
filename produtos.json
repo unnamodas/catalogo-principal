@@ -1,7 +1,7 @@
 [
     {
         "id": "285",
-        "nome": "Vestido longo*",
+        "nome": "Vestido longo",
         "por": "179,90",
         "novidade": true,
         "destaque": false,
@@ -34,13 +34,13 @@
                 "cor": "Azul (Marinho)",
                 "tamanho": "Único",
                 "imagem": "fotos/vestido_119azma.jpg",
-                "vendido": false
+                "vendido": true
             }
         ]
     },
     {
         "id": "286",
-        "nome": "Vestido longo*",
+        "nome": "Vestido longo",
         "por": "249,90",
         "novidade": true,
         "destaque": false,
@@ -60,12 +60,33 @@
                 "tamanho": "Único",
                 "imagem": "fotos/vestido_120verdmen.jpg",
                 "vendido": false
+            },
+            {
+                "codigoBling": "466205",
+                "cor": "Amarelo",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_120am.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466202",
+                "cor": "Verde",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_120verd.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466201",
+                "cor": "Rosa (Rosé)",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_120ros.jpg",
+                "vendido": false
             }
         ]
     },
     {
         "id": "287",
-        "nome": "Vestido*",
+        "nome": "Vestido",
         "por": "149,90",
         "novidade": true,
         "destaque": false,
@@ -78,12 +99,19 @@
                 "tamanho": "Único",
                 "imagem": "fotos/vestido_121azp.jpg",
                 "vendido": false
+            },
+            {
+                "codigoBling": "466199",
+                "cor": "Azul (e Off White)",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_121off.jpg",
+                "vendido": false
             }
         ]
     },
     {
         "id": "288",
-        "nome": "Vestido curto*",
+        "nome": "Vestido curto",
         "por": "179,90",
         "novidade": true,
         "destaque": false,
@@ -95,6 +123,91 @@
                 "cor": "Rosa",
                 "tamanho": "Único",
                 "imagem": "fotos/vestido_122ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466213",
+                "cor": "Bege",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_122beg.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "289",
+        "nome": "Calça pantalona",
+        "por": "139,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
+            {
+                "codigoBling": "466180",
+                "cor": "Amarelo",
+                "tamanho": "GG",
+                "imagem": "fotos/calca_17am.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466176",
+                "cor": "Amarelo",
+                "tamanho": "G1",
+                "imagem": "fotos/calca_17am.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466182",
+                "cor": "Preto",
+                "tamanho": "GG",
+                "imagem": "fotos/calca_17pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466178",
+                "cor": "Preto",
+                "tamanho": "G1",
+                "imagem": "fotos/calca_17pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466179",
+                "cor": "Preto",
+                "tamanho": "G2",
+                "imagem": "fotos/calca_17pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466181",
+                "cor": "Rosa",
+                "tamanho": "GG",
+                "imagem": "fotos/calca_17ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466177",
+                "cor": "Rosa",
+                "tamanho": "G1",
+                "imagem": "fotos/calca_17ros.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "290",
+        "nome": "Vestido",
+        "por": "249,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
+            {
+                "codigoBling": "466184",
+                "cor": "Verde",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_123.jpg",
                 "vendido": false
             }
         ]
