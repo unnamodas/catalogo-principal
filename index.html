@@ -1405,28 +1405,29 @@
                 min-height: 32px !important;
             }
 
-            /* 🟢 BADGES COMPACTOS E PROPORCIONAIS NO CELULAR */
+            /* 🟢 BADGES BEM MENORES E DELICADOS NO CELULAR */
             .badge {
-                padding: 3px 7px !important;
-                font-size: 8px !important;
-                top: 8px !important;
-                letter-spacing: 0.05em !important;
+                padding: 2px 4px !important;
+                font-size: 6px !important;
+                top: 5px !important;
+                letter-spacing: 0.02em !important;
+                border-radius: 2px;
             }
 
             .badge-sale,
             .badge-sold,
             .badge-destaque,
             .badge-novidade {
-                left: 8px !important;
+                left: 5px !important;
             }
 
             .badge-discount,
             .badge-ultima-peca {
-                right: 8px !important;
+                right: 5px !important;
                 left: auto !important;
-                font-size: 9px !important;
-                padding: 3px 7px !important;
-                top: 8px !important;
+                font-size: 6px !important;
+                padding: 2px 4px !important;
+                top: 5px !important;
             }
         }
 
@@ -1510,6 +1511,56 @@
         .btn-whatsapp {
             padding: 11px 18px !important;
             font-size: 10px !important;
+        }
+
+        /* --- BOTÕES DE NAVEGAÇÃO MANUAL NAS FOTOS --- */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.7);
+            color: #000000;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.3s ease, background 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image-container:hover .nav-btn {
+            opacity: 1;
+            /* Aparece ao passar o mouse */
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .nav-btn.prev-btn {
+            left: 8px;
+        }
+
+        .nav-btn.next-btn {
+            right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-btn {
+                opacity: 1;
+                /* Sempre visível no celular */
+                width: 24px;
+                height: 24px;
+                font-size: 9px;
+                background: rgba(255, 255, 255, 0.85);
+            }
         }
     </style>
     <!-- Importando o Firebase (Versão Modular) -->
@@ -2080,6 +2131,38 @@
                 });
                 atualizarFiltrosERenderizar();
             }
+            // 🟢 FUNÇÃO DE NAVEGAÇÃO MANUAL DE FOTOS
+            window.mudarFoto = function (event, produtoId, direcao) {
+                event.stopPropagation(); // Impede de abrir a foto grande sem querer
+
+                const trackElement = document.getElementById(`track-${produtoId}`);
+                if (!trackElement) return;
+
+                let imagens = trackElement.querySelectorAll('img');
+                if (!imagens || imagens.length === 0) return;
+
+                let indiceAtual = window.estadoFotosCard[produtoId] || 0;
+
+                // Calcula a próxima foto (indo pro final ou voltando pro início em loop)
+                indiceAtual = (indiceAtual + direcao + imagens.length) % imagens.length;
+                window.estadoFotosCard[produtoId] = indiceAtual;
+
+                // Muda a foto visível
+                imagens.forEach((img, i) => {
+                    if (i === indiceAtual) img.classList.add('active-img');
+                    else img.classList.remove('active-img');
+                });
+
+                // Atualiza o tracinho de baixo (indicador)
+                const indContainer = document.getElementById(`indicators-${produtoId}`);
+                if (indContainer) {
+                    const bars = indContainer.querySelectorAll('.indicator-bar');
+                    bars.forEach((bar, i) => {
+                        if (i === indiceAtual) bar.classList.add('active');
+                        else bar.classList.remove('active');
+                    });
+                }
+            };
 
             function verificaTamanhoCompativel(produto, tamanhoBuscado) {
                 if (tamanhoBuscado === 'Todos') return true;
@@ -2341,6 +2424,8 @@
                     });
 
                     let indicadoresHtml = '';
+                    let botoesNavegacaoHtml = ''; // 🟢 Criamos a variável dos botões
+
                     // Mostra os tracinhos se houver mais de uma foto para essa cor selecionada
                     if (fotosParaCarrossel.length > 1) {
                         indicadoresHtml = `<div class="carousel-indicators" id="indicators-${p.id}">`;
@@ -2348,7 +2433,14 @@
                             indicadoresHtml += `<div class="indicator-bar ${i === window.estadoFotosCard[p.id] ? 'active' : ''}"></div>`;
                         });
                         indicadoresHtml += `</div>`;
+
+                        // 🟢 Geramos as setinhas esquerda e direita
+                        botoesNavegacaoHtml = `
+                            <button class="nav-btn prev-btn" onclick="mudarFoto(event, '${p.id}', -1)">&#10094;</button>
+                            <button class="nav-btn next-btn" onclick="mudarFoto(event, '${p.id}', 1)">&#10095;</button>
+                        `;
                     }
+
 
                     const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${p.nome}" na cor ${corObj.corOriginal} (Tamanhos disponíveis: ${stringTamanhosAtual}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
                     const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}`;
@@ -2389,6 +2481,7 @@
                 </div>
                 
                 ${indicadoresHtml}
+                ${botoesNavegacaoHtml} <!-- 🟢 ADICIONE EXATAMENTE AQUI -->
             </div>
             <div class="product-info">
                 <h3 class="product-title">${p.nome}</h3>
@@ -2431,72 +2524,11 @@
             }
 
             function iniciarCarrosselAutomatico(produtoId) {
-                const produto = produtos.find(p => String(p.id) === String(produtoId));
-                if (!produto) return;
-
+                // 🟢 O carrossel automático foi desativado a pedido da loja.
+                // Esta trava de segurança garante que nenhum temporizador antigo fique rodando.
                 if (window.intervalosCarrossel[produtoId]) {
                     clearInterval(window.intervalosCarrossel[produtoId]);
                     window.intervalosCarrossel[produtoId] = null;
-                }
-
-                let fotosParaCarrossel = [];
-                let isFiltroCorAtivo = (corAtual !== 'Todas');
-
-                if (isFiltroCorAtivo) {
-                    let corFiltradaObj = produto.coresAgrupadas.find(c => c.corOriginal.toLowerCase().includes(corAtual.toLowerCase()));
-                    if (corFiltradaObj) {
-                        fotosParaCarrossel = [...new Set(corFiltradaObj.fotos)];
-                    }
-                } else if (window.modoCorUnica[produtoId]) {
-                    let corIndex = window.estadoVariantes[produtoId] || 0;
-                    let corObj = produto.coresAgrupadas[corIndex];
-                    fotosParaCarrossel = [...new Set(corObj.fotos)];
-                } else {
-                    produto.variantes.forEach(v => {
-                        if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
-                    });
-                }
-
-                fotosParaCarrossel = fotosParaCarrossel.filter(foto => foto && typeof foto === 'string' && foto.trim() !== "" && !foto.includes("undefined"));
-
-                // O carrossel roda se houver MAIS DE UMA foto válida para essa cor
-                if (fotosParaCarrossel.length > 1) {
-                    window.intervalosCarrossel[produtoId] = setInterval(() => {
-                        const trackElement = document.getElementById(`track-${produtoId}`);
-                        if (!trackElement) return;
-
-                        let imagens = trackElement.querySelectorAll('img');
-                        if (!imagens || imagens.length === 0) return;
-
-                        let indiceAtualFoto = window.estadoFotosCard[produtoId] || 0;
-                        indiceAtualFoto = (indiceAtualFoto + 1) % imagens.length;
-                        window.estadoFotosCard[produtoId] = indiceAtualFoto;
-
-                        let imgAlvo = imagens[indiceAtualFoto];
-                        if (!imgAlvo || !imgAlvo.src || imgAlvo.src.trim() === "" || imgAlvo.src.includes("undefined")) {
-                            indiceAtualFoto = 0;
-                            window.estadoFotosCard[produtoId] = 0;
-                            imgAlvo = imagens[0];
-                        }
-
-                        imagens.forEach((img, i) => {
-                            if (i === indiceAtualFoto) {
-                                img.classList.add('active-img');
-                            } else {
-                                img.classList.remove('active-img');
-                            }
-                        });
-
-                        const indContainer = document.getElementById(`indicators-${produtoId}`);
-                        if (indContainer) {
-                            const bars = indContainer.querySelectorAll('.indicator-bar');
-                            bars.forEach((bar, i) => {
-                                if (i === indiceAtualFoto) bar.classList.add('active');
-                                else bar.classList.remove('active');
-                            });
-                        }
-
-                    }, 4000);
                 }
             }
 
