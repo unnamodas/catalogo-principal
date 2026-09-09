@@ -1643,6 +1643,11 @@
             <!-- Os botões vieram para cá! -->
             <div class="status-filters">
                 <button class="status-btn active" id="status-todos" onclick="filtrarStatus('todos')">Principal</button>
+
+                <!-- 🟢 NOVA ABA: FESTA -->
+                <button class="status-btn" id="status-festa" onclick="filtrarStatus('festa')"
+                    style="color: #d4af37;">Festa ✨</button>
+
                 <button class="status-btn btn-liquidacao" id="status-liquidacao"
                     onclick="abrirLiquidacao()">Liquidação</button>
             </div>
@@ -1712,6 +1717,10 @@
     <script>
         const WHATSAPP_NUMERO = "5579999749647";
 
+
+        // 🟢 COLOQUE AQUI OS IDs DOS VESTIDOS DE FESTA ENTRE ASPAS SIMPLES E SEPARADOS POR VÍRGULA
+        // 🟢 COLOQUE AQUI OS IDs DOS VESTIDOS DE FESTA
+        const idsVestidosFesta = ['16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53'];
 
         let modoLiquidacao = false;
 
@@ -2293,7 +2302,10 @@
                 const matchesCategoria = (categoriaAtual === 'Todos' || catItem === categoriaAtual);
                 const matchesTamanho = verificaTamanhoCompativel(p, tamanhoAtual);
                 const matchesCor = (corAtual === 'Todas') || p.variantes.some(v => v.cor.toLowerCase().includes(corAtual.toLowerCase()));
-                const matchesStatus = (statusFiltro === 'todos') || (statusFiltro === 'disponiveis' && !p.vendido) || (statusFiltro === 'vendidos' && p.vendido);
+                const matchesStatus = (statusFiltro === 'todos') ||
+                    (statusFiltro === 'disponiveis' && !p.vendido) ||
+                    (statusFiltro === 'vendidos' && p.vendido) ||
+                    (statusFiltro === 'festa' && idsVestidosFesta.includes(String(p.id)));
 
                 const matchesPesquisa = p.nome.toLowerCase().includes(termoPesquisa.toLowerCase()) ||
                     p.variantes.some(v => v.tamanho.toLowerCase().includes(termoPesquisa.toLowerCase()) || v.cor.toLowerCase().includes(termoPesquisa.toLowerCase()));
