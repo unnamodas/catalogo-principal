@@ -1644,9 +1644,12 @@
             <div class="status-filters">
                 <button class="status-btn active" id="status-todos" onclick="filtrarStatus('todos')">Principal</button>
 
-                <!-- 🟢 NOVA ABA: FESTA -->
-                <button class="status-btn" id="status-festa" onclick="filtrarStatus('festa')"
-                    style="color: #d4af37;">Festa ✨</button>
+                <!-- 🟢 NOVA ABA: NOVIDADES (Lê automaticamente do Firebase) -->
+                <button class="status-btn" id="status-novidades" onclick="filtrarStatus('novidades')"
+                    style="color: #d4af37;">Novidades ✨</button>
+
+                <!-- Mudei o emoji da festa para não ficar igual ao de novidades, mas você pode alterar se quiser! -->
+                <button class="status-btn" id="status-festa" onclick="filtrarStatus('festa')">Festa 🥂</button>
 
                 <button class="status-btn btn-liquidacao" id="status-liquidacao"
                     onclick="abrirLiquidacao()">Liquidação</button>
@@ -2305,7 +2308,8 @@
                 const matchesStatus = (statusFiltro === 'todos') ||
                     (statusFiltro === 'disponiveis' && !p.vendido) ||
                     (statusFiltro === 'vendidos' && p.vendido) ||
-                    (statusFiltro === 'festa' && idsVestidosFesta.includes(String(p.id)));
+                    (statusFiltro === 'festa' && idsVestidosFesta.includes(String(p.id))) ||
+                    (statusFiltro === 'novidades' && (p.novidade === true || String(p.novidade).toLowerCase() === 'true' || p.Novidade === true || String(p.Novidade).toLowerCase() === 'true'));
 
                 const matchesPesquisa = p.nome.toLowerCase().includes(termoPesquisa.toLowerCase()) ||
                     p.variantes.some(v => v.tamanho.toLowerCase().includes(termoPesquisa.toLowerCase()) || v.cor.toLowerCase().includes(termoPesquisa.toLowerCase()));

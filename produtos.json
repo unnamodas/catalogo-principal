@@ -1,18 +1,202 @@
 [
     {
-        "id": "290",
-        "nome": "Vestido",
-        "por": "249,90",
+        "id": "291",
+        "nome": "Conjunto camisa e short",
+        "por": "409,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466184",
+                "codigoBling": "466215",
+                "cor": "Branco (Off White)",
+                "tamanho": "46",
+                "imagem": "fotos/conjunto_39.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466216",
+                "cor": "Branco (Off White)",
+                "tamanho": "48",
+                "imagem": "fotos/conjunto_39.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466217",
+                "cor": "Branco (Off White)",
+                "tamanho": "50",
+                "imagem": "fotos/conjunto_39.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "292",
+        "nome": "Conjunto parka e calça",
+        "por": "399,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
+            {
+                "codigoBling": "466226",
+                "cor": "Branco (Off White)",
+                "tamanho": "46",
+                "imagem": "fotos/conjunto_40bra.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466226",
+                "cor": "Branco (Off White)",
+                "tamanho": "46",
+                "imagem": "fotos/conjunto_40braft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466227",
+                "cor": "Branco (Off White)",
+                "tamanho": "48",
+                "imagem": "fotos/conjunto_40bra.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466227",
+                "cor": "Branco (Off White)",
+                "tamanho": "48",
+                "imagem": "fotos/conjunto_40braft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466228",
+                "cor": "Preto",
+                "tamanho": "50",
+                "imagem": "fotos/conjunto_40pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466228",
+                "cor": "Preto",
+                "tamanho": "50",
+                "imagem": "fotos/conjunto_40preft2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "293",
+        "nome": "Blusa",
+        "por": "179,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
+            {
+                "codigoBling": "466236",
                 "cor": "Verde",
-                "tamanho": "Único",
-                "imagem": "fotos/vestido_123.jpg",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_63ver.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466236",
+                "cor": "Verde",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_63verft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466234",
+                "cor": "Branco (Off White)",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_63bra.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466235",
+                "cor": "Branco (Off White)",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_63bra.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466237",
+                "cor": "Azul",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_63az.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "294",
+        "nome": "Blusa",
+        "por": "189,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
+            {
+                "codigoBling": "466223",
+                "cor": "Branco",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_64.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466223",
+                "cor": "Branco",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_64ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466224",
+                "cor": "Branco",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_64.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466224",
+                "cor": "Branco",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_64ft2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "295",
+        "nome": "Conjunto blusa e calça",
+        "por": "269,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
+            {
+                "codigoBling": "466189",
+                "cor": "Verde",
+                "tamanho": "G1",
+                "imagem": "fotos/conjunto_41ver.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466188",
+                "cor": "Rosa",
+                "tamanho": "GG",
+                "imagem": "fotos/conjunto_41ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466190",
+                "cor": "Preto",
+                "tamanho": "G2",
+                "imagem": "fotos/conjunto_41pre.jpg",
                 "vendido": false
             }
         ]
