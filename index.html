@@ -269,30 +269,28 @@
         .status-btn {
             background: transparent;
             border: none;
-            border-bottom: 2px solid transparent;
-            /* Prepara o espaço para a linha de seleção */
+            border-bottom: 3px solid transparent;
             padding: 0 10px 12px 10px;
-            /* Remove o visual de 'caixa' e aproxima o texto da linha */
             cursor: pointer;
             font-family: 'Inter', sans-serif;
-            font-size: 12px;
-            /* Mantemos 12px para leitura mais fácil */
-            font-weight: 600;
-            /* Semi-negrito para dar clareza */
-            color: var(--text-muted);
-            /* Cinza no estado inativo */
+            font-size: 14px;
+            font-weight: 800;
+            color: #333333;
             transition: var(--transition);
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
+            /* 🟢 MÁGICA AQUI: Estica a letra verticalmente (1.15 = 15% mais alta) */
+            transform: scaleY(1.05);
+            /* 🟢 Garante que a letra cresça para cima e a linha de seleção não saia do lugar */
+            transform-origin: center bottom;
         }
 
         .status-btn.active,
         .status-btn:hover {
             background-color: transparent;
-            color: var(--primary-color);
-            /* O texto fica preto ao selecionar */
-            border-bottom: 2px solid var(--primary-color);
-            /* Linha preta embaixo indicando a aba ativa */
+            color: #000000;
+            border-bottom: 3px solid #000000;
+            /* 🟢 Linha preta bem mais grossa ao selecionar */
         }
 
         .categories-tabs {
@@ -1284,8 +1282,12 @@
             .status-btn {
                 flex: 1;
                 text-align: center;
-                padding: 8px 4px;
-                font-size: 11px;
+                padding: 10px 2px;
+                /* 🟢 Dá um pouquinho mais de altura para o toque do dedo */
+                font-size: 12.5px;
+                /* 🟢 Fonte um pouco maior que a anterior no celular */
+                letter-spacing: 0;
+                /* 🟢 Remove o espaçamento extra para a palavra "Liquidação" não quebrar */
             }
 
             .category-tab,
@@ -1597,6 +1599,46 @@
         .modal-image-wrapper .next-btn {
             right: 12px;
         }
+
+        /* --- ESTILOS EXCLUSIVOS DAS ABAS NOVIDADES E FESTA --- */
+
+        /* --- CORES FORTES E ELEGANTES PARA MÁXIMA VISIBILIDADE --- */
+
+        /* 🟢 Dourado Escuro / Bronze (Novidades) */
+        .btn-novidades {
+            color: #8a6500 !important;
+        }
+
+        .btn-novidades.active,
+        .btn-novidades:hover {
+            background-color: transparent !important;
+            color: #8a6500 !important;
+            border-bottom: 3px solid #8a6500 !important;
+        }
+
+        /* 🟢 Cinza Escuro Elegante (Festa) */
+        .btn-festa {
+            color: #444444 !important;
+        }
+
+        .btn-festa.active,
+        .btn-festa:hover {
+            background-color: transparent !important;
+            color: #444444 !important;
+            border-bottom: 3px solid #444444 !important;
+        }
+
+        /* 🟢 Vermelho Fechado (Liquidação) */
+        .btn-liquidacao {
+            color: #c2251b !important;
+        }
+
+        .btn-liquidacao.active,
+        .btn-liquidacao:hover {
+            background-color: transparent !important;
+            color: #c2251b !important;
+            border-bottom: 3px solid #c2251b !important;
+        }
     </style>
     <!-- Importando o Firebase (Versão Modular) -->
     <!-- Importando o Firebase (Versão Modular) -->
@@ -1640,16 +1682,17 @@
         <div class="header-logo-nav">
             <img src="fotos/logo_unna.jpg" alt="Logo UNNA" class="logo-loja" onerror="substituirPorPlaceholder(this)">
 
+
             <!-- Os botões vieram para cá! -->
             <div class="status-filters">
                 <button class="status-btn active" id="status-todos" onclick="filtrarStatus('todos')">Principal</button>
 
-                <!-- 🟢 NOVA ABA: NOVIDADES (Lê automaticamente do Firebase) -->
-                <button class="status-btn" id="status-novidades" onclick="filtrarStatus('novidades')"
-                    style="color: #d4af37;">Novidades ✨</button>
+                <!-- 🟢 Adicionada a classe btn-novidades -->
+                <button class="status-btn btn-novidades" id="status-novidades"
+                    onclick="filtrarStatus('novidades')">Novidades</button>
 
-                <!-- Mudei o emoji da festa para não ficar igual ao de novidades, mas você pode alterar se quiser! -->
-                <button class="status-btn" id="status-festa" onclick="filtrarStatus('festa')">Festa 🥂</button>
+                <!-- 🟢 Adicionada a classe btn-festa -->
+                <button class="status-btn btn-festa" id="status-festa" onclick="filtrarStatus('festa')">Festa</button>
 
                 <button class="status-btn btn-liquidacao" id="status-liquidacao"
                     onclick="abrirLiquidacao()">Liquidação</button>
