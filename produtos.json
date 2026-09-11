@@ -1,60 +1,7 @@
 [
     {
-        "id": "296",
-        "nome": "Camisa",
-        "por": "279,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "ultimaPeca": false,
-        "variantes": [
-            {
-                "codigoBling": "466219",
-                "cor": "Branco",
-                "tamanho": "44",
-                "imagem": "fotos/blusa_65.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466219",
-                "cor": "Branco",
-                "tamanho": "44",
-                "imagem": "fotos/blusa_65ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466220",
-                "cor": "Branco",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_65.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466220",
-                "cor": "Branco",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_65ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466221",
-                "cor": "Branco",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_65.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466221",
-                "cor": "Branco",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_65ft2.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "297",
-        "nome": "Blusa",
+        "id": "300",
+        "nome": "Vestido",
         "por": "199,90",
         "novidade": true,
         "destaque": false,
@@ -62,84 +9,49 @@
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466230",
-                "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_66az.jpg",
+                "codigoBling": "466253",
+                "cor": "Verde",
+                "tamanho": "M(Slim)",
+                "imagem": "fotos/vestido_124verd.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466230",
-                "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_66azft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466231",
-                "cor": "Amarelo",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_66am.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466231",
-                "cor": "Amarelo",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_66amft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466232",
-                "cor": "Azul",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_66az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466232",
-                "cor": "Azul",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_66azft2.jpg",
+                "codigoBling": "466254",
+                "cor": "Rosa (Rosé)",
+                "tamanho": "M(Slim)",
+                "imagem": "fotos/vestido_124ros.jpg",
                 "vendido": false
             }
         ]
     },
     {
-        "id": "298",
-        "nome": "Regata",
-        "por": "149,90",
+        "id": "301",
+        "nome": "Vestido",
+        "por": "259,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466245",
-                "cor": "Preto",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_67pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466243",
+                "codigoBling": "466250",
                 "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_67az.jpg",
+                "tamanho": "M(Slim)",
+                "imagem": "fotos/vestido_125az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466244",
-                "cor": "Bege",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_67beg.jpg",
+                "codigoBling": "466251",
+                "cor": "Terracota",
+                "tamanho": "M(Slim)",
+                "imagem": "fotos/vestido_125ter.jpg",
                 "vendido": false
             }
         ]
     },
     {
-        "id": "299",
-        "nome": "Blusa",
+        "id": "302",
+        "nome": "Vestido",
         "por": "199,90",
         "novidade": true,
         "destaque": false,
@@ -147,24 +59,17 @@
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466239",
-                "cor": "Bege",
-                "tamanho": "44",
-                "imagem": "fotos/blusa_68beg.jpg",
+                "codigoBling": "466247",
+                "cor": "Branco",
+                "tamanho": "M(Slim)",
+                "imagem": "fotos/vestido_126bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466240",
-                "cor": "Preto",
-                "tamanho": "44",
-                "imagem": "fotos/blusa_68pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466241",
-                "cor": "Bege",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_68beg.jpg",
+                "codigoBling": "466248",
+                "cor": "Marrom",
+                "tamanho": "M(Slim)",
+                "imagem": "fotos/vestido_126mar.jpg",
                 "vendido": false
             }
         ]
