@@ -1293,22 +1293,37 @@
                 /* 🟢 Remove o espaçamento extra para a palavra "Liquidação" não quebrar */
             }
 
-            .category-tab,
-            .size-tab {
+            /* Mantém as abas de categoria (Blusas, Vestidos) no tamanho normal */
+            .category-tab {
                 padding: 6px 14px;
-                /* Reduz o espaço interno para caberem mais opções na tela */
                 font-size: 12px;
             }
 
+            /* 🟢 Encolhe especificamente os botões de TAMANHO para caberem na tela */
+            .size-tab {
+                padding: 7px 6px;
+                /* 🟢 Respiro ideal na vertical e enxuto na horizontal */
+                font-size: 12px;
+                /* 🟢 Tamanho encorpado e excelente para leitura */
+                font-weight: 700;
+                /* 🟢 Negrito forte */
+
+                /* 🟢 Letras levemente mais próximas para acomodar a frase inteira */
+            }
 
             .sizes-container {
-                margin-top: 6px;
+                margin-top: 8px;
                 padding-top: 6px;
-                gap: 6px;
+                gap: 4px;
+            }
+
+            .sizes-tabs {
+                gap: 10px;
             }
 
             .size-label {
                 font-size: 9px;
+                margin-right: 2px;
             }
 
 
@@ -1732,7 +1747,7 @@
 
             <!-- LINHA 4: TAMANHOS -->
             <div class="sizes-container">
-                <span class="size-label">Tam.:</span>
+                <span class="size-label">Tamanhos:</span>
                 <div class="sizes-tabs" id="sizes-tabs"></div>
             </div>
 
