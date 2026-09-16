@@ -2021,17 +2021,21 @@
                 // 3. Monta o visual riscando o que estiver esgotado e destacando o tamanho filtrado
                 let htmlParts = tamanhosArray.map(tam => {
                     let tamUpper = String(tam).toUpperCase();
+                    let partes = tamUpper.split(/[\,\/\-\s\(\)]+/).filter(p => p !== '');
+
+                    // 🟢 Avalia se o tamanho é apenas 38, 40, 42 ou 44
+                    let isSlimNumero = partes.some(p => ['38', '40', '42', '44'].includes(p));
 
                     // Identifica qual é a categoria desse tamanho específico
-                    let isSlim = tamUpper.includes('SLIM') || tamUpper === 'ÚNICO' || tamUpper === 'UNICO';
-                    let isPlus = !tamUpper.includes('SLIM'); // Tudo que não é Slim, é Plus (incluindo o Único)
+                    let isSlim = tamUpper.includes('SLIM') || isSlimNumero || tamUpper === 'ÚNICO' || tamUpper === 'UNICO';
+                    let isPlus = !isSlim; // O que não for enquadrado como Slim pelas regras acima, vai para o Plus
 
                     // Verifica se a aba selecionada bate com a categoria desse tamanho
                     let deveDestacar = false;
                     if (tamanhoAtual === 'PLUS (46 ao 54)' && isPlus) deveDestacar = true;
                     if (tamanhoAtual === 'SLIM (38 ao 44)' && isSlim) deveDestacar = true;
 
-                    // 🟢 O estilo do destaque AGORA MAIS DISCRETO E ELEGANTE (Tom Champanhe/Areia)
+                    // O estilo do destaque (Tom Champanhe/Areia)
                     let estiloDestaque = deveDestacar
                         ? 'background-color: #f5f0e1; color: #333333; font-weight: 800; font-size: 13px; padding: 2px 6px; border-radius: 4px; border: 1px solid #ebdcb7;'
                         : 'font-weight: 500;';
@@ -2310,28 +2314,31 @@
                 return produto.variantes.some(v => {
                     let tamUpper = String(v.tamanho).toUpperCase();
 
-                    // 1. Verifica se a peça tem a tag SLIM escrita nela
-                    let hasSlim = tamUpper.includes('SLIM');
-
-                    // 2. Limpa o texto para verificar se é a palavra Único pura (sem o "Plus" ou "Slim" junto)
+                    // 1. Separa as partes para ler a numeração/letra
                     let partes = tamUpper.split(/[\,\/\-\s\(\)]+/).filter(p => p !== '');
+
+                    // 2. Verifica as regras básicas
+                    let hasSlimExplicit = tamUpper.includes('SLIM'); // Pega P(Slim), M(Slim), G(Slim), GG(Slim)
+                    let hasPlusExplicit = tamUpper.includes('PLUS');
                     let isUnico = partes.includes('ÚNICO') || partes.includes('UNICO');
-                    let hasPlus = partes.includes('PLUS');
+
+                    // 3. 🟢 NOVA REGRA ESTRITA: Apenas os números 38, 40, 42 e 44
+                    let tamanhosSlimNumeros = ['38', '40', '42', '44'];
+                    let hasSlimNumero = partes.some(p => tamanhosSlimNumeros.includes(p));
 
                     // É "somente Único" se tiver a palavra Único, mas não tiver a tag Slim nem Plus
-                    let isSomenteUnico = isUnico && !hasSlim && !hasPlus;
+                    let isSomenteUnico = isUnico && !hasSlimExplicit && !hasPlusExplicit;
 
                     // 🟢 LÓGICA DO FILTRO SLIM
                     if (tamanhoBuscado === 'SLIM (38 ao 44)') {
-                        // Vai para SLIM se tiver a tag (Slim) OU se for somente "Único"
-                        return hasSlim || isSomenteUnico;
+                        // Vai para SLIM se for 38-44, se tiver a palavra (Slim) ou se for "Único" puro
+                        return hasSlimExplicit || hasSlimNumero || isSomenteUnico;
                     }
 
                     // 🟢 LÓGICA DO FILTRO PLUS
                     if (tamanhoBuscado === 'PLUS (46 ao 54)') {
-                        // Vai para PLUS se NÃO tiver a tag (Slim)
-                        // (Isso joga automaticamente o "Único" normal para cá, além de todos os outros tamanhos padrão da loja)
-                        return !hasSlim;
+                        // Vai para PLUS se NÃO tiver a tag (Slim) e NÃO for os números 38-44
+                        return !hasSlimExplicit && !hasSlimNumero;
                     }
 
                     return false;
