@@ -1,6 +1,6 @@
 [
     {
-        "id": "300",
+        "id": "303",
         "nome": "Vestido",
         "por": "199,90",
         "novidade": true,
@@ -9,67 +9,24 @@
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466253",
+                "codigoBling": "465961",
                 "cor": "Verde",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/vestido_124verd.jpg",
+                "tamanho": "42",
+                "imagem": "fotos/vestido_127ver.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466254",
-                "cor": "Rosa (Rosé)",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/vestido_124ros.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "301",
-        "nome": "Vestido",
-        "por": "259,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "ultimaPeca": false,
-        "variantes": [
-            {
-                "codigoBling": "466250",
+                "codigoBling": "465962",
                 "cor": "Azul",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/vestido_125az.jpg",
+                "tamanho": "42",
+                "imagem": "fotos/vestido_127az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466251",
-                "cor": "Terracota",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/vestido_125ter.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "302",
-        "nome": "Vestido",
-        "por": "199,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "ultimaPeca": false,
-        "variantes": [
-            {
-                "codigoBling": "466247",
-                "cor": "Branco",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/vestido_126bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466248",
-                "cor": "Marrom",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/vestido_126mar.jpg",
+                "codigoBling": "465963",
+                "cor": "Rosa (Rosé)",
+                "tamanho": "42",
+                "imagem": "fotos/vestido_127ros.jpg",
                 "vendido": false
             }
         ]
