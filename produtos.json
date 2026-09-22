@@ -1,7 +1,7 @@
 [
     {
-        "id": "304",
-        "nome": "Vestido jeans",
+        "id": "306",
+        "nome": "Vestido longo",
         "por": "199,90",
         "novidade": true,
         "destaque": false,
@@ -9,42 +9,24 @@
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466264",
-                "cor": "Azul",
-                "tamanho": "GG",
-                "imagem": "fotos/vestido_128.jpg",
+                "codigoBling": "466267",
+                "cor": "Lilás",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_129lil.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466264",
-                "cor": "Azul",
-                "tamanho": "GG",
-                "imagem": "fotos/vestido_128ft2.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "305",
-        "nome": "Blusa",
-        "por": "119,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "ultimaPeca": false,
-        "variantes": [
-            {
-                "codigoBling": "466281",
-                "cor": "Azul",
-                "tamanho": "GG",
-                "imagem": "fotos/blusa_69.jpg",
+                "codigoBling": "466268",
+                "cor": "Cinza",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_129cin.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466282",
+                "codigoBling": "466269",
                 "cor": "Azul",
-                "tamanho": "G2",
-                "imagem": "fotos/blusa_69.jpg",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_129az.jpg",
                 "vendido": false
             }
         ]
