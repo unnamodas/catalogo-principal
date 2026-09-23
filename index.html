@@ -1571,9 +1571,27 @@
             }
 
             .btn-whatsapp {
-                padding: 10px 14px !important;
-                font-size: 12px !important;
+                padding: 12px 14px !important;
+                font-size: 15px !important;
+                /* 🟢 Aumentado para o botão de Comprar */
                 letter-spacing: 0.1em;
+            }
+
+            /* 🟢 AUMENTOS EXCLUSIVOS PARA O CELULAR */
+            .btn-ver-variacoes {
+                font-size: 11px !important;
+                /* 🟢 Aumenta o texto do botão ver variações */
+                padding: 10px 14px !important;
+            }
+
+            .texto-tam-mobile {
+                font-size: 12.5px !important;
+                /* 🟢 Aumenta a palavra "Tam:" */
+            }
+
+            .texto-tam-valores-mobile {
+                font-size: 13.5px !important;
+                /* 🟢 Aumenta as letras dos tamanhos (G1/G2/G3) */
             }
 
             .cor-dot {
@@ -2689,10 +2707,16 @@
                 container.querySelectorAll('.cor-dot').forEach(d => d.classList.remove('active'));
                 dotElement.classList.add('active');
 
+                // 🟢 PUXA OS TAMANHOS DA NOVA COR SELECIONADA
+                const stringTamanhos = formatarTamanhosOrdenados(corObj.tamanhos);
+
+                // 🟢 Mantém a leitura dos tamanhos específicos APENAS para enviar na mensagem do WhatsApp
+                const stringTamanhosDaCor = formatarTamanhosOrdenados(corObj.tamanhos);
+
+                // 🟢 ATUALIZA O BOTÃO DE WHATSAPP
                 const btnContainer = document.getElementById(`btn-container-${produtoId}`);
                 if (btnContainer && !produto.vendido) {
-                    const stringTamanhos = formatarTamanhosOrdenados(corObj.tamanhos);
-                    const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${produto.nome}" na cor ${corObj.corOriginal} (Tamanhos: ${stringTamanhos}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
+                    const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${produto.nome}" na cor ${corObj.corOriginal} (Tamanhos: ${stringTamanhosDaCor}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
                     btnContainer.innerHTML = `<a id="btn-compra-${produtoId}" href="https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}" target="_blank" class="btn-whatsapp">Comprar</a>`;
                 }
 
@@ -2722,7 +2746,13 @@
 
                     let corIndex = window.estadoVariantes[p.id];
                     let corObj = p.coresAgrupadas[corIndex];
-                    const stringTamanhosAtual = formatarTamanhosOrdenados(corObj.tamanhos);
+
+                    // 🟢 MÁGICA AQUI: Pega TODOS os tamanhos do produto, ignorando separação por cor
+                    let todosTamanhosDoProduto = [];
+                    p.variantes.forEach(v => {
+                        if (v.tamanho) todosTamanhosDoProduto.push(v.tamanho);
+                    });
+                    const stringTodosTamanhos = formatarTamanhosOrdenados(todosTamanhosDoProduto);
 
                     let carrosselCoresHtml = '';
                     if (p.coresAgrupadas.length > 1) {
@@ -2780,7 +2810,8 @@
                     }
 
 
-                    const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${p.nome}" na cor ${corObj.corOriginal} (Tamanhos disponíveis: ${stringTamanhosAtual}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
+                    // 🟢 CORREÇÃO: Usando a variável com todos os tamanhos na mensagem do WhatsApp
+                    const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${p.nome}" na cor ${corObj.corOriginal} (Tamanhos: ${stringTodosTamanhos}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
                     const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}`;
 
                     const card = document.createElement('div');
@@ -2838,10 +2869,10 @@
                     
                     <!-- 🟢 NOVO CONTENTOR QUE EMPURRA TUDO PARA O FUNDO -->
                     <div style="margin-top: auto;">
-                        <!-- TEXTO EXIBINDO OS TAMANHOS ALINHADO À ESQUERDA -->
-                        <div style="font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; text-align: left;">
-                            Tam: <span style="font-weight: 700; color: var(--text-main);">${stringTamanhosAtual}</span>
-                        </div>
+                       <!-- 🟢 TEXTO EXIBINDO OS TAMANHOS ALINHADO À ESQUERDA -->
+                    <div class="texto-tam-mobile" style="font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; text-align: left;">
+                        Tam: <span id="texto-tamanhos-${p.id}" class="texto-tam-valores-mobile" style="font-weight: 700; color: var(--text-main);">${stringTodosTamanhos}</span>
+                    </div>
 
                         <button class="btn-ver-variacoes" onclick="abrirModalVariacoes(event, '${p.id}')">Ver Cores e Tamanhos</button>
                         
