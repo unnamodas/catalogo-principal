@@ -1,32 +1,25 @@
 [
     {
         "id": "307",
-        "nome": "xxxx",
-        "por": "199,90",
+        "nome": "Vestido longo",
+        "por": "299,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466267",
-                "cor": "Lilás",
-                "tamanho": "Único",
-                "imagem": "fotos/vestido_129lil.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466268",
-                "cor": "Cinza",
-                "tamanho": "Único",
-                "imagem": "fotos/vestido_129cin.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466269",
+                "codigoBling": "466284",
                 "cor": "Azul",
-                "tamanho": "Único",
-                "imagem": "fotos/vestido_129az.jpg",
+                "tamanho": "GG",
+                "imagem": "fotos/vestido_130.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466284",
+                "cor": "Azul",
+                "tamanho": "GG",
+                "imagem": "fotos/vestido_130ft2.jpg",
                 "vendido": false
             }
         ]
