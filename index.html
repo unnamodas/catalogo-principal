@@ -2835,10 +2835,13 @@
                 </div>
 
                 ${carrosselCoresHtml}
-                
-               <!-- 🟢 NOVO BOTÃO SUBSTITUINDO A LISTA ANTIGA -->
-                <button class="btn-ver-variacoes" onclick="abrirModalVariacoes(event, '${p.id}')">Ver Cores e Tamanhos</button>
+                    
+                    <!-- 🟢 TEXTO EXIBINDO OS TAMANHOS ALINHADO À ESQUERDA -->
+                    <div style="font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; text-align: left;">
+                        Tam: <span style="font-weight: 700; color: var(--text-main);">${stringTamanhosAtual}</span>
+                    </div>
 
+                    <button class="btn-ver-variacoes" onclick="abrirModalVariacoes(event, '${p.id}')">Ver Cores e Tamanhos</button>
                 <div id="btn-container-${p.id}" style="margin-top: auto;">
 
                     ${isVendido ?
