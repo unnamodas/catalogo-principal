@@ -443,15 +443,13 @@
         .product-image-container {
             position: relative;
             width: 100%;
-            padding-top: 140%;
+            padding-top: 155%;
+            /* 🟢 Aumentado para deixar a foto bem mais comprida na vertical */
             background-color: #fcfcfc;
             overflow: hidden;
             border-radius: 6px;
-            /* Cantos sutilmente arredondados, super elegantes */
             border: 1px solid rgba(0, 0, 0, 0.04);
-            /* Uma bordinha quase imperceptível que dá acabamento */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-            /* Sombra suave que dá a sensação de profundidade e leveza */
             transition: var(--transition);
         }
 
@@ -605,11 +603,10 @@
         }
 
 
-        /* 🟢 NOVA TAG NOVIDADE AO LADO DO NOME (COM ANIMAÇÕES) */
-        .badge-novidade-inline {
+        /* 🟢 NOVA TAG NOVIDADE ACIMA DO NOME */
+        .badge-novidade-above {
             display: inline-block;
             background-color: #d4af37;
-            /* Dourado original */
             color: #ffffff;
             font-family: 'Inter', sans-serif;
             font-size: 8px;
@@ -618,12 +615,11 @@
             border-radius: 4px;
             border: 1px solid rgba(255, 255, 255, 0.4);
             letter-spacing: 0.1em;
-            margin-left: 8px;
-            vertical-align: middle;
             text-transform: uppercase;
-            transform: translateY(-2px);
+            margin-bottom: 6px;
+            /* 🟢 Cria o espaço ideal entre a etiqueta e o título */
+            width: fit-content;
             animation: glow-pulse 2.5s ease-in-out infinite;
-            /* O efeito pulsante de volta! */
         }
 
         /* 🟢 MOTORES DAS ANIMAÇÕES (Caso você tenha apagado) */
@@ -767,9 +763,10 @@
         /* --- BOLINHAS DE CORES (Formato Circular Perfeito com Zoom Equilibrado) --- */
         .cores-container {
             display: flex;
-            gap: 12px;
-            margin-bottom: 12px;
-            padding: 6px 2px;
+            gap: 10px;
+            margin-bottom: 8px !important;
+            /* 🟢 Reduzido o espaço abaixo das bolinhas */
+            padding: 4px 2px;
             overflow-x: auto;
             align-items: center;
         }
@@ -1228,7 +1225,113 @@
             width: 100%;
         }
 
+        /* 🟢 BOTÃO DE ABRIR VARIAÇÕES COM VISUAL CLICÁVEL */
+        .btn-ver-variacoes {
+            background-color: #f8f8f8;
+            /* Fundo cinza claro super delicado para dar cara de botão */
+            border: 1px solid #dcdcdc;
+            /* Borda visível para delimitar o botão */
+            color: var(--text-main);
+            padding: 9px 14px;
+            font-size: 8.8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+            /* Sombra sutil de profundidade */
+        }
 
+        .btn-ver-variacoes:hover {
+            background-color: #000000;
+            /* Fica preto ao passar o mouse */
+            color: #ffffff;
+            /* Letra branca para contrastar */
+            border-color: #000000;
+            transform: translateY(-1px);
+            /* Dá uma leve erguida indicando interatividade */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 🟢 ESTRUTURA DO NOVO MODAL DE VARIAÇÕES */
+        .modal-variacoes-overlay {
+            display: flex;
+            position: fixed;
+            z-index: 100000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(4px);
+            justify-content: center;
+            align-items: center;
+            /* Centraliza na tela */
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-variacoes-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-variacoes-content {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 380px;
+            border-radius: 12px;
+            padding: 30px 25px;
+            position: relative;
+            max-height: 80vh;
+            overflow-y: auto;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-variacoes-overlay.show .modal-variacoes-content {
+            transform: scale(1);
+        }
+
+        .modal-variacoes-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.2s;
+        }
+
+        .modal-variacoes-close:hover {
+            color: #000;
+        }
+
+        .modal-variacoes-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-main);
+        }
+
+        .variacao-item-modal {
+            margin-bottom: 14px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            letter-spacing: 0.03em;
+        }
 
         .no-results {
             grid-column: 1 / -1;
@@ -1829,6 +1932,33 @@
                 </div>
             </div>
         </div>
+        <!-- 🟢 MODAL DE VARIAÇÕES COM MINIATURA -->
+        <div id="modal-variacoes" class="modal-variacoes-overlay" onclick="fecharModalVariacoes(event)">
+            <div class="modal-variacoes-content">
+                <span class="modal-variacoes-close" onclick="fecharModalVariacoes(event)">&times;</span>
+
+                <!-- 🟢 Miniatura e Título do Produto -->
+                <div
+                    style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid var(--border-color);">
+                    <img id="modal-var-img" src="" alt="Miniatura"
+                        style="width: 50px; height: 65px; object-fit: cover; border-radius: 4px; border: 1px solid #eee;">
+                    <div>
+                        <div
+                            style="font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2px;">
+                            Cores e Tamanhos</div>
+                        <div id="modal-var-nome"
+                            style="font-family: 'Cormorant Garamond', serif; font-size: 20px; line-height: 1.1; color: var(--text-main);">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="lista-variacoes-container"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 UNNA Modas.</p>
+        </footer>
 
         <footer>
             <p>&copy; 2026 UNNA Modas.</p>
@@ -2692,9 +2822,11 @@
                 ${indicadoresHtml}${botoesNavegacaoHtml} <!-- 🟢 ADICIONE EXATAMENTE AQUI -->
             </div>
             <div class="product-info">
-                <!-- 🟢 TAG DE NOVIDADE AGORA FICA AQUI, AO LADO DO TÍTULO! -->
+                <!-- 🟢 TAG DE NOVIDADE AGORA FICA ACIMA DO TÍTULO! -->
+                ${isNovidade && !isVendido && !corObj.esgotada ? '<span class="badge-novidade-above"><span class="sparkle-icon">✨</span> NOVIDADE</span>' : ''}
+                
                 <h3 class="product-title">
-                    ${p.nome}${isNovidade && !isVendido && !corObj.esgotada ? '<span class="badge-novidade-inline">✨ NOVIDADE</span>' : ''}
+                    ${p.nome}
                 </h3>
                 <div class="product-price-container">
                     <div class="price-installments">${calcularParcelamento(p.por)}</div>
@@ -2704,11 +2836,11 @@
 
                 ${carrosselCoresHtml}
                 
-                <div class="product-size" style="margin-top: -6px; margin-bottom: 8px;">
-                    ${listaCoresTamanhosHtml}
-                </div>
+               <!-- 🟢 NOVO BOTÃO SUBSTITUINDO A LISTA ANTIGA -->
+                <button class="btn-ver-variacoes" onclick="abrirModalVariacoes(event, '${p.id}')">Ver Cores e Tamanhos</button>
 
                 <div id="btn-container-${p.id}" style="margin-top: auto;">
+
                     ${isVendido ?
                             '<button class="btn-whatsapp btn-sold" disabled>Indisponível</button>' :
                             `<a id="btn-compra-${p.id}" href="${linkWhats}" target="_blank" class="btn-whatsapp">Comprar</a>`
@@ -2916,7 +3048,51 @@
                     idProdutoModalAtual = null;
                 }
             }
+            window.abrirModalVariacoes = function (event, idProduto) {
+                if (event) event.stopPropagation();
 
+                const produto = produtos.find(p => String(p.id) === String(idProduto));
+                if (!produto) return;
+
+                // 🟢 Pega a primeira foto disponível da peça para usar na miniatura
+                let fotoMiniatura = '';
+                if (produto.coresAgrupadas && produto.coresAgrupadas[0] && produto.coresAgrupadas[0].fotos) {
+                    fotoMiniatura = produto.coresAgrupadas[0].fotos[0];
+                }
+
+                // Injeta a foto e o nome no cabeçalho do modal
+                document.getElementById('modal-var-img').src = fotoMiniatura;
+                document.getElementById('modal-var-nome').textContent = produto.nome;
+
+                // Monta a lista de variações
+                let htmlLista = produto.coresAgrupadas.map(c => {
+                    let tamanhosCor = gerarHtmlTamanhosCor(produto, c);
+                    let esgotadaStatus = c.esgotada ? ' <span style="color: #d93025; font-size: 10px; font-weight: 700;">(ESGOTADA)</span>' : '';
+
+                    return `<div class="variacao-item-modal">
+                        <span style="font-weight: 700; color: var(--text-main); text-transform: uppercase;">${c.corOriginal}</span>: 
+                        <span class="destaque-tamanho" style="font-weight: 400; color: var(--text-muted);">${tamanhosCor}</span>${esgotadaStatus}
+                    </div>`;
+                }).join('');
+
+                document.getElementById('lista-variacoes-container').innerHTML = htmlLista;
+
+                const modal = document.getElementById('modal-variacoes');
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            };
+
+            window.fecharModalVariacoes = function (event) {
+                if (!event || event.target.id === 'modal-variacoes' || event.target.classList.contains('modal-variacoes-close')) {
+                    const modal = document.getElementById('modal-variacoes');
+                    modal.classList.remove('show');
+
+                    // Só destrava a tela se o modal de zoom de foto também não estiver aberto
+                    if (!document.getElementById('image-modal').classList.contains('show')) {
+                        document.body.style.overflow = '';
+                    }
+                }
+            };
             document.addEventListener('keydown', function (event) {
                 if (event.key === "Escape") {
                     fecharModal();
