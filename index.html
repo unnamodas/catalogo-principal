@@ -2368,6 +2368,20 @@
                 gerarAbasCores();
                 atualizarFiltrosERenderizar();
                 configurarObservadorRolagem();
+                // 🟢 Efeito de deslize demonstrativo nas categorias (Scroll Hint)
+                setTimeout(() => {
+                    const menuCategorias = document.getElementById('categories-tabs');
+                    // Verifica se está no celular (tela menor que 768px) para não animar no computador atoa
+                    if (menuCategorias && window.innerWidth <= 768) {
+                        // Desliza suavemente revelando os próximos botões
+                        menuCategorias.scrollBy({ left: 150, behavior: 'smooth' });
+
+                        // Aguarda um instante e volta suavemente para a posição inicial
+                        setTimeout(() => {
+                            menuCategorias.scrollBy({ left: -150, behavior: 'smooth' });
+                        }, 700);
+                    }
+                }, 3000); // Aguarda 1.5 segundos após a vitrine carregar para chamar a atenção
             });
 
             function obterCategoriasUnicas() {
