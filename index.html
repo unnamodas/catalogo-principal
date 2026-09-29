@@ -76,6 +76,10 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            /* 🟢 Trava a rolagem horizontal que cria a margem extra */
+            width: 100%;
+            /* 🟢 Força o site a respeitar o limite exato da tela */
         }
 
         .marquee-bar {
@@ -258,31 +262,44 @@
             stroke-width: 1.5;
         }
 
-        /* --- ABAS DE NAVEGAÇÃO SUPERIORES (Estilo Pílula) --- */
         .status-filters {
             display: flex;
-            gap: 30px;
-            /* Respiro elegante entre as abas */
-            border-bottom: none;
+            justify-content: flex-start;
+            /* 🟢 Alinha à esquerda e evita o corte da primeira palavra */
+            gap: 18px;
+            /* 🟢 Define um espaço elegante entre os botões */
+            padding: 0 15px;
+            overflow-x: auto;
+            /* 🟢 Permite deslizar o menu para o lado se a tela for pequena */
+            scrollbar-width: none;
+            /* 🟢 Oculta a barra de rolagem */
+        }
+
+        .status-filters::-webkit-scrollbar {
+            display: none;
+            /* 🟢 Oculta a barra de rolagem no iPhone */
         }
 
         .status-btn {
             background: transparent;
             border: none;
             border-bottom: 3px solid transparent;
-            padding: 8px 5px 5px;
+            padding: 10px 0px;
             cursor: pointer;
             font-family: 'Inter', sans-serif;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 800;
             color: #333333;
             transition: var(--transition);
-            letter-spacing: 0.05em;
+            letter-spacing: 0;
             text-transform: uppercase;
             /* 🟢 MÁGICA AQUI: Estica a letra verticalmente (1.15 = 15% mais alta) */
             transform: scaleY(1.05);
             /* 🟢 Garante que a letra cresça para cima e a linha de seleção não saia do lugar */
             transform-origin: center bottom;
+            flex: 0 0 auto;
+            /* 🟢 Impede os botões de espremerem o texto */
+            text-align: center;
         }
 
         .status-btn.active,
@@ -1489,12 +1506,14 @@
 
         @media (max-width: 480px) {
             .container {
-                padding: 0 12px 40px 12px;
+                padding: 0 15px 40px 15px !important;
+                /* 🟢 Força margens laterais idênticas (15px) */
             }
 
             .product-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 20px 12px;
+                gap: 20px 15px !important;
+                /* 🟢 Deixa o espaço entre as fotos (15px) igual às bordas da tela */
             }
 
             .product-title {
