@@ -1505,6 +1505,27 @@
         }
 
         @media (max-width: 480px) {
+
+            /* 🟢 Faz os menus deslizantes chegarem até à borda da tela sem cortes abruptos */
+            .categories-tabs {
+                margin-left: -15px !important;
+                margin-right: -15px !important;
+                padding: 5px 15px !important;
+            }
+
+            .sizes-container {
+                margin-left: -15px !important;
+                margin-right: -15px !important;
+                padding: 8px 15px !important;
+            }
+
+            /* 🟢 Truque invisível para forçar o Safari (iPhone) a não cortar o último botão */
+            .categories-tabs::after,
+            .sizes-container::after {
+                content: '';
+                flex: 0 0 1px;
+            }
+
             .container {
                 padding: 0 15px 40px 15px !important;
                 /* 🟢 Força margens laterais idênticas (15px) */
