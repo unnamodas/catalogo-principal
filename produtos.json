@@ -1,25 +1,18 @@
 [
     {
-        "id": "311",
-        "nome": "Blusa",
-        "por": "159,90",
+        "id": "312",
+        "nome": "Kimono",
+        "por": "219,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466307",
-                "cor": "Amarelo",
+                "codigoBling": "466313",
+                "cor": "Verde",
                 "tamanho": "GG",
-                "imagem": "fotos/blusa_71ama.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466306",
-                "cor": "Branco Off White",
-                "tamanho": "G",
-                "imagem": "fotos/blusa_71bra.jpg",
+                "imagem": "fotos/kimono_2ver.jpg",
                 "vendido": false
             }
         ]
