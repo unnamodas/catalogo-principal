@@ -1,32 +1,25 @@
 [
     {
-        "id": "310",
-        "nome": "Vestido",
-        "por": "329,90",
+        "id": "311",
+        "nome": "Blusa",
+        "por": "159,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466328",
-                "cor": "Coral",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_131.jpg",
+                "codigoBling": "466307",
+                "cor": "Amarelo",
+                "tamanho": "GG",
+                "imagem": "fotos/blusa_71ama.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466329",
-                "cor": "Coral",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_131.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466330",
-                "cor": "Coral",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_131.jpg",
+                "codigoBling": "466306",
+                "cor": "Branco Off White",
+                "tamanho": "G",
+                "imagem": "fotos/blusa_71bra.jpg",
                 "vendido": false
             }
         ]
