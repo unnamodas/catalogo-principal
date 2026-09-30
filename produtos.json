@@ -1,39 +1,53 @@
 [
     {
-        "id": "308",
-        "nome": "Blusa",
-        "por": "199,90",
+        "id": "309",
+        "nome": "Conjunto renda",
+        "por": "459,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466323",
-                "cor": "Branco Off White",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_70bra.jpg",
+                "codigoBling": "466334",
+                "cor": "Rosa",
+                "tamanho": "44",
+                "imagem": "fotos/conjunto_42ros.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466324",
+                "codigoBling": "466332",
+                "cor": "Preto",
+                "tamanho": "46",
+                "imagem": "fotos/conjunto_42pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466333",
+                "cor": "Rosa",
+                "tamanho": "46",
+                "imagem": "fotos/conjunto_42ros.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466335",
                 "cor": "Preto",
                 "tamanho": "48",
-                "imagem": "fotos/blusa_70pre.jpg",
+                "imagem": "fotos/conjunto_42pre.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466325",
-                "cor": "Branco Off White",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_70bra.jpg",
+                "codigoBling": "466336",
+                "cor": "Rosa",
+                "tamanho": "48",
+                "imagem": "fotos/conjunto_42ros.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466326",
+                "codigoBling": "466337",
                 "cor": "Preto",
-                "tamanho": "52",
-                "imagem": "fotos/blusa_70pre.jpg",
+                "tamanho": "50",
+                "imagem": "fotos/conjunto_42pre.jpg",
                 "vendido": false
             }
         ]
