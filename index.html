@@ -2233,25 +2233,32 @@
 
                 return itensExpandidos.join('/');
             }
-            function gerarHtmlTamanhosCor(produto, corObj) {
+            function gerarHtmlTamanhosCor(produto, corObj = null) {
                 let tamanhosMap = {};
 
-                // 1. Olha direto na lista "variantes" que o robô atualiza no Firebase
+                // 1. Filtra as variantes (por cor se exigido, ou pega a peça toda se for nulo)
                 produto.variantes.forEach(v => {
-                    let corNomeClean = v.cor.split('(')[0].trim().toLowerCase();
-                    let corObjClean = corObj.corOriginal.split('(')[0].trim().toLowerCase();
+                    let isCorValida = true;
+                    if (corObj !== null) {
+                        let corNomeClean = v.cor.split('(')[0].trim().toLowerCase();
+                        let corObjClean = corObj.corOriginal.split('(')[0].trim().toLowerCase();
+                        if (corNomeClean !== corObjClean) isCorValida = false;
+                    }
 
-                    // Confere se pertence à cor correta
-                    if (corNomeClean === corObjClean) {
+                    if (isCorValida) {
                         let partes = String(v.tamanho || '').split(/[\,\/\-\s]+/);
                         partes.forEach(p => {
                             let limpo = p.trim().toUpperCase();
                             if (limpo !== '') {
-                                // Se qualquer variante desse tamanho estiver vendida, marca true
+                                // Verifica se ESTA variante específica está vendida no Firebase
+                                let isVendido = (v.vendido === true || String(v.vendido).toLowerCase() === "true");
+
                                 if (tamanhosMap[limpo] === undefined) {
-                                    tamanhosMap[limpo] = (v.vendido === true);
-                                } else if (v.vendido === false) {
-                                    tamanhosMap[limpo] = false; // Se houver alguma unidade livre, destrava
+                                    // Se é a primeira vez que vemos este tamanho, assume o status dele
+                                    tamanhosMap[limpo] = isVendido;
+                                } else if (!isVendido) {
+                                    // Se achamos pelo menos UMA unidade que não está vendida, destrava o tamanho!
+                                    tamanhosMap[limpo] = false;
                                 }
                             }
                         });
@@ -2281,19 +2288,14 @@
                     let tamUpper = String(tam).toUpperCase();
                     let partes = tamUpper.split(/[\,\/\-\s\(\)]+/).filter(p => p !== '');
 
-                    // 🟢 Avalia se o tamanho é apenas 38, 40, 42 ou 44
                     let isSlimNumero = partes.some(p => ['38', '40', '42', '44'].includes(p));
-
-                    // Identifica qual é a categoria desse tamanho específico
                     let isSlim = tamUpper.includes('SLIM') || isSlimNumero || tamUpper === 'ÚNICO' || tamUpper === 'UNICO';
-                    let isPlus = !isSlim; // O que não for enquadrado como Slim pelas regras acima, vai para o Plus
+                    let isPlus = !isSlim;
 
-                    // Verifica se a aba selecionada bate com a categoria desse tamanho
                     let deveDestacar = false;
                     if (tamanhoAtual === 'PLUS (46 ao 54)' && isPlus) deveDestacar = true;
                     if (tamanhoAtual === 'SLIM (38 ao 44)' && isSlim) deveDestacar = true;
 
-                    // O estilo do destaque (Tom Champanhe/Areia)
                     let estiloDestaque = deveDestacar
                         ? 'background-color: #f5f0e1; color: #333333; font-weight: 800; font-size: 13px; padding: 2px 6px; border-radius: 4px; border: 1px solid #ebdcb7;'
                         : 'font-weight: 500;';
@@ -2558,7 +2560,7 @@
 
                 let indiceAtual = window.estadoFotosCard[produtoId] || 0;
 
-                // Calcula a próxima foto (indo pro final ou voltando pro início em loop)
+                // Calcula a próxima foto
                 indiceAtual = (indiceAtual + direcao + imagens.length) % imagens.length;
                 window.estadoFotosCard[produtoId] = indiceAtual;
 
@@ -2568,7 +2570,7 @@
                     else img.classList.remove('active-img');
                 });
 
-                // Atualiza o tracinho de baixo (indicador)
+                // Atualiza o tracinho indicador
                 const indContainer = document.getElementById(`indicators-${produtoId}`);
                 if (indContainer) {
                     const bars = indContainer.querySelectorAll('.indicator-bar');
@@ -2576,6 +2578,24 @@
                         if (i === indiceAtual) bar.classList.add('active');
                         else bar.classList.remove('active');
                     });
+                }
+
+                // 🟢 MÁGICA NOVA: Atualiza o badge de Esgotado conforme a foto atual!
+                const badgeSold = document.getElementById(`badge-sold-${produtoId}`);
+                if (badgeSold) {
+                    let imgAtiva = imagens[indiceAtual];
+                    let isEsgotada = imgAtiva.getAttribute('data-esgotada') === 'true';
+                    let isTotalVendido = badgeSold.getAttribute('data-total-vendido') === 'true';
+
+                    if (isTotalVendido) {
+                        badgeSold.style.display = 'block';
+                        badgeSold.textContent = 'ESGOTADO';
+                    } else if (isEsgotada) {
+                        badgeSold.style.display = 'block';
+                        badgeSold.textContent = 'COR ESGOTADA';
+                    } else {
+                        badgeSold.style.display = 'none';
+                    }
                 }
             };
 
@@ -2747,7 +2767,8 @@
                     let trackHtml = '';
                     fotosDaCor.forEach((foto, i) => {
                         let classeVisivel = i === 0 ? 'active-img' : '';
-                        trackHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${produto.nome}" onerror="substituirPorPlaceholder(this)">`;
+                        // 🟢 Adicionamos o status da cor direto na imagem
+                        trackHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${produto.nome}" data-esgotada="${corObj.esgotada}" onerror="substituirPorPlaceholder(this)">`;
                     });
                     trackElement.innerHTML = trackHtml;
                 }
@@ -2820,12 +2841,8 @@
                     let corIndex = window.estadoVariantes[p.id];
                     let corObj = p.coresAgrupadas[corIndex];
 
-                    // 🟢 MÁGICA AQUI: Pega TODOS os tamanhos do produto, ignorando separação por cor
-                    let todosTamanhosDoProduto = [];
-                    p.variantes.forEach(v => {
-                        if (v.tamanho) todosTamanhosDoProduto.push(v.tamanho);
-                    });
-                    const stringTodosTamanhos = formatarTamanhosOrdenados(todosTamanhosDoProduto);
+                    // 🟢 MÁGICA AQUI: Pede para avaliar TODOS os tamanhos da peça (passando null como cor)
+                    const htmlTamanhosCard = gerarHtmlTamanhosCor(p, null);
 
                     let carrosselCoresHtml = '';
                     if (p.coresAgrupadas.length > 1) {
@@ -2857,11 +2874,15 @@
                     // Limpa URLs inválidas
                     fotosParaCarrossel = fotosParaCarrossel.filter(foto => foto && typeof foto === 'string' && foto.trim() !== "" && !foto.includes("undefined"));
 
-                    // 🟢 1. Removemos o onclick da imagem para evitar conflito de toques
+                    // 🟢 1. Descobre se a foto pertence a uma cor esgotada e salva essa info na própria imagem
                     let trackImagensHtml = '';
                     fotosParaCarrossel.forEach((foto, i) => {
                         let classeVisivel = (i === 0 || i === window.estadoFotosCard[p.id]) ? 'active-img' : '';
-                        trackImagensHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${p.nome}" onerror="substituirPorPlaceholder(this)">`;
+
+                        let corDestaFoto = p.coresAgrupadas.find(c => c.fotos.includes(foto));
+                        let fotoEsgotada = corDestaFoto ? corDestaFoto.esgotada : false;
+
+                        trackImagensHtml += `<img src="${foto}" loading="lazy" class="${classeVisivel}" alt="${p.nome}" data-esgotada="${fotoEsgotada}" onerror="substituirPorPlaceholder(this)">`;
                     });
 
                     let indicadoresHtml = '';
@@ -2883,8 +2904,11 @@
                     }
 
 
-                    // 🟢 CORREÇÃO: Usando a variável com todos os tamanhos na mensagem do WhatsApp
-                    const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${p.nome}" na cor ${corObj.corOriginal} (Tamanhos: ${stringTodosTamanhos}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
+                    // 🟢 GERA OS TAMANHOS EM TEXTO LIMPO PARA O WHATSAPP NÃO QUEBRAR
+                    const stringTamanhosDaCor = formatarTamanhosOrdenados(corObj.tamanhos);
+
+                    // 🟢 MENSAGEM DO WHATSAPP CORRIGIDA COM A VARIÁVEL CERTA
+                    const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${p.nome}" na cor ${corObj.corOriginal} (Tamanhos: ${stringTamanhosDaCor}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
                     const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}`;
 
                     const card = document.createElement('div');
@@ -2905,19 +2929,24 @@
                     let isNovidade = (p.novidade === true || String(p.novidade).toLowerCase() === "true" || p.Novidade === true || String(p.Novidade).toLowerCase() === "true");
                     let isUltimaPeca = (p.ultimaPeca === true || String(p.ultimaPeca).toLowerCase() === "true" || p.UltimaPeca === true || String(p.UltimaPeca).toLowerCase() === "true");
 
+                    // 🟢 CORREÇÃO: Verifica dinamicamente se a PRIMEIRA foto que aparece pertence a uma cor esgotada
+                    let fotoInicialUrl = fotosParaCarrossel[window.estadoFotosCard[p.id] || 0];
+                    let corFotoInicial = p.coresAgrupadas.find(c => c.fotos.includes(fotoInicialUrl));
+                    let isCorAtualEsgotada = corFotoInicial ? corFotoInicial.esgotada : false;
+
                     card.innerHTML = `
           <!-- 🟢 Colocamos o onclick na CAIXA INTEIRA, garantindo que qualquer toque funcione! -->
            <div class="product-image-container" onclick="abrirModal('${p.id}')" style="cursor: zoom-in;">
                 ${isDestaque ? '<span class="badge badge-destaque">⭐ DESTAQUE</span>' : ''}
                 
-                <span id="badge-sold-${p.id}" class="badge badge-sold" style="display: ${isVendido || corObj.esgotada ? 'block' : 'none'}; ${isDestaque ? 'top: 42px;' : ''}">${isVendido ? 'ESGOTADO' : 'COR ESGOTADA'}</span>
+                <span id="badge-sold-${p.id}" class="badge badge-sold" data-total-vendido="${isVendido}" style="display: ${isVendido || isCorAtualEsgotada ? 'block' : 'none'}; ${isDestaque ? 'top: 42px;' : ''}">${isVendido ? 'ESGOTADO' : 'COR ESGOTADA'}</span>
                 
                 <!-- (A TAG DE NOVIDADE FOI RETIRADA DAQUI) -->
                 
                 ${p.desconto > 0 && !isVendido ? `<span class="badge badge-discount">-${p.desconto}%</span>` : ''}
 
                 <!-- 🟢 NOVA TAG IMPRESSA AQUI -->
-                ${isUltimaPeca && !isVendido && !corObj.esgotada ? `<span class="badge badge-ultima-peca" style="${p.desconto > 0 ? 'top: 48px;' : ''}"><span class="ampulheta">⏳</span> ÚLTIMA PEÇA</span>` : ''}
+                ${isUltimaPeca && !isVendido && !isCorAtualEsgotada ? `<span class="badge badge-ultima-peca" style="${p.desconto > 0 ? 'top: 48px;' : ''}"><span class="ampulheta">⏳</span> ÚLTIMA PEÇA</span>` : ''}
                 
                 <div class="carousel-track" id="track-${p.id}">
                     ${trackImagensHtml}
@@ -2927,7 +2956,7 @@
             </div>
             <div class="product-info">
                 <!-- 🟢 TAG DE NOVIDADE AGORA FICA ACIMA DO TÍTULO! -->
-                ${isNovidade && !isVendido && !corObj.esgotada ? '<span class="badge-novidade-above"><span class="sparkle-icon">✨</span> NOVIDADE</span>' : ''}
+                ${isNovidade && !isVendido && !isCorAtualEsgotada ? '<span class="badge-novidade-above"><span class="sparkle-icon">✨</span> NOVIDADE</span>' : ''}
                 
                 <h3 class="product-title">
                     ${p.nome}
@@ -2944,7 +2973,7 @@
                     <div style="margin-top: auto;">
                        <!-- 🟢 TEXTO EXIBINDO OS TAMANHOS ALINHADO À ESQUERDA -->
                     <div class="texto-tam-mobile" style="font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; text-align: left;">
-                        Tam: <span id="texto-tamanhos-${p.id}" class="texto-tam-valores-mobile" style="font-weight: 700; color: var(--text-main);">${stringTodosTamanhos}</span>
+                        Tam: <span id="texto-tamanhos-${p.id}" class="texto-tam-valores-mobile" style="font-weight: 700; color: var(--text-main);">${htmlTamanhosCard}</span>
                     </div>
 
                         <button class="btn-ver-variacoes" onclick="abrirModalVariacoes(event, '${p.id}')">Ver Cores e Tamanhos</button>
