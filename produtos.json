@@ -1,25 +1,39 @@
 [
     {
-        "id": "307",
-        "nome": "Vestido longo",
-        "por": "299,90",
+        "id": "308",
+        "nome": "Blusa",
+        "por": "199,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466284",
-                "cor": "Azul",
-                "tamanho": "GG",
-                "imagem": "fotos/vestido_130.jpg",
+                "codigoBling": "466323",
+                "cor": "Branco Off White",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_70bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466284",
-                "cor": "Azul",
-                "tamanho": "GG",
-                "imagem": "fotos/vestido_130ft2.jpg",
+                "codigoBling": "466324",
+                "cor": "Preto",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_70pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466325",
+                "cor": "Branco Off White",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_70bra.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466326",
+                "cor": "Preto",
+                "tamanho": "52",
+                "imagem": "fotos/blusa_70pre.jpg",
                 "vendido": false
             }
         ]
