@@ -1,39 +1,25 @@
 [
     {
-        "id": "312",
-        "nome": "Kimono",
-        "por": "219,90",
+        "id": "313",
+        "nome": "Colete",
+        "por": "129,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466313",
-                "cor": "Verde",
-                "tamanho": "GG",
-                "imagem": "fotos/kimono_2ver.jpg",
+                "codigoBling": "466311",
+                "cor": "Branco Off White",
+                "tamanho": "G(Slim)",
+                "imagem": "fotos/colete_4bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466313",
-                "cor": "Verde",
-                "tamanho": "GG(Slim)",
-                "imagem": "fotos/kimono_2ver.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466314",
-                "cor": "Azul",
-                "tamanho": "GG",
-                "imagem": "kimono_2az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466314",
-                "cor": "Azul",
-                "tamanho": "GG(Slim)",
-                "imagem": "kimono_2az.jpg",
+                "codigoBling": "466310",
+                "cor": "Bege",
+                "tamanho": "G(Slim)",
+                "imagem": "fotos/colete_4beg.jpg",
                 "vendido": false
             }
         ]
