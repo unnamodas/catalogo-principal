@@ -1,25 +1,18 @@
 [
     {
-        "id": "313",
-        "nome": "Colete",
-        "por": "129,90",
+        "id": "314",
+        "nome": "Blusa",
+        "por": "119,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466311",
+                "codigoBling": "466319",
                 "cor": "Branco Off White",
-                "tamanho": "G(Slim)",
-                "imagem": "fotos/colete_4bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466310",
-                "cor": "Bege",
-                "tamanho": "G(Slim)",
-                "imagem": "fotos/colete_4beg.jpg",
+                "tamanho": "GG",
+                "imagem": "fotos/blusa_72.jpg",
                 "vendido": false
             }
         ]
