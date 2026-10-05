@@ -1,7 +1,7 @@
 [
     {
-        "id": "316",
-        "nome": "Blusa",
+        "id": "317",
+        "nome": "Blazer",
         "por": "149,90",
         "novidade": false,
         "destaque": false,
@@ -9,17 +9,17 @@
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "465544",
-                "cor": "Marrom",
-                "tamanho": "M(Slim)",
-                "imagem": "fotos/blusa_74mar.jpg",
+                "codigoBling": "465548",
+                "cor": "Bege",
+                "tamanho": "G(Slim)",
+                "imagem": "fotos/blazer_3beg.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "465545",
-                "cor": "Preto",
-                "tamanho": "G(Slim)",
-                "imagem": "fotos/blusa_74pre.jpg",
+                "codigoBling": "465547",
+                "cor": "Marrom",
+                "tamanho": "GG(Slim)",
+                "imagem": "fotos/blazer_3mar.jpg",
                 "vendido": false
             }
         ]
