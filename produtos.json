@@ -1,18 +1,18 @@
 [
     {
-        "id": "314",
-        "nome": "Blusa",
-        "por": "119,90",
-        "novidade": true,
+        "id": "315",
+        "nome": "Calça moletinho",
+        "por": "179,90",
+        "novidade": false,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466319",
-                "cor": "Branco Off White",
-                "tamanho": "GG",
-                "imagem": "fotos/blusa_72.jpg",
+                "codigoBling": "466343",
+                "cor": "Preto",
+                "tamanho": "G2",
+                "imagem": "fotos/conjunto_10.jpg",
                 "vendido": false
             }
         ]
