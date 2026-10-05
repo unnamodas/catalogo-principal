@@ -1,18 +1,25 @@
 [
     {
-        "id": "315",
-        "nome": "Calça moletinho",
-        "por": "179,90",
+        "id": "316",
+        "nome": "Blusa",
+        "por": "149,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466343",
+                "codigoBling": "465544",
+                "cor": "Marrom",
+                "tamanho": "M(Slim)",
+                "imagem": "fotos/blusa_74mar.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "465545",
                 "cor": "Preto",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_10.jpg",
+                "tamanho": "G(Slim)",
+                "imagem": "fotos/blusa_74pre.jpg",
                 "vendido": false
             }
         ]
