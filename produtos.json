@@ -1,25 +1,18 @@
 [
     {
-        "id": "317",
-        "nome": "Blazer",
-        "por": "149,90",
+        "id": "315",
+        "nome": "Calça moletinho",
+        "por": "179,90",
         "novidade": false,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "465548",
-                "cor": "Bege",
-                "tamanho": "G(Slim)",
-                "imagem": "fotos/blazer_3beg.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465547",
-                "cor": "Marrom",
-                "tamanho": "GG(Slim)",
-                "imagem": "fotos/blazer_3mar.jpg",
+                "codigoBling": "466343",
+                "cor": "Preto",
+                "tamanho": "G2",
+                "imagem": "fotos/conjunto_10.jpg",
                 "vendido": false
             }
         ]
