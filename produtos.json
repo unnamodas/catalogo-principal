@@ -1,18 +1,18 @@
 [
     {
-        "id": "315",
-        "nome": "Calça moletinho",
-        "por": "179,90",
-        "novidade": false,
+        "id": "318",
+        "nome": "Kimono",
+        "por": "189,90",
+        "novidade": true,
         "destaque": false,
         "vendido": false,
-        "ultimaPeca": false,
+        "ultimaPeca": true,
         "variantes": [
             {
-                "codigoBling": "466343",
-                "cor": "Preto",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_10.jpg",
+                "codigoBling": "466143",
+                "cor": "Branco Off White",
+                "tamanho": "Único",
+                "imagem": "fotos/kimono_3.jpg",
                 "vendido": false
             }
         ]
