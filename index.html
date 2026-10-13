@@ -1984,6 +1984,8 @@
 
                 <!-- 🟢 ÁREA DA FOTO COM AS SETINHAS E INDICADORES DO MODAL -->
                 <div class="modal-image-wrapper">
+                    <span id="modal-badge-sold" class="badge badge-sold"
+                        style="display: none; top: 15px; left: 15px; z-index: 100; font-size: 11px; padding: 6px 12px;">ESGOTADO</span>
                     <img id="modal-img" src="" alt="Peça ampliada">
                     <div id="modal-nav-buttons"></div>
                     <div class="carousel-indicators" id="modal-indicators" style="bottom: 15px;"></div>
@@ -2832,7 +2834,9 @@
                             window.estadoVariantes[p.id] = filterIdx !== -1 ? filterIdx : 0;
                             window.modoCorUnica[p.id] = true;
                         } else {
-                            window.estadoVariantes[p.id] = 0;
+                            // 🟢 NOVA REGRA: Pega a primeira cor DISPONÍVEL, e não apenas a primeira cor da lista
+                            let primeiraCorDisponivel = p.coresAgrupadas.findIndex(c => !c.esgotada);
+                            window.estadoVariantes[p.id] = primeiraCorDisponivel !== -1 ? primeiraCorDisponivel : 0;
                             window.modoCorUnica[p.id] = false;
                         }
                     }
@@ -2866,6 +2870,8 @@
                     } else if (window.modoCorUnica[p.id]) {
                         fotosParaCarrossel = [...new Set(corObj.fotos)];
                     } else {
+                        // 🟢 Coloca as fotos da cor selecionada (a primeira disponível) na frente da lista!
+                        fotosParaCarrossel = [...new Set(corObj.fotos)];
                         p.variantes.forEach(v => {
                             if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
                         });
@@ -3033,16 +3039,17 @@
                 const produto = produtos.find(p => String(p.id) === String(idProduto));
                 if (!produto) return;
 
-                idProdutoModalAtual = idProduto; // Registra qual produto está aberto
+                idProdutoModalAtual = idProduto;
 
                 let corIndex = window.estadoVariantes[idProduto] || 0;
                 let corObj = produto.coresAgrupadas[corIndex];
 
-                // Puxa as fotos da cor atual ou de todas as variantes
                 let fotosParaCarrossel = [];
                 if (window.modoCorUnica[idProduto]) {
                     fotosParaCarrossel = [...new Set(corObj.fotos)];
                 } else {
+                    // 🟢 Garante a mesma ordem do carrossel principal
+                    fotosParaCarrossel = [...new Set(corObj.fotos)];
                     produto.variantes.forEach(v => {
                         if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
                     });
@@ -3066,7 +3073,6 @@
 
                 modalImg.src = fotoAtual;
 
-                // 🟢 GERA AS SETINHAS E INDICADORES DENTRO DO MODAL SE HOUVER MAIS DE UMA FOTO
                 if (fotosParaCarrossel.length > 1) {
                     modalNavButtons.innerHTML = `
                         <button class="nav-btn prev-btn" onclick="mudarFotoModal(-1)">&#10094;</button>
@@ -3116,6 +3122,20 @@
                     modalBtnContainer.innerHTML = `<a href="${linkWhats}" target="_blank" class="modal-btn-whatsapp">COMPRAR AGORA NO WHATSAPP</a>`;
                 }
 
+                // 🟢 ATUALIZA O BADGE DO MODAL INICIALMENTE
+                let corDaFoto = produto.coresAgrupadas.find(c => c.fotos.includes(fotoAtual));
+                let isModalCorEsgotada = corDaFoto ? corDaFoto.esgotada : false;
+                const modalBadgeSold = document.getElementById('modal-badge-sold');
+                if (produto.vendido) {
+                    modalBadgeSold.style.display = 'block';
+                    modalBadgeSold.textContent = 'ESGOTADO';
+                } else if (isModalCorEsgotada) {
+                    modalBadgeSold.style.display = 'block';
+                    modalBadgeSold.textContent = 'COR ESGOTADA';
+                } else {
+                    modalBadgeSold.style.display = 'none';
+                }
+
                 modal.classList.add('show');
                 document.body.style.overflow = 'hidden';
             }
@@ -3134,6 +3154,7 @@
                 if (window.modoCorUnica[idProdutoModalAtual]) {
                     fotosParaCarrossel = [...new Set(corObj.fotos)];
                 } else {
+                    fotosParaCarrossel = [...new Set(corObj.fotos)];
                     produto.variantes.forEach(v => {
                         if (v.imagem && !fotosParaCarrossel.includes(v.imagem)) fotosParaCarrossel.push(v.imagem);
                     });
@@ -3143,13 +3164,26 @@
                 let indiceAtual = window.estadoFotosCard[idProdutoModalAtual] || 0;
                 indiceAtual = (indiceAtual + direcao + fotosParaCarrossel.length) % fotosParaCarrossel.length;
 
-                // Atualiza tanto no modal quanto no card principal do catálogo em tempo real
                 window.estadoFotosCard[idProdutoModalAtual] = indiceAtual;
 
-                // Atualiza a imagem principal do modal
-                document.getElementById('modal-img').src = fotosParaCarrossel[indiceAtual];
+                let novaFoto = fotosParaCarrossel[indiceAtual];
+                document.getElementById('modal-img').src = novaFoto;
 
-                // Atualiza os tracinhos indicadores no modal
+                // 🟢 Atualiza o Badge do Modal dinamicamente ao deslizar as setinhas
+                let corDaNovaFoto = produto.coresAgrupadas.find(c => c.fotos.includes(novaFoto));
+                let novaFotoEsgotada = corDaNovaFoto ? corDaNovaFoto.esgotada : false;
+                const modalBadgeSold = document.getElementById('modal-badge-sold');
+
+                if (produto.vendido) {
+                    modalBadgeSold.style.display = 'block';
+                    modalBadgeSold.textContent = 'ESGOTADO';
+                } else if (novaFotoEsgotada) {
+                    modalBadgeSold.style.display = 'block';
+                    modalBadgeSold.textContent = 'COR ESGOTADA';
+                } else {
+                    modalBadgeSold.style.display = 'none';
+                }
+
                 const modalIndicators = document.getElementById('modal-indicators');
                 if (modalIndicators) {
                     const bars = modalIndicators.querySelectorAll('.indicator-bar');
@@ -3159,7 +3193,6 @@
                     });
                 }
 
-                // Sincroniza também a imagem e os indicadores do card correspondente na grade de trás
                 const trackElement = document.getElementById(`track-${idProdutoModalAtual}`);
                 if (trackElement) {
                     let imgs = trackElement.querySelectorAll('img');
