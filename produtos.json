@@ -1,18 +1,78 @@
 [
     {
-        "id": "318",
-        "nome": "Kimono",
-        "por": "189,90",
+        "id": "319",
+        "nome": "Vestido longo",
+        "por": "529,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
-        "ultimaPeca": true,
+        "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466143",
-                "cor": "Branco Off White",
-                "tamanho": "Único",
-                "imagem": "fotos/kimono_3.jpg",
+                "codigoBling": "466374",
+                "cor": "Azul",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_132az.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466375",
+                "cor": "Azul",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_132az.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466376",
+                "cor": "Bordô",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_132bor.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "320",
+        "nome": "Vestido longo",
+        "por": "529,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
+            {
+                "codigoBling": "464876",
+                "cor": "Azul Marinho",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_133az.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464876",
+                "cor": "Azul Marinho",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_133azft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464877",
+                "cor": "Bordô",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_133bor.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464877",
+                "cor": "Bordô",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_133borft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "464877",
+                "cor": "Bordô",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_133borft3.jpg",
                 "vendido": false
             }
         ]
