@@ -1,7 +1,7 @@
 [
     {
-        "id": "321",
-        "nome": "Vestido longo",
+        "id": "323",
+        "nome": "Conjunto blusa e calça",
         "por": "589,90",
         "novidade": true,
         "destaque": false,
@@ -9,56 +9,10 @@
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466370",
-                "cor": "Bordô",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_134ter.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466370",
-                "cor": "Bordô",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_134terft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466371",
-                "cor": "Verde Claro",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_134ver.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466372",
-                "cor": "Verde Claro",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_134ft2.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "322",
-        "nome": "Vestido midi",
-        "por": "369,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "ultimaPeca": false,
-        "variantes": [
-            {
-                "codigoBling": "466377",
-                "cor": "Terracota",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_135ter.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "465829",
-                "cor": "Terracota",
+                "codigoBling": "466379",
+                "cor": "Preto/Branco",
                 "tamanho": "GG",
-                "imagem": "fotos/vestido_135ver.jpg",
+                "imagem": "fotos/conjunto_43.jpg",
                 "vendido": false
             }
         ]
