@@ -400,6 +400,55 @@
             border-color: var(--primary-color);
         }
 
+        /* 🟢 CSS PARA A ANIMAÇÃO DO SUB-FILTRO PLUS SIZE */
+        .sub-sizes-hidden {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            max-height: 0;
+            opacity: 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+            transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease, padding 0.4s ease;
+            margin-top: 0;
+            padding: 0;
+            pointer-events: none;
+        }
+
+        .sub-sizes-hidden::-webkit-scrollbar {
+            display: none;
+        }
+
+        .sub-sizes-hidden.show {
+            max-height: 60px;
+            opacity: 1;
+            margin-top: 8px;
+            pointer-events: auto;
+        }
+
+        .sub-size-tab {
+            background-color: #f7f7f7;
+            border: 1px solid #d1d1d1;
+            border-radius: 50px;
+            padding: 6px 14px;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            color: #666666;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+
+        .sub-size-tab.active,
+        .sub-size-tab:hover {
+            background-color: #000000;
+            color: #ffffff;
+            border-color: #000000;
+        }
+
         /* --- BOLINHAS SÓLIDAS DO FILTRO DE CORES --- */
         .color-filter-dot {
             width: 26px;
@@ -1506,6 +1555,28 @@
 
         @media (max-width: 480px) {
 
+            /* 🟢 Ajustes Mobile do Sub-filtro */
+            .sub-sizes-hidden {
+                margin-left: -15px !important;
+                margin-right: -15px !important;
+                padding: 0 15px !important;
+            }
+
+            .sub-sizes-hidden.show {
+                padding-top: 5px !important;
+                padding-bottom: 5px !important;
+            }
+
+            .sub-sizes-hidden::after {
+                content: '';
+                flex: 0 0 1px;
+            }
+
+            .sub-size-tab {
+                font-size: 11px !important;
+                padding: 6px 12px !important;
+            }
+
             /* 🟢 Faz os menus deslizantes chegarem até à borda da tela sem cortes abruptos */
             .categories-tabs {
                 margin-left: -15px !important;
@@ -1969,6 +2040,12 @@
                 <div class="sizes-tabs" id="sizes-tabs"></div>
             </div>
 
+            <!-- 🟢 SUB-MENU DINÂMICO PARA TAMANHOS PLUS -->
+            <div id="sub-sizes-container" class="sub-sizes-hidden">
+                <span class="size-label">Filtro:</span>
+                <div class="sizes-tabs" id="sub-sizes-tabs"></div>
+            </div>
+
             <div class="results-info-row">
                 <div class="results-counter" id="results-counter">Carregando catálogo...</div>
             </div>
@@ -2182,6 +2259,7 @@
 
             let categoriaAtual = 'Todos';
             let tamanhoAtual = 'Todos';
+            let subTamanhoAtual = 'Todos'; // 🟢 Nova variável
             let corAtual = 'Todas';
             let termoPesquisa = '';
             let statusFiltro = 'todos';
@@ -2379,6 +2457,7 @@
 
                 gerarAbasCategorias();
                 gerarAbasTamanhos();
+                gerarAbasSubTamanhosPlus(); // 🟢 Chama o construtor do sub-menu
                 gerarAbasCores();
                 atualizarFiltrosERenderizar();
                 configurarObservadorRolagem();
@@ -2472,11 +2551,55 @@
             }
             function filtrarTamanho(tamanho) {
                 tamanhoAtual = tamanho;
-                // O '#sizes-tabs' garante que ele pinte apenas os botões de tamanho!
+                subTamanhoAtual = 'Todos'; // Reseta o filtro específico
+
                 document.querySelectorAll('#sizes-tabs .size-tab').forEach(btn => {
                     if (btn.getAttribute('data-size') === tamanho) btn.classList.add('active');
                     else btn.classList.remove('active');
                 });
+
+                // 🟢 Exibe ou esconde o sub-menu
+                const subMenu = document.getElementById('sub-sizes-container');
+                if (tamanho === 'PLUS (46 ao 54)') {
+                    subMenu.classList.add('show');
+                } else {
+                    subMenu.classList.remove('show');
+                }
+
+                // Pinta o botão "Todos" do sub-menu como padrão
+                document.querySelectorAll('.sub-size-tab').forEach(btn => {
+                    if (btn.getAttribute('data-sub-size') === 'Todos') btn.classList.add('active');
+                    else btn.classList.remove('active');
+                });
+
+                atualizarFiltrosERenderizar();
+            }
+
+            // 🟢 GERA OS BOTÕES DO SUB-MENU PLUS
+            function gerarAbasSubTamanhosPlus() {
+                const containerSub = document.getElementById('sub-sizes-tabs');
+                const tamanhosPlus = ['Todos', '46', '48', '50', '52', '54', 'EG', 'G1', 'G2', 'G3', 'G4'];
+
+                containerSub.innerHTML = '';
+                tamanhosPlus.forEach(tam => {
+                    const btn = document.createElement('button');
+                    btn.className = `sub-size-tab ${tam === 'Todos' ? 'active' : ''}`;
+                    btn.textContent = tam;
+                    btn.setAttribute('data-sub-size', tam);
+                    btn.onclick = () => filtrarSubTamanho(tam);
+                    containerSub.appendChild(btn);
+                });
+            }
+
+            // 🟢 AÇÃO DE CLICAR NO SUB-TAMANHO
+            function filtrarSubTamanho(subTamanho) {
+                subTamanhoAtual = subTamanho;
+
+                document.querySelectorAll('.sub-size-tab').forEach(btn => {
+                    if (btn.getAttribute('data-sub-size') === subTamanho) btn.classList.add('active');
+                    else btn.classList.remove('active');
+                });
+
                 atualizarFiltrosERenderizar();
             }
 
@@ -2631,8 +2754,14 @@
 
                     // 🟢 LÓGICA DO FILTRO PLUS
                     if (tamanhoBuscado === 'PLUS (46 ao 54)') {
-                        // Vai para PLUS se NÃO tiver a tag (Slim) e NÃO for os números 38-44
-                        return !hasSlimExplicit && !hasSlimNumero;
+                        let isPlusItem = !hasSlimExplicit && !hasSlimNumero;
+
+                        // 🟢 Se a cliente selecionou um sub-tamanho específico
+                        if (isPlusItem && subTamanhoAtual !== 'Todos') {
+                            return partes.includes(subTamanhoAtual);
+                        }
+
+                        return isPlusItem;
                     }
 
                     return false;
