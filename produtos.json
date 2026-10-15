@@ -1,6 +1,6 @@
 [
     {
-        "id": "323",
+        "id": "324",
         "nome": "Conjunto blusa e calça",
         "por": "249,90",
         "novidade": true,
@@ -9,10 +9,60 @@
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466379",
-                "cor": "Preto/Branco",
+                "codigoBling": "466386",
+                "cor": "Verde",
+                "tamanho": "G2",
+                "imagem": "fotos/conjunto_44.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "325",
+        "nome": "Conjunto blusa e calça",
+        "por": "249,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
+            {
+                "codigoBling": "466381",
+                "cor": "Verde Oliva",
                 "tamanho": "GG",
-                "imagem": "fotos/conjunto_43.jpg",
+                "imagem": "fotos/conjunto_45.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466382",
+                "cor": "Verde Oliva",
+                "tamanho": "G1",
+                "imagem": "fotos/conjunto_45.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466383",
+                "cor": "Verde Oliva",
+                "tamanho": "G2",
+                "imagem": "fotos/conjunto_45.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "326",
+        "nome": "Conjunto blusa e calça",
+        "por": "249,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
+            {
+                "codigoBling": "466385",
+                "cor": "Preto",
+                "tamanho": "G1",
+                "imagem": "fotos/conjunto_46.jpg",
                 "vendido": false
             }
         ]
