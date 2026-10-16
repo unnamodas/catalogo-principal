@@ -1,53 +1,50 @@
 [
     {
-        "id": "327",
-        "nome": "Regata",
-        "por": "89,90",
+        "id": "328",
+        "nome": "Vestido midi",
+        "por": "349,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466392",
+                "codigoBling": "466359",
+                "cor": "Verde",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_136ver.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466360",
                 "cor": "Azul",
-                "tamanho": "G1",
-                "imagem": "fotos/regata_7az.jpg",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_136az.jpg",
                 "vendido": false
-            },
+            }
+        ]
+    },
+    {
+        "id": "329",
+        "nome": "Vestido midi",
+        "por": "299,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
             {
-                "codigoBling": "466392",
+                "codigoBling": "466362",
                 "cor": "Azul",
-                "tamanho": "GG",
-                "imagem": "fotos/regata_7az.jpg",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_137az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466391",
-                "cor": "Preto",
-                "tamanho": "G1",
-                "imagem": "fotos/regata_7pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466391",
-                "cor": "Preto",
-                "tamanho": "G2",
-                "imagem": "fotos/regata_7pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466393",
-                "cor": "Branco",
-                "tamanho": "G2",
-                "imagem": "fotos/regata_7bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466393",
-                "cor": "Branco",
-                "tamanho": "GG",
-                "imagem": "fotos/regata_7bra.jpg",
+                "codigoBling": "466363",
+                "cor": "Verde",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_137ver.jpg",
                 "vendido": false
             }
         ]
