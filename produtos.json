@@ -1,68 +1,53 @@
 [
     {
-        "id": "324",
-        "nome": "Conjunto blusa e calça",
-        "por": "249,90",
+        "id": "327",
+        "nome": "Regata",
+        "por": "89,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466386",
-                "cor": "Verde",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_44.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "325",
-        "nome": "Conjunto blusa e calça",
-        "por": "249,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "ultimaPeca": false,
-        "variantes": [
-            {
-                "codigoBling": "466381",
-                "cor": "Verde Oliva",
-                "tamanho": "GG",
-                "imagem": "fotos/conjunto_45.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466382",
-                "cor": "Verde Oliva",
+                "codigoBling": "466392",
+                "cor": "Azul",
                 "tamanho": "G1",
-                "imagem": "fotos/conjunto_45.jpg",
+                "imagem": "fotos/regata_7az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466383",
-                "cor": "Verde Oliva",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_45.jpg",
+                "codigoBling": "466392",
+                "cor": "Azul",
+                "tamanho": "GG",
+                "imagem": "fotos/regata_7az.jpg",
                 "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "326",
-        "nome": "Conjunto blusa e calça",
-        "por": "249,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "ultimaPeca": false,
-        "variantes": [
+            },
             {
-                "codigoBling": "466385",
+                "codigoBling": "466391",
                 "cor": "Preto",
                 "tamanho": "G1",
-                "imagem": "fotos/conjunto_46.jpg",
+                "imagem": "fotos/regata_7pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466391",
+                "cor": "Preto",
+                "tamanho": "G2",
+                "imagem": "fotos/regata_7pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466393",
+                "cor": "Branco",
+                "tamanho": "G2",
+                "imagem": "fotos/regata_7bra.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466393",
+                "cor": "Branco",
+                "tamanho": "GG",
+                "imagem": "fotos/regata_7bra.jpg",
                 "vendido": false
             }
         ]
