@@ -1,39 +1,39 @@
 [
     {
-        "id": "335  ",
-        "nome": "Calça wideleg",
-        "por": "199,90",
+        "id": "336",
+        "nome": "Calça jeans wideleg",
+        "por": "219,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466427",
-                "cor": "Preto",
-                "tamanho": "46",
-                "imagem": "fotos/calcajeans_2.jpg",
+                "codigoBling": "466424",
+                "cor": "Azul Claro",
+                "tamanho": "48",
+                "imagem": "fotos/calcajeans_3.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466427",
-                "cor": "Preto",
-                "tamanho": "46",
-                "imagem": "fotos/calcajeans_2ft2.jpg",
+                "codigoBling": "466424",
+                "cor": "Azul Claro",
+                "tamanho": "48",
+                "imagem": "fotos/calcajeans_3ft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466428",
-                "cor": "Preto",
+                "codigoBling": "466425",
+                "cor": "Azul Claro",
                 "tamanho": "50",
-                "imagem": "fotos/calcajeans_2.jpg",
+                "imagem": "fotos/calcajeans_3.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466428",
-                "cor": "Preto",
+                "codigoBling": "466425",
+                "cor": "Azul Claro",
                 "tamanho": "50",
-                "imagem": "fotos/calcajeans_2ft2.jpg",
+                "imagem": "fotos/calcajeans_3ft3.jpg",
                 "vendido": false
             }
         ]
