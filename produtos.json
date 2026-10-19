@@ -1,7 +1,7 @@
 [
     {
-        "id": "334",
-        "nome": "Calça jeans wideleg",
+        "id": "335  ",
+        "nome": "Calça wideleg",
         "por": "199,90",
         "novidade": true,
         "destaque": false,
@@ -9,45 +9,31 @@
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466420",
-                "cor": "Azul Escuro",
-                "tamanho": "48",
-                "imagem": "fotos/calcajeans_1.jpg",
+                "codigoBling": "466427",
+                "cor": "Preto",
+                "tamanho": "46",
+                "imagem": "fotos/calcajeans_2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466420",
-                "cor": "Azul Escuro",
-                "tamanho": "48",
-                "imagem": "fotos/calcajeans_1ft2.jpg",
+                "codigoBling": "466427",
+                "cor": "Preto",
+                "tamanho": "46",
+                "imagem": "fotos/calcajeans_2ft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466421",
-                "cor": "Azul Escuro",
+                "codigoBling": "466428",
+                "cor": "Preto",
                 "tamanho": "50",
-                "imagem": "fotos/calcajeans_1.jpg",
+                "imagem": "fotos/calcajeans_2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466421",
-                "cor": "Azul Escuro",
+                "codigoBling": "466428",
+                "cor": "Preto",
                 "tamanho": "50",
-                "imagem": "fotos/calcajeans_1ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466422",
-                "cor": "Azul Escuro",
-                "tamanho": "52",
-                "imagem": "fotos/calcajeans_1.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466422",
-                "cor": "Azul Escuro",
-                "tamanho": "52",
-                "imagem": "fotos/calcajeans_1ft2.jpg",
+                "imagem": "fotos/calcajeans_2ft2.jpg",
                 "vendido": false
             }
         ]
