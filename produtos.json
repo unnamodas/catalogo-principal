@@ -1,50 +1,53 @@
 [
     {
-        "id": "330",
-        "nome": "Vestido midi",
-        "por": "299,90",
+        "id": "332",
+        "nome": "Short saia jeans",
+        "por": "195,00",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466365",
-                "cor": "Azul Marinho",
+                "codigoBling": "466434",
+                "cor": "Azul Claro",
                 "tamanho": "46",
-                "imagem": "fotos/vestido_138.jpg",
+                "imagem": "fotos/shortsaia_4.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466366",
-                "cor": "Azul Marinho",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_138.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "331",
-        "nome": "Vestido midi",
-        "por": "329,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "ultimaPeca": false,
-        "variantes": [
-            {
-                "codigoBling": "466356",
-                "cor": "Azul Marinho",
+                "codigoBling": "466434",
+                "cor": "Azul Claro",
                 "tamanho": "46",
-                "imagem": "fotos/vestido_139az.jpg",
+                "imagem": "fotos/shortsaia_4ft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466357",
-                "cor": "Preto",
+                "codigoBling": "466435",
+                "cor": "Azul Claro",
                 "tamanho": "48",
-                "imagem": "fotos/vestido_139pre.jpg",
+                "imagem": "fotos/shortsaia_4.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466435",
+                "cor": "Azul Claro",
+                "tamanho": "48",
+                "imagem": "fotos/shortsaia_4ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466436",
+                "cor": "Azul Claro",
+                "tamanho": "50",
+                "imagem": "fotos/shortsaia_4.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466436",
+                "cor": "Azul Claro",
+                "tamanho": "50",
+                "imagem": "fotos/shortsaia_4ft2.jpg",
                 "vendido": false
             }
         ]
