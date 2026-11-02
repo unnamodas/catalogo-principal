@@ -1,152 +1,159 @@
 [
     {
-        "id": "338",
-        "nome": "Macacão",
-        "por": "269,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "ultimaPeca": false,
-        "variantes": [
-            {
-                "codigoBling": "466462",
-                "cor": "Azul Marinho",
-                "tamanho": "Único",
-                "imagem": "fotos/macacao_5.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466463",
-                "cor": "Estampado",
-                "tamanho": "Único",
-                "imagem": "fotos/macacao_5.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "339",
-        "nome": "Blusa",
-        "por": "199,90",
-        "novidade": true,
-        "destaque": false,
-        "vendido": false,
-        "ultimaPeca": false,
-        "variantes": [
-            {
-                "codigoBling": "466469",
-                "cor": "Bege",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_75beg.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466470",
-                "cor": "Preto",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_75pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466470",
-                "cor": "Preto",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_75preft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466471",
-                "cor": "Bege",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_75beg.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466472",
-                "cor": "Preto",
-                "tamanho": "52",
-                "imagem": "fotos/blusa_75pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466472",
-                "cor": "Preto",
-                "tamanho": "52",
-                "imagem": "fotos/blusa_75preft2.jpg",
-                "vendido": false
-            }
-        ]
-    },
-    {
-        "id": "340",
+        "id": "341",
         "nome": "Vestido midi",
-        "por": "349,90",
+        "por": "329,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466488",
+                "codigoBling": "466475",
                 "cor": "Branco",
                 "tamanho": "46",
-                "imagem": "fotos/vestido_141bra.jpg",
+                "imagem": "fotos/vestido_142bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466487",
+                "codigoBling": "466474",
                 "cor": "Preto",
                 "tamanho": "46",
-                "imagem": "fotos/vestido_141pre.jpg",
+                "imagem": "fotos/vestido_142pre.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466489",
-                "cor": "Vermelho",
+                "codigoBling": "466474",
+                "cor": "Preto",
                 "tamanho": "46",
-                "imagem": "fotos/vestido_141verm.jpg",
+                "imagem": "fotos/vestido_142preft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466491",
+                "codigoBling": "466477",
                 "cor": "Branco",
                 "tamanho": "48",
-                "imagem": "fotos/vestido_141bra.jpg",
+                "imagem": "fotos/vestido_142bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466490",
+                "codigoBling": "466476",
                 "cor": "Preto",
                 "tamanho": "48",
-                "imagem": "fotos/vestido_141pre.jpg",
+                "imagem": "fotos/vestido_142pre.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466492",
-                "cor": "Vermelho",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_141verm.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466494",
-                "cor": "Branco",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_141bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466493",
+                "codigoBling": "466476",
                 "cor": "Preto",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_141pre.jpg",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_142preft2.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "342",
+        "nome": "Chemise",
+        "por": "249,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
+            {
+                "codigoBling": "466506",
+                "cor": "Verde",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_143.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466495",
-                "cor": "Vermelho",
+                "codigoBling": "466506",
+                "cor": "Verde",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_143ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466506",
+                "cor": "Verde",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_143ft3.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466507",
+                "cor": "Verde",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_143.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466507",
+                "cor": "Verde",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_143ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466507",
+                "cor": "Verde",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_143ft3.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466508",
+                "cor": "Verde",
                 "tamanho": "50",
-                "imagem": "fotos/vestido_141verm.jpg",
+                "imagem": "fotos/vestido_143.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466508",
+                "cor": "Verde",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_143ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466508",
+                "cor": "Verde",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_143ft3.jpg",
+                "vendido": false
+            }
+        ]
+    },
+    {
+        "id": "343",
+        "nome": "Blusa",
+        "por": "139,90",
+        "novidade": true,
+        "destaque": false,
+        "vendido": false,
+        "ultimaPeca": false,
+        "variantes": [
+            {
+                "codigoBling": "466532",
+                "cor": "Preto",
+                "tamanho": "G1",
+                "imagem": "fotos/blusa_76.jpg",
+                "vendido": true
+            },
+            {
+                "codigoBling": "466533",
+                "cor": "Preto",
+                "tamanho": "G2",
+                "imagem": "fotos/blusa_76.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466533",
+                "cor": "Preto",
+                "tamanho": "G3",
+                "imagem": "fotos/blusa_76.jpg",
                 "vendido": false
             }
         ]
