@@ -1,18 +1,18 @@
 [
     {
-        "id": "347",
-        "nome": "Vestido longo",
-        "por": "249,90",
+        "id": "348",
+        "nome": "Chemise",
+        "por": "169,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466458",
-                "cor": "Verde",
-                "tamanho": "G2",
-                "imagem": "fotos/vestido_145.jpg",
+                "codigoBling": "466527",
+                "cor": "Cinza (e Terracota)",
+                "tamanho": "EXGG",
+                "imagem": "fotos/vestido_146.jpg",
                 "vendido": false
             }
         ]
