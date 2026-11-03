@@ -1,33 +1,33 @@
 [
     {
-        "id": "349",
-        "nome": "Short saia",
-        "por": "199,90",
+        "id": "350",
+        "nome": "Regata",
+        "por": "139,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466519",
-                "cor": "Preto",
+                "codigoBling": "466543",
+                "cor": "Branco",
                 "tamanho": "G1",
-                "imagem": "fotos/shortsaia_5.jpg",
+                "imagem": "fotos/blusa_79bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466520",
+                "codigoBling": "466544",
+                "cor": "Bege",
+                "tamanho": "G2",
+                "imagem": "fotos/blusa_79beg.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466545",
                 "cor": "Preto",
                 "tamanho": "G2",
-                "imagem": "fotos/shortsaia_5.jpg",
+                "imagem": "fotos/blusa_79pre.jpg",
                 "vendido": false
-            },
-            {
-                "codigoBling": "466521",
-                "cor": "Preto",
-                "tamanho": "G3",
-                "imagem": "fotos/shortsaia_5.jpg",
-                "vendido": true
             }
         ]
     }
