@@ -21,6 +21,13 @@
                 "tamanho": "G2",
                 "imagem": "fotos/shortsaia_5.jpg",
                 "vendido": false
+            },
+            {
+                "codigoBling": "466521",
+                "cor": "Preto",
+                "tamanho": "G3",
+                "imagem": "fotos/shortsaia_5.jpg",
+                "vendido": true
             }
         ]
     }
