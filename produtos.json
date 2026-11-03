@@ -1,47 +1,33 @@
 [
     {
-        "id": "344",
+        "id": "345",
         "nome": "Blusa",
-        "por": "139,90",
+        "por": "129,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466452",
-                "cor": "Azul",
-                "tamanho": "G1",
-                "imagem": "fotos/blusa_77az.jpg",
+                "codigoBling": "466483",
+                "cor": "Branco",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_78.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466451",
-                "cor": "Rosa",
-                "tamanho": "G1",
-                "imagem": "fotos/blusa_77ros.jpg",
+                "codigoBling": "466484",
+                "cor": "Branco",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_78.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466455",
-                "cor": "Amarelo",
-                "tamanho": "G2",
-                "imagem": "fotos/blusa_77am.jpg",
+                "codigoBling": "466485",
+                "cor": "Branco",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_78.jpg",
                 "vendido": false
-            },
-            {
-                "codigoBling": "466454",
-                "cor": "Azul",
-                "tamanho": "G2",
-                "imagem": "fotos/blusa_77az.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466453",
-                "cor": "Rosa",
-                "tamanho": "G2",
-                "imagem": "fotos/blusa_77ros.jpg",
-                "vendido": true
             }
         ]
     }
