@@ -1,18 +1,18 @@
 [
     {
-        "id": "346",
-        "nome": "Vestido",
-        "por": "159,90",
+        "id": "347",
+        "nome": "Vestido longo",
+        "por": "249,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466460",
-                "cor": "Rosa",
-                "tamanho": "Único",
-                "imagem": "fotos/vestido_144.jpg",
+                "codigoBling": "466458",
+                "cor": "Verde",
+                "tamanho": "G2",
+                "imagem": "fotos/vestido_145.jpg",
                 "vendido": false
             }
         ]
