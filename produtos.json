@@ -1,74 +1,53 @@
 [
     {
-        "id": "359",
-        "nome": "Blusa",
-        "por": "149,90",
+        "id": "360",
+        "nome": "Conjunto blusa e calça",
+        "por": "379,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466633",
-                "cor": "Amarelo",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_83ama.jpg",
+                "codigoBling": "466562",
+                "cor": "Branco",
+                "tamanho": "44",
+                "imagem": "fotos/conjunto_47bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466634",
+                "codigoBling": "466563",
+                "cor": "Vermelho",
+                "tamanho": "44",
+                "imagem": "fotos/conjunto_47verm.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466564",
                 "cor": "Branco",
                 "tamanho": "46",
-                "imagem": "fotos/blusa_83bra.jpg",
+                "imagem": "fotos/conjunto_47bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466635",
+                "codigoBling": "466565",
                 "cor": "Vermelho",
                 "tamanho": "46",
-                "imagem": "fotos/blusa_83verm.jpg",
+                "imagem": "fotos/conjunto_47verm.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466636",
-                "cor": "Amarelo",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_83ama.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466637",
+                "codigoBling": "466566",
                 "cor": "Branco",
                 "tamanho": "48",
-                "imagem": "fotos/blusa_83bra.jpg",
+                "imagem": "fotos/conjunto_47bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466638",
+                "codigoBling": "466567",
                 "cor": "Vermelho",
                 "tamanho": "48",
-                "imagem": "fotos/blusa_83verm.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466639",
-                "cor": "Amarelo",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_83ama.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466640",
-                "cor": "Branco",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_83bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466641",
-                "cor": "Vermelho",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_83verm.jpg",
+                "imagem": "fotos/conjunto_47verm.jpg",
                 "vendido": false
             }
         ]
