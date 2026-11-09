@@ -1,25 +1,32 @@
 [
     {
-        "id": "351",
-        "nome": "Vestido",
-        "por": "359,90",
+        "id": "352",
+        "nome": "Vestido midi",
+        "por": "297,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466510",
-                "cor": "Bege",
+                "codigoBling": "466596",
+                "cor": "Azul",
                 "tamanho": "46",
-                "imagem": "fotos/vestido_147.jpg",
+                "imagem": "fotos/vestido_148az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466511",
-                "cor": "Bege",
+                "codigoBling": "466597",
+                "cor": "Verde",
                 "tamanho": "48",
-                "imagem": "fotos/vestido_147.jpg",
+                "imagem": "fotos/vestido_148ver.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466597",
+                "cor": "Verde",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_148verft2.jpg",
                 "vendido": false
             }
         ]
