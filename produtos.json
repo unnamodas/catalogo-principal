@@ -48,7 +48,7 @@
                 "cor": "Vermelho",
                 "tamanho": "48",
                 "imagem": "fotos/vestido_149verm.jpg",
-                "vendido": false
+                "vendido": true
             }
         ]
     }
