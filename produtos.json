@@ -1,32 +1,32 @@
 [
     {
-        "id": "361",
-        "nome": "Blusa",
-        "por": "129,90",
+        "id": "362",
+        "nome": "Conjunto blusa e short",
+        "por": "229,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466629",
-                "cor": "Verde",
+                "codigoBling": "466625",
+                "cor": "Rosa",
                 "tamanho": "46",
-                "imagem": "fotos/blusa_84ver.jpg",
+                "imagem": "fotos/conjunto_48.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466630",
-                "cor": "Marrom",
+                "codigoBling": "466626",
+                "cor": "Rosa",
                 "tamanho": "48",
-                "imagem": "fotos/blusa_84mar.jpg",
+                "imagem": "fotos/conjunto_48.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466631",
-                "cor": "Verde",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_84ver.jpg",
+                "codigoBling": "466627",
+                "cor": "Rosa",
+                "tamanho": "48",
+                "imagem": "fotos/conjunto_48.jpg",
                 "vendido": false
             }
         ]
