@@ -1,47 +1,54 @@
 [
     {
-        "id": "357",
-        "nome": "Vestido",
-        "por": "279,90",
+        "id": "358",
+        "nome": "Blusa",
+        "por": "179,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466604",
-                "cor": "Preto",
-                "tamanho": "44",
-                "imagem": "fotos/vestido_152pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466602",
-                "cor": "Azul",
+                "codigoBling": "466575",
+                "cor": "Branco",
                 "tamanho": "46",
-                "imagem": "fotos/vestido_152az.jpg",
-                "vendido": true
+                "imagem": "fotos/blusa_82bra.jpg",
+                "vendido": false
             },
             {
-                "codigoBling": "466603",
-                "cor": "Preto",
+                "codigoBling": "466576",
+                "cor": "Vermelho",
                 "tamanho": "46",
-                "imagem": "fotos/vestido_152pre.jpg",
+                "imagem": "fotos/blusa_82verm.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466605",
-                "cor": "Azul",
+                "codigoBling": "466577",
+                "cor": "Branco",
                 "tamanho": "48",
-                "imagem": "fotos/vestido_152az.jpg",
+                "imagem": "fotos/blusa_82bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466606",
-                "cor": "Preto",
+                "codigoBling": "466578",
+                "cor": "Vermelho",
                 "tamanho": "48",
-                "imagem": "fotos/vestido_152pre.jpg",
-                "vendido": true
+                "imagem": "fotos/blusa_82verm.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466579",
+                "cor": "Branco",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_82bra.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466580",
+                "cor": "Vermelho",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_82verm.jpg",
+                "vendido": false
             }
         ]
     }
