@@ -1,32 +1,32 @@
 [
     {
-        "id": "364",
-        "nome": "Blusa",
-        "por": "169,90",
+        "id": "365",
+        "nome": "Calça pantalona",
+        "por": "249,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466643",
-                "cor": "Branco",
+                "codigoBling": "466616",
+                "cor": "Branco (Off White)",
+                "tamanho": "44",
+                "imagem": "fotos/calca_18.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466617",
+                "cor": "Branco (Off White)",
                 "tamanho": "46",
-                "imagem": "fotos/blusa_86.jpg",
+                "imagem": "fotos/calca_18.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466644",
-                "cor": "Branco",
+                "codigoBling": "466618",
+                "cor": "Branco (Off White)",
                 "tamanho": "48",
-                "imagem": "fotos/blusa_86.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466645",
-                "cor": "Branco",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_86.jpg",
+                "imagem": "fotos/calca_18.jpg",
                 "vendido": false
             }
         ]
