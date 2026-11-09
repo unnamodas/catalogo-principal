@@ -1,53 +1,32 @@
 [
     {
-        "id": "360",
-        "nome": "Conjunto blusa e calça",
-        "por": "379,90",
+        "id": "361",
+        "nome": "Blusa",
+        "por": "129,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466562",
-                "cor": "Branco",
-                "tamanho": "44",
-                "imagem": "fotos/conjunto_47bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466563",
-                "cor": "Vermelho",
-                "tamanho": "44",
-                "imagem": "fotos/conjunto_47verm.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466564",
-                "cor": "Branco",
+                "codigoBling": "466629",
+                "cor": "Verde",
                 "tamanho": "46",
-                "imagem": "fotos/conjunto_47bra.jpg",
+                "imagem": "fotos/blusa_84ver.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466565",
-                "cor": "Vermelho",
-                "tamanho": "46",
-                "imagem": "fotos/conjunto_47verm.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466566",
-                "cor": "Branco",
+                "codigoBling": "466630",
+                "cor": "Marrom",
                 "tamanho": "48",
-                "imagem": "fotos/conjunto_47bra.jpg",
+                "imagem": "fotos/blusa_84mar.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466567",
-                "cor": "Vermelho",
-                "tamanho": "48",
-                "imagem": "fotos/conjunto_47verm.jpg",
+                "codigoBling": "466631",
+                "cor": "Verde",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_84ver.jpg",
                 "vendido": false
             }
         ]
