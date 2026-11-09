@@ -1,54 +1,26 @@
 [
     {
-        "id": "353",
-        "nome": "Vestido midi",
-        "por": "299,90",
+        "id": "354",
+        "nome": "Chemise",
+        "por": "319,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466551",
-                "cor": "Vermelho",
-                "tamanho": "44",
-                "imagem": "fotos/vestido_149verm.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466553",
-                "cor": "Azul",
+                "codigoBling": "466613",
+                "cor": "Rosa",
                 "tamanho": "46",
-                "imagem": "fotos/vestido_149az.jpg",
+                "imagem": "fotos/vestido_150ros.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466553",
-                "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_149azft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466552",
-                "cor": "Vermelho",
-                "tamanho": "46",
-                "imagem": "fotos/vestido_149verm.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466555",
-                "cor": "Verde",
+                "codigoBling": "466614",
+                "cor": "Amarelo",
                 "tamanho": "48",
-                "imagem": "fotos/vestido_149ver.jpg",
+                "imagem": "fotos/vestido_150ama.jpg",
                 "vendido": false
-            },
-            {
-                "codigoBling": "466554",
-                "cor": "Vermelho",
-                "tamanho": "48",
-                "imagem": "fotos/vestido_149verm.jpg",
-                "vendido": true
             }
         ]
     }
