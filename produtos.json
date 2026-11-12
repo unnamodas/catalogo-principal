@@ -1,53 +1,18 @@
 [
     {
-        "id": "370",
-        "nome": "Conjunto blusa e calça",
-        "por": "369,90",
+        "id": "371",
+        "nome": "Vestido longo",
+        "por": "179,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466679",
+                "codigoBling": "466719",
                 "cor": "Amarelo",
-                "tamanho": "G1",
-                "imagem": "fotos/conjunto_49ama.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466675",
-                "cor": "Amarelo",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_49ama.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466674",
-                "cor": "Marrom",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_49mar.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466677",
-                "cor": "Amarelo",
-                "tamanho": "G3",
-                "imagem": "fotos/conjunto_49ama.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466676",
-                "cor": "Marrom",
-                "tamanho": "G3",
-                "imagem": "fotos/conjunto_49mar.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466678",
-                "cor": "Marrom",
-                "tamanho": "G4",
-                "imagem": "fotos/conjunto_49mar.jpg",
+                "tamanho": "GG",
+                "imagem": "fotos/vestido_155ama.jpg",
                 "vendido": false
             }
         ]
