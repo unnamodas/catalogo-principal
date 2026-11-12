@@ -1,25 +1,53 @@
 [
     {
-        "id": "369",
-        "nome": "Vestido curto",
-        "por": "149,90",
+        "id": "370",
+        "nome": "Conjunto blusa e calça",
+        "por": "369,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466724",
+                "codigoBling": "466679",
                 "cor": "Amarelo",
-                "tamanho": "GG",
-                "imagem": "fotos/vestido_154ama.jpg",
+                "tamanho": "G1",
+                "imagem": "fotos/conjunto_49ama.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466723",
-                "cor": "Vermelho",
-                "tamanho": "GG",
-                "imagem": "fotos/vestido_154verm.jpg",
+                "codigoBling": "466675",
+                "cor": "Amarelo",
+                "tamanho": "G2",
+                "imagem": "fotos/conjunto_49ama.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466674",
+                "cor": "Marrom",
+                "tamanho": "G2",
+                "imagem": "fotos/conjunto_49mar.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466677",
+                "cor": "Amarelo",
+                "tamanho": "G3",
+                "imagem": "fotos/conjunto_49ama.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466676",
+                "cor": "Marrom",
+                "tamanho": "G3",
+                "imagem": "fotos/conjunto_49mar.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466678",
+                "cor": "Marrom",
+                "tamanho": "G4",
+                "imagem": "fotos/conjunto_49mar.jpg",
                 "vendido": false
             }
         ]
