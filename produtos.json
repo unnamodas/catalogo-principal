@@ -1,18 +1,25 @@
 [
     {
-        "id": "371",
-        "nome": "Vestido longo",
-        "por": "179,90",
+        "id": "372",
+        "nome": "Calça pantalona",
+        "por": "149,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466719",
-                "cor": "Amarelo",
+                "codigoBling": "466792",
+                "cor": "Marrom",
                 "tamanho": "GG",
-                "imagem": "fotos/vestido_155ama.jpg",
+                "imagem": "fotos/calca_19mar.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466793",
+                "cor": "Marrom",
+                "tamanho": "G3",
+                "imagem": "fotos/calca_19mar.jpg",
                 "vendido": false
             }
         ]
