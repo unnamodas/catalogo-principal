@@ -1,88 +1,32 @@
 [
     {
-        "id": "368",
+        "id": "369",
         "nome": "Blusa",
-        "por": "139,90",
+        "por": "129,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466751",
-                "cor": "Amarelo",
-                "tamanho": "G1",
-                "imagem": "fotos/blusa_88ama.jpg",
+                "codigoBling": "466740",
+                "cor": "Azul",
+                "tamanho": "EXGG",
+                "imagem": "fotos/blusa_89az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466753",
-                "cor": "Bege",
-                "tamanho": "G1",
-                "imagem": "fotos/blusa_88beg.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466752",
+                "codigoBling": "466741",
                 "cor": "Verde",
-                "tamanho": "G1",
-                "imagem": "fotos/blusa_88verd.jpg",
+                "tamanho": "EXGG",
+                "imagem": "fotos/blusa_89verd.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466754",
-                "cor": "Amarelo",
-                "tamanho": "G2",
-                "imagem": "fotos/blusa_88ama.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466756",
-                "cor": "Bege",
-                "tamanho": "G2",
-                "imagem": "fotos/blusa_88beg.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466750",
-                "cor": "Branco",
-                "tamanho": "G2",
-                "imagem": "fotos/blusa_88bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466755",
-                "cor": "Verde",
-                "tamanho": "G2",
-                "imagem": "fotos/blusa_88verd.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466759",
-                "cor": "Amarelo",
-                "tamanho": "G3",
-                "imagem": "fotos/blusa_88ama.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466760",
-                "cor": "Bege",
-                "tamanho": "G3",
-                "imagem": "fotos/blusa_88beg.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466757",
-                "cor": "Branco",
-                "tamanho": "G3",
-                "imagem": "fotos/blusa_88bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466758",
-                "cor": "Marrom",
-                "tamanho": "G3",
-                "imagem": "fotos/blusa_88mar.jpg",
+                "codigoBling": "466739",
+                "cor": "Vermelho",
+                "tamanho": "EXGG",
+                "imagem": "fotos/blusa_89verm.jpg",
                 "vendido": false
             }
         ]
