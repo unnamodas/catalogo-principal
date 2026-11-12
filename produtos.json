@@ -1,25 +1,32 @@
 [
     {
-        "id": "372",
-        "nome": "Calça pantalona",
-        "por": "149,90",
+        "id": "373",
+        "nome": "Blusa",
+        "por": "159,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466792",
-                "cor": "Marrom",
-                "tamanho": "GG",
-                "imagem": "fotos/calca_19mar.jpg",
+                "codigoBling": "466735",
+                "cor": "Bege",
+                "tamanho": "G2",
+                "imagem": "fotos/blusa_90beg.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466793",
-                "cor": "Marrom",
+                "codigoBling": "466736",
+                "cor": "Verde",
+                "tamanho": "G2",
+                "imagem": "fotos/blusa_90verd.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466737",
+                "cor": "Bege",
                 "tamanho": "G3",
-                "imagem": "fotos/calca_19mar.jpg",
+                "imagem": "fotos/blusa_90beg.jpg",
                 "vendido": false
             }
         ]
