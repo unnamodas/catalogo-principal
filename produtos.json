@@ -1,40 +1,33 @@
 [
     {
-        "id": "374",
-        "nome": "Conjunto blusa e calça",
-        "por": "299,90",
+        "id": "376",
+        "nome": "Conjunto blusa e short",
+        "por": "189,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466683",
-                "cor": "Marrom",
+                "codigoBling": "466781",
+                "cor": "Preto",
                 "tamanho": "G1",
-                "imagem": "fotos/conjunto_50mar.jpg",
+                "imagem": "fotos/conjunto_51pre.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466681",
-                "cor": "Preto",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_50pre.jpg",
+                "codigoBling": "466782",
+                "cor": "Verde",
+                "tamanho": "G3",
+                "imagem": "fotos/conjunto_51verd.jpg",
                 "vendido": true
             },
             {
-                "codigoBling": "466684",
-                "cor": "Marrom",
-                "tamanho": "G3",
-                "imagem": "fotos/conjunto_50mar.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466682",
-                "cor": "Preto",
-                "tamanho": "G4",
-                "imagem": "fotos/conjunto_50pre.jpg",
-                "vendido": false
+                "codigoBling": "466780",
+                "cor": "Azul",
+                "tamanho": "GG",
+                "imagem": "fotos/conjunto_51az.jpg",
+                "vendido": true
             }
         ]
     }
