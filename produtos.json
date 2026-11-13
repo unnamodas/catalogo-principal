@@ -1,33 +1,19 @@
 [
     {
-        "id": "376",
-        "nome": "Conjunto blusa e short",
-        "por": "189,90",
+        "id": "377",
+        "nome": "Vestido longo",
+        "por": "179,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466781",
-                "cor": "Preto",
-                "tamanho": "G1",
-                "imagem": "fotos/conjunto_51pre.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466782",
-                "cor": "Verde",
-                "tamanho": "G3",
-                "imagem": "fotos/conjunto_51verd.jpg",
-                "vendido": true
-            },
-            {
-                "codigoBling": "466780",
-                "cor": "Azul",
+                "codigoBling": "466723",
+                "cor": "Vermelho",
                 "tamanho": "GG",
-                "imagem": "fotos/conjunto_51az.jpg",
-                "vendido": true
+                "imagem": "fotos/vestido_159.jpg",
+                "vendido": false
             }
         ]
     }
