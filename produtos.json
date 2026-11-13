@@ -1,32 +1,39 @@
 [
     {
-        "id": "373",
-        "nome": "Blusa",
-        "por": "159,90",
+        "id": "374",
+        "nome": "Conjunto blusa e calça",
+        "por": "299,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466735",
-                "cor": "Bege",
-                "tamanho": "G2",
-                "imagem": "fotos/blusa_90beg.jpg",
+                "codigoBling": "466683",
+                "cor": "Marrom",
+                "tamanho": "G1",
+                "imagem": "fotos/conjunto_50mar.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466736",
-                "cor": "Verde",
+                "codigoBling": "466681",
+                "cor": "Preto",
                 "tamanho": "G2",
-                "imagem": "fotos/blusa_90verd.jpg",
-                "vendido": false
+                "imagem": "fotos/conjunto_50pre.jpg",
+                "vendido": true
             },
             {
-                "codigoBling": "466737",
-                "cor": "Bege",
+                "codigoBling": "466684",
+                "cor": "Marrom",
                 "tamanho": "G3",
-                "imagem": "fotos/blusa_90beg.jpg",
+                "imagem": "fotos/conjunto_50mar.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466682",
+                "cor": "Preto",
+                "tamanho": "G4",
+                "imagem": "fotos/conjunto_50pre.jpg",
                 "vendido": false
             }
         ]
