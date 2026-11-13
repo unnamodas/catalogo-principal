@@ -1,39 +1,32 @@
 [
     {
         "id": "379",
-        "nome": "Conjunto blusa e calça",
-        "por": "289,90",
+        "nome": "Vestido",
+        "por": "199,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466655",
-                "cor": "Branco",
-                "tamanho": "G1",
-                "imagem": "fotos/conjunto_53bra.jpg",
+                "codigoBling": "466769",
+                "cor": "Azul",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_160az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466654",
-                "cor": "Vermelho",
-                "tamanho": "G1",
-                "imagem": "fotos/conjunto_53verm.jpg",
+                "codigoBling": "466768",
+                "cor": "Bege",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_160beg.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466657",
-                "cor": "Branco",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_53bra.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466656",
-                "cor": "Vermelho",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_53verm.jpg",
+                "codigoBling": "466770",
+                "cor": "Verde",
+                "tamanho": "Único",
+                "imagem": "fotos/vestido_160verd.jpg",
                 "vendido": false
             }
         ]
