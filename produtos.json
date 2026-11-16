@@ -1,32 +1,25 @@
 [
     {
-        "id": "379",
-        "nome": "Vestido",
-        "por": "199,90",
+        "id": "380",
+        "nome": "Blusa",
+        "por": "149,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466769",
-                "cor": "Azul",
+                "codigoBling": "466710",
+                "cor": "Branco",
                 "tamanho": "Único",
-                "imagem": "fotos/vestido_160az.jpg",
+                "imagem": "fotos/blusa_91bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466768",
+                "codigoBling": "466711",
                 "cor": "Bege",
                 "tamanho": "Único",
-                "imagem": "fotos/vestido_160beg.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466770",
-                "cor": "Verde",
-                "tamanho": "Único",
-                "imagem": "fotos/vestido_160verd.jpg",
+                "imagem": "fotos/blusa_91beg.jpg",
                 "vendido": false
             }
         ]
