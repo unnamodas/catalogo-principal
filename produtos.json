@@ -9,17 +9,24 @@
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466710",
+                "codigoBling": "466698",
                 "cor": "Branco",
                 "tamanho": "Único",
-                "imagem": "fotos/blusa_91bra.jpg",
+                "imagem": "fotos/blusa_92bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466711",
-                "cor": "Bege",
+                "codigoBling": "466698",
+                "cor": "Branco",
                 "tamanho": "Único",
-                "imagem": "fotos/blusa_91beg.jpg",
+                "imagem": "fotos/blusa_92braft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466699",
+                "cor": "Amarelo",
+                "tamanho": "Único",
+                "imagem": "fotos/blusa_92ama.jpg",
                 "vendido": false
             }
         ]
