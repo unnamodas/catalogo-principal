@@ -3270,27 +3270,24 @@
                 </div>
             `;
 
-                const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${produto.nome}" na cor ${corObj.corOriginal} (Tamanhos disponíveis: ${stringTamanhosAtual}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
-                const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}`;
-
-                if (produto.vendido) {
-                    modalBtnContainer.innerHTML = `<button class="modal-btn-whatsapp btn-sold" disabled>Indisponível</button>`;
-                } else {
-                    modalBtnContainer.innerHTML = `<a href="${linkWhats}" target="_blank" class="modal-btn-whatsapp">COMPRAR AGORA NO WHATSAPP</a>`;
-                }
-
-                // 🟢 ATUALIZA O BADGE DO MODAL INICIALMENTE
+                // 🟢 ATUALIZA O BADGE E O BOTÃO DO MODAL INICIALMENTE
                 let corDaFoto = produto.coresAgrupadas.find(c => c.fotos.includes(fotoAtual));
                 let isModalCorEsgotada = corDaFoto ? corDaFoto.esgotada : false;
                 const modalBadgeSold = document.getElementById('modal-badge-sold');
+
                 if (produto.vendido) {
                     modalBadgeSold.style.display = 'block';
                     modalBadgeSold.textContent = 'ESGOTADO';
+                    modalBtnContainer.innerHTML = `<button class="modal-btn-whatsapp btn-sold" disabled>Indisponível</button>`;
                 } else if (isModalCorEsgotada) {
                     modalBadgeSold.style.display = 'block';
                     modalBadgeSold.textContent = 'COR ESGOTADA';
+                    modalBtnContainer.innerHTML = `<button class="modal-btn-whatsapp btn-sold" disabled>Indisponível</button>`;
                 } else {
                     modalBadgeSold.style.display = 'none';
+                    const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${produto.nome}" na cor ${corObj.corOriginal} (Tamanhos disponíveis: ${stringTamanhosAtual}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
+                    const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}`;
+                    modalBtnContainer.innerHTML = `<a href="${linkWhats}" target="_blank" class="modal-btn-whatsapp">COMPRAR AGORA NO WHATSAPP</a>`;
                 }
 
                 modal.classList.add('show');
@@ -3339,6 +3336,30 @@
                     modalBadgeSold.textContent = 'COR ESGOTADA';
                 } else {
                     modalBadgeSold.style.display = 'none';
+                }
+
+                // 🟢 MÁGICA NOVA: Atualiza também o nome da cor, os tamanhos e o link do WhatsApp no Modal!
+                if (corDaNovaFoto) {
+                    const stringTamanhosAtual = formatarTamanhosOrdenados(corDaNovaFoto.tamanhos);
+
+                    // 1. Atualiza os textos da legenda (Cor e Tamanho)
+                    document.getElementById('modal-caption').innerHTML = `
+                        <div style="font-size: 20px; line-height: 1.1; margin-bottom: 4px;">${produto.nome}</div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 10px; color: #a0a0a0; letter-spacing: 0.1em; text-transform: uppercase;">
+                            <b style="color: #ffffff; font-weight: 600;">Cor:</b> ${corDaNovaFoto.corOriginal} &nbsp;•&nbsp; <b style="color: #ffffff; font-weight: 600;">Tam:</b> ${stringTamanhosAtual}
+                        </div>
+                        <div style="width: 40px; height: 1px; background-color: rgba(255,255,255,0.2); margin: 10px auto;"></div>
+                    `;
+
+                    // 2. Atualiza a mensagem do botão do WhatsApp com a cor que a cliente está a ver
+                    const modalBtnContainer = document.getElementById('modal-btn-container');
+                    if (produto.vendido || novaFotoEsgotada) {
+                        modalBtnContainer.innerHTML = `<button class="modal-btn-whatsapp btn-sold" disabled>Indisponível</button>`;
+                    } else {
+                        const mensagemWhats = encodeURIComponent(`Olá, UNNA! Amei o "${produto.nome}" na cor ${corDaNovaFoto.corOriginal} (Tamanhos disponíveis: ${stringTamanhosAtual}) do catálogo. Gostaria de verificar a disponibilidade para compra!`);
+                        const linkWhats = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagemWhats}`;
+                        modalBtnContainer.innerHTML = `<a href="${linkWhats}" target="_blank" class="modal-btn-whatsapp">COMPRAR AGORA NO WHATSAPP</a>`;
+                    }
                 }
 
                 const modalIndicators = document.getElementById('modal-indicators');

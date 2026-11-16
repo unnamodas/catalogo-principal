@@ -1,6 +1,6 @@
 [
     {
-        "id": "385",
+        "id": "386",
         "nome": "Conjunto blusa e calça",
         "por": "289,90",
         "novidade": true,
@@ -9,39 +9,32 @@
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466663",
+                "codigoBling": "466655",
                 "cor": "Branco",
                 "tamanho": "G1",
-                "imagem": "fotos/conjunto_54bra.jpg",
+                "imagem": "fotos/conjunto_56bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466664",
-                "cor": "Rosa",
+                "codigoBling": "466654",
+                "cor": "Vermelho",
                 "tamanho": "G1",
-                "imagem": "fotos/conjunto_54ros.jpg",
+                "imagem": "fotos/conjunto_56verm.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466665",
-                "cor": "Bege",
-                "tamanho": "G2",
-                "imagem": "fotos/conjunto_54beg.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466666",
+                "codigoBling": "466657",
                 "cor": "Branco",
                 "tamanho": "G2",
-                "imagem": "fotos/conjunto_54bra.jpg",
+                "imagem": "fotos/conjunto_56bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466667",
-                "cor": "Rosa",
+                "codigoBling": "466656",
+                "cor": "Vermelho",
                 "tamanho": "G2",
-                "imagem": "fotos/conjunto_54ros.jpg",
-                "vendido": true
+                "imagem": "fotos/conjunto_56verm.jpg",
+                "vendido": false
             }
         ]
     }
