@@ -1,32 +1,88 @@
 [
     {
-        "id": "388",
-        "nome": "Blusa",
-        "por": "129,90",
+        "id": "389",
+        "nome": "Vestido curto",
+        "por": "329,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466739",
-                "cor": "Vermelho",
-                "tamanho": "EXGG",
-                "imagem": "fotos/blusa_89verm.jpg",
+                "codigoBling": "466878",
+                "cor": "Branco",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_163bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466741",
-                "cor": "Verde",
-                "tamanho": "EXGG",
-                "imagem": "fotos/blusa_89verd.jpg",
+                "codigoBling": "466878",
+                "cor": "Branco",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_163braft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466740",
-                "cor": "Azul",
-                "tamanho": "EXGG",
-                "imagem": "fotos/blusa_89az.jpg",
+                "codigoBling": "466878",
+                "cor": "Branco",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_163braft3.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466880",
+                "cor": "Branco",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_163bra.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466880",
+                "cor": "Branco",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_163braft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466880",
+                "cor": "Branco",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_163braft3.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466879",
+                "cor": "Preto",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_163pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466882",
+                "cor": "Branco",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_163bra.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466882",
+                "cor": "Branco",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_163braft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466882",
+                "cor": "Branco",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_163braft3.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466881",
+                "cor": "Preto",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_163pre.jpg",
                 "vendido": false
             }
         ]
