@@ -1,53 +1,53 @@
 [
     {
-        "id": "395",
-        "nome": "Blusa",
-        "por": "169,90",
+        "id": "396",
+        "nome": "Vestido curto",
+        "por": "329,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466848",
-                "cor": "Vermelho",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_95verm.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466846",
-                "cor": "Marrom",
+                "codigoBling": "466832",
+                "cor": "Branco",
                 "tamanho": "46",
-                "imagem": "fotos/blusa_95mar.jpg",
+                "imagem": "fotos/vestido_165.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466847",
-                "cor": "Marrom",
+                "codigoBling": "466832",
+                "cor": "Branco",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_165ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466833",
+                "cor": "Branco",
                 "tamanho": "48",
-                "imagem": "fotos/blusa_95mar.jpg",
+                "imagem": "fotos/vestido_165.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466849",
-                "cor": "Vermelho",
+                "codigoBling": "466833",
+                "cor": "Branco",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_165ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466834",
+                "cor": "Branco",
                 "tamanho": "50",
-                "imagem": "fotos/blusa_95verm.jpg",
+                "imagem": "fotos/vestido_165.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466850",
-                "cor": "Marrom",
-                "tamanho": "52",
-                "imagem": "fotos/blusa_95mar.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466851",
-                "cor": "Vermelho",
-                "tamanho": "54",
-                "imagem": "fotos/blusa_95verm.jpg",
+                "codigoBling": "466834",
+                "cor": "Branco",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_165ft2.jpg",
                 "vendido": false
             }
         ]
