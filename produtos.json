@@ -1,74 +1,39 @@
 [
     {
-        "id": "393",
-        "nome": "Bermuda",
-        "por": "179,90",
+        "id": "394",
+        "nome": "Regata",
+        "por": "149,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466838",
-                "cor": "Vermelho",
-                "tamanho": "50",
-                "imagem": "fotos/short_8verm.jpg",
+                "codigoBling": "466892",
+                "cor": "Branco",
+                "tamanho": "44",
+                "imagem": "fotos/blusa_94.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466836",
-                "cor": "Verde",
+                "codigoBling": "466891",
+                "cor": "Branco",
                 "tamanho": "46",
-                "imagem": "fotos/short_8verd.jpg",
+                "imagem": "fotos/blusa_94.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466837",
-                "cor": "Verde",
+                "codigoBling": "466893",
+                "cor": "Branco",
                 "tamanho": "48",
-                "imagem": "fotos/short_8verd.jpg",
+                "imagem": "fotos/blusa_94.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466840",
-                "cor": "Amarelo",
+                "codigoBling": "466894",
+                "cor": "Branco",
                 "tamanho": "50",
-                "imagem": "fotos/short_8ama.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466839",
-                "cor": "Bege",
-                "tamanho": "50",
-                "imagem": "fotos/short_8beg.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466842",
-                "cor": "Bege",
-                "tamanho": "52",
-                "imagem": "fotos/short_8beg.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466841",
-                "cor": "Vermelho",
-                "tamanho": "52",
-                "imagem": "fotos/short_8verm.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466844",
-                "cor": "Bege",
-                "tamanho": "54",
-                "imagem": "fotos/short_8beg.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466843",
-                "cor": "Vermelho",
-                "tamanho": "54",
-                "imagem": "fotos/short_8verm.jpg",
+                "imagem": "fotos/blusa_94.jpg",
                 "vendido": false
             }
         ]
