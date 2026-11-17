@@ -1,39 +1,53 @@
 [
     {
-        "id": "394",
-        "nome": "Regata",
-        "por": "149,90",
+        "id": "395",
+        "nome": "Blusa",
+        "por": "169,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466892",
-                "cor": "Branco",
-                "tamanho": "44",
-                "imagem": "fotos/blusa_94.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466891",
-                "cor": "Branco",
-                "tamanho": "46",
-                "imagem": "fotos/blusa_94.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466893",
-                "cor": "Branco",
+                "codigoBling": "466848",
+                "cor": "Vermelho",
                 "tamanho": "48",
-                "imagem": "fotos/blusa_94.jpg",
+                "imagem": "fotos/blusa_95verm.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466894",
-                "cor": "Branco",
+                "codigoBling": "466846",
+                "cor": "Marrom",
+                "tamanho": "46",
+                "imagem": "fotos/blusa_95mar.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466847",
+                "cor": "Marrom",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_95mar.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466849",
+                "cor": "Vermelho",
                 "tamanho": "50",
-                "imagem": "fotos/blusa_94.jpg",
+                "imagem": "fotos/blusa_95verm.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466850",
+                "cor": "Marrom",
+                "tamanho": "52",
+                "imagem": "fotos/blusa_95mar.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466851",
+                "cor": "Vermelho",
+                "tamanho": "54",
+                "imagem": "fotos/blusa_95verm.jpg",
                 "vendido": false
             }
         ]
