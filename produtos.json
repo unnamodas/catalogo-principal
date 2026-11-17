@@ -1,39 +1,39 @@
 [
     {
-        "id": "391",
-        "nome": "Saia midi",
-        "por": "229,90",
+        "id": "392",
+        "nome": "Blusa",
+        "por": "179,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466888",
+                "codigoBling": "466859",
                 "cor": "Branco",
                 "tamanho": "46",
-                "imagem": "fotos/saia_6.jpg",
+                "imagem": "fotos/blusa_93.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466888",
-                "cor": "Branco",
-                "tamanho": "46",
-                "imagem": "fotos/saia_6ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466889",
+                "codigoBling": "466860",
                 "cor": "Branco",
                 "tamanho": "48",
-                "imagem": "fotos/saia_6.jpg",
+                "imagem": "fotos/blusa_93.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466889",
+                "codigoBling": "466861",
                 "cor": "Branco",
-                "tamanho": "48",
-                "imagem": "fotos/saia_6ft2.jpg",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_93.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466862",
+                "cor": "Branco",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_93.jpg",
                 "vendido": false
             }
         ]
