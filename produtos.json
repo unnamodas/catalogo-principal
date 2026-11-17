@@ -1,67 +1,39 @@
 [
     {
-        "id": "390",
-        "nome": "Vestido curto",
-        "por": "249,90",
+        "id": "391",
+        "nome": "Saia midi",
+        "por": "229,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466864",
-                "cor": "Vermelho",
+                "codigoBling": "466888",
+                "cor": "Branco",
                 "tamanho": "46",
-                "imagem": "fotos/vestido_164.jpg",
+                "imagem": "fotos/saia_6.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466864",
-                "cor": "Vermelho",
+                "codigoBling": "466888",
+                "cor": "Branco",
                 "tamanho": "46",
-                "imagem": "fotos/vestido_164ft2.jpg",
+                "imagem": "fotos/saia_6ft2.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466865",
-                "cor": "Vermelho",
+                "codigoBling": "466889",
+                "cor": "Branco",
                 "tamanho": "48",
-                "imagem": "fotos/vestido_164.jpg",
+                "imagem": "fotos/saia_6.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466865",
-                "cor": "Vermelho",
+                "codigoBling": "466889",
+                "cor": "Branco",
                 "tamanho": "48",
-                "imagem": "fotos/vestido_164ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466866",
-                "cor": "Vermelho",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_164.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466866",
-                "cor": "Vermelho",
-                "tamanho": "50",
-                "imagem": "fotos/vestido_164ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466867",
-                "cor": "Vermelho",
-                "tamanho": "52",
-                "imagem": "fotos/vestido_164.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466867",
-                "cor": "Vermelho",
-                "tamanho": "52",
-                "imagem": "fotos/vestido_164ft2.jpg",
+                "imagem": "fotos/saia_6ft2.jpg",
                 "vendido": false
             }
         ]
