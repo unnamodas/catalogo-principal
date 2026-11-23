@@ -2860,8 +2860,12 @@
 
                     return matchesCategoria && matchesTamanho && matchesCor && matchesPesquisa && matchesStatus;
                 });
-                // 🟢 MUDANÇA q AQUI: Ordena as Novidades no topo E embaralha a ordem a cada novo acesso
+                // 🟢 Ordenação inteligente: na aba Novidades mostra os últimos adicionados primeiro (maior ID)
                 produtosFiltradosGlobais.sort((a, b) => {
+                    if (statusFiltro === 'novidades') {
+                        return Number(b.id) - Number(a.id);
+                    }
+
                     let aNovidade = (a.novidade === true || String(a.novidade).toLowerCase() === 'true' || a.Novidade === true || String(a.Novidade).toLowerCase() === 'true') ? 1 : 0;
                     let bNovidade = (b.novidade === true || String(b.novidade).toLowerCase() === 'true' || b.Novidade === true || String(b.Novidade).toLowerCase() === 'true') ? 1 : 0;
 
