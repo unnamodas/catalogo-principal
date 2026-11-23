@@ -1,25 +1,25 @@
 [
     {
-        "id": "399",
-        "nome": "Blusa",
-        "por": "199,90",
+        "id": "400",
+        "nome": "Vestido curto",
+        "por": "149,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466713",
-                "cor": "Branco",
-                "tamanho": "M",
-                "imagem": "fotos/blusa_97bra.jpg",
+                "codigoBling": "466797",
+                "cor": "Azul",
+                "tamanho": "G",
+                "imagem": "fotos/vestido_166az.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466714",
-                "cor": "Azul",
-                "tamanho": "M",
-                "imagem": "fotos/blusa_97az.jpg",
+                "codigoBling": "466796",
+                "cor": "Marrom",
+                "tamanho": "G",
+                "imagem": "fotos/vestido_166mar.jpg",
                 "vendido": false
             }
         ]
