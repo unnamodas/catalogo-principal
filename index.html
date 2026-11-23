@@ -1959,8 +1959,9 @@
             border-bottom: 3px solid #c2251b !important;
         }
 
-        /* 🟢 Esconde o filtro de cores definitivamente */
-        #linha-filtro-cores {
+        /* 🟢 Oculta o filtro de tamanhos temporariamente */
+        .sizes-container:has(#sizes-tabs),
+        #sub-sizes-container {
             display: none !important;
         }
     </style>
@@ -2554,7 +2555,7 @@
                 const containerTamanhos = document.getElementById('sizes-tabs');
 
                 // 🟢 Os novos filtros simplificados
-                const tamanhosPadrao = ['Todos', 'PLUS (46 ao 54)', 'SLIM (38 ao 44)'];
+                const tamanhosPadrao = ['Todos', 'PLUS (46 ao 54)'];
 
                 containerTamanhos.innerHTML = '';
                 tamanhosPadrao.forEach(tam => {
@@ -2622,9 +2623,8 @@
 
             function gerarAbasCores() {
                 const containerCores = document.getElementById('colors-tabs');
-                let coresData = [];
 
-                // Dicionário de Cores Sólidas
+                // Dicionário de Cores Sólidas (apenas estas bolinhas vão aparecer)
                 const mapaCoresHex = {
                     'Preto': '#000000',
                     'Branco': '#ffffff',
@@ -2645,18 +2645,24 @@
                     'Laranja': '#FFA500',
                 };
 
-                produtos.forEach(p => {
-                    p.variantes.forEach(v => {
-                        let corLimpa = v.cor.split('(')[0].trim();
-                        corLimpa = corLimpa.charAt(0).toUpperCase() + corLimpa.slice(1).toLowerCase();
+                // 🟢 Pega SOMENTE as cores da lista acima que tenham pelo menos 1 peça no catálogo
+                let coresData = Object.keys(mapaCoresHex).filter(nomeCor =>
+                    produtos.some(p =>
+                        p.variantes.some(v => v.cor.toLowerCase().includes(nomeCor.toLowerCase()))
+                    )
+                );
 
-                        if (!coresData.includes(corLimpa) && corLimpa !== '') {
-                            coresData.push(corLimpa);
-                        }
-                    });
+                // 🟢 Define a ordem de destaque no início da fila (Natal/Festas)
+                const coresPrioridade = ['Vermelho', 'Branco'];
+                coresData.sort((a, b) => {
+                    let idxA = coresPrioridade.indexOf(a);
+                    let idxB = coresPrioridade.indexOf(b);
+
+                    if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                    if (idxA !== -1) return -1;
+                    if (idxB !== -1) return 1;
+                    return a.localeCompare(b);
                 });
-
-                coresData.sort((a, b) => a.localeCompare(b));
 
                 containerCores.innerHTML = '';
 
@@ -2673,7 +2679,7 @@
                 coresData.forEach(nomeCor => {
                     const btn = document.createElement('button');
                     btn.className = `color-filter-dot ${corAtual === nomeCor ? 'active' : ''}`;
-                    btn.style.backgroundColor = mapaCoresHex[nomeCor] || '#cccccc';
+                    btn.style.backgroundColor = mapaCoresHex[nomeCor];
                     btn.title = nomeCor; // Mostra o nome da cor ao passar o mouse
                     btn.setAttribute('data-color', nomeCor);
                     btn.onclick = () => filtrarCor(nomeCor);
