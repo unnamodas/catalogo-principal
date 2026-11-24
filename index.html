@@ -611,18 +611,19 @@
             border: 1px solid #000000;
         }
 
-        /* 🟢 BADGE ESGOTADO (Padronizado na mesma vibe e tamanho dos outros) */
+        /* 🟢 BADGE ESGOTADO (Maior e mais visível) */
         .badge-sold {
             background-color: #000000;
             color: #ffffff;
-            top: 15px;
-            left: 15px;
-            font-size: 9px;
-            font-weight: 600;
-            padding: 5px 10px;
+            top: 12px;
+            left: 12px;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 14px;
+            border-radius: 4px;
             letter-spacing: 0.08em;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             z-index: 2;
             pointer-events: none;
             display: inline-block;
@@ -1728,10 +1729,20 @@
             }
 
             .badge-sale,
-            .badge-sold,
             .badge-destaque,
             .badge-novidade {
                 left: 5px !important;
+            }
+
+            /* 🟢 Destaque maior para o badge de esgotado no celular */
+            .badge-sold {
+                left: 8px !important;
+                top: 8px !important;
+                font-size: 10px !important;
+                padding: 5px 9px !important;
+                font-weight: 700 !important;
+                letter-spacing: 0.06em !important;
+                border-radius: 4px !important;
             }
 
             .badge-discount,
@@ -2132,7 +2143,7 @@
             const idsVestidosFesta = ['16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '319', '320', '321', '322'];
 
             // 🟢 COLOQUE AQUI OS IDs DAS PEÇAS JEANS ENTRE ASPAS SIMPLES E SEPARADOS POR VÍRGULA
-            const idsJeans = ['332', '333', '334', '335', '336']; // <-- Substitua estes números fictícios pelos IDs reais do seu Firebase
+            const idsJeans = ['332', '333', '334', '335', '336', '404', '406']; // <-- Substitua estes números fictícios pelos IDs reais do seu Firebase
             let modoLiquidacao = false;
             // 🟢 FUNÇÃO PARA PEDIR SENHA ANTES DA LIQUIDAÇÃO
             function verificarSenhaLiquidacao() {
