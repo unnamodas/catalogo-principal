@@ -30,6 +30,13 @@
                 "vendido": false
             },
             {
+                "codigoBling": "466926",
+                "cor": "Amarelo",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_101ama.jpg",
+                "vendido": false
+            },
+            {
                 "codigoBling": "466924",
                 "cor": "Verde",
                 "tamanho": "46",
