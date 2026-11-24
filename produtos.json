@@ -1,39 +1,46 @@
 [
     {
-        "id": "403",
-        "nome": "Regata",
-        "por": "129,90",
+        "id": "404",
+        "nome": "Short",
+        "por": "189,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466952",
-                "cor": "Amarelo",
+                "codigoBling": "466964",
+                "cor": "Azul",
                 "tamanho": "46",
-                "imagem": "fotos/blusa_99ama.jpg",
+                "imagem": "fotos/short_10.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466954",
-                "cor": "Verde",
+                "codigoBling": "466965",
+                "cor": "Azul",
                 "tamanho": "48",
-                "imagem": "fotos/blusa_99verd.jpg",
+                "imagem": "fotos/short_10.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466956",
-                "cor": "Amarelo",
+                "codigoBling": "466966",
+                "cor": "Azul",
                 "tamanho": "50",
-                "imagem": "fotos/blusa_99ama.jpg",
+                "imagem": "fotos/short_10.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466957",
-                "cor": "Verde",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_99verd.jpg",
+                "codigoBling": "466967",
+                "cor": "Azul",
+                "tamanho": "52",
+                "imagem": "fotos/short_10.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466968",
+                "cor": "Azul",
+                "tamanho": "54",
+                "imagem": "fotos/short_10.jpg",
                 "vendido": false
             }
         ]
