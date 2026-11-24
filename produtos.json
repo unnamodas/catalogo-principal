@@ -1,32 +1,67 @@
 [
     {
-        "id": "412",
-        "nome": "Conjunto blusa e calça",
-        "por": "429,90",
+        "id": "415",
+        "nome": "Vestido midi",
+        "por": "329,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466897",
+                "codigoBling": "466904",
+                "cor": "Vermelho",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_167verm.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466475",
                 "cor": "Branco",
                 "tamanho": "46",
-                "imagem": "fotos/conjunto_57.jpg",
+                "imagem": "fotos/vestido_167bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466898",
+                "codigoBling": "466474",
+                "cor": "Preto",
+                "tamanho": "46",
+                "imagem": "fotos/vestido_167pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466477",
                 "cor": "Branco",
                 "tamanho": "48",
-                "imagem": "fotos/conjunto_57.jpg",
+                "imagem": "fotos/vestido_167bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466899",
+                "codigoBling": "466476",
+                "cor": "Preto",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_167pre.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466905",
+                "cor": "Vermelho",
+                "tamanho": "48",
+                "imagem": "fotos/vestido_167verm.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466906",
                 "cor": "Branco",
                 "tamanho": "50",
-                "imagem": "fotos/conjunto_57.jpg",
+                "imagem": "fotos/vestido_167bra.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466907",
+                "cor": "Vermelho",
+                "tamanho": "50",
+                "imagem": "fotos/vestido_167verm.jpg",
                 "vendido": false
             }
         ]
