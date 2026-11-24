@@ -1,46 +1,32 @@
 [
     {
-        "id": "404",
-        "nome": "Short",
-        "por": "189,90",
+        "id": "405",
+        "nome": "Macaquinho",
+        "por": "179,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466964",
-                "cor": "Azul",
-                "tamanho": "46",
-                "imagem": "fotos/short_10.jpg",
+                "codigoBling": "467042",
+                "cor": "Vermelho",
+                "tamanho": "G1",
+                "imagem": "fotos/macaquinho_1verm.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466965",
-                "cor": "Azul",
-                "tamanho": "48",
-                "imagem": "fotos/short_10.jpg",
+                "codigoBling": "467040",
+                "cor": "Branco",
+                "tamanho": "G1",
+                "imagem": "fotos/macaquinho_1bra.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "466966",
-                "cor": "Azul",
-                "tamanho": "50",
-                "imagem": "fotos/short_10.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466967",
-                "cor": "Azul",
-                "tamanho": "52",
-                "imagem": "fotos/short_10.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466968",
-                "cor": "Azul",
-                "tamanho": "54",
-                "imagem": "fotos/short_10.jpg",
+                "codigoBling": "467044",
+                "cor": "Vermelho",
+                "tamanho": "G2",
+                "imagem": "fotos/macaquinho_1verm.jpg",
                 "vendido": false
             }
         ]
