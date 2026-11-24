@@ -1,47 +1,47 @@
 [
     {
-        "id": "410",
+        "id": "411",
         "nome": "Blusa",
-        "por": "199,90",
+        "por": "189,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "466923",
-                "cor": "Rosa",
-                "tamanho": "44",
-                "imagem": "fotos/blusa_101ros.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466923",
-                "cor": "Rosa",
-                "tamanho": "48",
-                "imagem": "fotos/blusa_101ros.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466925",
-                "cor": "Rosa",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_101ros.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466926",
-                "cor": "Amarelo",
-                "tamanho": "50",
-                "imagem": "fotos/blusa_101ama.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "466924",
+                "codigoBling": "466917",
                 "cor": "Verde",
                 "tamanho": "46",
-                "imagem": "fotos/blusa_101verd.jpg",
-                "vendido": true
+                "imagem": "fotos/blusa_102verd.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466918",
+                "cor": "Amarelo",
+                "tamanho": "48",
+                "imagem": "fotos/blusa_102ama.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466919",
+                "cor": "Verde",
+                "tamanho": "50",
+                "imagem": "fotos/blusa_102verd.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466921",
+                "cor": "Verde",
+                "tamanho": "52",
+                "imagem": "fotos/blusa_102verd.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "466920",
+                "cor": "Amarelo",
+                "tamanho": "54",
+                "imagem": "fotos/blusa_102ama.jpg",
+                "vendido": false
             }
         ]
     }
