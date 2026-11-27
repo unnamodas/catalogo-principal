@@ -1,123 +1,25 @@
 [
     {
-        "id": "417",
-        "nome": "Calça reta",
-        "por": "219,90",
+        "id": "419",
+        "nome": "Blusa",
+        "por": "169,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "463769",
-                "cor": "Branco",
-                "tamanho": "46",
-                "imagem": "fotos/calca_21.jpg",
+                "codigoBling": "463864",
+                "cor": "Verde",
+                "tamanho": "M",
+                "imagem": "fotos/blusa_103.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "463769",
-                "cor": "Branco",
-                "tamanho": "46",
-                "imagem": "fotos/calca_21ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463769",
-                "cor": "Branco",
-                "tamanho": "46",
-                "imagem": "fotos/calca_21ft3.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463770",
-                "cor": "Branco",
-                "tamanho": "48",
-                "imagem": "fotos/calca_21.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463770",
-                "cor": "Branco",
-                "tamanho": "48",
-                "imagem": "fotos/calca_21ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463770",
-                "cor": "Branco",
-                "tamanho": "48",
-                "imagem": "fotos/calca_21ft3.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463771",
-                "cor": "Branco",
-                "tamanho": "50",
-                "imagem": "fotos/calca_21.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463771",
-                "cor": "Branco",
-                "tamanho": "50",
-                "imagem": "fotos/calca_21.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463771",
-                "cor": "Branco",
-                "tamanho": "50",
-                "imagem": "fotos/calca_21ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463771",
-                "cor": "Branco",
-                "tamanho": "50",
-                "imagem": "fotos/calca_21ft3.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463772",
-                "cor": "Branco",
-                "tamanho": "52",
-                "imagem": "fotos/calca_21.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463772",
-                "cor": "Branco",
-                "tamanho": "52",
-                "imagem": "fotos/calca_21ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463772",
-                "cor": "Branco",
-                "tamanho": "52",
-                "imagem": "fotos/calca_21ft3.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463773",
-                "cor": "Branco",
-                "tamanho": "54",
-                "imagem": "fotos/calca_21.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463773",
-                "cor": "Branco",
-                "tamanho": "54",
-                "imagem": "fotos/calca_21ft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "463773",
-                "cor": "Branco",
-                "tamanho": "54",
-                "imagem": "fotos/calca_21ft3.jpg",
+                "codigoBling": "463865",
+                "cor": "Verde",
+                "tamanho": "G",
+                "imagem": "fotos/blusa_103.jpg",
                 "vendido": false
             }
         ]
