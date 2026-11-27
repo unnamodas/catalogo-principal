@@ -1,46 +1,123 @@
 [
     {
-        "id": "416",
-        "nome": "Vestido longo",
-        "por": "229,90",
+        "id": "417",
+        "nome": "Calça reta",
+        "por": "219,90",
         "novidade": true,
         "destaque": false,
         "vendido": false,
         "ultimaPeca": false,
         "variantes": [
             {
-                "codigoBling": "467051",
-                "cor": "Vermelho",
-                "tamanho": "G1",
-                "imagem": "fotos/vestido_168verm.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "467051",
-                "cor": "Vermelho",
-                "tamanho": "G1",
-                "imagem": "fotos/vestido_168vermft2.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "467052",
-                "cor": "Verde",
-                "tamanho": "G1",
-                "imagem": "fotos/vestido_168verd.jpg",
-                "vendido": false
-            },
-            {
-                "codigoBling": "467050",
+                "codigoBling": "463769",
                 "cor": "Branco",
-                "tamanho": "G1",
-                "imagem": "fotos/vestido_168bra.jpg",
+                "tamanho": "46",
+                "imagem": "fotos/calca_21.jpg",
                 "vendido": false
             },
             {
-                "codigoBling": "467053",
+                "codigoBling": "463769",
                 "cor": "Branco",
-                "tamanho": "G2",
-                "imagem": "fotos/vestido_168bra.jpg",
+                "tamanho": "46",
+                "imagem": "fotos/calca_21ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463769",
+                "cor": "Branco",
+                "tamanho": "46",
+                "imagem": "fotos/calca_21ft3.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463770",
+                "cor": "Branco",
+                "tamanho": "48",
+                "imagem": "fotos/calca_21.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463770",
+                "cor": "Branco",
+                "tamanho": "48",
+                "imagem": "fotos/calca_21ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463770",
+                "cor": "Branco",
+                "tamanho": "48",
+                "imagem": "fotos/calca_21ft3.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463771",
+                "cor": "Branco",
+                "tamanho": "50",
+                "imagem": "fotos/calca_21.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463771",
+                "cor": "Branco",
+                "tamanho": "50",
+                "imagem": "fotos/calca_21.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463771",
+                "cor": "Branco",
+                "tamanho": "50",
+                "imagem": "fotos/calca_21ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463771",
+                "cor": "Branco",
+                "tamanho": "50",
+                "imagem": "fotos/calca_21ft3.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463772",
+                "cor": "Branco",
+                "tamanho": "52",
+                "imagem": "fotos/calca_21.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463772",
+                "cor": "Branco",
+                "tamanho": "52",
+                "imagem": "fotos/calca_21ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463772",
+                "cor": "Branco",
+                "tamanho": "52",
+                "imagem": "fotos/calca_21ft3.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463773",
+                "cor": "Branco",
+                "tamanho": "54",
+                "imagem": "fotos/calca_21.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463773",
+                "cor": "Branco",
+                "tamanho": "54",
+                "imagem": "fotos/calca_21ft2.jpg",
+                "vendido": false
+            },
+            {
+                "codigoBling": "463773",
+                "cor": "Branco",
+                "tamanho": "54",
+                "imagem": "fotos/calca_21ft3.jpg",
                 "vendido": false
             }
         ]
